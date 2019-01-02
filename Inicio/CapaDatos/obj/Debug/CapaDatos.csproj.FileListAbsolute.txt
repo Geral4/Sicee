@@ -1,0 +1,12 @@
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb

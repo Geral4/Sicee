@@ -1,0 +1,147 @@
+c:\users\dulce\source\repos\Inicio\Inicio\bin\Debug\Inicio.exe.config
+c:\users\dulce\source\repos\Inicio\Inicio\bin\Debug\Inicio.exe
+c:\users\dulce\source\repos\Inicio\Inicio\bin\Debug\Inicio.pdb
+c:\users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.csprojResolveAssemblyReference.cache
+c:\users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Properties.Resources.resources
+c:\users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.csproj.GenerateResource.cache
+c:\users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.csproj.CoreCompileInputs.cache
+c:\users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.exe
+c:\users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.pdb
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Inicio.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Alta.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Usuario.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Horario.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Alumno.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Empleado.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Asignatura.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Cargo.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Aula.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Principal.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Reporte.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\dulce\source\repos\Inicio\Inicio\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComplete
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaDocente.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaAlumno.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ReporteAsitencia.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ReporteInmobiliario.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ReportePrestamos.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Prestamos.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Bitacora.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Login.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Inmueble.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Carrera.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Consultas.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaLaboral.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaCargo.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaEmpleado.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaUsuario.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.Edificio.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.RealizarPrestamo.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.DevolucionPrestamo.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaCarrera.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaPrestamo.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaEdificio.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaAsignatura.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ReporteBitacora.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ConsultaInmueble.resources
+C:\Users\dulce\source\repos\Inicio\Inicio\obj\Debug\Inicio.ModificacionCambio.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\Inicio.exe.config
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\Inicio.exe
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\Inicio.pdb
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\CapaDatos.dll
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\CapaDatos.pdb
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csprojResolveAssemblyReference.cache
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Alta.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Alumno.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Asignatura.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Aula.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Bitacora.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Cargo.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Carrera.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaAlumno.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaAsignatura.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaCargo.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaCarrera.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaDocente.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaEdificio.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaEmpleado.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaInmueble.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaLaboral.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaPrestamo.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Consultas.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaUsuario.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.DevolucionPrestamo.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Edificio.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Empleado.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Horario.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Inicio.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Inmueble.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Login.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ModificacionCambio.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Prestamos.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Principal.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Properties.Resources.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.RealizarPrestamo.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Reporte.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReporteAsitencia.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReporteBitacora.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReporteInmobiliario.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReportePrestamos.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Usuario.resources
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csproj.GenerateResource.cache
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csproj.CoreCompileInputs.cache
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComplete
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.exe
+C:\Users\dulce\OneDrive\Documentos\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.pdb
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\bin\Debug\Inicio.exe.config
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\bin\Debug\Inicio.exe
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\bin\Debug\Inicio.pdb
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\bin\Debug\CapaDatos.dll
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\bin\Debug\CapaDatos.pdb
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csprojAssemblyReference.cache
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Alta.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Alumno.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Asignatura.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Aula.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Bitacora.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Cargo.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Carrera.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaAlumno.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaAsignatura.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaCargo.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaCarrera.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaDocente.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaEdificio.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaEmpleado.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaInmueble.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaLaboral.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaPrestamo.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Consultas.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ConsultaUsuario.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.DevolucionPrestamo.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Edificio.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Empleado.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Horario.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Inicio.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Inmueble.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Login.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ModificacionCambio.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Prestamos.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Principal.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Properties.Resources.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.RealizarPrestamo.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Reporte.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReporteAsitencia.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReporteBitacora.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReporteInmobiliario.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.ReportePrestamos.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.Usuario.resources
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csproj.GenerateResource.cache
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csproj.CoreCompileInputs.cache
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComplete
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.exe
+C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\Inicio\obj\Debug\Inicio.pdb
