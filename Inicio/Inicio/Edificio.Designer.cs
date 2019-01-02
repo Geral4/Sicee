@@ -91,6 +91,7 @@
             this.numericEdificio.Name = "numericEdificio";
             this.numericEdificio.Size = new System.Drawing.Size(233, 20);
             this.numericEdificio.TabIndex = 24;
+            this.numericEdificio.ValueChanged += new System.EventHandler(this.numericEdificio_ValueChanged);
             // 
             // labelEdificioNAulas
             // 
@@ -257,6 +258,7 @@
             this.Name = "Edificio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edificio";
+            this.Load += new System.EventHandler(this.Edificio_Load);
             this.panelEdificioVertical2.ResumeLayout(false);
             this.panelEdificioVertical2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericEdificio)).EndInit();

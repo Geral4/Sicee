@@ -45,6 +45,7 @@
     <Compile Include="CDCargo.cs" />
     <Compile Include="CDCarrera.cs" />
     <Compile Include="CDConexion.cs" />
+    <Compile Include="CDEdificio.cs" />
     <Compile Include="CDEmpleado.cs" />
     <Compile Include="CDUsuario.cs" />
     <Compile Include="CNEmpleado.cs" />
