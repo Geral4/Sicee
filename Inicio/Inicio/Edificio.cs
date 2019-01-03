@@ -15,7 +15,9 @@ namespace Inicio
     {
         private int no_aulas=0;
         private string clave = "";
-        private CDEdificio edificioAula = new CDEdificio();
+        private CDAula edificioAula = new CDAula();
+        CDEdificio objEdificio = new CDEdificio();
+
         public Edificio()
         {
             InitializeComponent();
@@ -23,12 +25,31 @@ namespace Inicio
 
         private void buttonEdificioRegistrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                objEdificio.insertaEdificio(
+                    textEdificioNombre.Text,
+                    textEdificioClave.Text,
+                   textEdificioDescripcion.Text,
+                   Convert.ToInt32(numericEdificio.Value)
+                   );
+
+                MessageBox.Show("Insertado Correctamente");
+                MostrarEdificio();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puede insertar los datos por: " + ex);
+            }
+
             no_aulas = Convert.ToInt32(numericEdificio.Value);
             clave = textEdificioClave.Text;
             edificioAula.insertaAulas(clave, no_aulas);
             Aula formAula = new Aula();
+            formAula.clave_edificio = clave;
             formAula.Show();
         }
+
 
         private void textEdificioNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -43,7 +64,15 @@ namespace Inicio
 
         private void Edificio_Load(object sender, EventArgs e)
         {
-
+            MostrarEdificio();
         }
+
+        private void MostrarEdificio()
+        {
+            CDEdificio objEdificio = new CDEdificio();
+            dataGridEdificio.DataSource = objEdificio.MostrarEdificio();
+        }
+
+
     }
 }

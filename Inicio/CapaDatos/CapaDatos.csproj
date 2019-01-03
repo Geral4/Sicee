@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CDAlumno.cs" />
     <Compile Include="CDAsignatura.cs" />
+    <Compile Include="CDAula.cs" />
     <Compile Include="CDCargo.cs" />
     <Compile Include="CDCarrera.cs" />
     <Compile Include="CDConexion.cs" />

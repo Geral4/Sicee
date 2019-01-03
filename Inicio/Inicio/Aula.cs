@@ -15,6 +15,7 @@ namespace Inicio
     {
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        public string clave_edificio = "";
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
            "Initial Catalog=Sicee;Data Source=localhost";
         public Aula()
@@ -25,7 +26,7 @@ namespace Inicio
         private void Aula_Load(object sender, EventArgs e)
         {
             dataGridAula.DataSource = bindingSource1;
-            GetData("select * from cat_aulas order by clave");
+            GetData("select * from cat_aulas where clave like '"+clave_edificio+"%' order by clave");
         }
 
         private void GetData(string sql)
