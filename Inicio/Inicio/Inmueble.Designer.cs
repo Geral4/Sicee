@@ -36,7 +36,7 @@
             this.dataGridInmueble = new System.Windows.Forms.DataGridView();
             this.labeInmuebleLista = new System.Windows.Forms.Label();
             this.panelInmuebleVertical2 = new System.Windows.Forms.Panel();
-            this.textInmuebleAula = new System.Windows.Forms.TextBox();
+            this.comboInmuebleAula = new System.Windows.Forms.ComboBox();
             this.labelInmuebleAula = new System.Windows.Forms.Label();
             this.comboInmuebleColor = new System.Windows.Forms.ComboBox();
             this.labelInmuebleColor = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.textInmuebleNombre = new System.Windows.Forms.TextBox();
             this.labelInmuebleNombre = new System.Windows.Forms.Label();
             this.labeInmuebleRegistro = new System.Windows.Forms.Label();
+            this.textInmuebleAula = new System.Windows.Forms.TextBox();
             this.panelInmuebleVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInmueble)).BeginInit();
             this.panelInmuebleVertical2.SuspendLayout();
@@ -70,7 +71,7 @@
             this.panelInmuebleVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelInmuebleVertical.Location = new System.Drawing.Point(0, 0);
             this.panelInmuebleVertical.Name = "panelInmuebleVertical";
-            this.panelInmuebleVertical.Size = new System.Drawing.Size(575, 318);
+            this.panelInmuebleVertical.Size = new System.Drawing.Size(575, 377);
             this.panelInmuebleVertical.TabIndex = 4;
             // 
             // label1
@@ -139,6 +140,7 @@
             // 
             this.panelInmuebleVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panelInmuebleVertical2.Controls.Add(this.textInmuebleAula);
+            this.panelInmuebleVertical2.Controls.Add(this.comboInmuebleAula);
             this.panelInmuebleVertical2.Controls.Add(this.labelInmuebleAula);
             this.panelInmuebleVertical2.Controls.Add(this.comboInmuebleColor);
             this.panelInmuebleVertical2.Controls.Add(this.labelInmuebleColor);
@@ -158,15 +160,18 @@
             this.panelInmuebleVertical2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInmuebleVertical2.Location = new System.Drawing.Point(570, 0);
             this.panelInmuebleVertical2.Name = "panelInmuebleVertical2";
-            this.panelInmuebleVertical2.Size = new System.Drawing.Size(329, 318);
+            this.panelInmuebleVertical2.Size = new System.Drawing.Size(329, 377);
             this.panelInmuebleVertical2.TabIndex = 5;
             // 
-            // textInmuebleAula
+            // comboInmuebleAula
             // 
-            this.textInmuebleAula.Location = new System.Drawing.Point(81, 199);
-            this.textInmuebleAula.Name = "textInmuebleAula";
-            this.textInmuebleAula.Size = new System.Drawing.Size(233, 20);
-            this.textInmuebleAula.TabIndex = 25;
+            this.comboInmuebleAula.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboInmuebleAula.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboInmuebleAula.Location = new System.Drawing.Point(84, 200);
+            this.comboInmuebleAula.Name = "comboInmuebleAula";
+            this.comboInmuebleAula.Size = new System.Drawing.Size(230, 21);
+            this.comboInmuebleAula.TabIndex = 25;
+            this.comboInmuebleAula.SelectedIndexChanged += new System.EventHandler(this.comboInmuebleAula_SelectedIndexChanged_1);
             // 
             // labelInmuebleAula
             // 
@@ -188,6 +193,7 @@
             this.comboInmuebleColor.Size = new System.Drawing.Size(233, 21);
             this.comboInmuebleColor.TabIndex = 23;
             this.comboInmuebleColor.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboInmuebleColor_DrawItem);
+            this.comboInmuebleColor.SelectedIndexChanged += new System.EventHandler(this.comboInmuebleColor_SelectedIndexChanged);
             // 
             // labelInmuebleColor
             // 
@@ -206,7 +212,7 @@
             this.buttonInmuebleCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInmuebleCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInmuebleCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonInmuebleCancelar.Location = new System.Drawing.Point(219, 277);
+            this.buttonInmuebleCancelar.Location = new System.Drawing.Point(219, 316);
             this.buttonInmuebleCancelar.Name = "buttonInmuebleCancelar";
             this.buttonInmuebleCancelar.Size = new System.Drawing.Size(78, 24);
             this.buttonInmuebleCancelar.TabIndex = 21;
@@ -219,16 +225,17 @@
             this.buttonInmuebleGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInmuebleGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInmuebleGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonInmuebleGuardar.Location = new System.Drawing.Point(55, 276);
+            this.buttonInmuebleGuardar.Location = new System.Drawing.Point(55, 315);
             this.buttonInmuebleGuardar.Name = "buttonInmuebleGuardar";
             this.buttonInmuebleGuardar.Size = new System.Drawing.Size(75, 24);
             this.buttonInmuebleGuardar.TabIndex = 20;
             this.buttonInmuebleGuardar.Text = "Guardar";
             this.buttonInmuebleGuardar.UseVisualStyleBackColor = false;
+            this.buttonInmuebleGuardar.Click += new System.EventHandler(this.buttonInmuebleGuardar_Click);
             // 
             // textInmuebleDescripcion
             // 
-            this.textInmuebleDescripcion.Location = new System.Drawing.Point(111, 227);
+            this.textInmuebleDescripcion.Location = new System.Drawing.Point(110, 261);
             this.textInmuebleDescripcion.Name = "textInmuebleDescripcion";
             this.textInmuebleDescripcion.Size = new System.Drawing.Size(203, 20);
             this.textInmuebleDescripcion.TabIndex = 12;
@@ -238,7 +245,7 @@
             this.labelInmuebleDescripcion.AutoSize = true;
             this.labelInmuebleDescripcion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInmuebleDescripcion.ForeColor = System.Drawing.Color.White;
-            this.labelInmuebleDescripcion.Location = new System.Drawing.Point(9, 226);
+            this.labelInmuebleDescripcion.Location = new System.Drawing.Point(8, 259);
             this.labelInmuebleDescripcion.Name = "labelInmuebleDescripcion";
             this.labelInmuebleDescripcion.Size = new System.Drawing.Size(96, 20);
             this.labelInmuebleDescripcion.TabIndex = 9;
@@ -329,16 +336,24 @@
             this.labeInmuebleRegistro.TabIndex = 0;
             this.labeInmuebleRegistro.Text = "Alta inmueble";
             // 
+            // textInmuebleAula
+            // 
+            this.textInmuebleAula.Location = new System.Drawing.Point(84, 230);
+            this.textInmuebleAula.Name = "textInmuebleAula";
+            this.textInmuebleAula.Size = new System.Drawing.Size(230, 20);
+            this.textInmuebleAula.TabIndex = 26;
+            // 
             // Inmueble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 318);
+            this.ClientSize = new System.Drawing.Size(899, 377);
             this.Controls.Add(this.panelInmuebleVertical2);
             this.Controls.Add(this.panelInmuebleVertical);
             this.Name = "Inmueble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inmueble";
+            this.Load += new System.EventHandler(this.Inmueble_Load);
             this.panelInmuebleVertical.ResumeLayout(false);
             this.panelInmuebleVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInmueble)).EndInit();
@@ -357,7 +372,6 @@
         private System.Windows.Forms.DataGridView dataGridInmueble;
         private System.Windows.Forms.Label labeInmuebleLista;
         private System.Windows.Forms.Panel panelInmuebleVertical2;
-        private System.Windows.Forms.TextBox textInmuebleAula;
         private System.Windows.Forms.Label labelInmuebleAula;
         private System.Windows.Forms.ComboBox comboInmuebleColor;
         private System.Windows.Forms.Label labelInmuebleColor;
@@ -375,5 +389,7 @@
         private System.Windows.Forms.Label labelInmuebleNombre;
         private System.Windows.Forms.Label labeInmuebleRegistro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboInmuebleAula;
+        private System.Windows.Forms.TextBox textInmuebleAula;
     }
 }
