@@ -96,10 +96,11 @@ namespace Inicio
         {
             try
             {
-                textInmuebleAula.ReadOnly = true;
+                textInmuebleAula.Enabled = false;
                 comboInmuebleAula.DataSource = ObtenerAulas();
-                comboInmuebleAula.DisplayMember = "clave";
+                comboInmuebleAula.DisplayMember = "nombre";
                 comboInmuebleAula.ValueMember = "clave";
+                textInmuebleAula.Text = "";
             }
             catch (Exception ex)
             {
@@ -115,7 +116,8 @@ namespace Inicio
 
         private void comboInmuebleAula_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-           
+            textInmuebleAula.Text = "";
+            textInmuebleAula.Text = comboInmuebleAula.SelectedValue.ToString();
         }
     }
 }
