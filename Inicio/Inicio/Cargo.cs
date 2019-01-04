@@ -64,7 +64,10 @@ namespace Inicio
         
         private void textCargoBuscar_TextChanged(object sender, EventArgs e)
         {
-           // CDCargo objCargo3 = new CDCargo();
+            filtrado = textCargoBuscar.Text;
+            dataGridViewCargo.DataSource = bindingSource1;
+            GetData("select * from Cargo where Clave like '" + filtrado + "%' or Nombre like '" + filtrado + "%';");
+            // CDCargo objCargo3 = new CDCargo();
             //if (textCargoBuscar.Text!="" )
             //{
             //    dataGridViewCargo.CurrentCell = null;
@@ -83,14 +86,14 @@ namespace Inicio
             //            }
             //        }
             //    }
-                
+
             //}
             //else
             //{
             //    CDCargo objCargo3 = new CDCargo();
             //    dataGridViewCargo.DataSource = objCargo3.MostrarCargo();
             //}
-           
+
         }
 
         private void dataGridViewCargo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -119,9 +122,9 @@ namespace Inicio
 
         private void textCargoBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            filtrado = textCargoBuscar.Text;
-            dataGridViewCargo.DataSource = bindingSource1;
-            GetData("select * from Cargo where Clave like '" + filtrado + "%' or Nombre like '" + filtrado + "%';");
+            //filtrado = textCargoBuscar.Text;
+            //dataGridViewCargo.DataSource = bindingSource1;
+            //GetData("select * from Cargo where Clave like '" + filtrado + "%' or Nombre like '" + filtrado + "%';");
         }
     }
 }
