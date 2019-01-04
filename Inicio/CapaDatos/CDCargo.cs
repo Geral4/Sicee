@@ -15,6 +15,9 @@ namespace CapaDatos
         private CDConexion Conexion = new CDConexion();
         private SqlCommand Coman = new SqlCommand();
         private SqlDataReader LeerFilas;
+        private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
+           "Initial Catalog=Sicee;Data Source=localhost";
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
 
 
 
@@ -44,6 +47,7 @@ namespace CapaDatos
             Conexion.CerrarConexion();
             return Tabla;
         }
+        
 
     }   
 }

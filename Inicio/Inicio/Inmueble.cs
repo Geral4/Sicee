@@ -117,7 +117,7 @@ namespace Inicio
         private void comboInmuebleAula_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             textInmuebleAula.Text = "";
-            textInmuebleAula.Text = comboInmuebleAula.SelectedValue.ToString();
+            textInmuebleAula.Text = "Clave Aula: " + comboInmuebleAula.SelectedValue.ToString();
         }
     }
 }
