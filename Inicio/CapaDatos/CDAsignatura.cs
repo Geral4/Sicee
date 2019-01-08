@@ -28,7 +28,7 @@ namespace CapaDatos
             return Tabla2;
         }
 
-        public void insertarAsignatura (string nombre, string clave, int carrera,int creditos,string modalidad)
+        public void insertarAsignatura (string nombre, string clave, string carrera,int creditos,string modalidad)
         {
             Coman.Connection = Conexion.AbrirConexion();
             Coman.CommandText = "InsertarAsignatura";

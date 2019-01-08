@@ -43,17 +43,19 @@ namespace Inicio
 
         private void buttonCEmpleadoEditar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.Validate();
-                bindingSource1.EndEdit();
-                dataAdapter.Update((DataTable)bindingSource1.DataSource);
-                GetData(dataAdapter.SelectCommand.CommandText);
-            }
-            catch (SqlException s)
-            {
-                MessageBox.Show("" + s, "Verifica");
-            }
+            //try
+            //{
+            //    this.Validate();
+            //    bindingSource1.EndEdit();
+            //    dataAdapter.Update((DataTable)bindingSource1.DataSource);
+            //    GetData(dataAdapter.SelectCommand.CommandText);
+            //}
+            //catch (SqlException s)
+            //{
+            //    MessageBox.Show("" + s, "Verifica");
+            //}
+            EditarEmpleado formEmpleado = new EditarEmpleado();
+            formEmpleado.Show();
         }
 
         private void MostrarEmpleado()

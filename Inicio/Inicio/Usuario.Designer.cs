@@ -37,7 +37,6 @@
             this.labelUsuarioLista = new System.Windows.Forms.Label();
             this.panelUsuarioVertical2 = new System.Windows.Forms.Panel();
             this.textUsuarioNombre = new System.Windows.Forms.TextBox();
-            this.labelUsuarioNombre = new System.Windows.Forms.Label();
             this.comboUsuarioNPersonal = new System.Windows.Forms.ComboBox();
             this.textUsuarioRepetir = new System.Windows.Forms.TextBox();
             this.labelUsuarioRepetir = new System.Windows.Forms.Label();
@@ -137,7 +136,6 @@
             // 
             this.panelUsuarioVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panelUsuarioVertical2.Controls.Add(this.textUsuarioNombre);
-            this.panelUsuarioVertical2.Controls.Add(this.labelUsuarioNombre);
             this.panelUsuarioVertical2.Controls.Add(this.comboUsuarioNPersonal);
             this.panelUsuarioVertical2.Controls.Add(this.textUsuarioRepetir);
             this.panelUsuarioVertical2.Controls.Add(this.labelUsuarioRepetir);
@@ -159,22 +157,11 @@
             // 
             // textUsuarioNombre
             // 
-            this.textUsuarioNombre.Location = new System.Drawing.Point(100, 93);
+            this.textUsuarioNombre.Location = new System.Drawing.Point(25, 93);
             this.textUsuarioNombre.Name = "textUsuarioNombre";
             this.textUsuarioNombre.ReadOnly = true;
-            this.textUsuarioNombre.Size = new System.Drawing.Size(214, 20);
+            this.textUsuarioNombre.Size = new System.Drawing.Size(275, 20);
             this.textUsuarioNombre.TabIndex = 27;
-            // 
-            // labelUsuarioNombre
-            // 
-            this.labelUsuarioNombre.AutoSize = true;
-            this.labelUsuarioNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuarioNombre.ForeColor = System.Drawing.Color.White;
-            this.labelUsuarioNombre.Location = new System.Drawing.Point(8, 93);
-            this.labelUsuarioNombre.Name = "labelUsuarioNombre";
-            this.labelUsuarioNombre.Size = new System.Drawing.Size(68, 20);
-            this.labelUsuarioNombre.TabIndex = 26;
-            this.labelUsuarioNombre.Text = "Nombre";
             // 
             // comboUsuarioNPersonal
             // 
@@ -351,7 +338,6 @@
         private System.Windows.Forms.TextBox textUsuarioRepetir;
         private System.Windows.Forms.Label labelUsuarioRepetir;
         private System.Windows.Forms.ComboBox comboUsuarioNPersonal;
-        private System.Windows.Forms.Label labelUsuarioNombre;
         private System.Windows.Forms.TextBox textUsuarioNombre;
         private System.Windows.Forms.Label label1;
     }

@@ -14,6 +14,7 @@ namespace CapaDatos
         private CDConexion Conexion = new CDConexion();
         private SqlCommand Coman = new SqlCommand();
         private SqlDataReader LeerFilas;
+   
 
         public DataTable ListarCargo()
         {
@@ -29,7 +30,7 @@ namespace CapaDatos
         }
 
         public void insertarEmpleado(string nPersonal, string nombre,string apellidoP,
-        string apellidoM, string telefono, string sexo, string direccion, int cargo_id, string email)
+        string apellidoM, string telefono, string sexo, string direccion, string cargo_id, string email)
         {
             Coman.Connection = Conexion.AbrirConexion();
             Coman.CommandText = "InsertarEmpleado";

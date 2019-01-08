@@ -47,13 +47,14 @@ namespace CapaDatos
             return Table;
         }
 
-        public void insertarUsuario(int nPersonal_id,string usuario,
+        public void insertarUsuario(string nPersonal_id,string nombre,string usuario,
             string contrasena,string repetirContra,string acceso)
         {
             Coman.Connection = Conexion.AbrirConexion();
             Coman.CommandText = "InsertarUsuario";
             Coman.CommandType = CommandType.StoredProcedure;
             Coman.Parameters.AddWithValue("@npersonal_id",nPersonal_id);
+            Coman.Parameters.AddWithValue("@nombre", nombre);
             Coman.Parameters.AddWithValue("@usuario", usuario);
             Coman.Parameters.AddWithValue("@contrasena", contrasena);
             Coman.Parameters.AddWithValue("@repetirContra", repetirContra);
@@ -62,21 +63,21 @@ namespace CapaDatos
             Coman.Parameters.Clear();
         }
 
-        public void editarUsuario(int nPersonal_id, string usuario,
-            string contrasena, string repetirContra, string acceso)//t Id_Usuario)
-        {
-            Coman.Connection = Conexion.AbrirConexion();
-            Coman.CommandText = "EditarUsuario";
-            Coman.CommandType = CommandType.StoredProcedure;
-            Coman.Parameters.AddWithValue("@npersonal_id", nPersonal_id);
-            Coman.Parameters.AddWithValue("@usuario", usuario);
-            Coman.Parameters.AddWithValue("@contrasena", contrasena);
-            Coman.Parameters.AddWithValue("@repetirContra", repetirContra);
-            Coman.Parameters.AddWithValue("@acceso", acceso);
-            //            Coman.Parameters.AddWithValue("@Id_Usuario", Id_Usuario);
-            Coman.ExecuteNonQuery();
-            Coman.Parameters.Clear();
-        }
+        //public void editarUsuario(int nPersonal_id, string usuario,
+        //    string contrasena, string repetirContra, string acceso)//t Id_Usuario)
+        //{
+        //    Coman.Connection = Conexion.AbrirConexion();
+        //    Coman.CommandText = "EditarUsuario";
+        //    Coman.CommandType = CommandType.StoredProcedure;
+        //    Coman.Parameters.AddWithValue("@npersonal_id", nPersonal_id);
+        //    Coman.Parameters.AddWithValue("@usuario", usuario);
+        //    Coman.Parameters.AddWithValue("@contrasena", contrasena);
+        //    Coman.Parameters.AddWithValue("@repetirContra", repetirContra);
+        //    Coman.Parameters.AddWithValue("@acceso", acceso);
+        //    //            Coman.Parameters.AddWithValue("@Id_Usuario", Id_Usuario);
+        //    Coman.ExecuteNonQuery();
+        //    Coman.Parameters.Clear();
+        //}
 
 
         public DataTable MostrarUsuario()

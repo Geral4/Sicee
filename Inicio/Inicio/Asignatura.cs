@@ -43,6 +43,7 @@ namespace Inicio
         {
             CDAsignatura objAsignatura1 = new CDAsignatura();
             comboAsignaturaCarrera.DataSource= objAsignatura1.ListarCarrera();
+
             comboAsignaturaCarrera.DisplayMember = "Nombre";
             comboAsignaturaCarrera.ValueMember = "Clave";
 
@@ -60,8 +61,8 @@ namespace Inicio
                 objAsignatura.insertarAsignatura(
                     textAsignaturaNombre.Text,
                     textAsignaturaClave.Text,
-                    Convert.ToInt32(comboAsignaturaCarrera.SelectedValue),
-                    Convert.ToInt32( numericAsignatura.Value),
+                    comboAsignaturaCarrera.SelectedValue.ToString(),
+                    Convert.ToInt32(numericAsignatura.Value),
                     comboAsignaturaModalidad.Text
                     );
                 MessageBox.Show("Insertado Correctamente");

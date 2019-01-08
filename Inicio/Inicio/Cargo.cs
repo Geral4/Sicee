@@ -25,7 +25,7 @@ namespace Inicio
         {
             InitializeComponent();
             comboCargoDepartamento.Items.Add("Academico");
-            //comboCargoDepartamento.Items.Add("Administrativo");
+            comboCargoDepartamento.Items.Add("Administrativo");
 
         }
 

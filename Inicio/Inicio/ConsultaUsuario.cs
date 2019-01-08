@@ -64,27 +64,27 @@ namespace Inicio
                 MessageBox.Show("Seleccione una fila por favor");
         }
 
-        private void buttonCUsuarioGuardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                objUsuario4.editarUsuario2(comboCUsuarioNPersonal.Text, textCUsuarioUsuario.Text, textCUsuarioContraseña.Text, textCUsuarioRepetir.Text, comboCUsuarioAcceso.Text);
-                //editarUsuario(
-                //Convert.ToInt32(comboCUsuarioNPersonal.SelectedValue),
-                //textCUsuarioUsuario.Text,
-                //textCUsuarioUsuario.Text,
-                //textCUsuarioRepetir.Text,
-                //Convert.ToInt32(comboCUsuarioAcceso.SelectedValue),
-                //Convert.ToInt32(Id_Usuario)
-                //);
-                MessageBox.Show("Se edito Correctamente");
-                MostrarUsuario();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("No se puede editar: " + ex);
-            }
+        //private void buttonCUsuarioGuardar_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        objUsuario4.editarUsuario2(comboCUsuarioNPersonal.Text, textCUsuarioUsuario.Text, textCUsuarioContraseña.Text, textCUsuarioRepetir.Text, comboCUsuarioAcceso.Text);
+        //        //editarUsuario(
+        //        //Convert.ToInt32(comboCUsuarioNPersonal.SelectedValue),
+        //        //textCUsuarioUsuario.Text,
+        //        //textCUsuarioUsuario.Text,
+        //        //textCUsuarioRepetir.Text,
+        //        //Convert.ToInt32(comboCUsuarioAcceso.SelectedValue),
+        //        //Convert.ToInt32(Id_Usuario)
+        //        //);
+        //        MessageBox.Show("Se edito Correctamente");
+        //        MostrarUsuario();
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        MessageBox.Show("No se puede editar: " + ex);
+        //    }
 
-        }
+       // }
     }
 }

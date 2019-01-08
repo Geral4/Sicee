@@ -249,7 +249,7 @@
             this.buttonCUsuarioGuardar.TabIndex = 19;
             this.buttonCUsuarioGuardar.Text = "Guardar";
             this.buttonCUsuarioGuardar.UseVisualStyleBackColor = false;
-            this.buttonCUsuarioGuardar.Click += new System.EventHandler(this.buttonCUsuarioGuardar_Click);
+            //this.buttonCUsuarioGuardar.Click += new System.EventHandler(this.buttonCUsuarioGuardar_Click);
             // 
             // comboCUsuarioAcceso
             // 

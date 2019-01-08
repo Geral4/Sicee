@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelEmpleadoVertical = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonEmpleadoBuscar = new System.Windows.Forms.Button();
             this.textEmpleadoBuscar = new System.Windows.Forms.TextBox();
             this.labelEmpleadoBuscar = new System.Windows.Forms.Label();
             this.dataGridEmpleado = new System.Windows.Forms.DataGridView();
@@ -58,30 +56,15 @@
             this.textEmpleadoNombre = new System.Windows.Forms.TextBox();
             this.labelEmpleadoNombre = new System.Windows.Forms.Label();
             this.labeEmpleadoRegistro = new System.Windows.Forms.Label();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.empleadoTableAdapter = new Inicio.SiceeDataSetTableAdapters.EmpleadoTableAdapter();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nPersonalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelEmpleadoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleado)).BeginInit();
             this.panelEmpleadoVertical2.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.siceeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEmpleadoVertical
             // 
             this.panelEmpleadoVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelEmpleadoVertical.Controls.Add(this.label1);
-            this.panelEmpleadoVertical.Controls.Add(this.buttonEmpleadoBuscar);
             this.panelEmpleadoVertical.Controls.Add(this.textEmpleadoBuscar);
             this.panelEmpleadoVertical.Controls.Add(this.labelEmpleadoBuscar);
             this.panelEmpleadoVertical.Controls.Add(this.dataGridEmpleado);
@@ -102,25 +85,13 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "*Solo para consultas";
             // 
-            // buttonEmpleadoBuscar
-            // 
-            this.buttonEmpleadoBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonEmpleadoBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmpleadoBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEmpleadoBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonEmpleadoBuscar.Location = new System.Drawing.Point(418, 38);
-            this.buttonEmpleadoBuscar.Name = "buttonEmpleadoBuscar";
-            this.buttonEmpleadoBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonEmpleadoBuscar.TabIndex = 24;
-            this.buttonEmpleadoBuscar.Text = "Buscar";
-            this.buttonEmpleadoBuscar.UseVisualStyleBackColor = false;
-            // 
             // textEmpleadoBuscar
             // 
             this.textEmpleadoBuscar.Location = new System.Drawing.Point(274, 41);
             this.textEmpleadoBuscar.Name = "textEmpleadoBuscar";
             this.textEmpleadoBuscar.Size = new System.Drawing.Size(137, 20);
             this.textEmpleadoBuscar.TabIndex = 23;
+            this.textEmpleadoBuscar.TextChanged += new System.EventHandler(this.textEmpleadoBuscar_TextChanged);
             // 
             // labelEmpleadoBuscar
             // 
@@ -136,25 +107,13 @@
             // dataGridEmpleado
             // 
             this.dataGridEmpleado.AllowDrop = true;
-            this.dataGridEmpleado.AutoGenerateColumns = false;
             this.dataGridEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(72)))));
             this.dataGridEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idEmpleadoDataGridViewTextBoxColumn,
-            this.nPersonalDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoPDataGridViewTextBoxColumn,
-            this.apellidoMDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.sexoDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.cargoidDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn});
-            this.dataGridEmpleado.DataSource = this.empleadoBindingSource;
             this.dataGridEmpleado.Location = new System.Drawing.Point(14, 73);
             this.dataGridEmpleado.Name = "dataGridEmpleado";
             this.dataGridEmpleado.Size = new System.Drawing.Size(558, 253);
             this.dataGridEmpleado.TabIndex = 1;
+            this.dataGridEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpleado_CellContentClick);
             // 
             // labelEmpleadoLista
             // 
@@ -404,68 +363,6 @@
             this.labeEmpleadoRegistro.TabIndex = 0;
             this.labeEmpleadoRegistro.Text = "Registrar Empleado";
             // 
-            // 
-            // idEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Id_Empleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id_Empleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            this.idEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nPersonalDataGridViewTextBoxColumn
-            // 
-            this.nPersonalDataGridViewTextBoxColumn.DataPropertyName = "NPersonal";
-            this.nPersonalDataGridViewTextBoxColumn.HeaderText = "NPersonal";
-            this.nPersonalDataGridViewTextBoxColumn.Name = "nPersonalDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // apellidoPDataGridViewTextBoxColumn
-            // 
-            this.apellidoPDataGridViewTextBoxColumn.DataPropertyName = "ApellidoP";
-            this.apellidoPDataGridViewTextBoxColumn.HeaderText = "ApellidoP";
-            this.apellidoPDataGridViewTextBoxColumn.Name = "apellidoPDataGridViewTextBoxColumn";
-            // 
-            // apellidoMDataGridViewTextBoxColumn
-            // 
-            this.apellidoMDataGridViewTextBoxColumn.DataPropertyName = "ApellidoM";
-            this.apellidoMDataGridViewTextBoxColumn.HeaderText = "ApellidoM";
-            this.apellidoMDataGridViewTextBoxColumn.Name = "apellidoMDataGridViewTextBoxColumn";
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // sexoDataGridViewTextBoxColumn
-            // 
-            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
-            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
-            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // cargoidDataGridViewTextBoxColumn
-            // 
-            this.cargoidDataGridViewTextBoxColumn.DataPropertyName = "Cargo_id";
-            this.cargoidDataGridViewTextBoxColumn.HeaderText = "Cargo_id";
-            this.cargoidDataGridViewTextBoxColumn.Name = "cargoidDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,8 +380,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleado)).EndInit();
             this.panelEmpleadoVertical2.ResumeLayout(false);
             this.panelEmpleadoVertical2.PerformLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.siceeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,7 +387,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelEmpleadoVertical;
-        private System.Windows.Forms.Button buttonEmpleadoBuscar;
         private System.Windows.Forms.TextBox textEmpleadoBuscar;
         private System.Windows.Forms.Label labelEmpleadoBuscar;
         private System.Windows.Forms.DataGridView dataGridEmpleado;
@@ -520,8 +414,6 @@
         private System.Windows.Forms.ComboBox comboEmpleadoSexo;
         private System.Windows.Forms.Label labelEmpleadoSex;
         private System.Windows.Forms.Label label1;
-        //private Inicio.SiceeDataSet siceeDataSet;
-        private System.Windows.Forms.BindingSource empleadoBindingSource;
         //private Inicio.SiceeDataSetTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nPersonalDataGridViewTextBoxColumn;

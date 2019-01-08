@@ -35,7 +35,8 @@ namespace Inicio
             CDUsuario objUsuario1 = new CDUsuario();
             comboUsuarioNPersonal.DataSource = objUsuario1.ListarNPersonal();
             comboUsuarioNPersonal.DisplayMember = "NPersonal";
-            comboUsuarioNPersonal.ValueMember = "Npersonal";
+            comboUsuarioNPersonal.ValueMember = "Nombre";
+            textUsuarioNombre.Text = "";
         }
 
         private void buttonUsuarioGuardar_Click(object sender, EventArgs e)
@@ -43,7 +44,8 @@ namespace Inicio
             try
             {
                 objUsuario.insertarUsuario(
-                   Convert.ToInt32(comboUsuarioNPersonal.SelectedValue),
+                   comboUsuarioNPersonal.Text,
+                   comboUsuarioNPersonal.SelectedValue.ToString(),
                    textUsuarioUsuario.Text,
                    textUsuarioContraseña.Text,
                    textUsuarioRepetir.Text,
@@ -65,6 +67,9 @@ namespace Inicio
 
         private void comboUsuarioNPersonal_SelectedIndexChanged(object sender, EventArgs e)
         {
+            textUsuarioNombre.Text = "";
+            
+            textUsuarioNombre.Text = "Nombre:    " + comboUsuarioNPersonal.SelectedValue.ToString();
 
         }
 

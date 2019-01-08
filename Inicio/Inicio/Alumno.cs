@@ -84,7 +84,7 @@ namespace Inicio
                    textAlumnoNControl.Text,
                    textAlumnoCurp.Text,
                    comboAlumnoSexo.Text,
-                   Convert.ToInt32(comboAlumnoCarrera.SelectedValue),
+                   comboAlumnoCarrera.SelectedValue.ToString(),
                    comboAlumnoSemestre.Text,
                    textAlumnoDireccion.Text,
                    textAlumnoTelefono.Text
@@ -106,4 +106,3 @@ namespace Inicio
         }
     }
 }
-

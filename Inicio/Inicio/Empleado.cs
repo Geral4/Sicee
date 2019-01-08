@@ -15,6 +15,11 @@ namespace Inicio
     public partial class Empleado : Form
     {
        CDEmpleado objEmpleado = new CDEmpleado();
+        private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
+            "Initial Catalog=Sicee;Data Source=localhost";
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        private string filtrado = "";
         public Empleado()
         {
             InitializeComponent();
@@ -52,7 +57,7 @@ namespace Inicio
             CDEmpleado objEmpleado1 = new CDEmpleado();
             comboEmpleadoCargo.DataSource = objEmpleado1.ListarCargo();
             comboEmpleadoCargo.DisplayMember = "Nombre";
-            comboEmpleadoCargo.ValueMember = "Clave";
+            comboEmpleadoCargo.DisplayMember = "Clave";
         }
 
         private void buttonEmpleadoGuardar_Click(object sender, EventArgs e)
@@ -67,7 +72,7 @@ namespace Inicio
                     textEmpleadoTelefono.Text,
                     comboEmpleadoSexo.Text,
                     textEmpleadoDireccion.Text,
-                    Convert.ToInt32(comboEmpleadoCargo.SelectedValue),
+                    comboEmpleadoCargo.Text,
                     textEmpleadoEmail.Text
                     );
                 MessageBox.Show("Insertado Correctamente");
@@ -86,5 +91,36 @@ namespace Inicio
             dataGridEmpleado.DataSource = objEmpleado2.MostrarEmpleado();
         }
 
+        private void textEmpleadoBuscar_TextChanged(object sender, EventArgs e)
+        {
+            filtrado = textEmpleadoBuscar.Text;
+            dataGridEmpleado.DataSource = bindingSource1;            
+            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like " +
+                "'" + filtrado +   "%' or ApellidoP like '" +filtrado +  "%' or ApellidoM like '" + filtrado +  "%';");
+
+        }
+        private void GetData(string sql)
+        {
+            try
+            {
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.Fill(table);
+                bindingSource1.DataSource = table;
+                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción: " + ex);
+            }
+
+        }
+
+        private void dataGridEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

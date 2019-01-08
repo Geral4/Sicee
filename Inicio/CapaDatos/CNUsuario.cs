@@ -34,12 +34,12 @@ namespace CapaDatos
             return Loguear;
         }
 
-        public void editarUsuario2(string nPersonal_id, string usuario,
-            string contrasena, string repetirContra, string acceso) //            string Id_Usuario)
-        {
-            objDato.editarUsuario(Convert.ToInt32(nPersonal_id), usuario, contrasena, repetirContra, acceso); //             Convert.ToInt32(Id_Usuario));
+        //public void editarUsuario2(string nPersonal_id, string usuario,
+        //    string contrasena, string repetirContra, string acceso) //            string Id_Usuario)
+        //{
+        //    objDato.editarUsuario(Convert.ToInt32(nPersonal_id), usuario, contrasena, repetirContra, acceso); //             Convert.ToInt32(Id_Usuario));
 
-        }
+        //}
 
     }
 }

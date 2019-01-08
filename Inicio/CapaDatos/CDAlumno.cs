@@ -28,7 +28,7 @@ namespace CapaDatos
         }
 
         public void insertarAlumno (string nombre, string apellidoP, string apellidoM, string nControl,
-            string curp, string sexo, int carrera, string semestre, string direccion, string telefono)
+            string curp, string sexo, string carrera, string semestre, string direccion, string telefono)
         {
             Coman.Connection = Conexion.AbrirConexion();
             Coman.CommandText = "InsertarAlumno";

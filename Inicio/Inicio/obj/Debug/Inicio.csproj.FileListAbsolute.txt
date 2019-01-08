@@ -243,3 +243,5 @@ D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.csproj.CoreCompileInputs.ca
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComplete
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.exe
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.pdb
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.EditarCargo.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.EditarEmpleado.resources
