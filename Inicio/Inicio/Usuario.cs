@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
+using System.Data.SqlClient;
 
 namespace Inicio
 {
@@ -16,6 +17,14 @@ namespace Inicio
         {
 
         CDUsuario objUsuario = new CDUsuario();
+
+
+        private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
+            "Initial Catalog=Sicee;Data Source=localhost";
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        private string filtrado = "";
+
         public Usuario()
         {
             InitializeComponent();
@@ -70,6 +79,33 @@ namespace Inicio
             textUsuarioNombre.Text = "";
             
             textUsuarioNombre.Text = "Nombre:    " + comboUsuarioNPersonal.SelectedValue.ToString();
+
+        }
+
+        private void textUsuarioBuscar_TextChanged(object sender, EventArgs e)
+        {
+            filtrado = textUsuarioBuscar.Text;
+            dataGridUsuario.DataSource = bindingSource1;
+            GetData("select * from Usuario where NPersonal_id like '" + filtrado + "%' or Nombre like '" + filtrado + "%' or Usuario like '" +filtrado + "%';");
+
+        }
+
+        private void GetData(string sql)
+        {
+            try
+            {
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.Fill(table);
+                bindingSource1.DataSource = table;
+                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción: " + ex);
+            }
 
         }
 

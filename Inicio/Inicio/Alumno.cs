@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
-using System.Data.SqlClient;
 
 namespace Inicio
 {
     public partial class Alumno : Form
     {
         CDAlumno objAlumno = new CDAlumno();
+
+        CDCargo objCargo = new CDCargo();
+        private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
+            "Initial Catalog=Sicee;Data Source=localhost";
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        private string filtrado = "";
+
         public Alumno()
         {
             InitializeComponent();
@@ -103,6 +111,34 @@ namespace Inicio
         {
             CDAlumno objAlumno2 = new CDAlumno();
             dataGridAlumno.DataSource = objAlumno2.MostrarAlumno();
+        }
+
+        private void textAlumnoBuscar_TextChanged(object sender, EventArgs e)
+        {
+            filtrado = textAlumnoBuscar.Text;
+            dataGridAlumno.DataSource = bindingSource1;
+            GetData("select * from Alumno where NControl like '" + filtrado + "%' or Nombre like '" +
+                   filtrado + "%' or ApellidoP like '" + filtrado + "%' or ApellidoM like '" + filtrado + "%';");
+
+        }
+
+        private void GetData(string sql)
+        {
+            try
+            {
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.Fill(table);
+                bindingSource1.DataSource = table;
+                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción: " + ex);
+            }
+
         }
     }
 }

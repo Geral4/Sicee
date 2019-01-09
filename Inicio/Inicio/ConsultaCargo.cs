@@ -41,8 +41,8 @@ namespace Inicio
 
         private void buttonCCargoEditar_Click(object sender, EventArgs e)
         {
-            EditarCargo formCargo = new EditarCargo();
-            formCargo.Show();
+            //EditarCargo formCargo = new EditarCargo();
+            //formCargo.Show();
 
            
         }

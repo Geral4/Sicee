@@ -15,11 +15,13 @@ namespace Inicio
     public partial class Empleado : Form
     {
        CDEmpleado objEmpleado = new CDEmpleado();
+
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
             "Initial Catalog=Sicee;Data Source=localhost";
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "";
+
         public Empleado()
         {
             InitializeComponent();
@@ -95,8 +97,8 @@ namespace Inicio
         {
             filtrado = textEmpleadoBuscar.Text;
             dataGridEmpleado.DataSource = bindingSource1;            
-            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like " +
-                "'" + filtrado +   "%' or ApellidoP like '" +filtrado +  "%' or ApellidoM like '" + filtrado +  "%';");
+            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like '" +
+                  filtrado +   "%' or ApellidoP like '" +filtrado +  "%' or ApellidoM like '" + filtrado +  "%';");
 
         }
         private void GetData(string sql)

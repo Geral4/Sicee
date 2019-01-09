@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using CapaDatos;
 
 namespace Inicio
@@ -16,10 +16,14 @@ namespace Inicio
     {
         CDEmpleado objEmpleado2 = new CDEmpleado();
         CDConexion conexion = new CDConexion();
+
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
-            "Initial Catalog=Sicee;Data Source=localhost";
+           "Initial Catalog=Sicee;Data Source=localhost";
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        private DataTable table = new DataTable("Cargos");
+        private string filtrado = "", sql ="";
+
         //PruebaSet dataSet = new PruebaSet();
         // CNEmpleado objEmple2=new CNEmpleado();
         public ConsultaEmpleado()
@@ -34,8 +38,20 @@ namespace Inicio
         private void ConsultaEmpleado_Load(object sender, EventArgs e)
         {
 
+
             dataGridCEmpleado.DataSource = bindingSource1;
+            try
+            {
+                columCargo.DataSource = ObtenerAulas();
+                columCargo.DisplayMember = "Nombre";
+                columCargo.ValueMember = "Clave";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "Excepción producida");
+            }
             GetData("select * from Empleado");
+
             //conexion.CerrarConexion();
             //GetData(dataAdapter.SelectCommand.CommandText);
             //MostrarEmpleado();
@@ -43,19 +59,25 @@ namespace Inicio
 
         private void buttonCEmpleadoEditar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    this.Validate();
-            //    bindingSource1.EndEdit();
-            //    dataAdapter.Update((DataTable)bindingSource1.DataSource);
-            //    GetData(dataAdapter.SelectCommand.CommandText);
-            //}
-            //catch (SqlException s)
-            //{
-            //    MessageBox.Show("" + s, "Verifica");
-            //}
-            EditarEmpleado formEmpleado = new EditarEmpleado();
-            formEmpleado.Show();
+            try
+            {
+                if (dataGridCEmpleado.RowCount == 2)
+                {
+                    this.Validate();
+                    bindingSource1.EndEdit();
+                    dataAdapter.Update((DataTable)bindingSource1.DataSource);
+                    GetData(dataAdapter.SelectCommand.CommandText);
+                }
+                else
+                {
+                    MessageBox.Show("Solo puedes editar un registro a la vez", "Atenctión");
+                }
+            }
+            catch (SqlException s)
+            {
+                MessageBox.Show("" + s, "Verifica");
+            }
+          
         }
 
         private void MostrarEmpleado()
@@ -86,6 +108,30 @@ namespace Inicio
 
         }
 
+        private DataTable ObtenerAulas()
+        {
+            try
+            {
+                sql = "select Clave, Nombre from Cargo order by Nombre";
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                dataAdapter.Fill(table);
+            }
+            catch (SqlException sq)
+            {
+                MessageBox.Show("" + sq, "Excepción producida");
+            }
+            return table;
+        }
+
+        private void textCEmpleadoBuscar_TextChanged(object sender, EventArgs e)
+        {
+            filtrado = textCEmpleadoBuscar.Text;
+            dataGridCEmpleado.DataSource = bindingSource1;
+            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like " +
+               "'" + filtrado + "%' or ApellidoP like '" + filtrado + "%' or ApellidoM like '" + filtrado + "%';");
+
+        }
+
         private void dataGridCEmpleado_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -106,9 +152,28 @@ namespace Inicio
 
         }
 
+        private void buttonCEmpleadoEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridCEmpleado.Rows.Remove(dataGridCEmpleado.CurrentRow);
+                //this.Validate();
+                bindingSource1.EndEdit();
+                dataAdapter.Update((DataTable)bindingSource1.DataSource);
+                GetData(dataAdapter.SelectCommand.CommandText);
+
+            }
+            catch (SqlException s)
+            {
+                MessageBox.Show("" + s, "Verifica");
+            }
+        }
+
         private void dataGridCEmpleado_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
 
         }
+
+        
     }
 }

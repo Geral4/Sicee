@@ -43,7 +43,6 @@
             this.dataGridEdificio = new System.Windows.Forms.DataGridView();
             this.labelEdificioBuscar = new System.Windows.Forms.Label();
             this.textEdificioBuscar = new System.Windows.Forms.TextBox();
-            this.buttonEdificioBuscar = new System.Windows.Forms.Button();
             this.panelEdificioVertical = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelEdificioVertical2.SuspendLayout();
@@ -208,25 +207,12 @@
             this.textEdificioBuscar.Name = "textEdificioBuscar";
             this.textEdificioBuscar.Size = new System.Drawing.Size(120, 20);
             this.textEdificioBuscar.TabIndex = 23;
-            // 
-            // buttonEdificioBuscar
-            // 
-            this.buttonEdificioBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonEdificioBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdificioBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdificioBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonEdificioBuscar.Location = new System.Drawing.Point(376, 38);
-            this.buttonEdificioBuscar.Name = "buttonEdificioBuscar";
-            this.buttonEdificioBuscar.Size = new System.Drawing.Size(75, 26);
-            this.buttonEdificioBuscar.TabIndex = 24;
-            this.buttonEdificioBuscar.Text = "Buscar";
-            this.buttonEdificioBuscar.UseVisualStyleBackColor = false;
+            this.textEdificioBuscar.TextChanged += new System.EventHandler(this.textEdificioBuscar_TextChanged);
             // 
             // panelEdificioVertical
             // 
             this.panelEdificioVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelEdificioVertical.Controls.Add(this.label1);
-            this.panelEdificioVertical.Controls.Add(this.buttonEdificioBuscar);
             this.panelEdificioVertical.Controls.Add(this.textEdificioBuscar);
             this.panelEdificioVertical.Controls.Add(this.labelEdificioBuscar);
             this.panelEdificioVertical.Controls.Add(this.dataGridEdificio);
@@ -285,7 +271,6 @@
         private System.Windows.Forms.DataGridView dataGridEdificio;
         private System.Windows.Forms.Label labelEdificioBuscar;
         private System.Windows.Forms.TextBox textEdificioBuscar;
-        private System.Windows.Forms.Button buttonEdificioBuscar;
         private System.Windows.Forms.Panel panelEdificioVertical;
         private System.Windows.Forms.Label label1;
     }

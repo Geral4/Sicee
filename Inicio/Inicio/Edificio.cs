@@ -1,13 +1,14 @@
-﻿using CapaDatos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 
 namespace Inicio
 {
@@ -17,6 +18,14 @@ namespace Inicio
         private string clave = "";
         private CDAula edificioAula = new CDAula();
         CDEdificio objEdificio = new CDEdificio();
+
+
+        CDCargo objCargo = new CDCargo();
+        private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
+            "Initial Catalog=Sicee;Data Source=localhost";
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        private string filtrado = "";
 
         public Edificio()
         {
@@ -73,6 +82,9 @@ namespace Inicio
             dataGridEdificio.DataSource = objEdificio.MostrarEdificio();
         }
 
-
+        private void textEdificioBuscar_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

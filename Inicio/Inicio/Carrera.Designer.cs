@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelCarreraVertical = new System.Windows.Forms.Panel();
-            this.buttonCarreraBuscar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.textCarreraBuscar = new System.Windows.Forms.TextBox();
             this.labelCarreraBuscar = new System.Windows.Forms.Label();
             this.dataGridViewCarrera = new System.Windows.Forms.DataGridView();
@@ -44,7 +44,6 @@
             this.textCarreraClave = new System.Windows.Forms.TextBox();
             this.labelCarreraClave = new System.Windows.Forms.Label();
             this.labelCarreraRegistro = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelCarreraVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarrera)).BeginInit();
             this.panelCarreraVertical2.SuspendLayout();
@@ -54,7 +53,6 @@
             // 
             this.panelCarreraVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelCarreraVertical.Controls.Add(this.label1);
-            this.panelCarreraVertical.Controls.Add(this.buttonCarreraBuscar);
             this.panelCarreraVertical.Controls.Add(this.textCarreraBuscar);
             this.panelCarreraVertical.Controls.Add(this.labelCarreraBuscar);
             this.panelCarreraVertical.Controls.Add(this.dataGridViewCarrera);
@@ -65,32 +63,31 @@
             this.panelCarreraVertical.Size = new System.Drawing.Size(468, 252);
             this.panelCarreraVertical.TabIndex = 2;
             // 
-            // buttonCarreraBuscar
+            // label1
             // 
-            this.buttonCarreraBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonCarreraBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCarreraBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCarreraBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonCarreraBuscar.Location = new System.Drawing.Point(275, 40);
-            this.buttonCarreraBuscar.Name = "buttonCarreraBuscar";
-            this.buttonCarreraBuscar.Size = new System.Drawing.Size(75, 26);
-            this.buttonCarreraBuscar.TabIndex = 24;
-            this.buttonCarreraBuscar.Text = "Buscar";
-            this.buttonCarreraBuscar.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightCoral;
+            this.label1.Location = new System.Drawing.Point(6, 226);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 20);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "*Solo para consultas";
             // 
             // textCarreraBuscar
             // 
-            this.textCarreraBuscar.Location = new System.Drawing.Point(139, 43);
+            this.textCarreraBuscar.Location = new System.Drawing.Point(155, 43);
             this.textCarreraBuscar.Name = "textCarreraBuscar";
-            this.textCarreraBuscar.Size = new System.Drawing.Size(120, 20);
+            this.textCarreraBuscar.Size = new System.Drawing.Size(163, 20);
             this.textCarreraBuscar.TabIndex = 23;
+            this.textCarreraBuscar.TextChanged += new System.EventHandler(this.textCarreraBuscar_TextChanged);
             // 
             // labelCarreraBuscar
             // 
             this.labelCarreraBuscar.AutoSize = true;
             this.labelCarreraBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCarreraBuscar.ForeColor = System.Drawing.Color.Black;
-            this.labelCarreraBuscar.Location = new System.Drawing.Point(79, 42);
+            this.labelCarreraBuscar.Location = new System.Drawing.Point(95, 42);
             this.labelCarreraBuscar.Name = "labelCarreraBuscar";
             this.labelCarreraBuscar.Size = new System.Drawing.Size(57, 18);
             this.labelCarreraBuscar.TabIndex = 21;
@@ -228,17 +225,6 @@
             this.labelCarreraRegistro.TabIndex = 0;
             this.labelCarreraRegistro.Text = "Registrar carrera";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(6, 226);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "*Solo para consultas";
-            // 
             // Carrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,7 +248,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelCarreraVertical;
-        private System.Windows.Forms.Button buttonCarreraBuscar;
         private System.Windows.Forms.TextBox textCarreraBuscar;
         private System.Windows.Forms.Label labelCarreraBuscar;
         private System.Windows.Forms.DataGridView dataGridViewCarrera;

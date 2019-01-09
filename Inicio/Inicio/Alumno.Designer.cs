@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAlumnoVertical = new System.Windows.Forms.Panel();
-            this.buttonAlumnoBuscar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.textAlumnoBuscar = new System.Windows.Forms.TextBox();
             this.labelAlumnoBuscar = new System.Windows.Forms.Label();
             this.dataGridAlumno = new System.Windows.Forms.DataGridView();
@@ -58,7 +58,6 @@
             this.textAlumnoNombre = new System.Windows.Forms.TextBox();
             this.labelAlumnoNombre = new System.Windows.Forms.Label();
             this.labelAlumnoRegistro = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelAlumnoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlumno)).BeginInit();
             this.panelAlumnoVertical2.SuspendLayout();
@@ -68,7 +67,6 @@
             // 
             this.panelAlumnoVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelAlumnoVertical.Controls.Add(this.label1);
-            this.panelAlumnoVertical.Controls.Add(this.buttonAlumnoBuscar);
             this.panelAlumnoVertical.Controls.Add(this.textAlumnoBuscar);
             this.panelAlumnoVertical.Controls.Add(this.labelAlumnoBuscar);
             this.panelAlumnoVertical.Controls.Add(this.dataGridAlumno);
@@ -79,18 +77,16 @@
             this.panelAlumnoVertical.Size = new System.Drawing.Size(575, 370);
             this.panelAlumnoVertical.TabIndex = 1;
             // 
-            // buttonAlumnoBuscar
+            // label1
             // 
-            this.buttonAlumnoBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonAlumnoBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAlumnoBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAlumnoBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonAlumnoBuscar.Location = new System.Drawing.Point(417, 38);
-            this.buttonAlumnoBuscar.Name = "buttonAlumnoBuscar";
-            this.buttonAlumnoBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonAlumnoBuscar.TabIndex = 24;
-            this.buttonAlumnoBuscar.Text = "Buscar";
-            this.buttonAlumnoBuscar.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightCoral;
+            this.label1.Location = new System.Drawing.Point(6, 335);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 20);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "*Solo para consultas";
             // 
             // textAlumnoBuscar
             // 
@@ -98,6 +94,7 @@
             this.textAlumnoBuscar.Name = "textAlumnoBuscar";
             this.textAlumnoBuscar.Size = new System.Drawing.Size(137, 20);
             this.textAlumnoBuscar.TabIndex = 23;
+            this.textAlumnoBuscar.TextChanged += new System.EventHandler(this.textAlumnoBuscar_TextChanged);
             // 
             // labelAlumnoBuscar
             // 
@@ -386,17 +383,6 @@
             this.labelAlumnoRegistro.TabIndex = 0;
             this.labelAlumnoRegistro.Text = "Registrar Alumno";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(6, 335);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "*Solo para consultas";
-            // 
             // Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,7 +407,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelAlumnoVertical;
-        private System.Windows.Forms.Button buttonAlumnoBuscar;
         private System.Windows.Forms.TextBox textAlumnoBuscar;
         private System.Windows.Forms.Label labelAlumnoBuscar;
         private System.Windows.Forms.DataGridView dataGridAlumno;

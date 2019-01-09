@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAsignaturaVertical = new System.Windows.Forms.Panel();
-            this.buttonAsignaturaBuscar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.textAsignaturaBuscar = new System.Windows.Forms.TextBox();
             this.labelAsignaturaBuscar = new System.Windows.Forms.Label();
             this.dataGridViewAsignatura = new System.Windows.Forms.DataGridView();
@@ -48,7 +48,6 @@
             this.textAsignaturaNombre = new System.Windows.Forms.TextBox();
             this.labelAsignaturaNombre = new System.Windows.Forms.Label();
             this.labelAsignaturaRegistro = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelAsignaturaVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsignatura)).BeginInit();
             this.panelAsignaturaVertical2.SuspendLayout();
@@ -59,7 +58,6 @@
             // 
             this.panelAsignaturaVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelAsignaturaVertical.Controls.Add(this.label1);
-            this.panelAsignaturaVertical.Controls.Add(this.buttonAsignaturaBuscar);
             this.panelAsignaturaVertical.Controls.Add(this.textAsignaturaBuscar);
             this.panelAsignaturaVertical.Controls.Add(this.labelAsignaturaBuscar);
             this.panelAsignaturaVertical.Controls.Add(this.dataGridViewAsignatura);
@@ -71,18 +69,16 @@
             this.panelAsignaturaVertical.TabIndex = 2;
             this.panelAsignaturaVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAsignaturaVertical_Paint);
             // 
-            // buttonAsignaturaBuscar
+            // label1
             // 
-            this.buttonAsignaturaBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonAsignaturaBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAsignaturaBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAsignaturaBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonAsignaturaBuscar.Location = new System.Drawing.Point(393, 35);
-            this.buttonAsignaturaBuscar.Name = "buttonAsignaturaBuscar";
-            this.buttonAsignaturaBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonAsignaturaBuscar.TabIndex = 24;
-            this.buttonAsignaturaBuscar.Text = "Buscar";
-            this.buttonAsignaturaBuscar.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightCoral;
+            this.label1.Location = new System.Drawing.Point(5, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "*Solo para consultas";
             // 
             // textAsignaturaBuscar
             // 
@@ -90,6 +86,7 @@
             this.textAsignaturaBuscar.Name = "textAsignaturaBuscar";
             this.textAsignaturaBuscar.Size = new System.Drawing.Size(137, 20);
             this.textAsignaturaBuscar.TabIndex = 23;
+            this.textAsignaturaBuscar.TextChanged += new System.EventHandler(this.textAsignaturaBuscar_TextChanged);
             // 
             // labelAsignaturaBuscar
             // 
@@ -277,17 +274,6 @@
             this.labelAsignaturaRegistro.Text = "Registrar Asignatura";
             this.labelAsignaturaRegistro.Click += new System.EventHandler(this.labelAsignaturaRegistro_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(5, 231);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 20);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "*Solo para consultas";
-            // 
             // Asignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,7 +298,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelAsignaturaVertical;
-        private System.Windows.Forms.Button buttonAsignaturaBuscar;
         private System.Windows.Forms.TextBox textAsignaturaBuscar;
         private System.Windows.Forms.Label labelAsignaturaBuscar;
         private System.Windows.Forms.DataGridView dataGridViewAsignatura;

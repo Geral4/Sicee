@@ -30,7 +30,6 @@
         {
             this.panelUsuarioVertical = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonUsuarioBuscar = new System.Windows.Forms.Button();
             this.textUsuarioBuscar = new System.Windows.Forms.TextBox();
             this.labelUsuarioBuscar = new System.Windows.Forms.Label();
             this.dataGridUsuario = new System.Windows.Forms.DataGridView();
@@ -59,7 +58,6 @@
             // 
             this.panelUsuarioVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelUsuarioVertical.Controls.Add(this.label1);
-            this.panelUsuarioVertical.Controls.Add(this.buttonUsuarioBuscar);
             this.panelUsuarioVertical.Controls.Add(this.textUsuarioBuscar);
             this.panelUsuarioVertical.Controls.Add(this.labelUsuarioBuscar);
             this.panelUsuarioVertical.Controls.Add(this.dataGridUsuario);
@@ -81,32 +79,20 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "*Solo para consultas";
             // 
-            // buttonUsuarioBuscar
-            // 
-            this.buttonUsuarioBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonUsuarioBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUsuarioBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUsuarioBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonUsuarioBuscar.Location = new System.Drawing.Point(417, 32);
-            this.buttonUsuarioBuscar.Name = "buttonUsuarioBuscar";
-            this.buttonUsuarioBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonUsuarioBuscar.TabIndex = 24;
-            this.buttonUsuarioBuscar.Text = "Buscar";
-            this.buttonUsuarioBuscar.UseVisualStyleBackColor = false;
-            // 
             // textUsuarioBuscar
             // 
-            this.textUsuarioBuscar.Location = new System.Drawing.Point(274, 37);
+            this.textUsuarioBuscar.Location = new System.Drawing.Point(310, 36);
             this.textUsuarioBuscar.Name = "textUsuarioBuscar";
-            this.textUsuarioBuscar.Size = new System.Drawing.Size(137, 20);
+            this.textUsuarioBuscar.Size = new System.Drawing.Size(170, 20);
             this.textUsuarioBuscar.TabIndex = 23;
+            this.textUsuarioBuscar.TextChanged += new System.EventHandler(this.textUsuarioBuscar_TextChanged);
             // 
             // labelUsuarioBuscar
             // 
             this.labelUsuarioBuscar.AutoSize = true;
             this.labelUsuarioBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuarioBuscar.ForeColor = System.Drawing.Color.Black;
-            this.labelUsuarioBuscar.Location = new System.Drawing.Point(219, 35);
+            this.labelUsuarioBuscar.Location = new System.Drawing.Point(247, 36);
             this.labelUsuarioBuscar.Name = "labelUsuarioBuscar";
             this.labelUsuarioBuscar.Size = new System.Drawing.Size(57, 18);
             this.labelUsuarioBuscar.TabIndex = 21;
@@ -332,7 +318,6 @@
         private System.Windows.Forms.Button buttonUsuarioGuardar;
         private System.Windows.Forms.Button buttonUsuarioCancelar;
         private System.Windows.Forms.DataGridView dataGridUsuario;
-        private System.Windows.Forms.Button buttonUsuarioBuscar;
         private System.Windows.Forms.TextBox textUsuarioBuscar;
         private System.Windows.Forms.Label labelUsuarioBuscar;
         private System.Windows.Forms.TextBox textUsuarioRepetir;
