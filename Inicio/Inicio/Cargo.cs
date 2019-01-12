@@ -41,13 +41,21 @@ namespace Inicio
 
         private void buttonCargoGuardar_Click(object sender, EventArgs e)
         {
-            objCargo.insertarCargo(
+            try
+            {
+                objCargo.insertarCargo(
                 textCargoClave.Text,
                 textCargoNombre.Text,
                 textCargoDescripcion.Text,
                 comboCargoDepartamento.Text);
             MessageBox.Show("Insertado Correctamente");
             MostrarCargo();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puede insertar los datos por: " + ex);
+            }
         }
 
         private void MostrarCargo()
@@ -95,11 +103,7 @@ namespace Inicio
             //}
 
         }
-
-        private void dataGridViewCargo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void GetData(string sql)
         {

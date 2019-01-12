@@ -30,7 +30,6 @@
         {
             this.panelInmuebleVertical = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonInmuebleBuscar = new System.Windows.Forms.Button();
             this.textInmuebleBuscar = new System.Windows.Forms.TextBox();
             this.labelInmuebleBuscar = new System.Windows.Forms.Label();
             this.dataGridInmueble = new System.Windows.Forms.DataGridView();
@@ -63,7 +62,6 @@
             // 
             this.panelInmuebleVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelInmuebleVertical.Controls.Add(this.label1);
-            this.panelInmuebleVertical.Controls.Add(this.buttonInmuebleBuscar);
             this.panelInmuebleVertical.Controls.Add(this.textInmuebleBuscar);
             this.panelInmuebleVertical.Controls.Add(this.labelInmuebleBuscar);
             this.panelInmuebleVertical.Controls.Add(this.dataGridInmueble);
@@ -85,25 +83,13 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "*Solo para consultas";
             // 
-            // buttonInmuebleBuscar
-            // 
-            this.buttonInmuebleBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonInmuebleBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonInmuebleBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInmuebleBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonInmuebleBuscar.Location = new System.Drawing.Point(417, 38);
-            this.buttonInmuebleBuscar.Name = "buttonInmuebleBuscar";
-            this.buttonInmuebleBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonInmuebleBuscar.TabIndex = 24;
-            this.buttonInmuebleBuscar.Text = "Buscar";
-            this.buttonInmuebleBuscar.UseVisualStyleBackColor = false;
-            // 
             // textInmuebleBuscar
             // 
             this.textInmuebleBuscar.Location = new System.Drawing.Point(274, 41);
             this.textInmuebleBuscar.Name = "textInmuebleBuscar";
             this.textInmuebleBuscar.Size = new System.Drawing.Size(137, 20);
             this.textInmuebleBuscar.TabIndex = 23;
+            this.textInmuebleBuscar.TextChanged += new System.EventHandler(this.textInmuebleBuscar_TextChanged);
             // 
             // labelInmuebleBuscar
             // 
@@ -368,7 +354,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelInmuebleVertical;
-        private System.Windows.Forms.Button buttonInmuebleBuscar;
         private System.Windows.Forms.TextBox textInmuebleBuscar;
         private System.Windows.Forms.Label labelInmuebleBuscar;
         private System.Windows.Forms.DataGridView dataGridInmueble;

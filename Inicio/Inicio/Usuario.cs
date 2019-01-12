@@ -86,7 +86,15 @@ namespace Inicio
         {
             filtrado = textUsuarioBuscar.Text;
             dataGridUsuario.DataSource = bindingSource1;
-            GetData("select * from Usuario where NPersonal_id like '" + filtrado + "%' or Nombre like '" + filtrado + "%' or Usuario like '" +filtrado + "%';");
+
+            string consulta = "select usu.NPersonal_id, (emp.ApellidoP + ' ' + emp.ApellidoM + ' ' + emp.Nombre) " +
+                "'Nombre Empleado', usu.Usuario, usu.Contrasena, usu.Acceso  from Empleado emp left outer join " +
+                "Usuario usu on emp.NPersonal = usu.NPersonal_id where usu.NPersonal_id like '" + filtrado + "%' " +
+                "or emp.ApellidoP like '" + filtrado + "%' or emp.ApellidoM like '"+filtrado+"%'  or emp.Nombre like '"+ 
+                filtrado +"%'or usu.Usuario like '" + filtrado + "%';";
+            Console.WriteLine(consulta);
+            GetData(consulta);
+            //GetData("select * from Usuario where NPersonal_id like '" + filtrado + "%' or Nombre like '" + filtrado + "%' or Usuario like '" +filtrado + "%';");
 
         }
 

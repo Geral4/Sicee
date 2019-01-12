@@ -59,7 +59,7 @@ namespace Inicio
             CDEmpleado objEmpleado1 = new CDEmpleado();
             comboEmpleadoCargo.DataSource = objEmpleado1.ListarCargo();
             comboEmpleadoCargo.DisplayMember = "Nombre";
-            comboEmpleadoCargo.DisplayMember = "Clave";
+            comboEmpleadoCargo.ValueMember = "Clave";
         }
 
         private void buttonEmpleadoGuardar_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace Inicio
                     textEmpleadoTelefono.Text,
                     comboEmpleadoSexo.Text,
                     textEmpleadoDireccion.Text,
-                    comboEmpleadoCargo.Text,
+                    comboEmpleadoCargo.SelectedValue.ToString(),
                     textEmpleadoEmail.Text
                     );
                 MessageBox.Show("Insertado Correctamente");

@@ -132,7 +132,7 @@
             // pictureConsultasPrestamo
             // 
             this.pictureConsultasPrestamo.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasPrestamo.Image")));
-            this.pictureConsultasPrestamo.Location = new System.Drawing.Point(236, 357);
+            this.pictureConsultasPrestamo.Location = new System.Drawing.Point(392, 354);
             this.pictureConsultasPrestamo.Name = "pictureConsultasPrestamo";
             this.pictureConsultasPrestamo.Size = new System.Drawing.Size(148, 85);
             this.pictureConsultasPrestamo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,7 +149,7 @@
             this.buttonConsultaPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaPrestamo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaPrestamo.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaPrestamo.Location = new System.Drawing.Point(261, 441);
+            this.buttonConsultaPrestamo.Location = new System.Drawing.Point(417, 438);
             this.buttonConsultaPrestamo.Name = "buttonConsultaPrestamo";
             this.buttonConsultaPrestamo.Size = new System.Drawing.Size(100, 31);
             this.buttonConsultaPrestamo.TabIndex = 39;
@@ -167,7 +167,7 @@
             this.buttonConsultaAsignatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaAsignatura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaAsignatura.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaAsignatura.Location = new System.Drawing.Point(465, 448);
+            this.buttonConsultaAsignatura.Location = new System.Drawing.Point(168, 438);
             this.buttonConsultaAsignatura.Name = "buttonConsultaAsignatura";
             this.buttonConsultaAsignatura.Size = new System.Drawing.Size(110, 31);
             this.buttonConsultaAsignatura.TabIndex = 37;
@@ -196,7 +196,7 @@
             // pictureConsultasAsignatura
             // 
             this.pictureConsultasAsignatura.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasAsignatura.Image")));
-            this.pictureConsultasAsignatura.Location = new System.Drawing.Point(448, 357);
+            this.pictureConsultasAsignatura.Location = new System.Drawing.Point(151, 347);
             this.pictureConsultasAsignatura.Name = "pictureConsultasAsignatura";
             this.pictureConsultasAsignatura.Size = new System.Drawing.Size(148, 85);
             this.pictureConsultasAsignatura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

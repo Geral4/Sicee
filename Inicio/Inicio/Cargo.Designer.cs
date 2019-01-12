@@ -111,7 +111,6 @@
             this.dataGridViewCargo.Name = "dataGridViewCargo";
             this.dataGridViewCargo.Size = new System.Drawing.Size(584, 178);
             this.dataGridViewCargo.TabIndex = 1;
-            this.dataGridViewCargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCargo_CellContentClick);
             // 
             // labelCargoLista
             // 

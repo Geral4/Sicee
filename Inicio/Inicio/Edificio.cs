@@ -84,7 +84,28 @@ namespace Inicio
 
         private void textEdificioBuscar_TextChanged(object sender, EventArgs e)
         {
-            
+            filtrado = textEdificioBuscar.Text;
+            dataGridEdificio.DataSource = bindingSource1;
+            GetData("select * from Edificio where Clave like '" + filtrado + "%' or NAulas like '" +filtrado + "%' or Nombre like '" + filtrado + "%';");
+
+        }
+        private void GetData(string sql)
+        {
+            try
+            {
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.Fill(table);
+                bindingSource1.DataSource = table;
+                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción: " + ex);
+            }
+
         }
     }
 }

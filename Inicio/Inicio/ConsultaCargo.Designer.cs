@@ -35,6 +35,7 @@
             this.buttonCCargoEditar = new System.Windows.Forms.Button();
             this.dataGridCCargo = new System.Windows.Forms.DataGridView();
             this.labelCCargoLista = new System.Windows.Forms.Label();
+            this.Departamento = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelCCargoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCCargo)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.textCCargoBuscar.Name = "textCCargoBuscar";
             this.textCCargoBuscar.Size = new System.Drawing.Size(137, 20);
             this.textCCargoBuscar.TabIndex = 23;
+            this.textCCargoBuscar.TextChanged += new System.EventHandler(this.textCCargoBuscar_TextChanged);
             // 
             // labelCCargoBuscar
             // 
@@ -87,6 +89,7 @@
             this.buttonCCargoEliminar.TabIndex = 22;
             this.buttonCCargoEliminar.Text = "Eliminar";
             this.buttonCCargoEliminar.UseVisualStyleBackColor = false;
+            this.buttonCCargoEliminar.Click += new System.EventHandler(this.buttonCCargoEliminar_Click);
             // 
             // buttonCCargoEditar
             // 
@@ -107,11 +110,12 @@
             // 
             this.dataGridCCargo.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Departamento});
             this.dataGridCCargo.Location = new System.Drawing.Point(7, 87);
             this.dataGridCCargo.Name = "dataGridCCargo";
             this.dataGridCCargo.Size = new System.Drawing.Size(444, 182);
             this.dataGridCCargo.TabIndex = 1;
-            this.dataGridCCargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCCargo_CellContentClick);
             // 
             // labelCCargoLista
             // 
@@ -123,6 +127,15 @@
             this.labelCCargoLista.Size = new System.Drawing.Size(162, 24);
             this.labelCCargoLista.TabIndex = 0;
             this.labelCCargoLista.Text = "Lista de cargos";
+            // 
+            // Departamento
+            // 
+            this.Departamento.DataPropertyName = "Departamento";
+            this.Departamento.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Departamento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ConsultaCargo
             // 
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Button buttonCCargoEditar;
         private System.Windows.Forms.DataGridView dataGridCCargo;
         private System.Windows.Forms.Label labelCCargoLista;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Departamento;
     }
 }

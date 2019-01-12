@@ -31,12 +31,11 @@
             this.panelCEmpleadoVertical2 = new System.Windows.Forms.Panel();
             this.textCEmpleadoBuscar = new System.Windows.Forms.TextBox();
             this.labelReporteLBuscar = new System.Windows.Forms.Label();
-            this.buttonCEmpleadoBuscar = new System.Windows.Forms.Button();
             this.buttonCEmpleadoEliminar = new System.Windows.Forms.Button();
             this.buttonCEmpleadoEditar = new System.Windows.Forms.Button();
             this.dataGridCEmpleado = new System.Windows.Forms.DataGridView();
-            this.labelCEmpleadoLista = new System.Windows.Forms.Label();
             this.columCargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.labelCEmpleadoLista = new System.Windows.Forms.Label();
             this.panelCEmpleadoVertical2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +45,6 @@
             this.panelCEmpleadoVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelCEmpleadoVertical2.Controls.Add(this.textCEmpleadoBuscar);
             this.panelCEmpleadoVertical2.Controls.Add(this.labelReporteLBuscar);
-            this.panelCEmpleadoVertical2.Controls.Add(this.buttonCEmpleadoBuscar);
             this.panelCEmpleadoVertical2.Controls.Add(this.buttonCEmpleadoEliminar);
             this.panelCEmpleadoVertical2.Controls.Add(this.buttonCEmpleadoEditar);
             this.panelCEmpleadoVertical2.Controls.Add(this.dataGridCEmpleado);
@@ -77,19 +75,6 @@
             this.labelReporteLBuscar.Size = new System.Drawing.Size(98, 19);
             this.labelReporteLBuscar.TabIndex = 40;
             this.labelReporteLBuscar.Text = "Buscar por :";
-            // 
-            // buttonCEmpleadoBuscar
-            // 
-            this.buttonCEmpleadoBuscar.BackColor = System.Drawing.Color.Olive;
-            this.buttonCEmpleadoBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCEmpleadoBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCEmpleadoBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonCEmpleadoBuscar.Location = new System.Drawing.Point(494, 40);
-            this.buttonCEmpleadoBuscar.Name = "buttonCEmpleadoBuscar";
-            this.buttonCEmpleadoBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonCEmpleadoBuscar.TabIndex = 42;
-            this.buttonCEmpleadoBuscar.Text = "Buscar";
-            this.buttonCEmpleadoBuscar.UseVisualStyleBackColor = false;
             // 
             // buttonCEmpleadoEliminar
             // 
@@ -128,10 +113,16 @@
             this.dataGridCEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columCargo});
-            this.dataGridCEmpleado.Location = new System.Drawing.Point(18, 88);
+            this.dataGridCEmpleado.Location = new System.Drawing.Point(22, 72);
             this.dataGridCEmpleado.Name = "dataGridCEmpleado";
             this.dataGridCEmpleado.Size = new System.Drawing.Size(579, 255);
             this.dataGridCEmpleado.TabIndex = 1;
+            // 
+            // columCargo
+            // 
+            this.columCargo.DataPropertyName = "Cargo_id";
+            this.columCargo.HeaderText = "Cargo";
+            this.columCargo.Name = "columCargo";
             // 
             // labelCEmpleadoLista
             // 
@@ -143,12 +134,6 @@
             this.labelCEmpleadoLista.Size = new System.Drawing.Size(210, 24);
             this.labelCEmpleadoLista.TabIndex = 0;
             this.labelCEmpleadoLista.Text = "Lista de empleados";
-            // 
-            // columCargo
-            // 
-            this.columCargo.DataPropertyName = "Cargo_id";
-            this.columCargo.HeaderText = "Cargo";
-            this.columCargo.Name = "columCargo";
             // 
             // ConsultaEmpleado
             // 
@@ -177,7 +162,6 @@
         private System.Windows.Forms.Label labelCEmpleadoLista;
         private System.Windows.Forms.Label labelReporteLBuscar;
         private System.Windows.Forms.TextBox textCEmpleadoBuscar;
-        private System.Windows.Forms.Button buttonCEmpleadoBuscar;
         private System.Windows.Forms.DataGridViewComboBoxColumn columCargo;
     }
 }

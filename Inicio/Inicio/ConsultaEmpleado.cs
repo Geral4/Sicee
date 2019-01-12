@@ -15,7 +15,6 @@ namespace Inicio
     public partial class ConsultaEmpleado : Form
     {
         CDEmpleado objEmpleado2 = new CDEmpleado();
-        CDConexion conexion = new CDConexion();
 
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
            "Initial Catalog=Sicee;Data Source=localhost";
@@ -42,7 +41,7 @@ namespace Inicio
             dataGridCEmpleado.DataSource = bindingSource1;
             try
             {
-                columCargo.DataSource = ObtenerAulas();
+                columCargo.DataSource = ObtenerCargo();
                 columCargo.DisplayMember = "Nombre";
                 columCargo.ValueMember = "Clave";
             }
@@ -70,7 +69,7 @@ namespace Inicio
                 }
                 else
                 {
-                    MessageBox.Show("Solo puedes editar un registro a la vez", "Atenctión");
+                    MessageBox.Show("Solo puedes editar un registro a la vez", "Atención");
                 }
             }
             catch (SqlException s)
@@ -108,7 +107,7 @@ namespace Inicio
 
         }
 
-        private DataTable ObtenerAulas()
+        private DataTable ObtenerCargo()
         {
             try
             {
@@ -132,26 +131,6 @@ namespace Inicio
 
         }
 
-        private void dataGridCEmpleado_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridCEmpleado_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-
-        }
-
-        private void dataGridCEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridCEmpleado_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonCEmpleadoEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -169,10 +148,7 @@ namespace Inicio
             }
         }
 
-        private void dataGridCEmpleado_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        {
-
-        }
+        
 
         
     }

@@ -2,24 +2,32 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
+using System.Data.SqlClient;
 
 namespace Inicio
 {
     public partial class Inmueble : Form
     {
         CDInmueble objInmueble = new CDInmueble();
+
+        private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
+            "Initial Catalog=Sicee;Data Source=localhost";
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        private string filtrado = "";
+
+
         //private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
         //  "Initial Catalog=Sicee;Data Source=localhost";
         //private BindingSource bindingSource1 = new BindingSource();
         //private SqlDataAdapter dataAdapter = new SqlDataAdapter();
-       // private DataTable table = new DataTable("Aulas");
+        // private DataTable table = new DataTable("Aulas");
         //private string sql = "";
 
         public Inmueble()
@@ -165,6 +173,34 @@ namespace Inicio
 
         private void textInmuebleAula_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void textInmuebleBuscar_TextChanged(object sender, EventArgs e)
+        {
+            filtrado = textInmuebleBuscar.Text;
+            dataGridInmueble.DataSource = bindingSource1;
+            GetData("select * from Inmueble where Marca like '" + filtrado + "%' or Nombre like '" + filtrado + "%' or Modelo like '" +filtrado + "%' or  NSerie like '" +filtrado+ "%' or Aula like '"+ filtrado + "%';");
+
+        }
+
+
+        private void GetData(string sql)
+        {
+            try
+            {
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.Fill(table);
+                bindingSource1.DataSource = table;
+                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción: " + ex);
+            }
 
         }
     }

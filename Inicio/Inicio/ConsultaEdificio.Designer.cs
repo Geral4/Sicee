@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.panelCEdificioVertical = new System.Windows.Forms.Panel();
-            this.buttonCEdificioBuscar = new System.Windows.Forms.Button();
+            this.buttonCEdificioGuardar = new System.Windows.Forms.Button();
             this.textCEdificioBuscar = new System.Windows.Forms.TextBox();
             this.labelCEdificioBuscar = new System.Windows.Forms.Label();
             this.buttonCEdificioEliminar = new System.Windows.Forms.Button();
             this.buttonCEdificioEditar = new System.Windows.Forms.Button();
             this.dataGridCEdificio = new System.Windows.Forms.DataGridView();
             this.labelCEdificioLista = new System.Windows.Forms.Label();
-            this.buttonCEdificioGuardar = new System.Windows.Forms.Button();
             this.panelCEdificioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCEdificio)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +44,6 @@
             // 
             this.panelCEdificioVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelCEdificioVertical.Controls.Add(this.buttonCEdificioGuardar);
-            this.panelCEdificioVertical.Controls.Add(this.buttonCEdificioBuscar);
             this.panelCEdificioVertical.Controls.Add(this.textCEdificioBuscar);
             this.panelCEdificioVertical.Controls.Add(this.labelCEdificioBuscar);
             this.panelCEdificioVertical.Controls.Add(this.buttonCEdificioEliminar);
@@ -58,18 +56,18 @@
             this.panelCEdificioVertical.Size = new System.Drawing.Size(649, 303);
             this.panelCEdificioVertical.TabIndex = 7;
             // 
-            // buttonCEdificioBuscar
+            // buttonCEdificioGuardar
             // 
-            this.buttonCEdificioBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonCEdificioBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCEdificioBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCEdificioBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonCEdificioBuscar.Location = new System.Drawing.Point(393, 53);
-            this.buttonCEdificioBuscar.Name = "buttonCEdificioBuscar";
-            this.buttonCEdificioBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonCEdificioBuscar.TabIndex = 24;
-            this.buttonCEdificioBuscar.Text = "Buscar";
-            this.buttonCEdificioBuscar.UseVisualStyleBackColor = false;
+            this.buttonCEdificioGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.buttonCEdificioGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCEdificioGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCEdificioGuardar.ForeColor = System.Drawing.Color.White;
+            this.buttonCEdificioGuardar.Location = new System.Drawing.Point(448, 263);
+            this.buttonCEdificioGuardar.Name = "buttonCEdificioGuardar";
+            this.buttonCEdificioGuardar.Size = new System.Drawing.Size(82, 26);
+            this.buttonCEdificioGuardar.TabIndex = 26;
+            this.buttonCEdificioGuardar.Text = "Guardar";
+            this.buttonCEdificioGuardar.UseVisualStyleBackColor = false;
             // 
             // textCEdificioBuscar
             // 
@@ -77,6 +75,7 @@
             this.textCEdificioBuscar.Name = "textCEdificioBuscar";
             this.textCEdificioBuscar.Size = new System.Drawing.Size(137, 20);
             this.textCEdificioBuscar.TabIndex = 23;
+            this.textCEdificioBuscar.TextChanged += new System.EventHandler(this.textCEdificioBuscar_TextChanged);
             // 
             // labelCEdificioBuscar
             // 
@@ -138,19 +137,6 @@
             this.labelCEdificioLista.TabIndex = 0;
             this.labelCEdificioLista.Text = "Lista de edificios";
             // 
-            // buttonCEdificioGuardar
-            // 
-            this.buttonCEdificioGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonCEdificioGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCEdificioGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCEdificioGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonCEdificioGuardar.Location = new System.Drawing.Point(448, 263);
-            this.buttonCEdificioGuardar.Name = "buttonCEdificioGuardar";
-            this.buttonCEdificioGuardar.Size = new System.Drawing.Size(82, 26);
-            this.buttonCEdificioGuardar.TabIndex = 26;
-            this.buttonCEdificioGuardar.Text = "Guardar";
-            this.buttonCEdificioGuardar.UseVisualStyleBackColor = false;
-            // 
             // ConsultaEdificio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,7 +157,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelCEdificioVertical;
-        private System.Windows.Forms.Button buttonCEdificioBuscar;
         private System.Windows.Forms.TextBox textCEdificioBuscar;
         private System.Windows.Forms.Label labelCEdificioBuscar;
         private System.Windows.Forms.Button buttonCEdificioEliminar;
