@@ -245,3 +245,5 @@ D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.exe
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.pdb
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.EditarCargo.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.EditarEmpleado.resources
+D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.EditarCargo.resources
+D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.EditarEmpleado.resources
