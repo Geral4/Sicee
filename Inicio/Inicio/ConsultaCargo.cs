@@ -44,8 +44,8 @@ namespace Inicio
             //   MostrarCargo();
             try
             {
-                Departamento.Items.Add("Administrativo");
-                Departamento.Items.Add("Académico");
+                //Departamento.Items.Add("Administrativo");
+                //Departamento.Items.Add("Académico");
                 dataGridCCargo.DataSource = bindingSource1;
                 GetData("select * from Cargo");
             }

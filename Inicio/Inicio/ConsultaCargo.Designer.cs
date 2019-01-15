@@ -35,7 +35,6 @@
             this.buttonCCargoEditar = new System.Windows.Forms.Button();
             this.dataGridCCargo = new System.Windows.Forms.DataGridView();
             this.labelCCargoLista = new System.Windows.Forms.Label();
-            this.Departamento = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelCCargoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCCargo)).BeginInit();
             this.SuspendLayout();
@@ -51,16 +50,18 @@
             this.panelCCargoVertical.Controls.Add(this.labelCCargoLista);
             this.panelCCargoVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCCargoVertical.Location = new System.Drawing.Point(0, 0);
+            this.panelCCargoVertical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCCargoVertical.Name = "panelCCargoVertical";
-            this.panelCCargoVertical.Size = new System.Drawing.Size(485, 311);
+            this.panelCCargoVertical.Size = new System.Drawing.Size(647, 383);
             this.panelCCargoVertical.TabIndex = 6;
             this.panelCCargoVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCCargoVertical_Paint);
             // 
             // textCCargoBuscar
             // 
-            this.textCCargoBuscar.Location = new System.Drawing.Point(227, 50);
+            this.textCCargoBuscar.Location = new System.Drawing.Point(303, 62);
+            this.textCCargoBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textCCargoBuscar.Name = "textCCargoBuscar";
-            this.textCCargoBuscar.Size = new System.Drawing.Size(137, 20);
+            this.textCCargoBuscar.Size = new System.Drawing.Size(181, 22);
             this.textCCargoBuscar.TabIndex = 23;
             this.textCCargoBuscar.TextChanged += new System.EventHandler(this.textCCargoBuscar_TextChanged);
             // 
@@ -70,9 +71,10 @@
             this.labelCCargoBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCCargoBuscar.ForeColor = System.Drawing.Color.Transparent;
             this.labelCCargoBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelCCargoBuscar.Location = new System.Drawing.Point(157, 49);
+            this.labelCCargoBuscar.Location = new System.Drawing.Point(209, 60);
+            this.labelCCargoBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCCargoBuscar.Name = "labelCCargoBuscar";
-            this.labelCCargoBuscar.Size = new System.Drawing.Size(57, 18);
+            this.labelCCargoBuscar.Size = new System.Drawing.Size(71, 23);
             this.labelCCargoBuscar.TabIndex = 21;
             this.labelCCargoBuscar.Text = "Buscar";
             // 
@@ -83,9 +85,10 @@
             this.buttonCCargoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCCargoEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCCargoEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonCCargoEliminar.Location = new System.Drawing.Point(260, 275);
+            this.buttonCCargoEliminar.Location = new System.Drawing.Point(347, 338);
+            this.buttonCCargoEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCCargoEliminar.Name = "buttonCCargoEliminar";
-            this.buttonCCargoEliminar.Size = new System.Drawing.Size(85, 24);
+            this.buttonCCargoEliminar.Size = new System.Drawing.Size(113, 30);
             this.buttonCCargoEliminar.TabIndex = 22;
             this.buttonCCargoEliminar.Text = "Eliminar";
             this.buttonCCargoEliminar.UseVisualStyleBackColor = false;
@@ -98,9 +101,10 @@
             this.buttonCCargoEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCCargoEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCCargoEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonCCargoEditar.Location = new System.Drawing.Point(160, 275);
+            this.buttonCCargoEditar.Location = new System.Drawing.Point(213, 338);
+            this.buttonCCargoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCCargoEditar.Name = "buttonCCargoEditar";
-            this.buttonCCargoEditar.Size = new System.Drawing.Size(75, 24);
+            this.buttonCCargoEditar.Size = new System.Drawing.Size(100, 30);
             this.buttonCCargoEditar.TabIndex = 21;
             this.buttonCCargoEditar.Text = "Editar";
             this.buttonCCargoEditar.UseVisualStyleBackColor = false;
@@ -110,11 +114,10 @@
             // 
             this.dataGridCCargo.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCCargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Departamento});
-            this.dataGridCCargo.Location = new System.Drawing.Point(7, 87);
+            this.dataGridCCargo.Location = new System.Drawing.Point(9, 107);
+            this.dataGridCCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridCCargo.Name = "dataGridCCargo";
-            this.dataGridCCargo.Size = new System.Drawing.Size(444, 182);
+            this.dataGridCCargo.Size = new System.Drawing.Size(592, 224);
             this.dataGridCCargo.TabIndex = 1;
             // 
             // labelCCargoLista
@@ -122,27 +125,20 @@
             this.labelCCargoLista.AutoSize = true;
             this.labelCCargoLista.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCCargoLista.ForeColor = System.Drawing.Color.PaleGreen;
-            this.labelCCargoLista.Location = new System.Drawing.Point(12, 11);
+            this.labelCCargoLista.Location = new System.Drawing.Point(16, 14);
+            this.labelCCargoLista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCCargoLista.Name = "labelCCargoLista";
-            this.labelCCargoLista.Size = new System.Drawing.Size(162, 24);
+            this.labelCCargoLista.Size = new System.Drawing.Size(211, 33);
             this.labelCCargoLista.TabIndex = 0;
             this.labelCCargoLista.Text = "Lista de cargos";
             // 
-            // Departamento
-            // 
-            this.Departamento.DataPropertyName = "Departamento";
-            this.Departamento.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Departamento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // ConsultaCargo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 311);
+            this.ClientSize = new System.Drawing.Size(607, 383);
             this.Controls.Add(this.panelCCargoVertical);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConsultaCargo";
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -164,6 +160,5 @@
         private System.Windows.Forms.Button buttonCCargoEditar;
         private System.Windows.Forms.DataGridView dataGridCCargo;
         private System.Windows.Forms.Label labelCCargoLista;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Departamento;
     }
 }
