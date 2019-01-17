@@ -65,7 +65,7 @@
             this.panelAsignaturaVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAsignaturaVertical.Location = new System.Drawing.Point(0, 0);
             this.panelAsignaturaVertical.Name = "panelAsignaturaVertical";
-            this.panelAsignaturaVertical.Size = new System.Drawing.Size(494, 257);
+            this.panelAsignaturaVertical.Size = new System.Drawing.Size(553, 338);
             this.panelAsignaturaVertical.TabIndex = 2;
             this.panelAsignaturaVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAsignaturaVertical_Paint);
             // 
@@ -74,7 +74,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(5, 231);
+            this.label1.Location = new System.Drawing.Point(3, 309);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 20);
             this.label1.TabIndex = 24;
@@ -82,7 +82,7 @@
             // 
             // textAsignaturaBuscar
             // 
-            this.textAsignaturaBuscar.Location = new System.Drawing.Point(251, 39);
+            this.textAsignaturaBuscar.Location = new System.Drawing.Point(363, 37);
             this.textAsignaturaBuscar.Name = "textAsignaturaBuscar";
             this.textAsignaturaBuscar.Size = new System.Drawing.Size(137, 20);
             this.textAsignaturaBuscar.TabIndex = 23;
@@ -94,7 +94,7 @@
             this.labelAsignaturaBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAsignaturaBuscar.ForeColor = System.Drawing.Color.Black;
             this.labelAsignaturaBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelAsignaturaBuscar.Location = new System.Drawing.Point(195, 40);
+            this.labelAsignaturaBuscar.Location = new System.Drawing.Point(302, 38);
             this.labelAsignaturaBuscar.Name = "labelAsignaturaBuscar";
             this.labelAsignaturaBuscar.Size = new System.Drawing.Size(57, 18);
             this.labelAsignaturaBuscar.TabIndex = 21;
@@ -106,7 +106,7 @@
             this.dataGridViewAsignatura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAsignatura.Location = new System.Drawing.Point(8, 69);
             this.dataGridViewAsignatura.Name = "dataGridViewAsignatura";
-            this.dataGridViewAsignatura.Size = new System.Drawing.Size(478, 159);
+            this.dataGridViewAsignatura.Size = new System.Drawing.Size(538, 227);
             this.dataGridViewAsignatura.TabIndex = 1;
             // 
             // labelAsignaturaLista
@@ -137,9 +137,9 @@
             this.panelAsignaturaVertical2.Controls.Add(this.labelAsignaturaNombre);
             this.panelAsignaturaVertical2.Controls.Add(this.labelAsignaturaRegistro);
             this.panelAsignaturaVertical2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelAsignaturaVertical2.Location = new System.Drawing.Point(492, 0);
+            this.panelAsignaturaVertical2.Location = new System.Drawing.Point(552, 0);
             this.panelAsignaturaVertical2.Name = "panelAsignaturaVertical2";
-            this.panelAsignaturaVertical2.Size = new System.Drawing.Size(328, 257);
+            this.panelAsignaturaVertical2.Size = new System.Drawing.Size(328, 338);
             this.panelAsignaturaVertical2.TabIndex = 3;
             // 
             // comboAsignaturaCarrera
@@ -182,7 +182,7 @@
             this.buttonAsignaturaCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAsignaturaCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAsignaturaCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonAsignaturaCancelar.Location = new System.Drawing.Point(190, 221);
+            this.buttonAsignaturaCancelar.Location = new System.Drawing.Point(204, 272);
             this.buttonAsignaturaCancelar.Name = "buttonAsignaturaCancelar";
             this.buttonAsignaturaCancelar.Size = new System.Drawing.Size(78, 24);
             this.buttonAsignaturaCancelar.TabIndex = 20;
@@ -195,7 +195,7 @@
             this.buttonAsignaturaGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAsignaturaGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAsignaturaGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonAsignaturaGuardar.Location = new System.Drawing.Point(63, 221);
+            this.buttonAsignaturaGuardar.Location = new System.Drawing.Point(77, 272);
             this.buttonAsignaturaGuardar.Name = "buttonAsignaturaGuardar";
             this.buttonAsignaturaGuardar.Size = new System.Drawing.Size(75, 24);
             this.buttonAsignaturaGuardar.TabIndex = 19;
@@ -278,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 257);
+            this.ClientSize = new System.Drawing.Size(880, 338);
             this.Controls.Add(this.panelAsignaturaVertical2);
             this.Controls.Add(this.panelAsignaturaVertical);
             this.Name = "Asignatura";

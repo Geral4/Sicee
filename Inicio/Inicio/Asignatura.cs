@@ -93,7 +93,9 @@ namespace Inicio
         {
             filtrado = textAsignaturaBuscar.Text;
             dataGridViewAsignatura.DataSource = bindingSource1;
-            GetData("select * from Asignatura where Nombre like '" + filtrado + "%' or Clave like '"  + filtrado + "%' or Creditos like '" + filtrado + "%';");
+            GetData("select * from Asignatura where Nombre like '" + filtrado + "%' or Clave like '"
+               + filtrado + "%' or Carrera_id like '" + filtrado + "%' or Creditos like '"
+               + filtrado + "%' or Modalidad like '" + filtrado + "%';");
 
         }
 

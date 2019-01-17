@@ -42,7 +42,6 @@
             this.labelInmuebleColor = new System.Windows.Forms.Label();
             this.buttonInmuebleCancelar = new System.Windows.Forms.Button();
             this.buttonInmuebleGuardar = new System.Windows.Forms.Button();
-            this.textInmuebleDescripcion = new System.Windows.Forms.TextBox();
             this.labelInmuebleDescripcion = new System.Windows.Forms.Label();
             this.textInmuebleNSerie = new System.Windows.Forms.TextBox();
             this.labelInmuebleNSerie = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.textInmuebleNombre = new System.Windows.Forms.TextBox();
             this.labelInmuebleNombre = new System.Windows.Forms.Label();
             this.labeInmuebleRegistro = new System.Windows.Forms.Label();
+            this.textInmuebleDescripcion = new System.Windows.Forms.TextBox();
             this.panelInmuebleVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInmueble)).BeginInit();
             this.panelInmuebleVertical2.SuspendLayout();
@@ -69,7 +69,7 @@
             this.panelInmuebleVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelInmuebleVertical.Location = new System.Drawing.Point(0, 0);
             this.panelInmuebleVertical.Name = "panelInmuebleVertical";
-            this.panelInmuebleVertical.Size = new System.Drawing.Size(575, 351);
+            this.panelInmuebleVertical.Size = new System.Drawing.Size(575, 378);
             this.panelInmuebleVertical.TabIndex = 4;
             // 
             // label1
@@ -77,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(4, 291);
+            this.label1.Location = new System.Drawing.Point(3, 351);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 18);
             this.label1.TabIndex = 24;
@@ -108,7 +108,7 @@
             this.dataGridInmueble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridInmueble.Location = new System.Drawing.Point(6, 69);
             this.dataGridInmueble.Name = "dataGridInmueble";
-            this.dataGridInmueble.Size = new System.Drawing.Size(558, 219);
+            this.dataGridInmueble.Size = new System.Drawing.Size(558, 279);
             this.dataGridInmueble.TabIndex = 1;
             // 
             // labeInmuebleLista
@@ -125,6 +125,7 @@
             // panelInmuebleVertical2
             // 
             this.panelInmuebleVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelInmuebleVertical2.Controls.Add(this.textInmuebleDescripcion);
             this.panelInmuebleVertical2.Controls.Add(this.textInmuebleAula);
             this.panelInmuebleVertical2.Controls.Add(this.comboInmuebleAula);
             this.panelInmuebleVertical2.Controls.Add(this.labelInmuebleAula);
@@ -132,7 +133,6 @@
             this.panelInmuebleVertical2.Controls.Add(this.labelInmuebleColor);
             this.panelInmuebleVertical2.Controls.Add(this.buttonInmuebleCancelar);
             this.panelInmuebleVertical2.Controls.Add(this.buttonInmuebleGuardar);
-            this.panelInmuebleVertical2.Controls.Add(this.textInmuebleDescripcion);
             this.panelInmuebleVertical2.Controls.Add(this.labelInmuebleDescripcion);
             this.panelInmuebleVertical2.Controls.Add(this.textInmuebleNSerie);
             this.panelInmuebleVertical2.Controls.Add(this.labelInmuebleNSerie);
@@ -146,7 +146,7 @@
             this.panelInmuebleVertical2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInmuebleVertical2.Location = new System.Drawing.Point(570, 0);
             this.panelInmuebleVertical2.Name = "panelInmuebleVertical2";
-            this.panelInmuebleVertical2.Size = new System.Drawing.Size(329, 351);
+            this.panelInmuebleVertical2.Size = new System.Drawing.Size(329, 378);
             this.panelInmuebleVertical2.TabIndex = 5;
             // 
             // textInmuebleAula
@@ -207,7 +207,7 @@
             this.buttonInmuebleCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInmuebleCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInmuebleCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonInmuebleCancelar.Location = new System.Drawing.Point(219, 316);
+            this.buttonInmuebleCancelar.Location = new System.Drawing.Point(220, 343);
             this.buttonInmuebleCancelar.Name = "buttonInmuebleCancelar";
             this.buttonInmuebleCancelar.Size = new System.Drawing.Size(78, 24);
             this.buttonInmuebleCancelar.TabIndex = 21;
@@ -220,20 +220,13 @@
             this.buttonInmuebleGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInmuebleGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInmuebleGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonInmuebleGuardar.Location = new System.Drawing.Point(55, 315);
+            this.buttonInmuebleGuardar.Location = new System.Drawing.Point(56, 342);
             this.buttonInmuebleGuardar.Name = "buttonInmuebleGuardar";
             this.buttonInmuebleGuardar.Size = new System.Drawing.Size(75, 24);
             this.buttonInmuebleGuardar.TabIndex = 20;
             this.buttonInmuebleGuardar.Text = "Guardar";
             this.buttonInmuebleGuardar.UseVisualStyleBackColor = false;
             this.buttonInmuebleGuardar.Click += new System.EventHandler(this.buttonInmuebleGuardar_Click);
-            // 
-            // textInmuebleDescripcion
-            // 
-            this.textInmuebleDescripcion.Location = new System.Drawing.Point(110, 261);
-            this.textInmuebleDescripcion.Name = "textInmuebleDescripcion";
-            this.textInmuebleDescripcion.Size = new System.Drawing.Size(203, 20);
-            this.textInmuebleDescripcion.TabIndex = 12;
             // 
             // labelInmuebleDescripcion
             // 
@@ -331,11 +324,19 @@
             this.labeInmuebleRegistro.TabIndex = 0;
             this.labeInmuebleRegistro.Text = "Alta inmueble";
             // 
+            // textInmuebleDescripcion
+            // 
+            this.textInmuebleDescripcion.Location = new System.Drawing.Point(101, 259);
+            this.textInmuebleDescripcion.Multiline = true;
+            this.textInmuebleDescripcion.Name = "textInmuebleDescripcion";
+            this.textInmuebleDescripcion.Size = new System.Drawing.Size(213, 52);
+            this.textInmuebleDescripcion.TabIndex = 27;
+            // 
             // Inmueble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 351);
+            this.ClientSize = new System.Drawing.Size(899, 378);
             this.Controls.Add(this.panelInmuebleVertical2);
             this.Controls.Add(this.panelInmuebleVertical);
             this.Name = "Inmueble";
@@ -364,7 +365,6 @@
         private System.Windows.Forms.Label labelInmuebleColor;
         private System.Windows.Forms.Button buttonInmuebleCancelar;
         private System.Windows.Forms.Button buttonInmuebleGuardar;
-        private System.Windows.Forms.TextBox textInmuebleDescripcion;
         private System.Windows.Forms.Label labelInmuebleDescripcion;
         private System.Windows.Forms.TextBox textInmuebleNSerie;
         private System.Windows.Forms.Label labelInmuebleNSerie;
@@ -378,5 +378,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboInmuebleAula;
         private System.Windows.Forms.TextBox textInmuebleAula;
+        private System.Windows.Forms.TextBox textInmuebleDescripcion;
     }
 }

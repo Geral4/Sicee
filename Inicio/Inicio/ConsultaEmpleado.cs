@@ -66,6 +66,7 @@ namespace Inicio
                     bindingSource1.EndEdit();
                     dataAdapter.Update((DataTable)bindingSource1.DataSource);
                     GetData(dataAdapter.SelectCommand.CommandText);
+                    MessageBox.Show("Editado Correctamente");
                 }
                 else
                 {
@@ -126,8 +127,8 @@ namespace Inicio
         {
             filtrado = textCEmpleadoBuscar.Text;
             dataGridCEmpleado.DataSource = bindingSource1;
-            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like " +
-               "'" + filtrado + "%' or ApellidoP like '" + filtrado + "%' or ApellidoM like '" + filtrado + "%';");
+            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like '" +
+                 filtrado + "%' or ApellidoP like '" + filtrado + "%' or ApellidoM like '" + filtrado + "%';");
 
         }
 
@@ -140,6 +141,7 @@ namespace Inicio
                 bindingSource1.EndEdit();
                 dataAdapter.Update((DataTable)bindingSource1.DataSource);
                 GetData(dataAdapter.SelectCommand.CommandText);
+                MessageBox.Show("Eliminado Correctamente");
 
             }
             catch (SqlException s)

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelCEdificioVertical = new System.Windows.Forms.Panel();
-            this.buttonCEdificioGuardar = new System.Windows.Forms.Button();
             this.textCEdificioBuscar = new System.Windows.Forms.TextBox();
             this.labelCEdificioBuscar = new System.Windows.Forms.Label();
             this.buttonCEdificioEliminar = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@
             // panelCEdificioVertical
             // 
             this.panelCEdificioVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panelCEdificioVertical.Controls.Add(this.buttonCEdificioGuardar);
             this.panelCEdificioVertical.Controls.Add(this.textCEdificioBuscar);
             this.panelCEdificioVertical.Controls.Add(this.labelCEdificioBuscar);
             this.panelCEdificioVertical.Controls.Add(this.buttonCEdificioEliminar);
@@ -55,19 +53,6 @@
             this.panelCEdificioVertical.Name = "panelCEdificioVertical";
             this.panelCEdificioVertical.Size = new System.Drawing.Size(649, 303);
             this.panelCEdificioVertical.TabIndex = 7;
-            // 
-            // buttonCEdificioGuardar
-            // 
-            this.buttonCEdificioGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonCEdificioGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCEdificioGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCEdificioGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonCEdificioGuardar.Location = new System.Drawing.Point(448, 263);
-            this.buttonCEdificioGuardar.Name = "buttonCEdificioGuardar";
-            this.buttonCEdificioGuardar.Size = new System.Drawing.Size(82, 26);
-            this.buttonCEdificioGuardar.TabIndex = 26;
-            this.buttonCEdificioGuardar.Text = "Guardar";
-            this.buttonCEdificioGuardar.UseVisualStyleBackColor = false;
             // 
             // textCEdificioBuscar
             // 
@@ -102,6 +87,7 @@
             this.buttonCEdificioEliminar.TabIndex = 22;
             this.buttonCEdificioEliminar.Text = "Eliminar";
             this.buttonCEdificioEliminar.UseVisualStyleBackColor = false;
+            this.buttonCEdificioEliminar.Click += new System.EventHandler(this.buttonCEdificioEliminar_Click);
             // 
             // buttonCEdificioEditar
             // 
@@ -116,14 +102,15 @@
             this.buttonCEdificioEditar.TabIndex = 21;
             this.buttonCEdificioEditar.Text = "Editar";
             this.buttonCEdificioEditar.UseVisualStyleBackColor = false;
+            this.buttonCEdificioEditar.Click += new System.EventHandler(this.buttonCEdificioEditar_Click);
             // 
             // dataGridCEdificio
             // 
             this.dataGridCEdificio.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCEdificio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCEdificio.Location = new System.Drawing.Point(10, 87);
+            this.dataGridCEdificio.Location = new System.Drawing.Point(7, 87);
             this.dataGridCEdificio.Name = "dataGridCEdificio";
-            this.dataGridCEdificio.Size = new System.Drawing.Size(629, 170);
+            this.dataGridCEdificio.Size = new System.Drawing.Size(464, 170);
             this.dataGridCEdificio.TabIndex = 1;
             // 
             // labelCEdificioLista
@@ -141,12 +128,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 303);
+            this.ClientSize = new System.Drawing.Size(478, 303);
             this.Controls.Add(this.panelCEdificioVertical);
             this.Name = "ConsultaEdificio";
             this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaEdificio";
+            this.Load += new System.EventHandler(this.ConsultaEdificio_Load);
             this.panelCEdificioVertical.ResumeLayout(false);
             this.panelCEdificioVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCEdificio)).EndInit();
@@ -163,6 +151,5 @@
         private System.Windows.Forms.Button buttonCEdificioEditar;
         private System.Windows.Forms.DataGridView dataGridCEdificio;
         private System.Windows.Forms.Label labelCEdificioLista;
-        private System.Windows.Forms.Button buttonCEdificioGuardar;
     }
 }

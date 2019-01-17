@@ -16,14 +16,13 @@ namespace Inicio
     {
         CDUsuario objUsuario3 = new CDUsuario();
       //  CNUsuario objUsuario4 = new CNUsuario();
-        private string Id_Usuario =null;
 
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
           "Initial Catalog=Sicee;Data Source=localhost";
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        private DataTable table = new DataTable("Cargos");
         private string filtrado = "", sql = "";
+        private DataTable table = new DataTable("Empleado");
 
         public ConsultaUsuario()
         {
@@ -63,7 +62,7 @@ namespace Inicio
         private void MostrarUsuario()
         {
             CDUsuario objUsuario3 = new CDUsuario();
-            dataGridCUsuario.DataSource = objUsuario3.MostrarUsuario();
+           // dataGridCUsuario.DataSource = objUsuario3.MostrarUsuario();
         }
 
         private DataTable ObtenerEmpleado()
@@ -83,13 +82,31 @@ namespace Inicio
 
         private void ListarNPersonal()
         {
-            CDUsuario objUsuario1 = new CDUsuario();
+          //  CDUsuario objUsuario1 = new CDUsuario();
            
         }
 
         private void buttonCUsuarioEditar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (dataGridCUsuario.RowCount == 2)
+                {
+                    this.Validate();
+                    bindingSource1.EndEdit();
+                    dataAdapter.Update((DataTable)bindingSource1.DataSource);
+                    GetData(dataAdapter.SelectCommand.CommandText);
+                    MessageBox.Show("Editado Correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Solo puedes editar un registro a la vez", "Atención");
+                }
+            }
+            catch (SqlException s)
+            {
+                MessageBox.Show("" + s, "Verifica");
+            }
         }
 
         private void GetData(string sql)
@@ -111,14 +128,36 @@ namespace Inicio
 
         }
 
+        private void buttonCUsuarioEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridCUsuario.Rows.Remove(dataGridCUsuario.CurrentRow);
+                //this.Validate();
+                bindingSource1.EndEdit();
+                dataAdapter.Update((DataTable)bindingSource1.DataSource);
+                GetData(dataAdapter.SelectCommand.CommandText);
+                MessageBox.Show("Eliminado Correctamente");
+
+            }
+            catch (SqlException s)
+            {
+                MessageBox.Show("" + s, "Verifica");
+            }
+        }
+
         private void textCUsuarioBuscar_TextChanged(object sender, EventArgs e)
         {
             filtrado = textCUsuarioBuscar.Text;
             dataGridCUsuario.DataSource = bindingSource1;
-            GetData("select usu.NPersonal_id, (emp.ApellidoP + ' ' + emp.ApellidoM + ' ' + emp.Nombre) " +
-                "Nombre_Completo, usu.Usuario, usu.Contrasena, usu.Acceso  from Empleado emp left outer join " +
-                "Usuario usu on emp.NPersonal = usu.NPersonal_id where usu.NPersonal_id like '" + filtrado + "%' " +
-                "or Nombre_Completo like '" + filtrado + "%' or usu.Usuario like '" + filtrado + "%';");
+
+            string consulta = "select usu.NPersonal_id, (emp.ApellidoP + ' ' + emp.ApellidoM + ' ' + emp.Nombre) " +
+                            "'Nombre Empleado', usu.Usuario, usu.Contrasena, usu.Acceso  from Empleado emp left outer join " +
+                            "Usuario usu on emp.NPersonal = usu.NPersonal_id where usu.NPersonal_id like '" + filtrado + "%' " +
+                            "or emp.ApellidoP like '" + filtrado + "%' or emp.ApellidoM like '" + filtrado + "%'  or emp.Nombre like '" +
+                            filtrado + "%'or usu.Usuario like '" + filtrado + "%';";
+            Console.WriteLine(consulta);
+            GetData(consulta);
             //GetData("select * from Usuario where NPersonal_id like '" + filtrado + "%' or Nombre like '" + filtrado + "%' or Usuario like '" + filtrado + "%';");
 
         }

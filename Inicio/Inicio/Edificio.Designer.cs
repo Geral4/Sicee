@@ -65,7 +65,7 @@
             this.panelEdificioVertical2.Controls.Add(this.labelEdificioClave);
             this.panelEdificioVertical2.Controls.Add(this.labelEdificioRegistro);
             this.panelEdificioVertical2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelEdificioVertical2.Location = new System.Drawing.Point(462, 0);
+            this.panelEdificioVertical2.Location = new System.Drawing.Point(455, 0);
             this.panelEdificioVertical2.Name = "panelEdificioVertical2";
             this.panelEdificioVertical2.Size = new System.Drawing.Size(323, 289);
             this.panelEdificioVertical2.TabIndex = 4;
@@ -187,7 +187,7 @@
             this.dataGridEdificio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEdificio.Location = new System.Drawing.Point(5, 69);
             this.dataGridEdificio.Name = "dataGridEdificio";
-            this.dataGridEdificio.Size = new System.Drawing.Size(451, 182);
+            this.dataGridEdificio.Size = new System.Drawing.Size(444, 182);
             this.dataGridEdificio.TabIndex = 1;
             // 
             // labelEdificioBuscar
@@ -195,7 +195,7 @@
             this.labelEdificioBuscar.AutoSize = true;
             this.labelEdificioBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEdificioBuscar.ForeColor = System.Drawing.Color.Black;
-            this.labelEdificioBuscar.Location = new System.Drawing.Point(184, 40);
+            this.labelEdificioBuscar.Location = new System.Drawing.Point(231, 35);
             this.labelEdificioBuscar.Name = "labelEdificioBuscar";
             this.labelEdificioBuscar.Size = new System.Drawing.Size(57, 18);
             this.labelEdificioBuscar.TabIndex = 21;
@@ -203,9 +203,9 @@
             // 
             // textEdificioBuscar
             // 
-            this.textEdificioBuscar.Location = new System.Drawing.Point(244, 41);
+            this.textEdificioBuscar.Location = new System.Drawing.Point(296, 36);
             this.textEdificioBuscar.Name = "textEdificioBuscar";
-            this.textEdificioBuscar.Size = new System.Drawing.Size(120, 20);
+            this.textEdificioBuscar.Size = new System.Drawing.Size(135, 20);
             this.textEdificioBuscar.TabIndex = 23;
             this.textEdificioBuscar.TextChanged += new System.EventHandler(this.textEdificioBuscar_TextChanged);
             // 
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 289);
+            this.ClientSize = new System.Drawing.Size(778, 289);
             this.Controls.Add(this.panelEdificioVertical2);
             this.Controls.Add(this.panelEdificioVertical);
             this.Name = "Edificio";
@@ -260,7 +260,6 @@
         private System.Windows.Forms.Label labelEdificioDescripcion;
         private System.Windows.Forms.TextBox textEdificioNombre;
         private System.Windows.Forms.Label labelEdificioNombre;
-        private System.Windows.Forms.TextBox textEdificioDescripcion;
         private System.Windows.Forms.TextBox textEdificioClave;
         private System.Windows.Forms.Label labelEdificioClave;
         private System.Windows.Forms.Label labelEdificioRegistro;
@@ -273,5 +272,6 @@
         private System.Windows.Forms.TextBox textEdificioBuscar;
         private System.Windows.Forms.Panel panelEdificioVertical;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textEdificioDescripcion;
     }
 }

@@ -56,6 +56,7 @@ namespace Inicio
                 bindingSource1.EndEdit();
                 dataAdapter.Update((DataTable)bindingSource1.DataSource);
                 GetData(dataAdapter.SelectCommand.CommandText);
+                MessageBox.Show("Guardado Correctamente");
             }
             catch (SqlException s)
             {

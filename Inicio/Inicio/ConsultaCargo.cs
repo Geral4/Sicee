@@ -87,7 +87,8 @@ namespace Inicio
         {
             filtrado = textCCargoBuscar.Text;
             dataGridCCargo.DataSource = bindingSource1;
-            GetData("select * from Cargo where Clave like '" + filtrado + "%' or Nombre like '" + filtrado + "%';");
+            GetData("select * from Cargo where Clave like '" 
+                + filtrado + "%' or Nombre like '" + filtrado + "%';");
 
         }
         private void GetData(string sql)

@@ -123,9 +123,9 @@
             this.buttonConsultaCambio.ForeColor = System.Drawing.Color.Black;
             this.buttonConsultaCambio.Location = new System.Drawing.Point(660, 438);
             this.buttonConsultaCambio.Name = "buttonConsultaCambio";
-            this.buttonConsultaCambio.Size = new System.Drawing.Size(153, 50);
+            this.buttonConsultaCambio.Size = new System.Drawing.Size(153, 70);
             this.buttonConsultaCambio.TabIndex = 41;
-            this.buttonConsultaCambio.Text = "Inmueble          Cambio de aula";
+            this.buttonConsultaCambio.Text = "Inmueble          Modificacion de estado";
             this.buttonConsultaCambio.UseVisualStyleBackColor = false;
             this.buttonConsultaCambio.Click += new System.EventHandler(this.buttonConsultaCambio_Click);
             // 

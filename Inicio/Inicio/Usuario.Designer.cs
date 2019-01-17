@@ -112,7 +112,7 @@
             this.labelUsuarioLista.AutoSize = true;
             this.labelUsuarioLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuarioLista.ForeColor = System.Drawing.Color.PaleGreen;
-            this.labelUsuarioLista.Location = new System.Drawing.Point(4, 19);
+            this.labelUsuarioLista.Location = new System.Drawing.Point(12, 11);
             this.labelUsuarioLista.Name = "labelUsuarioLista";
             this.labelUsuarioLista.Size = new System.Drawing.Size(134, 21);
             this.labelUsuarioLista.TabIndex = 0;
@@ -143,6 +143,7 @@
             // 
             // textUsuarioNombre
             // 
+            this.textUsuarioNombre.Enabled = false;
             this.textUsuarioNombre.Location = new System.Drawing.Point(25, 93);
             this.textUsuarioNombre.Name = "textUsuarioNombre";
             this.textUsuarioNombre.ReadOnly = true;

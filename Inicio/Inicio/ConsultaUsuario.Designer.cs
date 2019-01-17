@@ -34,8 +34,8 @@
             this.buttonCUsuarioEliminar = new System.Windows.Forms.Button();
             this.buttonCUsuarioEditar = new System.Windows.Forms.Button();
             this.dataGridCUsuario = new System.Windows.Forms.DataGridView();
-            this.labelCUsuarioLista = new System.Windows.Forms.Label();
             this.NPersonal = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.labelCUsuarioLista = new System.Windows.Forms.Label();
             this.panelCUsuarioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCUsuario)).BeginInit();
             this.SuspendLayout();
@@ -52,14 +52,14 @@
             this.panelCUsuarioVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCUsuarioVertical.Location = new System.Drawing.Point(0, 0);
             this.panelCUsuarioVertical.Name = "panelCUsuarioVertical";
-            this.panelCUsuarioVertical.Size = new System.Drawing.Size(486, 297);
+            this.panelCUsuarioVertical.Size = new System.Drawing.Size(509, 313);
             this.panelCUsuarioVertical.TabIndex = 6;
             // 
             // textCUsuarioBuscar
             // 
-            this.textCUsuarioBuscar.Location = new System.Drawing.Point(251, 57);
+            this.textCUsuarioBuscar.Location = new System.Drawing.Point(285, 51);
             this.textCUsuarioBuscar.Name = "textCUsuarioBuscar";
-            this.textCUsuarioBuscar.Size = new System.Drawing.Size(137, 20);
+            this.textCUsuarioBuscar.Size = new System.Drawing.Size(174, 20);
             this.textCUsuarioBuscar.TabIndex = 23;
             this.textCUsuarioBuscar.TextChanged += new System.EventHandler(this.textCUsuarioBuscar_TextChanged);
             // 
@@ -69,7 +69,7 @@
             this.labelCUsuarioBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCUsuarioBuscar.ForeColor = System.Drawing.Color.Black;
             this.labelCUsuarioBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelCUsuarioBuscar.Location = new System.Drawing.Point(195, 58);
+            this.labelCUsuarioBuscar.Location = new System.Drawing.Point(222, 51);
             this.labelCUsuarioBuscar.Name = "labelCUsuarioBuscar";
             this.labelCUsuarioBuscar.Size = new System.Drawing.Size(57, 18);
             this.labelCUsuarioBuscar.TabIndex = 21;
@@ -82,12 +82,13 @@
             this.buttonCUsuarioEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCUsuarioEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCUsuarioEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonCUsuarioEliminar.Location = new System.Drawing.Point(330, 263);
+            this.buttonCUsuarioEliminar.Location = new System.Drawing.Point(314, 270);
             this.buttonCUsuarioEliminar.Name = "buttonCUsuarioEliminar";
             this.buttonCUsuarioEliminar.Size = new System.Drawing.Size(85, 24);
             this.buttonCUsuarioEliminar.TabIndex = 22;
             this.buttonCUsuarioEliminar.Text = "Eliminar";
             this.buttonCUsuarioEliminar.UseVisualStyleBackColor = false;
+            this.buttonCUsuarioEliminar.Click += new System.EventHandler(this.buttonCUsuarioEliminar_Click);
             // 
             // buttonCUsuarioEditar
             // 
@@ -96,7 +97,7 @@
             this.buttonCUsuarioEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCUsuarioEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCUsuarioEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonCUsuarioEditar.Location = new System.Drawing.Point(227, 264);
+            this.buttonCUsuarioEditar.Location = new System.Drawing.Point(210, 270);
             this.buttonCUsuarioEditar.Name = "buttonCUsuarioEditar";
             this.buttonCUsuarioEditar.Size = new System.Drawing.Size(75, 24);
             this.buttonCUsuarioEditar.TabIndex = 21;
@@ -112,8 +113,16 @@
             this.NPersonal});
             this.dataGridCUsuario.Location = new System.Drawing.Point(10, 87);
             this.dataGridCUsuario.Name = "dataGridCUsuario";
-            this.dataGridCUsuario.Size = new System.Drawing.Size(465, 170);
+            this.dataGridCUsuario.Size = new System.Drawing.Size(485, 170);
             this.dataGridCUsuario.TabIndex = 1;
+            // 
+            // NPersonal
+            // 
+            this.NPersonal.DataPropertyName = "NPersonal_id";
+            this.NPersonal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.NPersonal.HeaderText = "Nº Personal";
+            this.NPersonal.Name = "NPersonal";
+            this.NPersonal.Width = 80;
             // 
             // labelCUsuarioLista
             // 
@@ -126,19 +135,11 @@
             this.labelCUsuarioLista.TabIndex = 0;
             this.labelCUsuarioLista.Text = "Lista de usuarios";
             // 
-            // NPersonal
-            // 
-            this.NPersonal.DataPropertyName = "NPersonal_id";
-            this.NPersonal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.NPersonal.HeaderText = "Nº Personal";
-            this.NPersonal.Name = "NPersonal";
-            this.NPersonal.Width = 80;
-            // 
             // ConsultaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 297);
+            this.ClientSize = new System.Drawing.Size(507, 313);
             this.Controls.Add(this.panelCUsuarioVertical);
             this.Name = "ConsultaUsuario";
             this.Opacity = 0.97D;

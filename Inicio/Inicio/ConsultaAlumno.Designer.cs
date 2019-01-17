@@ -34,9 +34,7 @@
             this.buttonCAlumnoEliminar = new System.Windows.Forms.Button();
             this.labelCAlumnoBuscar = new System.Windows.Forms.Label();
             this.textCAlumnoBuscar = new System.Windows.Forms.TextBox();
-            this.buttonCAlumnoBuscar = new System.Windows.Forms.Button();
             this.panelCAlumnoVertical = new System.Windows.Forms.Panel();
-            this.buttonCAlumnoGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCAlumno)).BeginInit();
             this.panelCAlumnoVertical.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +72,7 @@
             this.buttonCAlumnoEditar.TabIndex = 21;
             this.buttonCAlumnoEditar.Text = "Editar";
             this.buttonCAlumnoEditar.UseVisualStyleBackColor = false;
+            this.buttonCAlumnoEditar.Click += new System.EventHandler(this.buttonCAlumnoEditar_Click_1);
             // 
             // buttonCAlumnoEliminar
             // 
@@ -88,6 +87,7 @@
             this.buttonCAlumnoEliminar.TabIndex = 22;
             this.buttonCAlumnoEliminar.Text = "Eliminar";
             this.buttonCAlumnoEliminar.UseVisualStyleBackColor = false;
+            this.buttonCAlumnoEliminar.Click += new System.EventHandler(this.buttonCAlumnoEliminar_Click);
             // 
             // labelCAlumnoBuscar
             // 
@@ -107,25 +107,11 @@
             this.textCAlumnoBuscar.Name = "textCAlumnoBuscar";
             this.textCAlumnoBuscar.Size = new System.Drawing.Size(137, 20);
             this.textCAlumnoBuscar.TabIndex = 23;
-            // 
-            // buttonCAlumnoBuscar
-            // 
-            this.buttonCAlumnoBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonCAlumnoBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCAlumnoBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCAlumnoBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonCAlumnoBuscar.Location = new System.Drawing.Point(393, 53);
-            this.buttonCAlumnoBuscar.Name = "buttonCAlumnoBuscar";
-            this.buttonCAlumnoBuscar.Size = new System.Drawing.Size(82, 26);
-            this.buttonCAlumnoBuscar.TabIndex = 24;
-            this.buttonCAlumnoBuscar.Text = "Buscar";
-            this.buttonCAlumnoBuscar.UseVisualStyleBackColor = false;
+            this.textCAlumnoBuscar.TextChanged += new System.EventHandler(this.textCAlumnoBuscar_TextChanged);
             // 
             // panelCAlumnoVertical
             // 
             this.panelCAlumnoVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panelCAlumnoVertical.Controls.Add(this.buttonCAlumnoGuardar);
-            this.panelCAlumnoVertical.Controls.Add(this.buttonCAlumnoBuscar);
             this.panelCAlumnoVertical.Controls.Add(this.textCAlumnoBuscar);
             this.panelCAlumnoVertical.Controls.Add(this.labelCAlumnoBuscar);
             this.panelCAlumnoVertical.Controls.Add(this.buttonCAlumnoEliminar);
@@ -137,19 +123,6 @@
             this.panelCAlumnoVertical.Name = "panelCAlumnoVertical";
             this.panelCAlumnoVertical.Size = new System.Drawing.Size(585, 297);
             this.panelCAlumnoVertical.TabIndex = 5;
-            // 
-            // buttonCAlumnoGuardar
-            // 
-            this.buttonCAlumnoGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonCAlumnoGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCAlumnoGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCAlumnoGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonCAlumnoGuardar.Location = new System.Drawing.Point(439, 261);
-            this.buttonCAlumnoGuardar.Name = "buttonCAlumnoGuardar";
-            this.buttonCAlumnoGuardar.Size = new System.Drawing.Size(82, 26);
-            this.buttonCAlumnoGuardar.TabIndex = 25;
-            this.buttonCAlumnoGuardar.Text = "Guardar";
-            this.buttonCAlumnoGuardar.UseVisualStyleBackColor = false;
             // 
             // ConsultaAlumno
             // 
@@ -177,8 +150,6 @@
         private System.Windows.Forms.Button buttonCAlumnoEliminar;
         private System.Windows.Forms.Label labelCAlumnoBuscar;
         private System.Windows.Forms.TextBox textCAlumnoBuscar;
-        private System.Windows.Forms.Button buttonCAlumnoBuscar;
         private System.Windows.Forms.Panel panelCAlumnoVertical;
-        private System.Windows.Forms.Button buttonCAlumnoGuardar;
     }
 }
