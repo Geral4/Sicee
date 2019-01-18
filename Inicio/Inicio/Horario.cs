@@ -37,22 +37,33 @@ namespace Inicio
             comboHorarioDia.Items.Add("Sabado");
             comboHorarioDia.Items.Add("Domingo");
             buttonHorarioExaminar.Enabled = false;
+            buttonHorarioGuardar.Enabled = false;
+            lblArchivoC.Text = "";
+            lblArchivo.Visible = false;
         }
         
 
         private void buttonAsignaturaGuardar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion_sql = new SqlConnection(CadenaConexion);
-            conexion_sql.Open();
-            SqlBulkCopy importar = default(SqlBulkCopy);
-            importar = new SqlBulkCopy(conexion_sql);
-            importar.DestinationTableName = "tabla_prueba";
-            importar.WriteToServer(ds.Tables[0]);
-            conexion_sql.Close();
-            MessageBox.Show("Importación exitosa :)", "Importación Excel");
-            filtrado = textHorarioBuscar.Text;
-            dataGridHorario.DataSource = bindingSource1;
-            GetData("select * from tabla_prueba");
+            try{
+                SqlConnection conexion_sql = new SqlConnection(CadenaConexion);
+                conexion_sql.Open();
+                SqlBulkCopy importar = default(SqlBulkCopy);
+                importar = new SqlBulkCopy(conexion_sql);
+                importar.DestinationTableName = "Horario";
+                importar.WriteToServer(ds.Tables[0]);
+                conexion_sql.Close();
+                MessageBox.Show("Importación exitosa :)", "Importación Excel");
+                //filtrado = textHorarioBuscar.Text;
+                dataGridHorario.DataSource = bindingSource1;
+                GetData("select * from Horario");
+                buttonHorarioGuardar.Enabled = false;
+            }
+            catch(SqlException SQLEx){
+                MessageBox.Show("Excepción producida: \n" + SQLEx.Message, "Error fatal");
+
+            } 
+            
         }
 
         private void textAsignaturaCreditos_TextChanged(object sender, EventArgs e)
@@ -67,8 +78,10 @@ namespace Inicio
 
         private void buttonHorarioExaminar_Click(object sender, EventArgs e)
         {
+            ds.Clear();
             if (radioHorarioHoja.Checked)
             {
+                
                 archivoExcel.Filter = "Excel|*.xlsx";   
                 if(archivoExcel.ShowDialog() == DialogResult.OK)
                 {
@@ -91,7 +104,9 @@ namespace Inicio
                         adaptador.Fill(ds);
                         dataGridHorario.DataSource = ds.Tables[0];
                         origen.Close();
-
+                        lblArchivo.Visible = true;
+                        lblArchivoC.Text = nombre_archivo;
+                        buttonHorarioGuardar.Enabled = true;
                         //SqlConnection conexion_sql = new SqlConnection(CadenaConexion);
                         //conexion_sql.Open();
                         //SqlBulkCopy importar = default(SqlBulkCopy);
@@ -118,7 +133,7 @@ namespace Inicio
         {
             filtrado = textHorarioBuscar.Text;
             dataGridHorario.DataSource = bindingSource1;
-            GetData("select * from tabla_prueba where Usuario like '" + filtrado + "%'");
+            GetData("select * from Horario where DocenteEmpleado_id like '" + filtrado + "%'");
         }
 
         private void radioHorarioHoja_MouseClick(object sender, MouseEventArgs e)

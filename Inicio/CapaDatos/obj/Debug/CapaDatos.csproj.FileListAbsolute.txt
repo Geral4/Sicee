@@ -22,3 +22,9 @@ D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
 D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
 D:\Documents\SiceeGIT\Inicio\CapaDatos\bin\Debug\CapaDatos.dll
 D:\Documents\SiceeGIT\Inicio\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb

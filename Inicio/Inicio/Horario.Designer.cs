@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelHorarioTitulo = new System.Windows.Forms.Label();
             this.panelHorarioVertical = new System.Windows.Forms.Panel();
             this.buttonHorarioBuscar = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.dataGridHorario = new System.Windows.Forms.DataGridView();
             this.labelHorarioLista = new System.Windows.Forms.Label();
             this.panelHorarioVertical2 = new System.Windows.Forms.Panel();
+            this.comboHorarioHoraF = new System.Windows.Forms.ComboBox();
+            this.comboHorarioHoraI = new System.Windows.Forms.ComboBox();
             this.buttonHorarioExaminar = new System.Windows.Forms.Button();
             this.radioHorarioHoja = new System.Windows.Forms.RadioButton();
             this.radioHorarioManual = new System.Windows.Forms.RadioButton();
@@ -57,8 +60,8 @@
             this.labelHorarioDocente = new System.Windows.Forms.Label();
             this.labelHorarioRegistro = new System.Windows.Forms.Label();
             this.panelHorarioHorizontal = new System.Windows.Forms.Panel();
-            this.comboHorarioHoraI = new System.Windows.Forms.ComboBox();
-            this.comboHorarioHoraF = new System.Windows.Forms.ComboBox();
+            this.lblArchivo = new System.Windows.Forms.Label();
+            this.lblArchivoC = new System.Windows.Forms.Label();
             this.panelHorarioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHorario)).BeginInit();
             this.panelHorarioVertical2.SuspendLayout();
@@ -138,6 +141,8 @@
             this.dataGridHorario.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridHorario.Location = new System.Drawing.Point(8, 69);
             this.dataGridHorario.Name = "dataGridHorario";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dataGridHorario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridHorario.Size = new System.Drawing.Size(653, 340);
             this.dataGridHorario.TabIndex = 1;
             // 
@@ -155,6 +160,8 @@
             // panelHorarioVertical2
             // 
             this.panelHorarioVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelHorarioVertical2.Controls.Add(this.lblArchivoC);
+            this.panelHorarioVertical2.Controls.Add(this.lblArchivo);
             this.panelHorarioVertical2.Controls.Add(this.comboHorarioHoraF);
             this.panelHorarioVertical2.Controls.Add(this.comboHorarioHoraI);
             this.panelHorarioVertical2.Controls.Add(this.buttonHorarioExaminar);
@@ -180,6 +187,22 @@
             this.panelHorarioVertical2.Name = "panelHorarioVertical2";
             this.panelHorarioVertical2.Size = new System.Drawing.Size(386, 453);
             this.panelHorarioVertical2.TabIndex = 4;
+            // 
+            // comboHorarioHoraF
+            // 
+            this.comboHorarioHoraF.FormattingEnabled = true;
+            this.comboHorarioHoraF.Location = new System.Drawing.Point(286, 351);
+            this.comboHorarioHoraF.Name = "comboHorarioHoraF";
+            this.comboHorarioHoraF.Size = new System.Drawing.Size(67, 21);
+            this.comboHorarioHoraF.TabIndex = 54;
+            // 
+            // comboHorarioHoraI
+            // 
+            this.comboHorarioHoraI.FormattingEnabled = true;
+            this.comboHorarioHoraI.Location = new System.Drawing.Point(169, 353);
+            this.comboHorarioHoraI.Name = "comboHorarioHoraI";
+            this.comboHorarioHoraI.Size = new System.Drawing.Size(65, 21);
+            this.comboHorarioHoraI.TabIndex = 53;
             // 
             // buttonHorarioExaminar
             // 
@@ -407,21 +430,27 @@
             this.panelHorarioHorizontal.Size = new System.Drawing.Size(1081, 30);
             this.panelHorarioHorizontal.TabIndex = 25;
             // 
-            // comboHorarioHoraI
+            // lblArchivo
             // 
-            this.comboHorarioHoraI.FormattingEnabled = true;
-            this.comboHorarioHoraI.Location = new System.Drawing.Point(169, 353);
-            this.comboHorarioHoraI.Name = "comboHorarioHoraI";
-            this.comboHorarioHoraI.Size = new System.Drawing.Size(65, 21);
-            this.comboHorarioHoraI.TabIndex = 53;
+            this.lblArchivo.AutoSize = true;
+            this.lblArchivo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivo.ForeColor = System.Drawing.Color.White;
+            this.lblArchivo.Location = new System.Drawing.Point(10, 149);
+            this.lblArchivo.Name = "lblArchivo";
+            this.lblArchivo.Size = new System.Drawing.Size(140, 20);
+            this.lblArchivo.TabIndex = 55;
+            this.lblArchivo.Text = "Archivo cargado:";
             // 
-            // comboHorarioHoraF
+            // lblArchivoC
             // 
-            this.comboHorarioHoraF.FormattingEnabled = true;
-            this.comboHorarioHoraF.Location = new System.Drawing.Point(286, 351);
-            this.comboHorarioHoraF.Name = "comboHorarioHoraF";
-            this.comboHorarioHoraF.Size = new System.Drawing.Size(67, 21);
-            this.comboHorarioHoraF.TabIndex = 54;
+            this.lblArchivoC.AutoSize = true;
+            this.lblArchivoC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivoC.ForeColor = System.Drawing.Color.White;
+            this.lblArchivoC.Location = new System.Drawing.Point(145, 149);
+            this.lblArchivoC.Name = "lblArchivoC";
+            this.lblArchivoC.Size = new System.Drawing.Size(140, 20);
+            this.lblArchivoC.TabIndex = 56;
+            this.lblArchivoC.Text = "Archivo cargado:";
             // 
             // Horario
             // 
@@ -480,5 +509,7 @@
         private System.Windows.Forms.RadioButton radioHorarioManual;
         private System.Windows.Forms.ComboBox comboHorarioHoraF;
         private System.Windows.Forms.ComboBox comboHorarioHoraI;
+        private System.Windows.Forms.Label lblArchivoC;
+        private System.Windows.Forms.Label lblArchivo;
     }
 }
