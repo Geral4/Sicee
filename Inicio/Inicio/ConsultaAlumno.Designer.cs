@@ -35,6 +35,7 @@
             this.labelCAlumnoBuscar = new System.Windows.Forms.Label();
             this.textCAlumnoBuscar = new System.Windows.Forms.TextBox();
             this.panelCAlumnoVertical = new System.Windows.Forms.Panel();
+            this.Carrera = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCAlumno)).BeginInit();
             this.panelCAlumnoVertical.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,8 @@
             // 
             this.dataGridCAlumno.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCAlumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Carrera});
             this.dataGridCAlumno.Location = new System.Drawing.Point(10, 87);
             this.dataGridCAlumno.Name = "dataGridCAlumno";
             this.dataGridCAlumno.Size = new System.Drawing.Size(562, 170);
@@ -124,6 +127,15 @@
             this.panelCAlumnoVertical.Size = new System.Drawing.Size(585, 297);
             this.panelCAlumnoVertical.TabIndex = 5;
             // 
+            // Carrera
+            // 
+            this.Carrera.DataPropertyName = "Carrera_id";
+            this.Carrera.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.Carrera.HeaderText = "Carrera";
+            this.Carrera.MaxDropDownItems = 20;
+            this.Carrera.Name = "Carrera";
+            this.Carrera.Width = 115;
+            // 
             // ConsultaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Label labelCAlumnoBuscar;
         private System.Windows.Forms.TextBox textCAlumnoBuscar;
         private System.Windows.Forms.Panel panelCAlumnoVertical;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Carrera;
     }
 }

@@ -17,13 +17,17 @@ namespace Inicio
     public partial class Horario : Form
     {
         private OpenFileDialog archivoExcel = new OpenFileDialog();
-        private string ruta_archivo = "", nombre_archivo = "", conexion ="";
+        private string ruta_archivo = "", nombre_archivo = "", conexion ="", aux="";
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
             "Initial Catalog=Sicee;Data Source=localhost";
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "";
         private DataSet ds = new DataSet();
+        private string sql = "select (emp.Nombre + ' ' + emp.ApellidoP + ' '+ emp.ApellidoM) 'Nombre Empleado', car.Nombre Carrera, asig.Nombre Asignatura, " +
+                    "hr.HorarioInicio 'Hora Inicio', hr.HorarioFin 'Hora Fin', aula.clave Aula, hr.Dia from Horario hr inner join Empleado emp on hr.DocenteEmpleado_id = " +
+                    "emp.NPersonal inner join Carrera car on hr.Carrera_id = car.Clave inner join Asignatura asig on hr.Asignatura_id = asig.Clave inner join" +
+                    " cat_aulas aula on hr.Aula_id = aula.clave";
 
 
         public Horario()
@@ -40,6 +44,39 @@ namespace Inicio
             buttonHorarioGuardar.Enabled = false;
             lblArchivoC.Text = "";
             lblArchivo.Visible = false;
+
+            comboHorarioHoraI.Items.Add("07:00");
+            comboHorarioHoraI.Items.Add("08:00");
+            comboHorarioHoraI.Items.Add("09:00");
+            comboHorarioHoraI.Items.Add("10:00");
+            comboHorarioHoraI.Items.Add("11:00");
+            comboHorarioHoraI.Items.Add("12:00");
+            comboHorarioHoraI.Items.Add("13:00");
+            comboHorarioHoraI.Items.Add("14:00");
+            comboHorarioHoraI.Items.Add("15:00");
+            comboHorarioHoraI.Items.Add("16:00");
+            comboHorarioHoraI.Items.Add("17:00");
+            comboHorarioHoraI.Items.Add("18:00");
+            comboHorarioHoraI.Items.Add("19:00");
+            comboHorarioHoraI.Items.Add("20:00");
+            comboHorarioHoraI.Items.Add("21:00");
+
+            comboHorarioHoraF.Items.Add("08:00");
+            comboHorarioHoraF.Items.Add("09:00");
+            comboHorarioHoraF.Items.Add("10:00");
+            comboHorarioHoraF.Items.Add("11:00");
+            comboHorarioHoraF.Items.Add("12:00");
+            comboHorarioHoraF.Items.Add("13:00");
+            comboHorarioHoraF.Items.Add("14:00");
+            comboHorarioHoraF.Items.Add("15:00");
+            comboHorarioHoraF.Items.Add("16:00");
+            comboHorarioHoraF.Items.Add("17:00");
+            comboHorarioHoraF.Items.Add("18:00");
+            comboHorarioHoraF.Items.Add("19:00");
+            comboHorarioHoraF.Items.Add("20:00");
+            comboHorarioHoraF.Items.Add("21:00");
+            comboHorarioHoraF.Items.Add("22:00");
+
         }
         
 
@@ -56,7 +93,7 @@ namespace Inicio
                 MessageBox.Show("Importación exitosa :)", "Importación Excel");
                 //filtrado = textHorarioBuscar.Text;
                 dataGridHorario.DataSource = bindingSource1;
-                GetData("select * from Horario");
+                GetData(sql);
                 buttonHorarioGuardar.Enabled = false;
             }
             catch(SqlException SQLEx){
@@ -133,7 +170,10 @@ namespace Inicio
         {
             filtrado = textHorarioBuscar.Text;
             dataGridHorario.DataSource = bindingSource1;
-            GetData("select * from Horario where DocenteEmpleado_id like '" + filtrado + "%'");
+            aux = sql + " where emp.Nombre like '" + filtrado + "%' or emp.ApellidoP like '" + filtrado + "%' or car.Nombre like '" + filtrado + "%' or hr.Aula_id like '" + filtrado + "%'" +
+                " or hr.Dia like '" + filtrado + "%'";
+            Console.WriteLine(aux);
+            GetData(aux);
         }
 
         private void radioHorarioHoja_MouseClick(object sender, MouseEventArgs e)
@@ -163,6 +203,16 @@ namespace Inicio
             {
                 buttonHorarioExaminar.Enabled = false;
             }
+        }
+
+        private void dataGridHorario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Horario_Load(object sender, EventArgs e)
+        {
+        
         }
 
         private string ExcelConnection(string fileName)

@@ -57,6 +57,7 @@
             this.textEmpleadoNombre = new System.Windows.Forms.TextBox();
             this.labelEmpleadoNombre = new System.Windows.Forms.Label();
             this.labeEmpleadoRegistro = new System.Windows.Forms.Label();
+            this.textEmpleadoHuella = new System.Windows.Forms.TextBox();
             this.panelEmpleadoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleado)).BeginInit();
             this.panelEmpleadoVertical2.SuspendLayout();
@@ -65,6 +66,7 @@
             // panelEmpleadoVertical
             // 
             this.panelEmpleadoVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelEmpleadoVertical.Controls.Add(this.textEmpleadoHuella);
             this.panelEmpleadoVertical.Controls.Add(this.label1);
             this.panelEmpleadoVertical.Controls.Add(this.textEmpleadoBuscar);
             this.panelEmpleadoVertical.Controls.Add(this.labelEmpleadoBuscar);
@@ -154,7 +156,7 @@
             this.panelEmpleadoVertical2.Controls.Add(this.labeEmpleadoRegistro);
             this.panelEmpleadoVertical2.Location = new System.Drawing.Point(573, 0);
             this.panelEmpleadoVertical2.Name = "panelEmpleadoVertical2";
-            this.panelEmpleadoVertical2.Size = new System.Drawing.Size(326, 439);
+            this.panelEmpleadoVertical2.Size = new System.Drawing.Size(333, 439);
             this.panelEmpleadoVertical2.TabIndex = 2;
             // 
             // buttonEmpleadoHuella
@@ -380,11 +382,18 @@
             this.labeEmpleadoRegistro.TabIndex = 0;
             this.labeEmpleadoRegistro.Text = "Registrar Empleado";
             // 
+            // textEmpleadoHuella
+            // 
+            this.textEmpleadoHuella.Location = new System.Drawing.Point(206, 13);
+            this.textEmpleadoHuella.Name = "textEmpleadoHuella";
+            this.textEmpleadoHuella.Size = new System.Drawing.Size(12, 20);
+            this.textEmpleadoHuella.TabIndex = 26;
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 436);
+            this.ClientSize = new System.Drawing.Size(895, 436);
             this.Controls.Add(this.panelEmpleadoVertical2);
             this.Controls.Add(this.panelEmpleadoVertical);
             this.Name = "Empleado";
@@ -443,5 +452,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cargoidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonEmpleadoHuella;
+        private System.Windows.Forms.TextBox textEmpleadoHuella;
     }
 }

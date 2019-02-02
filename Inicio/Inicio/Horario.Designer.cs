@@ -32,12 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelHorarioTitulo = new System.Windows.Forms.Label();
             this.panelHorarioVertical = new System.Windows.Forms.Panel();
-            this.buttonHorarioBuscar = new System.Windows.Forms.Button();
             this.textHorarioBuscar = new System.Windows.Forms.TextBox();
             this.labelHorarioBuscar = new System.Windows.Forms.Label();
             this.dataGridHorario = new System.Windows.Forms.DataGridView();
             this.labelHorarioLista = new System.Windows.Forms.Label();
             this.panelHorarioVertical2 = new System.Windows.Forms.Panel();
+            this.lblArchivoC = new System.Windows.Forms.Label();
+            this.lblArchivo = new System.Windows.Forms.Label();
             this.comboHorarioHoraF = new System.Windows.Forms.ComboBox();
             this.comboHorarioHoraI = new System.Windows.Forms.ComboBox();
             this.buttonHorarioExaminar = new System.Windows.Forms.Button();
@@ -60,8 +61,6 @@
             this.labelHorarioDocente = new System.Windows.Forms.Label();
             this.labelHorarioRegistro = new System.Windows.Forms.Label();
             this.panelHorarioHorizontal = new System.Windows.Forms.Panel();
-            this.lblArchivo = new System.Windows.Forms.Label();
-            this.lblArchivoC = new System.Windows.Forms.Label();
             this.panelHorarioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHorario)).BeginInit();
             this.panelHorarioVertical2.SuspendLayout();
@@ -81,7 +80,6 @@
             // panelHorarioVertical
             // 
             this.panelHorarioVertical.BackColor = System.Drawing.Color.White;
-            this.panelHorarioVertical.Controls.Add(this.buttonHorarioBuscar);
             this.panelHorarioVertical.Controls.Add(this.textHorarioBuscar);
             this.panelHorarioVertical.Controls.Add(this.labelHorarioBuscar);
             this.panelHorarioVertical.Controls.Add(this.dataGridHorario);
@@ -90,20 +88,6 @@
             this.panelHorarioVertical.Name = "panelHorarioVertical";
             this.panelHorarioVertical.Size = new System.Drawing.Size(670, 453);
             this.panelHorarioVertical.TabIndex = 3;
-            // 
-            // buttonHorarioBuscar
-            // 
-            this.buttonHorarioBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.buttonHorarioBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonHorarioBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHorarioBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHorarioBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonHorarioBuscar.Location = new System.Drawing.Point(554, 27);
-            this.buttonHorarioBuscar.Name = "buttonHorarioBuscar";
-            this.buttonHorarioBuscar.Size = new System.Drawing.Size(94, 38);
-            this.buttonHorarioBuscar.TabIndex = 24;
-            this.buttonHorarioBuscar.Text = "Buscar";
-            this.buttonHorarioBuscar.UseVisualStyleBackColor = false;
             // 
             // textHorarioBuscar
             // 
@@ -145,6 +129,7 @@
             this.dataGridHorario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridHorario.Size = new System.Drawing.Size(653, 340);
             this.dataGridHorario.TabIndex = 1;
+            this.dataGridHorario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridHorario_CellContentClick);
             // 
             // labelHorarioLista
             // 
@@ -187,6 +172,28 @@
             this.panelHorarioVertical2.Name = "panelHorarioVertical2";
             this.panelHorarioVertical2.Size = new System.Drawing.Size(386, 453);
             this.panelHorarioVertical2.TabIndex = 4;
+            // 
+            // lblArchivoC
+            // 
+            this.lblArchivoC.AutoSize = true;
+            this.lblArchivoC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivoC.ForeColor = System.Drawing.Color.White;
+            this.lblArchivoC.Location = new System.Drawing.Point(145, 149);
+            this.lblArchivoC.Name = "lblArchivoC";
+            this.lblArchivoC.Size = new System.Drawing.Size(140, 20);
+            this.lblArchivoC.TabIndex = 56;
+            this.lblArchivoC.Text = "Archivo cargado:";
+            // 
+            // lblArchivo
+            // 
+            this.lblArchivo.AutoSize = true;
+            this.lblArchivo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArchivo.ForeColor = System.Drawing.Color.White;
+            this.lblArchivo.Location = new System.Drawing.Point(10, 149);
+            this.lblArchivo.Name = "lblArchivo";
+            this.lblArchivo.Size = new System.Drawing.Size(140, 20);
+            this.lblArchivo.TabIndex = 55;
+            this.lblArchivo.Text = "Archivo cargado:";
             // 
             // comboHorarioHoraF
             // 
@@ -430,28 +437,6 @@
             this.panelHorarioHorizontal.Size = new System.Drawing.Size(1081, 30);
             this.panelHorarioHorizontal.TabIndex = 25;
             // 
-            // lblArchivo
-            // 
-            this.lblArchivo.AutoSize = true;
-            this.lblArchivo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArchivo.ForeColor = System.Drawing.Color.White;
-            this.lblArchivo.Location = new System.Drawing.Point(10, 149);
-            this.lblArchivo.Name = "lblArchivo";
-            this.lblArchivo.Size = new System.Drawing.Size(140, 20);
-            this.lblArchivo.TabIndex = 55;
-            this.lblArchivo.Text = "Archivo cargado:";
-            // 
-            // lblArchivoC
-            // 
-            this.lblArchivoC.AutoSize = true;
-            this.lblArchivoC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArchivoC.ForeColor = System.Drawing.Color.White;
-            this.lblArchivoC.Location = new System.Drawing.Point(145, 149);
-            this.lblArchivoC.Name = "lblArchivoC";
-            this.lblArchivoC.Size = new System.Drawing.Size(140, 20);
-            this.lblArchivoC.TabIndex = 56;
-            this.lblArchivoC.Text = "Archivo cargado:";
-            // 
             // Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,6 +452,7 @@
             this.Name = "Horario";
             this.Opacity = 0.96D;
             this.Text = "Horario";
+            this.Load += new System.EventHandler(this.Horario_Load);
             this.panelHorarioVertical.ResumeLayout(false);
             this.panelHorarioVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHorario)).EndInit();
@@ -481,7 +467,6 @@
 
         private System.Windows.Forms.Label labelHorarioTitulo;
         private System.Windows.Forms.Panel panelHorarioVertical;
-        private System.Windows.Forms.Button buttonHorarioBuscar;
         private System.Windows.Forms.TextBox textHorarioBuscar;
         private System.Windows.Forms.Label labelHorarioBuscar;
         private System.Windows.Forms.DataGridView dataGridHorario;

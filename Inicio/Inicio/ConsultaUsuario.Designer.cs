@@ -52,7 +52,7 @@
             this.panelCUsuarioVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCUsuarioVertical.Location = new System.Drawing.Point(0, 0);
             this.panelCUsuarioVertical.Name = "panelCUsuarioVertical";
-            this.panelCUsuarioVertical.Size = new System.Drawing.Size(509, 313);
+            this.panelCUsuarioVertical.Size = new System.Drawing.Size(553, 313);
             this.panelCUsuarioVertical.TabIndex = 6;
             // 
             // textCUsuarioBuscar
@@ -113,7 +113,7 @@
             this.NPersonal});
             this.dataGridCUsuario.Location = new System.Drawing.Point(10, 87);
             this.dataGridCUsuario.Name = "dataGridCUsuario";
-            this.dataGridCUsuario.Size = new System.Drawing.Size(485, 170);
+            this.dataGridCUsuario.Size = new System.Drawing.Size(531, 170);
             this.dataGridCUsuario.TabIndex = 1;
             // 
             // NPersonal
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 313);
+            this.ClientSize = new System.Drawing.Size(553, 313);
             this.Controls.Add(this.panelCUsuarioVertical);
             this.Name = "ConsultaUsuario";
             this.Opacity = 0.97D;

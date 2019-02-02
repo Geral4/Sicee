@@ -19,6 +19,7 @@ namespace Inicio
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "", sql = "";
+        private DataTable table = new DataTable("Carreras");
 
         public ConsultaAsignatura()
         {
@@ -98,17 +99,36 @@ namespace Inicio
         }
 
         private void ConsultaAsignatura_Load(object sender, EventArgs e)
+        {           
+             dataGridCAsignatura.DataSource = bindingSource1;
+                       
+            try
+            {
+                Carrera.DataSource = ObtenerCarrera();
+                Carrera.DisplayMember = "Nombre";
+                Carrera.ValueMember = "Clave";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "Excepción producida");
+            }
+            GetData("select * from Asignatura");
+        }
+
+
+        private DataTable ObtenerCarrera()
         {
             try
             {
-                dataGridCAsignatura.DataSource = bindingSource1;
-                GetData("select * from Asignatura");
+                sql = "select Clave, Nombre from Carrera order by Nombre";
+                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
+                dataAdapter.Fill(table);
             }
-            catch (DataException ex)
+            catch (SqlException sq)
             {
-                Console.WriteLine("Excepción producida: " + ex);
+                MessageBox.Show("" + sq, "Excepción producida");
             }
-
+            return table;
         }
     }
 }

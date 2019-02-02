@@ -30,7 +30,7 @@ namespace CapaDatos
         }
 
         public void insertarEmpleado(string nPersonal, string nombre,string apellidoP,
-        string apellidoM, string telefono, string sexo, string direccion, string cargo_id, string email)
+        string apellidoM, string telefono, string sexo, string direccion, string cargo_id, string email,string huellas)
         {
             Coman.Connection = Conexion.AbrirConexion();
             Coman.CommandText = "InsertarEmpleado";
@@ -44,6 +44,7 @@ namespace CapaDatos
             Coman.Parameters.AddWithValue("@direccion", direccion);
             Coman.Parameters.AddWithValue("@cargoid", cargo_id);
             Coman.Parameters.AddWithValue("@email", email);
+            Coman.Parameters.AddWithValue("@huellas", huellas);
             Coman.ExecuteNonQuery();
             Coman.Parameters.Clear(); 
         }               

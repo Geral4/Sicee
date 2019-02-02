@@ -51,12 +51,12 @@
             this.panelCEdificioVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCEdificioVertical.Location = new System.Drawing.Point(0, 0);
             this.panelCEdificioVertical.Name = "panelCEdificioVertical";
-            this.panelCEdificioVertical.Size = new System.Drawing.Size(649, 303);
+            this.panelCEdificioVertical.Size = new System.Drawing.Size(518, 303);
             this.panelCEdificioVertical.TabIndex = 7;
             // 
             // textCEdificioBuscar
             // 
-            this.textCEdificioBuscar.Location = new System.Drawing.Point(251, 57);
+            this.textCEdificioBuscar.Location = new System.Drawing.Point(266, 41);
             this.textCEdificioBuscar.Name = "textCEdificioBuscar";
             this.textCEdificioBuscar.Size = new System.Drawing.Size(137, 20);
             this.textCEdificioBuscar.TabIndex = 23;
@@ -68,7 +68,7 @@
             this.labelCEdificioBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCEdificioBuscar.ForeColor = System.Drawing.Color.Black;
             this.labelCEdificioBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelCEdificioBuscar.Location = new System.Drawing.Point(195, 58);
+            this.labelCEdificioBuscar.Location = new System.Drawing.Point(193, 40);
             this.labelCEdificioBuscar.Name = "labelCEdificioBuscar";
             this.labelCEdificioBuscar.Size = new System.Drawing.Size(57, 18);
             this.labelCEdificioBuscar.TabIndex = 21;
@@ -110,7 +110,7 @@
             this.dataGridCEdificio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCEdificio.Location = new System.Drawing.Point(7, 87);
             this.dataGridCEdificio.Name = "dataGridCEdificio";
-            this.dataGridCEdificio.Size = new System.Drawing.Size(464, 170);
+            this.dataGridCEdificio.Size = new System.Drawing.Size(456, 170);
             this.dataGridCEdificio.TabIndex = 1;
             // 
             // labelCEdificioLista
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 303);
+            this.ClientSize = new System.Drawing.Size(475, 303);
             this.Controls.Add(this.panelCEdificioVertical);
             this.Name = "ConsultaEdificio";
             this.Opacity = 0.97D;

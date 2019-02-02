@@ -39,8 +39,7 @@ namespace Inicio
             catch (DataException ex)
             {
                 Console.WriteLine("Excepción producida: " + ex);
-            }
-          
+            }          
         }
 
         private void buttonCEdificioEditar_Click(object sender, EventArgs e)

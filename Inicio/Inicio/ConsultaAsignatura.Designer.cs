@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.panelCAsignaturaVertical2 = new System.Windows.Forms.Panel();
+            this.textCAsignaturaBuscar = new System.Windows.Forms.TextBox();
+            this.labelCAsignaturaBuscar = new System.Windows.Forms.Label();
             this.buttonCAsignaturaEliminar = new System.Windows.Forms.Button();
             this.buttonCAsignaturaEditar = new System.Windows.Forms.Button();
             this.dataGridCAsignatura = new System.Windows.Forms.DataGridView();
             this.labelCAsignaturaLista = new System.Windows.Forms.Label();
-            this.labelCAsignaturaBuscar = new System.Windows.Forms.Label();
-            this.textCAsignaturaBuscar = new System.Windows.Forms.TextBox();
+            this.Carrera = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelCAsignaturaVertical2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCAsignatura)).BeginInit();
             this.SuspendLayout();
@@ -49,10 +50,31 @@
             this.panelCAsignaturaVertical2.Controls.Add(this.dataGridCAsignatura);
             this.panelCAsignaturaVertical2.Controls.Add(this.labelCAsignaturaLista);
             this.panelCAsignaturaVertical2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelCAsignaturaVertical2.Location = new System.Drawing.Point(-2, 0);
+            this.panelCAsignaturaVertical2.Location = new System.Drawing.Point(-4, 0);
             this.panelCAsignaturaVertical2.Name = "panelCAsignaturaVertical2";
-            this.panelCAsignaturaVertical2.Size = new System.Drawing.Size(570, 312);
+            this.panelCAsignaturaVertical2.Size = new System.Drawing.Size(598, 312);
             this.panelCAsignaturaVertical2.TabIndex = 56;
+            // 
+            // textCAsignaturaBuscar
+            // 
+            this.textCAsignaturaBuscar.Location = new System.Drawing.Point(312, 58);
+            this.textCAsignaturaBuscar.Name = "textCAsignaturaBuscar";
+            this.textCAsignaturaBuscar.Size = new System.Drawing.Size(177, 20);
+            this.textCAsignaturaBuscar.TabIndex = 41;
+            this.textCAsignaturaBuscar.TextChanged += new System.EventHandler(this.textCAsignaturaBuscar_TextChanged);
+            // 
+            // labelCAsignaturaBuscar
+            // 
+            this.labelCAsignaturaBuscar.AutoSize = true;
+            this.labelCAsignaturaBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.labelCAsignaturaBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCAsignaturaBuscar.ForeColor = System.Drawing.Color.White;
+            this.labelCAsignaturaBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.labelCAsignaturaBuscar.Location = new System.Drawing.Point(246, 59);
+            this.labelCAsignaturaBuscar.Name = "labelCAsignaturaBuscar";
+            this.labelCAsignaturaBuscar.Size = new System.Drawing.Size(60, 19);
+            this.labelCAsignaturaBuscar.TabIndex = 40;
+            this.labelCAsignaturaBuscar.Text = "Buscar";
             // 
             // buttonCAsignaturaEliminar
             // 
@@ -88,9 +110,11 @@
             // 
             this.dataGridCAsignatura.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCAsignatura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCAsignatura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Carrera});
             this.dataGridCAsignatura.Location = new System.Drawing.Point(10, 87);
             this.dataGridCAsignatura.Name = "dataGridCAsignatura";
-            this.dataGridCAsignatura.Size = new System.Drawing.Size(553, 170);
+            this.dataGridCAsignatura.Size = new System.Drawing.Size(576, 170);
             this.dataGridCAsignatura.TabIndex = 1;
             // 
             // labelCAsignaturaLista
@@ -104,32 +128,20 @@
             this.labelCAsignaturaLista.TabIndex = 0;
             this.labelCAsignaturaLista.Text = "Lista de Asignatura";
             // 
-            // labelCAsignaturaBuscar
+            // Carrera
             // 
-            this.labelCAsignaturaBuscar.AutoSize = true;
-            this.labelCAsignaturaBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.labelCAsignaturaBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCAsignaturaBuscar.ForeColor = System.Drawing.Color.White;
-            this.labelCAsignaturaBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelCAsignaturaBuscar.Location = new System.Drawing.Point(246, 59);
-            this.labelCAsignaturaBuscar.Name = "labelCAsignaturaBuscar";
-            this.labelCAsignaturaBuscar.Size = new System.Drawing.Size(60, 19);
-            this.labelCAsignaturaBuscar.TabIndex = 40;
-            this.labelCAsignaturaBuscar.Text = "Buscar";
-            // 
-            // textCAsignaturaBuscar
-            // 
-            this.textCAsignaturaBuscar.Location = new System.Drawing.Point(312, 58);
-            this.textCAsignaturaBuscar.Name = "textCAsignaturaBuscar";
-            this.textCAsignaturaBuscar.Size = new System.Drawing.Size(177, 20);
-            this.textCAsignaturaBuscar.TabIndex = 41;
-            this.textCAsignaturaBuscar.TextChanged += new System.EventHandler(this.textCAsignaturaBuscar_TextChanged);
+            this.Carrera.DataPropertyName = "Carrera_id";
+            this.Carrera.HeaderText = "Carrera";
+            this.Carrera.Name = "Carrera";
+            this.Carrera.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Carrera.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Carrera.Width = 115;
             // 
             // ConsultaAsignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 312);
+            this.ClientSize = new System.Drawing.Size(594, 312);
             this.Controls.Add(this.panelCAsignaturaVertical2);
             this.Name = "ConsultaAsignatura";
             this.Opacity = 0.98D;
@@ -152,5 +164,6 @@
         private System.Windows.Forms.Label labelCAsignaturaLista;
         private System.Windows.Forms.Label labelCAsignaturaBuscar;
         private System.Windows.Forms.TextBox textCAsignaturaBuscar;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Carrera;
     }
 }

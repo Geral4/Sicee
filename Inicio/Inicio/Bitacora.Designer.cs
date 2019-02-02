@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bitacora));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelBitacoraBitacora = new System.Windows.Forms.Label();
             this.panelBitacoraHorizontal = new System.Windows.Forms.Panel();
@@ -38,15 +37,14 @@
             this.labelHBitacora = new System.Windows.Forms.Label();
             this.textBitacoraBuscar = new System.Windows.Forms.TextBox();
             this.labelBitacoraBuscar = new System.Windows.Forms.Label();
-            this.buttonBitacoraBuscar = new System.Windows.Forms.Button();
-            this.buttonBitacoraEditar = new System.Windows.Forms.Button();
-            this.pictureBitacora = new System.Windows.Forms.PictureBox();
             this.panelBitacoraVertical2 = new System.Windows.Forms.Panel();
+            this.dataGridBHorario = new System.Windows.Forms.DataGridView();
             this.buttonBitacoraGuardar = new System.Windows.Forms.Button();
             this.timerBitacora = new System.Windows.Forms.Timer(this.components);
+            this.buttonBitacoraEditar = new System.Windows.Forms.Button();
             this.panelBitacoraVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBitacora)).BeginInit();
             this.panelBitacoraVertical2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBHorario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,7 +64,6 @@
             this.labelBitacoraBitacora.Size = new System.Drawing.Size(196, 49);
             this.labelBitacoraBitacora.TabIndex = 2;
             this.labelBitacoraBitacora.Text = "Bitacora";
-            this.labelBitacoraBitacora.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelBitacoraHorizontal
             // 
@@ -83,19 +80,17 @@
             this.panelBitacoraVertical.Controls.Add(this.labelHBitacora);
             this.panelBitacoraVertical.Controls.Add(this.textBitacoraBuscar);
             this.panelBitacoraVertical.Controls.Add(this.labelBitacoraBuscar);
-            this.panelBitacoraVertical.Controls.Add(this.buttonBitacoraBuscar);
-            this.panelBitacoraVertical.Location = new System.Drawing.Point(5, 69);
+            this.panelBitacoraVertical.Location = new System.Drawing.Point(6, 67);
             this.panelBitacoraVertical.Name = "panelBitacoraVertical";
-            this.panelBitacoraVertical.Size = new System.Drawing.Size(242, 537);
+            this.panelBitacoraVertical.Size = new System.Drawing.Size(1035, 117);
             this.panelBitacoraVertical.TabIndex = 5;
-            this.panelBitacoraVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.panelReporteIVertical_Paint);
             // 
             // labelFBitacora
             // 
             this.labelFBitacora.AutoSize = true;
             this.labelFBitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFBitacora.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelFBitacora.Location = new System.Drawing.Point(12, 85);
+            this.labelFBitacora.Location = new System.Drawing.Point(170, 63);
             this.labelFBitacora.Name = "labelFBitacora";
             this.labelFBitacora.Size = new System.Drawing.Size(100, 37);
             this.labelFBitacora.TabIndex = 34;
@@ -106,7 +101,7 @@
             this.labelHBitacora.AutoSize = true;
             this.labelHBitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHBitacora.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelHBitacora.Location = new System.Drawing.Point(46, 46);
+            this.labelHBitacora.Location = new System.Drawing.Point(240, 24);
             this.labelHBitacora.Name = "labelHBitacora";
             this.labelHBitacora.Size = new System.Drawing.Size(109, 39);
             this.labelHBitacora.TabIndex = 33;
@@ -114,10 +109,11 @@
             // 
             // textBitacoraBuscar
             // 
-            this.textBitacoraBuscar.Location = new System.Drawing.Point(19, 332);
+            this.textBitacoraBuscar.Location = new System.Drawing.Point(669, 66);
             this.textBitacoraBuscar.Name = "textBitacoraBuscar";
             this.textBitacoraBuscar.Size = new System.Drawing.Size(199, 20);
             this.textBitacoraBuscar.TabIndex = 31;
+            this.textBitacoraBuscar.TextChanged += new System.EventHandler(this.textBitacoraBuscar_TextChanged);
             // 
             // labelBitacoraBuscar
             // 
@@ -126,66 +122,30 @@
             this.labelBitacoraBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBitacoraBuscar.ForeColor = System.Drawing.Color.White;
             this.labelBitacoraBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelBitacoraBuscar.Location = new System.Drawing.Point(49, 310);
+            this.labelBitacoraBuscar.Location = new System.Drawing.Point(595, 64);
             this.labelBitacoraBuscar.Name = "labelBitacoraBuscar";
-            this.labelBitacoraBuscar.Size = new System.Drawing.Size(134, 19);
+            this.labelBitacoraBuscar.Size = new System.Drawing.Size(68, 19);
             this.labelBitacoraBuscar.TabIndex = 25;
-            this.labelBitacoraBuscar.Text = "Buscar por aula:";
-            // 
-            // buttonBitacoraBuscar
-            // 
-            this.buttonBitacoraBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.buttonBitacoraBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBitacoraBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.buttonBitacoraBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.buttonBitacoraBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBitacoraBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBitacoraBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonBitacoraBuscar.Location = new System.Drawing.Point(76, 381);
-            this.buttonBitacoraBuscar.Name = "buttonBitacoraBuscar";
-            this.buttonBitacoraBuscar.Size = new System.Drawing.Size(95, 33);
-            this.buttonBitacoraBuscar.TabIndex = 24;
-            this.buttonBitacoraBuscar.Text = "Buscar";
-            this.buttonBitacoraBuscar.UseVisualStyleBackColor = false;
-            // 
-            // buttonBitacoraEditar
-            // 
-            this.buttonBitacoraEditar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.buttonBitacoraEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBitacoraEditar.FlatAppearance.BorderSize = 0;
-            this.buttonBitacoraEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
-            this.buttonBitacoraEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
-            this.buttonBitacoraEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBitacoraEditar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBitacoraEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonBitacoraEditar.Location = new System.Drawing.Point(255, 453);
-            this.buttonBitacoraEditar.Name = "buttonBitacoraEditar";
-            this.buttonBitacoraEditar.Size = new System.Drawing.Size(96, 35);
-            this.buttonBitacoraEditar.TabIndex = 22;
-            this.buttonBitacoraEditar.Text = "Editar";
-            this.buttonBitacoraEditar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBitacora
-            // 
-            this.pictureBitacora.Image = ((System.Drawing.Image)(resources.GetObject("pictureBitacora.Image")));
-            this.pictureBitacora.Location = new System.Drawing.Point(3, 29);
-            this.pictureBitacora.Name = "pictureBitacora";
-            this.pictureBitacora.Size = new System.Drawing.Size(781, 418);
-            this.pictureBitacora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBitacora.TabIndex = 7;
-            this.pictureBitacora.TabStop = false;
-            this.pictureBitacora.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.labelBitacoraBuscar.Text = "Buscar :";
             // 
             // panelBitacoraVertical2
             // 
             this.panelBitacoraVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelBitacoraVertical2.Controls.Add(this.dataGridBHorario);
             this.panelBitacoraVertical2.Controls.Add(this.buttonBitacoraGuardar);
-            this.panelBitacoraVertical2.Controls.Add(this.pictureBitacora);
             this.panelBitacoraVertical2.Controls.Add(this.buttonBitacoraEditar);
-            this.panelBitacoraVertical2.Location = new System.Drawing.Point(254, 69);
+            this.panelBitacoraVertical2.Location = new System.Drawing.Point(6, 180);
             this.panelBitacoraVertical2.Name = "panelBitacoraVertical2";
-            this.panelBitacoraVertical2.Size = new System.Drawing.Size(787, 537);
+            this.panelBitacoraVertical2.Size = new System.Drawing.Size(1035, 510);
             this.panelBitacoraVertical2.TabIndex = 6;
+            // 
+            // dataGridBHorario
+            // 
+            this.dataGridBHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridBHorario.Location = new System.Drawing.Point(11, 10);
+            this.dataGridBHorario.Name = "dataGridBHorario";
+            this.dataGridBHorario.Size = new System.Drawing.Size(1013, 365);
+            this.dataGridBHorario.TabIndex = 24;
             // 
             // buttonBitacoraGuardar
             // 
@@ -197,7 +157,7 @@
             this.buttonBitacoraGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBitacoraGuardar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBitacoraGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonBitacoraGuardar.Location = new System.Drawing.Point(426, 453);
+            this.buttonBitacoraGuardar.Location = new System.Drawing.Point(557, 381);
             this.buttonBitacoraGuardar.Name = "buttonBitacoraGuardar";
             this.buttonBitacoraGuardar.Size = new System.Drawing.Size(112, 35);
             this.buttonBitacoraGuardar.TabIndex = 23;
@@ -209,11 +169,28 @@
             this.timerBitacora.Enabled = true;
             this.timerBitacora.Tick += new System.EventHandler(this.timerBitacora_Tick);
             // 
+            // buttonBitacoraEditar
+            // 
+            this.buttonBitacoraEditar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.buttonBitacoraEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBitacoraEditar.FlatAppearance.BorderSize = 0;
+            this.buttonBitacoraEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.buttonBitacoraEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
+            this.buttonBitacoraEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBitacoraEditar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBitacoraEditar.ForeColor = System.Drawing.Color.White;
+            this.buttonBitacoraEditar.Location = new System.Drawing.Point(338, 381);
+            this.buttonBitacoraEditar.Name = "buttonBitacoraEditar";
+            this.buttonBitacoraEditar.Size = new System.Drawing.Size(96, 35);
+            this.buttonBitacoraEditar.TabIndex = 22;
+            this.buttonBitacoraEditar.Text = "Editar";
+            this.buttonBitacoraEditar.UseVisualStyleBackColor = false;
+            // 
             // Bitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 615);
+            this.ClientSize = new System.Drawing.Size(1080, 614);
             this.Controls.Add(this.panelBitacoraVertical2);
             this.Controls.Add(this.panelBitacoraVertical);
             this.Controls.Add(this.panel1);
@@ -223,10 +200,11 @@
             this.Name = "Bitacora";
             this.Opacity = 0.96D;
             this.Text = "Bitacora";
+            this.Load += new System.EventHandler(this.Bitacora_Load);
             this.panelBitacoraVertical.ResumeLayout(false);
             this.panelBitacoraVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBitacora)).EndInit();
             this.panelBitacoraVertical2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBHorario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,13 +218,12 @@
         private System.Windows.Forms.Panel panelBitacoraVertical;
         private System.Windows.Forms.TextBox textBitacoraBuscar;
         private System.Windows.Forms.Label labelBitacoraBuscar;
-        private System.Windows.Forms.Button buttonBitacoraBuscar;
-        private System.Windows.Forms.PictureBox pictureBitacora;
-        private System.Windows.Forms.Button buttonBitacoraEditar;
         private System.Windows.Forms.Panel panelBitacoraVertical2;
         private System.Windows.Forms.Label labelHBitacora;
         private System.Windows.Forms.Label labelFBitacora;
         private System.Windows.Forms.Timer timerBitacora;
         private System.Windows.Forms.Button buttonBitacoraGuardar;
+        private System.Windows.Forms.DataGridView dataGridBHorario;
+        private System.Windows.Forms.Button buttonBitacoraEditar;
     }
 }
