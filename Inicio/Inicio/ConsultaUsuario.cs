@@ -56,8 +56,8 @@ namespace Inicio
                 MessageBox.Show("" + ex, "Excepción producida");
             }
             GetData("select usu.NPersonal_id, (emp.ApellidoP + ' ' + emp.ApellidoM + ' ' + emp.Nombre) " +
-                "Nombre_Completo, usu.Usuario, usu.Contrasena, usu.Acceso  from Empleado emp left outer join " +
-                "Usuario usu on emp.NPersonal = usu.NPersonal_id");
+                "Nombre_Completo, usu.Usuario, usu.Contrasena, usu.Acceso  from Usuario usu left outer join " +
+                "Empleado emp on usu.NPersonal_id = emp.NPersonal");
         }
         private void MostrarUsuario()
         {
