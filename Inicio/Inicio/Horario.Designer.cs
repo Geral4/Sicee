@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelHorarioTitulo = new System.Windows.Forms.Label();
             this.panelHorarioVertical = new System.Windows.Forms.Panel();
             this.textHorarioBuscar = new System.Windows.Forms.TextBox();
@@ -37,6 +37,8 @@
             this.dataGridHorario = new System.Windows.Forms.DataGridView();
             this.labelHorarioLista = new System.Windows.Forms.Label();
             this.panelHorarioVertical2 = new System.Windows.Forms.Panel();
+            this.BitacoraFechaSemestre = new System.Windows.Forms.Label();
+            this.FechaBitacora = new System.Windows.Forms.DateTimePicker();
             this.lblArchivoC = new System.Windows.Forms.Label();
             this.lblArchivo = new System.Windows.Forms.Label();
             this.comboHorarioHoraF = new System.Windows.Forms.ComboBox();
@@ -115,18 +117,18 @@
             this.dataGridHorario.AllowUserToDeleteRows = false;
             this.dataGridHorario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dataGridHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridHorario.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridHorario.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridHorario.Location = new System.Drawing.Point(8, 69);
             this.dataGridHorario.Name = "dataGridHorario";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dataGridHorario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dataGridHorario.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridHorario.Size = new System.Drawing.Size(653, 340);
             this.dataGridHorario.TabIndex = 1;
             this.dataGridHorario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridHorario_CellContentClick);
@@ -145,6 +147,8 @@
             // panelHorarioVertical2
             // 
             this.panelHorarioVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelHorarioVertical2.Controls.Add(this.BitacoraFechaSemestre);
+            this.panelHorarioVertical2.Controls.Add(this.FechaBitacora);
             this.panelHorarioVertical2.Controls.Add(this.lblArchivoC);
             this.panelHorarioVertical2.Controls.Add(this.lblArchivo);
             this.panelHorarioVertical2.Controls.Add(this.comboHorarioHoraF);
@@ -168,10 +172,28 @@
             this.panelHorarioVertical2.Controls.Add(this.textHorarioDocente);
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioDocente);
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioRegistro);
-            this.panelHorarioVertical2.Location = new System.Drawing.Point(686, 99);
+            this.panelHorarioVertical2.Location = new System.Drawing.Point(686, 53);
             this.panelHorarioVertical2.Name = "panelHorarioVertical2";
-            this.panelHorarioVertical2.Size = new System.Drawing.Size(386, 453);
+            this.panelHorarioVertical2.Size = new System.Drawing.Size(386, 499);
             this.panelHorarioVertical2.TabIndex = 4;
+            // 
+            // BitacoraFechaSemestre
+            // 
+            this.BitacoraFechaSemestre.AutoSize = true;
+            this.BitacoraFechaSemestre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BitacoraFechaSemestre.ForeColor = System.Drawing.Color.White;
+            this.BitacoraFechaSemestre.Location = new System.Drawing.Point(111, 185);
+            this.BitacoraFechaSemestre.Name = "BitacoraFechaSemestre";
+            this.BitacoraFechaSemestre.Size = new System.Drawing.Size(190, 20);
+            this.BitacoraFechaSemestre.TabIndex = 58;
+            this.BitacoraFechaSemestre.Text = "Fecha inicio de semestre";
+            // 
+            // FechaBitacora
+            // 
+            this.FechaBitacora.Location = new System.Drawing.Point(104, 205);
+            this.FechaBitacora.Name = "FechaBitacora";
+            this.FechaBitacora.Size = new System.Drawing.Size(200, 20);
+            this.FechaBitacora.TabIndex = 57;
             // 
             // lblArchivoC
             // 
@@ -198,7 +220,7 @@
             // comboHorarioHoraF
             // 
             this.comboHorarioHoraF.FormattingEnabled = true;
-            this.comboHorarioHoraF.Location = new System.Drawing.Point(286, 351);
+            this.comboHorarioHoraF.Location = new System.Drawing.Point(286, 401);
             this.comboHorarioHoraF.Name = "comboHorarioHoraF";
             this.comboHorarioHoraF.Size = new System.Drawing.Size(67, 21);
             this.comboHorarioHoraF.TabIndex = 54;
@@ -206,7 +228,7 @@
             // comboHorarioHoraI
             // 
             this.comboHorarioHoraI.FormattingEnabled = true;
-            this.comboHorarioHoraI.Location = new System.Drawing.Point(169, 353);
+            this.comboHorarioHoraI.Location = new System.Drawing.Point(169, 403);
             this.comboHorarioHoraI.Name = "comboHorarioHoraI";
             this.comboHorarioHoraI.Size = new System.Drawing.Size(65, 21);
             this.comboHorarioHoraI.TabIndex = 53;
@@ -261,7 +283,7 @@
             // comboHorarioDia
             // 
             this.comboHorarioDia.FormattingEnabled = true;
-            this.comboHorarioDia.Location = new System.Drawing.Point(96, 316);
+            this.comboHorarioDia.Location = new System.Drawing.Point(96, 366);
             this.comboHorarioDia.Name = "comboHorarioDia";
             this.comboHorarioDia.Size = new System.Drawing.Size(273, 21);
             this.comboHorarioDia.TabIndex = 33;
@@ -271,7 +293,7 @@
             this.labelHorarioDia.AutoSize = true;
             this.labelHorarioDia.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioDia.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioDia.Location = new System.Drawing.Point(11, 315);
+            this.labelHorarioDia.Location = new System.Drawing.Point(11, 365);
             this.labelHorarioDia.Name = "labelHorarioDia";
             this.labelHorarioDia.Size = new System.Drawing.Size(33, 20);
             this.labelHorarioDia.TabIndex = 32;
@@ -282,7 +304,7 @@
             this.labelHorarioDe.AutoSize = true;
             this.labelHorarioDe.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioDe.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioDe.Location = new System.Drawing.Point(133, 351);
+            this.labelHorarioDe.Location = new System.Drawing.Point(133, 401);
             this.labelHorarioDe.Name = "labelHorarioDe";
             this.labelHorarioDe.Size = new System.Drawing.Size(30, 20);
             this.labelHorarioDe.TabIndex = 25;
@@ -293,7 +315,7 @@
             this.labelHorarioHorario.AutoSize = true;
             this.labelHorarioHorario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioHorario.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioHorario.Location = new System.Drawing.Point(10, 350);
+            this.labelHorarioHorario.Location = new System.Drawing.Point(10, 400);
             this.labelHorarioHorario.Name = "labelHorarioHorario";
             this.labelHorarioHorario.Size = new System.Drawing.Size(62, 20);
             this.labelHorarioHorario.TabIndex = 7;
@@ -304,7 +326,7 @@
             this.labelHorarioA.AutoSize = true;
             this.labelHorarioA.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioA.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioA.Location = new System.Drawing.Point(261, 351);
+            this.labelHorarioA.Location = new System.Drawing.Point(261, 401);
             this.labelHorarioA.Name = "labelHorarioA";
             this.labelHorarioA.Size = new System.Drawing.Size(19, 20);
             this.labelHorarioA.TabIndex = 24;
@@ -316,7 +338,7 @@
             this.labelHorarioCarrera.AutoSize = true;
             this.labelHorarioCarrera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioCarrera.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioCarrera.Location = new System.Drawing.Point(10, 251);
+            this.labelHorarioCarrera.Location = new System.Drawing.Point(10, 301);
             this.labelHorarioCarrera.Name = "labelHorarioCarrera";
             this.labelHorarioCarrera.Size = new System.Drawing.Size(66, 20);
             this.labelHorarioCarrera.TabIndex = 21;
@@ -331,7 +353,7 @@
             this.buttonHorarioCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHorarioCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHorarioCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonHorarioCancelar.Location = new System.Drawing.Point(234, 413);
+            this.buttonHorarioCancelar.Location = new System.Drawing.Point(234, 463);
             this.buttonHorarioCancelar.Name = "buttonHorarioCancelar";
             this.buttonHorarioCancelar.Size = new System.Drawing.Size(83, 28);
             this.buttonHorarioCancelar.TabIndex = 20;
@@ -347,7 +369,7 @@
             this.buttonHorarioGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHorarioGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHorarioGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonHorarioGuardar.Location = new System.Drawing.Point(86, 413);
+            this.buttonHorarioGuardar.Location = new System.Drawing.Point(86, 463);
             this.buttonHorarioGuardar.Name = "buttonHorarioGuardar";
             this.buttonHorarioGuardar.Size = new System.Drawing.Size(80, 28);
             this.buttonHorarioGuardar.TabIndex = 19;
@@ -357,7 +379,7 @@
             // 
             // textHorarioAula
             // 
-            this.textHorarioAula.Location = new System.Drawing.Point(96, 285);
+            this.textHorarioAula.Location = new System.Drawing.Point(96, 335);
             this.textHorarioAula.Name = "textHorarioAula";
             this.textHorarioAula.Size = new System.Drawing.Size(274, 20);
             this.textHorarioAula.TabIndex = 17;
@@ -368,7 +390,7 @@
             this.labelHorarioAula.AutoSize = true;
             this.labelHorarioAula.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioAula.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioAula.Location = new System.Drawing.Point(10, 285);
+            this.labelHorarioAula.Location = new System.Drawing.Point(10, 335);
             this.labelHorarioAula.Name = "labelHorarioAula";
             this.labelHorarioAula.Size = new System.Drawing.Size(42, 20);
             this.labelHorarioAula.TabIndex = 12;
@@ -376,14 +398,14 @@
             // 
             // textHorarioCarrera
             // 
-            this.textHorarioCarrera.Location = new System.Drawing.Point(96, 253);
+            this.textHorarioCarrera.Location = new System.Drawing.Point(96, 303);
             this.textHorarioCarrera.Name = "textHorarioCarrera";
             this.textHorarioCarrera.Size = new System.Drawing.Size(274, 20);
             this.textHorarioCarrera.TabIndex = 8;
             // 
             // texHorarioAsignatura
             // 
-            this.texHorarioAsignatura.Location = new System.Drawing.Point(96, 221);
+            this.texHorarioAsignatura.Location = new System.Drawing.Point(96, 271);
             this.texHorarioAsignatura.Name = "texHorarioAsignatura";
             this.texHorarioAsignatura.Size = new System.Drawing.Size(274, 20);
             this.texHorarioAsignatura.TabIndex = 4;
@@ -393,7 +415,7 @@
             this.labelHorarioAsignatura.AutoSize = true;
             this.labelHorarioAsignatura.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioAsignatura.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioAsignatura.Location = new System.Drawing.Point(9, 220);
+            this.labelHorarioAsignatura.Location = new System.Drawing.Point(9, 270);
             this.labelHorarioAsignatura.Name = "labelHorarioAsignatura";
             this.labelHorarioAsignatura.Size = new System.Drawing.Size(87, 20);
             this.labelHorarioAsignatura.TabIndex = 3;
@@ -401,7 +423,7 @@
             // 
             // textHorarioDocente
             // 
-            this.textHorarioDocente.Location = new System.Drawing.Point(96, 190);
+            this.textHorarioDocente.Location = new System.Drawing.Point(96, 240);
             this.textHorarioDocente.Name = "textHorarioDocente";
             this.textHorarioDocente.Size = new System.Drawing.Size(274, 20);
             this.textHorarioDocente.TabIndex = 2;
@@ -411,7 +433,7 @@
             this.labelHorarioDocente.AutoSize = true;
             this.labelHorarioDocente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorarioDocente.ForeColor = System.Drawing.Color.White;
-            this.labelHorarioDocente.Location = new System.Drawing.Point(9, 190);
+            this.labelHorarioDocente.Location = new System.Drawing.Point(9, 240);
             this.labelHorarioDocente.Name = "labelHorarioDocente";
             this.labelHorarioDocente.Size = new System.Drawing.Size(74, 20);
             this.labelHorarioDocente.TabIndex = 1;
@@ -496,5 +518,7 @@
         private System.Windows.Forms.ComboBox comboHorarioHoraI;
         private System.Windows.Forms.Label lblArchivoC;
         private System.Windows.Forms.Label lblArchivo;
+        private System.Windows.Forms.Label BitacoraFechaSemestre;
+        private System.Windows.Forms.DateTimePicker FechaBitacora;
     }
 }

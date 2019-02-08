@@ -34,8 +34,8 @@
             this.buttonCUsuarioEliminar = new System.Windows.Forms.Button();
             this.buttonCUsuarioEditar = new System.Windows.Forms.Button();
             this.dataGridCUsuario = new System.Windows.Forms.DataGridView();
-            this.NPersonal = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.labelCUsuarioLista = new System.Windows.Forms.Label();
+            this.NPersonal = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelCUsuarioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCUsuario)).BeginInit();
             this.SuspendLayout();
@@ -116,14 +116,6 @@
             this.dataGridCUsuario.Size = new System.Drawing.Size(531, 170);
             this.dataGridCUsuario.TabIndex = 1;
             // 
-            // NPersonal
-            // 
-            this.NPersonal.DataPropertyName = "NPersonal_id";
-            this.NPersonal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.NPersonal.HeaderText = "Nº Personal";
-            this.NPersonal.Name = "NPersonal";
-            this.NPersonal.Width = 80;
-            // 
             // labelCUsuarioLista
             // 
             this.labelCUsuarioLista.AutoSize = true;
@@ -134,6 +126,14 @@
             this.labelCUsuarioLista.Size = new System.Drawing.Size(171, 24);
             this.labelCUsuarioLista.TabIndex = 0;
             this.labelCUsuarioLista.Text = "Lista de usuarios";
+            // 
+            // NPersonal
+            // 
+            this.NPersonal.DataPropertyName = "NPersonal_id";
+            this.NPersonal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.NPersonal.HeaderText = "Nº Personal";
+            this.NPersonal.Name = "NPersonal";
+            this.NPersonal.Width = 80;
             // 
             // ConsultaUsuario
             // 

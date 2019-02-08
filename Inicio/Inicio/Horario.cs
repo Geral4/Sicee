@@ -11,15 +11,24 @@ using System.Runtime.InteropServices;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.IO;
+using System.Data.SqlTypes;
+using CapaDatos;
+
 
 namespace Inicio
 {
     public partial class Horario : Form
+
     {
+
+        private CDConexion Conexion = new CDConexion();
+        private SqlCommand Coman = new SqlCommand();
+
         private OpenFileDialog archivoExcel = new OpenFileDialog();
         private string ruta_archivo = "", nombre_archivo = "", conexion ="", aux="";
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
             "Initial Catalog=Sicee;Data Source=localhost";
+
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "";
@@ -28,6 +37,9 @@ namespace Inicio
                     "hr.HorarioInicio 'Hora Inicio', hr.HorarioFin 'Hora Fin', aula.clave Aula, hr.Dia from Horario hr inner join Empleado emp on hr.DocenteEmpleado_id = " +
                     "emp.NPersonal inner join Carrera car on hr.Carrera_id = car.Clave inner join Asignatura asig on hr.Asignatura_id = asig.Clave inner join" +
                     " cat_aulas aula on hr.Aula_id = aula.clave";
+
+       
+        
 
 
         public Horario()
@@ -95,13 +107,35 @@ namespace Inicio
                 dataGridHorario.DataSource = bindingSource1;
                 GetData(sql);
                 buttonHorarioGuardar.Enabled = false;
+
+                actualizarHorario();
+
             }
             catch(SqlException SQLEx){
                 MessageBox.Show("Excepción producida: \n" + SQLEx.Message, "Error fatal");
 
             } 
             
+        }              
+
+        public void actualizarHorario()
+        {
+            try
+            {
+                Coman.Connection = Conexion.AbrirConexion();
+                Coman.CommandText = "Bitacora";
+                Coman.CommandType = CommandType.StoredProcedure;
+                Coman.Parameters.AddWithValue("@fecha_inicial_clases", FechaBitacora.Value);
+                Coman.ExecuteNonQuery();
+                Coman.Parameters.Clear();
+            }
+            catch (SqlException sql)
+            {
+                Console.WriteLine("Excepción producida: " + sql);
+            }
+
         }
+
 
         private void textAsignaturaCreditos_TextChanged(object sender, EventArgs e)
         {
@@ -212,8 +246,19 @@ namespace Inicio
 
         private void Horario_Load(object sender, EventArgs e)
         {
-        
+           // Bitacora();
         }
+
+
+        //private void Bitacora()
+        //{
+        //    CDBitacora objbitacora1 = new CDBitacora();
+        //    dataGridHorario.DataSource = objbitacora1.Bitacora();
+        //}
+
+
+
+
 
         private string ExcelConnection(string fileName)
         {

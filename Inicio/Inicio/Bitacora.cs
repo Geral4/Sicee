@@ -20,7 +20,7 @@ namespace Inicio
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "", aux = "";
-        private string sql = " select(emp.Nombre + ' ' + emp.ApellidoP + ' ' + emp.ApellidoM) 'Nombre Empleado', hr.CAlumnos 'Cantidad Alumnos', car.Nombre Carrera, asig.Nombre Asignatura," +
+        private string sql = " select ROW_NUMBER() OVER(ORDER BY fecha ASC) AS 'Nº', (emp.Nombre + ' ' + emp.ApellidoP + ' ' + emp.ApellidoM) 'Nombre Empleado', hr.CAlumnos 'Cantidad Alumnos', car.Nombre Carrera, asig.Nombre Asignatura," +
                    "hr.ClasePractica 'Clase/Practica', hr.HorarioInicio 'Hora Inicio', hr.HorarioFin 'Hora Fin', hr.Observaciones 'Observaciones' , hr.Firma 'Firma' from Horario hr inner join Empleado emp on hr.DocenteEmpleado_id = " +
                    "emp.NPersonal inner join Carrera car on hr.Carrera_id = car.Clave inner join Asignatura asig on hr.Asignatura_id = asig.Clave inner join cat_aulas aula on hr.Aula_id = aula.clave";
 
@@ -73,8 +73,7 @@ namespace Inicio
         {
             filtrado = textBitacoraBuscar.Text;
             dataGridBHorario.DataSource = bindingSource1;
-            aux = sql + " where emp.Nombre like '" + filtrado + "%' or emp.ApellidoP like '" + filtrado + "%' or car.Nombre like '" + filtrado + "%' or hr.Aula_id like '" + filtrado + "%'" +
-                 " or hr.Dia like '" + filtrado + "%'";
+            aux = sql + " where emp.Nombre like '" + filtrado + "%' or emp.ApellidoP like '" + filtrado + "%' or car.Nombre like '" + filtrado + "%' or hr.Aula_id like '" + filtrado + "%' or  hr.Fecha like '" + filtrado + "%' or hr.Dia like '" + filtrado + "%'";
             Console.WriteLine(aux);
             GetData(aux);
         }
