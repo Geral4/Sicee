@@ -16,6 +16,7 @@ namespace Inicio
     {
         CDPrestamo objPrestamo = new CDPrestamo();
         CDUsuario objEmpleado = new CDUsuario();
+        Validar funciones = new Validar();
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
         "Initial Catalog=Sicee;Data Source=localhost";
         private BindingSource bindingSource1 = new BindingSource();
@@ -56,13 +57,17 @@ namespace Inicio
         private void RealizarPrestamo_Load(object sender, EventArgs e)
         {
 
+            sql = "select NSerie, (Nserie + ' - '+ Nombre) as Inmueble from Inmueble";
+            funciones.llenarComboDGSQL(sql, NSerie, "Nserie", "Inmueble");
+            dataGridRP.AllowUserToDeleteRows = false;
+            dataGridRP.AllowUserToAddRows = false;
             textRealizarPFolio.Text = objPrestamo.obtenerFolio() + "";
         }
 
         private void ListarAlumno()
         {
                 comboRealizarPNumero.DataSource = objPrestamo.ListarAlumno();
-                comboRealizarPNumero.DisplayMember = "NControl";
+                comboRealizarPNumero.DisplayMember = "Nombre";
                 comboRealizarPNumero.ValueMember = "NControl";       
         }
 
@@ -96,10 +101,12 @@ namespace Inicio
                     );
                 }
                 MessageBox.Show("Insertado Correctamente");
+                sql = "select id_PI, Folio_id, numero, NSerie_id, Observaciones from PrestamoInmueble where " +
+                    "Folio_id = "+ textRealizarPFolio.Text +"";
+                dataGridRP.DataSource= funciones.llenarDataGrid(sql);
                 // Actualizar el origne de datos del data grid con la consulta 
                 //select numero, Nserie_id + '-' + Nombre Nombre_Inmueble, Observaciones from PrestamoInmueble where Folio_id = "+  Convert.ToInst32(txt.Text) +"
-                textRealizarPFolio.Text = objPrestamo.obtenerFolio() + "";
-
+                 
             }
             catch (Exception ex)
             {
@@ -109,10 +116,21 @@ namespace Inicio
 
         }
 
+        private void comboRealizarPNumero_SelectedValueChanged(object sender, EventArgs e)
+        {
+            textRealizarPNombre.Text = comboRealizarPNumero.SelectedValue.ToString();
+        }
+
+        private void buttonRealizarPGuardar_Click(object sender, EventArgs e)
+        {
+            funciones.EditarDataGrid(dataGridRP);
+            textRealizarPFolio.Text = objPrestamo.obtenerFolio() + "";
+        }
+
         private void ListarNPersonal()
         {
             comboRealizarPNumero.DataSource = objEmpleado.ListarNPersonal();
-            comboRealizarPNumero.DisplayMember = "NPersonal";
+            comboRealizarPNumero.DisplayMember = "Nombre";
             comboRealizarPNumero.ValueMember = "NPersonal";
         }
 

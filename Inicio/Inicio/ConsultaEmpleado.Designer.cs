@@ -50,16 +50,18 @@
             this.panelCEmpleadoVertical2.Controls.Add(this.dataGridCEmpleado);
             this.panelCEmpleadoVertical2.Controls.Add(this.labelCEmpleadoLista);
             this.panelCEmpleadoVertical2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelCEmpleadoVertical2.Location = new System.Drawing.Point(-8, 0);
+            this.panelCEmpleadoVertical2.Location = new System.Drawing.Point(-10, 0);
+            this.panelCEmpleadoVertical2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCEmpleadoVertical2.Name = "panelCEmpleadoVertical2";
-            this.panelCEmpleadoVertical2.Size = new System.Drawing.Size(601, 395);
+            this.panelCEmpleadoVertical2.Size = new System.Drawing.Size(801, 486);
             this.panelCEmpleadoVertical2.TabIndex = 6;
             // 
             // textCEmpleadoBuscar
             // 
-            this.textCEmpleadoBuscar.Location = new System.Drawing.Point(299, 46);
+            this.textCEmpleadoBuscar.Location = new System.Drawing.Point(399, 57);
+            this.textCEmpleadoBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textCEmpleadoBuscar.Name = "textCEmpleadoBuscar";
-            this.textCEmpleadoBuscar.Size = new System.Drawing.Size(177, 20);
+            this.textCEmpleadoBuscar.Size = new System.Drawing.Size(235, 22);
             this.textCEmpleadoBuscar.TabIndex = 41;
             this.textCEmpleadoBuscar.TextChanged += new System.EventHandler(this.textCEmpleadoBuscar_TextChanged);
             // 
@@ -70,9 +72,10 @@
             this.labelReporteLBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReporteLBuscar.ForeColor = System.Drawing.Color.White;
             this.labelReporteLBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelReporteLBuscar.Location = new System.Drawing.Point(195, 46);
+            this.labelReporteLBuscar.Location = new System.Drawing.Point(260, 57);
+            this.labelReporteLBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReporteLBuscar.Name = "labelReporteLBuscar";
-            this.labelReporteLBuscar.Size = new System.Drawing.Size(98, 19);
+            this.labelReporteLBuscar.Size = new System.Drawing.Size(125, 23);
             this.labelReporteLBuscar.TabIndex = 40;
             this.labelReporteLBuscar.Text = "Buscar por :";
             // 
@@ -83,9 +86,10 @@
             this.buttonCEmpleadoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCEmpleadoEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCEmpleadoEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonCEmpleadoEliminar.Location = new System.Drawing.Point(302, 349);
+            this.buttonCEmpleadoEliminar.Location = new System.Drawing.Point(403, 430);
+            this.buttonCEmpleadoEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCEmpleadoEliminar.Name = "buttonCEmpleadoEliminar";
-            this.buttonCEmpleadoEliminar.Size = new System.Drawing.Size(85, 24);
+            this.buttonCEmpleadoEliminar.Size = new System.Drawing.Size(113, 30);
             this.buttonCEmpleadoEliminar.TabIndex = 22;
             this.buttonCEmpleadoEliminar.Text = "Eliminar";
             this.buttonCEmpleadoEliminar.UseVisualStyleBackColor = false;
@@ -98,9 +102,10 @@
             this.buttonCEmpleadoEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCEmpleadoEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCEmpleadoEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonCEmpleadoEditar.Location = new System.Drawing.Point(199, 350);
+            this.buttonCEmpleadoEditar.Location = new System.Drawing.Point(265, 431);
+            this.buttonCEmpleadoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCEmpleadoEditar.Name = "buttonCEmpleadoEditar";
-            this.buttonCEmpleadoEditar.Size = new System.Drawing.Size(75, 24);
+            this.buttonCEmpleadoEditar.Size = new System.Drawing.Size(100, 30);
             this.buttonCEmpleadoEditar.TabIndex = 21;
             this.buttonCEmpleadoEditar.Text = "Editar";
             this.buttonCEmpleadoEditar.UseVisualStyleBackColor = false;
@@ -113,10 +118,12 @@
             this.dataGridCEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columCargo});
-            this.dataGridCEmpleado.Location = new System.Drawing.Point(22, 72);
+            this.dataGridCEmpleado.Location = new System.Drawing.Point(29, 89);
+            this.dataGridCEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridCEmpleado.Name = "dataGridCEmpleado";
-            this.dataGridCEmpleado.Size = new System.Drawing.Size(579, 255);
+            this.dataGridCEmpleado.Size = new System.Drawing.Size(772, 314);
             this.dataGridCEmpleado.TabIndex = 1;
+            this.dataGridCEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCEmpleado_CellContentClick);
             // 
             // columCargo
             // 
@@ -129,18 +136,20 @@
             this.labelCEmpleadoLista.AutoSize = true;
             this.labelCEmpleadoLista.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCEmpleadoLista.ForeColor = System.Drawing.Color.PaleGreen;
-            this.labelCEmpleadoLista.Location = new System.Drawing.Point(15, 12);
+            this.labelCEmpleadoLista.Location = new System.Drawing.Point(20, 15);
+            this.labelCEmpleadoLista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCEmpleadoLista.Name = "labelCEmpleadoLista";
-            this.labelCEmpleadoLista.Size = new System.Drawing.Size(210, 24);
+            this.labelCEmpleadoLista.Size = new System.Drawing.Size(273, 33);
             this.labelCEmpleadoLista.TabIndex = 0;
             this.labelCEmpleadoLista.Text = "Lista de empleados";
             // 
             // ConsultaEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 395);
+            this.ClientSize = new System.Drawing.Size(791, 486);
             this.Controls.Add(this.panelCEmpleadoVertical2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConsultaEmpleado";
             this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

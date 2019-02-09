@@ -30,3 +30,5 @@ C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\GriauleFingerprintLibrary.dll
 C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+D:\Documents\SiceeGIT\Inicio\CapaDatos\bin\Debug\GriauleFingerprintLibrary.dll
+D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete

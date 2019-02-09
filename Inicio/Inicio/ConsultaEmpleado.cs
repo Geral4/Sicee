@@ -36,11 +36,11 @@ namespace Inicio
 
         private void ConsultaEmpleado_Load(object sender, EventArgs e)
         {
-
-
-            dataGridCEmpleado.DataSource = bindingSource1;
+                                  
             try
             {
+                dataGridCEmpleado.DataSource = bindingSource1;
+                GetData("select * from Empleado");
                 columCargo.DataSource = ObtenerCargo();
                 columCargo.DisplayMember = "Nombre";
                 columCargo.ValueMember = "Clave";
@@ -49,7 +49,6 @@ namespace Inicio
             {
                 MessageBox.Show("" + ex, "Excepción producida");
             }
-            GetData("select * from Empleado");
 
             //conexion.CerrarConexion();
             //GetData(dataAdapter.SelectCommand.CommandText);
@@ -129,6 +128,11 @@ namespace Inicio
             dataGridCEmpleado.DataSource = bindingSource1;
             GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like '" +
                  filtrado + "%' or ApellidoP like '" + filtrado + "%' or ApellidoM like '" + filtrado + "%';");
+
+        }
+
+        private void dataGridCEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
