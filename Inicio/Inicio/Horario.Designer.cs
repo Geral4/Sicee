@@ -54,15 +54,15 @@
             this.labelHorarioCarrera = new System.Windows.Forms.Label();
             this.buttonHorarioCancelar = new System.Windows.Forms.Button();
             this.buttonHorarioGuardar = new System.Windows.Forms.Button();
-            this.textHorarioAula = new System.Windows.Forms.TextBox();
             this.labelHorarioAula = new System.Windows.Forms.Label();
-            this.textHorarioCarrera = new System.Windows.Forms.TextBox();
-            this.texHorarioAsignatura = new System.Windows.Forms.TextBox();
             this.labelHorarioAsignatura = new System.Windows.Forms.Label();
-            this.textHorarioDocente = new System.Windows.Forms.TextBox();
             this.labelHorarioDocente = new System.Windows.Forms.Label();
             this.labelHorarioRegistro = new System.Windows.Forms.Label();
             this.panelHorarioHorizontal = new System.Windows.Forms.Panel();
+            this.comboHorarioDocente = new System.Windows.Forms.ComboBox();
+            this.comboHorarioAsignatura = new System.Windows.Forms.ComboBox();
+            this.comboHorarioCarrera = new System.Windows.Forms.ComboBox();
+            this.comboHorarioAula = new System.Windows.Forms.ComboBox();
             this.panelHorarioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHorario)).BeginInit();
             this.panelHorarioVertical2.SuspendLayout();
@@ -147,6 +147,10 @@
             // panelHorarioVertical2
             // 
             this.panelHorarioVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelHorarioVertical2.Controls.Add(this.comboHorarioAula);
+            this.panelHorarioVertical2.Controls.Add(this.comboHorarioCarrera);
+            this.panelHorarioVertical2.Controls.Add(this.comboHorarioAsignatura);
+            this.panelHorarioVertical2.Controls.Add(this.comboHorarioDocente);
             this.panelHorarioVertical2.Controls.Add(this.BitacoraFechaSemestre);
             this.panelHorarioVertical2.Controls.Add(this.FechaBitacora);
             this.panelHorarioVertical2.Controls.Add(this.lblArchivoC);
@@ -164,12 +168,8 @@
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioCarrera);
             this.panelHorarioVertical2.Controls.Add(this.buttonHorarioCancelar);
             this.panelHorarioVertical2.Controls.Add(this.buttonHorarioGuardar);
-            this.panelHorarioVertical2.Controls.Add(this.textHorarioAula);
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioAula);
-            this.panelHorarioVertical2.Controls.Add(this.textHorarioCarrera);
-            this.panelHorarioVertical2.Controls.Add(this.texHorarioAsignatura);
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioAsignatura);
-            this.panelHorarioVertical2.Controls.Add(this.textHorarioDocente);
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioDocente);
             this.panelHorarioVertical2.Controls.Add(this.labelHorarioRegistro);
             this.panelHorarioVertical2.Location = new System.Drawing.Point(686, 53);
@@ -282,6 +282,8 @@
             // 
             // comboHorarioDia
             // 
+            this.comboHorarioDia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboHorarioDia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboHorarioDia.FormattingEnabled = true;
             this.comboHorarioDia.Location = new System.Drawing.Point(96, 366);
             this.comboHorarioDia.Name = "comboHorarioDia";
@@ -331,7 +333,6 @@
             this.labelHorarioA.Size = new System.Drawing.Size(19, 20);
             this.labelHorarioA.TabIndex = 24;
             this.labelHorarioA.Text = "a";
-            this.labelHorarioA.Click += new System.EventHandler(this.labelHorarioA_Click);
             // 
             // labelHorarioCarrera
             // 
@@ -377,14 +378,6 @@
             this.buttonHorarioGuardar.UseVisualStyleBackColor = false;
             this.buttonHorarioGuardar.Click += new System.EventHandler(this.buttonAsignaturaGuardar_Click);
             // 
-            // textHorarioAula
-            // 
-            this.textHorarioAula.Location = new System.Drawing.Point(96, 335);
-            this.textHorarioAula.Name = "textHorarioAula";
-            this.textHorarioAula.Size = new System.Drawing.Size(274, 20);
-            this.textHorarioAula.TabIndex = 17;
-            this.textHorarioAula.TextChanged += new System.EventHandler(this.textAsignaturaCreditos_TextChanged);
-            // 
             // labelHorarioAula
             // 
             this.labelHorarioAula.AutoSize = true;
@@ -396,20 +389,6 @@
             this.labelHorarioAula.TabIndex = 12;
             this.labelHorarioAula.Text = "Aula";
             // 
-            // textHorarioCarrera
-            // 
-            this.textHorarioCarrera.Location = new System.Drawing.Point(96, 303);
-            this.textHorarioCarrera.Name = "textHorarioCarrera";
-            this.textHorarioCarrera.Size = new System.Drawing.Size(274, 20);
-            this.textHorarioCarrera.TabIndex = 8;
-            // 
-            // texHorarioAsignatura
-            // 
-            this.texHorarioAsignatura.Location = new System.Drawing.Point(96, 271);
-            this.texHorarioAsignatura.Name = "texHorarioAsignatura";
-            this.texHorarioAsignatura.Size = new System.Drawing.Size(274, 20);
-            this.texHorarioAsignatura.TabIndex = 4;
-            // 
             // labelHorarioAsignatura
             // 
             this.labelHorarioAsignatura.AutoSize = true;
@@ -420,13 +399,6 @@
             this.labelHorarioAsignatura.Size = new System.Drawing.Size(87, 20);
             this.labelHorarioAsignatura.TabIndex = 3;
             this.labelHorarioAsignatura.Text = "Asignatura";
-            // 
-            // textHorarioDocente
-            // 
-            this.textHorarioDocente.Location = new System.Drawing.Point(96, 240);
-            this.textHorarioDocente.Name = "textHorarioDocente";
-            this.textHorarioDocente.Size = new System.Drawing.Size(274, 20);
-            this.textHorarioDocente.TabIndex = 2;
             // 
             // labelHorarioDocente
             // 
@@ -458,6 +430,44 @@
             this.panelHorarioHorizontal.Name = "panelHorarioHorizontal";
             this.panelHorarioHorizontal.Size = new System.Drawing.Size(1081, 30);
             this.panelHorarioHorizontal.TabIndex = 25;
+            // 
+            // comboHorarioDocente
+            // 
+            this.comboHorarioDocente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboHorarioDocente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboHorarioDocente.FormattingEnabled = true;
+            this.comboHorarioDocente.Location = new System.Drawing.Point(96, 239);
+            this.comboHorarioDocente.Name = "comboHorarioDocente";
+            this.comboHorarioDocente.Size = new System.Drawing.Size(273, 21);
+            this.comboHorarioDocente.TabIndex = 59;
+            // 
+            // comboHorarioAsignatura
+            // 
+            this.comboHorarioAsignatura.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboHorarioAsignatura.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboHorarioAsignatura.FormattingEnabled = true;
+            this.comboHorarioAsignatura.Location = new System.Drawing.Point(96, 272);
+            this.comboHorarioAsignatura.Name = "comboHorarioAsignatura";
+            this.comboHorarioAsignatura.Size = new System.Drawing.Size(273, 21);
+            this.comboHorarioAsignatura.TabIndex = 60;
+            // 
+            // comboHorarioCarrera
+            // 
+            this.comboHorarioCarrera.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboHorarioCarrera.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboHorarioCarrera.FormattingEnabled = true;
+            this.comboHorarioCarrera.Location = new System.Drawing.Point(96, 303);
+            this.comboHorarioCarrera.Name = "comboHorarioCarrera";
+            this.comboHorarioCarrera.Size = new System.Drawing.Size(273, 21);
+            this.comboHorarioCarrera.TabIndex = 61;
+            // 
+            // comboHorarioAula
+            // 
+            this.comboHorarioAula.FormattingEnabled = true;
+            this.comboHorarioAula.Location = new System.Drawing.Point(96, 334);
+            this.comboHorarioAula.Name = "comboHorarioAula";
+            this.comboHorarioAula.Size = new System.Drawing.Size(273, 21);
+            this.comboHorarioAula.TabIndex = 62;
             // 
             // Horario
             // 
@@ -496,13 +506,9 @@
         private System.Windows.Forms.Panel panelHorarioVertical2;
         private System.Windows.Forms.Button buttonHorarioCancelar;
         private System.Windows.Forms.Button buttonHorarioGuardar;
-        private System.Windows.Forms.TextBox textHorarioAula;
         private System.Windows.Forms.Label labelHorarioAula;
-        private System.Windows.Forms.TextBox textHorarioCarrera;
         private System.Windows.Forms.Label labelHorarioHorario;
-        private System.Windows.Forms.TextBox texHorarioAsignatura;
         private System.Windows.Forms.Label labelHorarioAsignatura;
-        private System.Windows.Forms.TextBox textHorarioDocente;
         private System.Windows.Forms.Label labelHorarioDocente;
         private System.Windows.Forms.Label labelHorarioRegistro;
         private System.Windows.Forms.Label labelHorarioDe;
@@ -520,5 +526,9 @@
         private System.Windows.Forms.Label lblArchivo;
         private System.Windows.Forms.Label BitacoraFechaSemestre;
         private System.Windows.Forms.DateTimePicker FechaBitacora;
+        private System.Windows.Forms.ComboBox comboHorarioAula;
+        private System.Windows.Forms.ComboBox comboHorarioCarrera;
+        private System.Windows.Forms.ComboBox comboHorarioAsignatura;
+        private System.Windows.Forms.ComboBox comboHorarioDocente;
     }
 }

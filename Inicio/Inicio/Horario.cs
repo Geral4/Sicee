@@ -51,7 +51,6 @@ namespace Inicio
             comboHorarioDia.Items.Add("Jueves");
             comboHorarioDia.Items.Add("Viernes");
             comboHorarioDia.Items.Add("Sabado");
-            comboHorarioDia.Items.Add("Domingo");
             buttonHorarioExaminar.Enabled = false;
             buttonHorarioGuardar.Enabled = false;
             lblArchivoC.Text = "";
@@ -135,17 +134,7 @@ namespace Inicio
             }
 
         }
-
-
-        private void textAsignaturaCreditos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelHorarioA_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void buttonHorarioExaminar_Click(object sender, EventArgs e)
         {

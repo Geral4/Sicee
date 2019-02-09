@@ -54,6 +54,7 @@
     <Compile Include="CDEdificio.cs" />
     <Compile Include="CDEmpleado.cs" />
     <Compile Include="CDInmueble.cs" />
+    <Compile Include="CDPrestamo.cs" />
     <Compile Include="CDUsuario.cs" />
     <Compile Include="CNEmpleado.cs" />
     <Compile Include="CNUsuario.cs" />

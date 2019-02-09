@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelEmpleadoVertical = new System.Windows.Forms.Panel();
+            this.textEmpleadoHuella = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textEmpleadoBuscar = new System.Windows.Forms.TextBox();
             this.labelEmpleadoBuscar = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.textEmpleadoNombre = new System.Windows.Forms.TextBox();
             this.labelEmpleadoNombre = new System.Windows.Forms.Label();
             this.labeEmpleadoRegistro = new System.Windows.Forms.Label();
-            this.textEmpleadoHuella = new System.Windows.Forms.TextBox();
             this.panelEmpleadoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleado)).BeginInit();
             this.panelEmpleadoVertical2.SuspendLayout();
@@ -76,6 +76,13 @@
             this.panelEmpleadoVertical.Name = "panelEmpleadoVertical";
             this.panelEmpleadoVertical.Size = new System.Drawing.Size(575, 439);
             this.panelEmpleadoVertical.TabIndex = 1;
+            // 
+            // textEmpleadoHuella
+            // 
+            this.textEmpleadoHuella.Location = new System.Drawing.Point(206, 13);
+            this.textEmpleadoHuella.Name = "textEmpleadoHuella";
+            this.textEmpleadoHuella.Size = new System.Drawing.Size(12, 20);
+            this.textEmpleadoHuella.TabIndex = 26;
             // 
             // label1
             // 
@@ -381,13 +388,6 @@
             this.labeEmpleadoRegistro.Size = new System.Drawing.Size(162, 21);
             this.labeEmpleadoRegistro.TabIndex = 0;
             this.labeEmpleadoRegistro.Text = "Registrar Empleado";
-            // 
-            // textEmpleadoHuella
-            // 
-            this.textEmpleadoHuella.Location = new System.Drawing.Point(206, 13);
-            this.textEmpleadoHuella.Name = "textEmpleadoHuella";
-            this.textEmpleadoHuella.Size = new System.Drawing.Size(12, 20);
-            this.textEmpleadoHuella.TabIndex = 26;
             // 
             // Empleado
             // 
