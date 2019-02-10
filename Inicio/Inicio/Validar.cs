@@ -127,6 +127,7 @@ namespace Inicio
                     global.Update((DataTable)g.DataSource);
                     //GetData(dataAdapter.SelectCommand.CommandText);
                     MessageBox.Show("Editado Correctamente");
+                    Console.WriteLine("Hola");
                     dg.Refresh();
             }
             catch (SqlException s)
