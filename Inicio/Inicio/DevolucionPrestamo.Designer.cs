@@ -40,6 +40,11 @@
             this.labelDevolucionPTitulo = new System.Windows.Forms.Label();
             this.panelDevolucionPHorizontal = new System.Windows.Forms.Panel();
             this.buttonDevolucionPEditar = new System.Windows.Forms.Button();
+            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.identi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDevolucionPHorizontal3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDevolucionP)).BeginInit();
             this.SuspendLayout();
@@ -101,10 +106,18 @@
             // 
             this.dataGridDevolucionP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dataGridDevolucionP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDevolucionP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Folio,
+            this.identi,
+            this.Nombre,
+            this.fechaP,
+            this.fechaE});
             this.dataGridDevolucionP.Location = new System.Drawing.Point(8, 69);
             this.dataGridDevolucionP.Name = "dataGridDevolucionP";
             this.dataGridDevolucionP.Size = new System.Drawing.Size(1036, 307);
             this.dataGridDevolucionP.TabIndex = 1;
+            this.dataGridDevolucionP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDevolucionP_CellContentClick);
+            this.dataGridDevolucionP.DoubleClick += new System.EventHandler(this.dataGridDevolucionP_DoubleClick);
             // 
             // labelDevolucionPLista
             // 
@@ -172,6 +185,46 @@
             this.buttonDevolucionPEditar.Text = "Editar";
             this.buttonDevolucionPEditar.UseVisualStyleBackColor = false;
             // 
+            // Folio
+            // 
+            this.Folio.DataPropertyName = "Folio";
+            this.Folio.HeaderText = "Folio";
+            this.Folio.Name = "Folio";
+            this.Folio.ReadOnly = true;
+            this.Folio.Width = 80;
+            // 
+            // identi
+            // 
+            this.identi.DataPropertyName = "identi";
+            this.identi.HeaderText = "Nº Control / Nº Personal";
+            this.identi.Name = "identi";
+            this.identi.ReadOnly = true;
+            this.identi.Width = 180;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre_Completo";
+            this.Nombre.HeaderText = "Nombre Completo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 180;
+            // 
+            // fechaP
+            // 
+            this.fechaP.DataPropertyName = "FechaP";
+            this.fechaP.HeaderText = "Fecha de prestamo";
+            this.fechaP.Name = "fechaP";
+            this.fechaP.ReadOnly = true;
+            this.fechaP.Width = 150;
+            // 
+            // fechaE
+            // 
+            this.fechaE.DataPropertyName = "FechaE";
+            this.fechaE.HeaderText = "Fecha de entrega";
+            this.fechaE.Name = "fechaE";
+            this.fechaE.ReadOnly = true;
+            this.fechaE.Width = 150;
+            // 
             // DevolucionPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,5 +265,10 @@
         private System.Windows.Forms.Label labelDevolucionPTitulo;
         private System.Windows.Forms.Panel panelDevolucionPHorizontal;
         private System.Windows.Forms.Button buttonDevolucionPEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaE;
     }
 }

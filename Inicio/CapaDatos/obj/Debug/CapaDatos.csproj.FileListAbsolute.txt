@@ -10,12 +10,6 @@ C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\
 C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
 C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\INSPIRON\Documents\Programas\Programación Visual\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\CapaDatos.dll
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\CapaDatos.pdb
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
 D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
 D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
 D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
@@ -28,7 +22,13 @@ C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\GriauleFingerprintLibrary.dll
-C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 D:\Documents\SiceeGIT\Inicio\CapaDatos\bin\Debug\GriauleFingerprintLibrary.dll
 D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\bin\Debug\GriauleFingerprintLibrary.dll
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
