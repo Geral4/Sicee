@@ -201,7 +201,6 @@ C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\bin\Deb
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\bin\Debug\Inicio.pdb
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\bin\Debug\CapaDatos.dll
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\bin\Debug\CapaDatos.pdb
-C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.csprojAssemblyReference.cache
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.Alta.resources
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.Alumno.resources
@@ -298,3 +297,4 @@ C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComp
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.exe
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.pdb
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.InmueblePrestado.resources
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.InmueblePrestado.resources

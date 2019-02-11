@@ -41,7 +41,7 @@
             this.panelInmueblePrestado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelInmueblePrestado.Location = new System.Drawing.Point(0, 1);
             this.panelInmueblePrestado.Name = "panelInmueblePrestado";
-            this.panelInmueblePrestado.Size = new System.Drawing.Size(584, 232);
+            this.panelInmueblePrestado.Size = new System.Drawing.Size(836, 232);
             this.panelInmueblePrestado.TabIndex = 24;
             // 
             // dataGridInmueblePrestado
@@ -55,17 +55,19 @@
             this.dataGridInmueblePrestado.Location = new System.Drawing.Point(10, 11);
             this.dataGridInmueblePrestado.Name = "dataGridInmueblePrestado";
             this.dataGridInmueblePrestado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridInmueblePrestado.Size = new System.Drawing.Size(561, 204);
+            this.dataGridInmueblePrestado.Size = new System.Drawing.Size(812, 204);
             this.dataGridInmueblePrestado.TabIndex = 7;
             // 
             // InmueblePrestado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 273);
+            this.ClientSize = new System.Drawing.Size(848, 273);
             this.Controls.Add(this.panelInmueblePrestado);
             this.Name = "InmueblePrestado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InmueblePrestado";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InmueblePrestado_FormClosing);
             this.Load += new System.EventHandler(this.InmueblePrestado_Load);
             this.panelInmueblePrestado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInmueblePrestado)).EndInit();

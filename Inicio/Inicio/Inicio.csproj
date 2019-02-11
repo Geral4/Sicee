@@ -160,6 +160,7 @@
     <Compile Include="Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultasSQL.cs" />
     <Compile Include="ConsultaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
