@@ -68,7 +68,7 @@ namespace Inicio
 
         private void Alumno_Load(object sender, EventArgs e)
         {
-            ListarCarrera();
+            
             MostrarAlumno();
         }
         private void ListarCarrera()
@@ -105,6 +105,16 @@ namespace Inicio
             {
                 MessageBox.Show("No se puede insertar los datos por: " + ex);
             }
+            textAlumnoNombre.Clear();
+            textAlumnoApellidoP.Clear();
+            textAlumnoApellidoM.Clear();
+            textAlumnoCurp.Clear();
+            textAlumnoDireccion.Clear();
+            textAlumnoNControl.Clear();
+            textAlumnoTelefono.Clear();
+            comboAlumnoCarrera.Text = string.Empty;
+            comboAlumnoSemestre.Text = string.Empty;
+            comboAlumnoSexo.Text = string.Empty;
         }
 
         private void MostrarAlumno()
@@ -138,6 +148,27 @@ namespace Inicio
             {
                 Console.WriteLine("Excepción: " + ex);
             }
+
+        }
+        
+
+        private void comboAlumnoCarrera_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListarCarrera();
+        }
+
+        private void buttonAlumnoCancelar_Click(object sender, EventArgs e)
+        {
+            textAlumnoNombre.Clear();
+            textAlumnoApellidoP.Clear();
+            textAlumnoApellidoM.Clear();
+            textAlumnoCurp.Clear();
+            textAlumnoDireccion.Clear();
+            textAlumnoNControl.Clear();
+            textAlumnoTelefono.Clear();
+            comboAlumnoCarrera.Text = string.Empty;
+            comboAlumnoSemestre.Text = string.Empty;
+            comboAlumnoSexo.Text = string.Empty;
 
         }
     }

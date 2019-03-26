@@ -28,34 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDevolucionPHorizontal2 = new System.Windows.Forms.Panel();
             this.panelDevolucionPHorizontal3 = new System.Windows.Forms.Panel();
             this.buttonDevolucionPBuscar = new System.Windows.Forms.Button();
             this.textDevolucionPBuscar = new System.Windows.Forms.TextBox();
             this.labelDevolucionPBuscar = new System.Windows.Forms.Label();
             this.dataGridDevolucionP = new System.Windows.Forms.DataGridView();
+            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.identi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelDevolucionPLista = new System.Windows.Forms.Label();
             this.buttonDevolucionPGuardar = new System.Windows.Forms.Button();
             this.panelDevolucionPHorizontal4 = new System.Windows.Forms.Panel();
             this.labelDevolucionPTitulo = new System.Windows.Forms.Label();
             this.panelDevolucionPHorizontal = new System.Windows.Forms.Panel();
             this.buttonDevolucionPEditar = new System.Windows.Forms.Button();
-            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.identi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelDevolucionPHorizontal3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDevolucionP)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelDevolucionPHorizontal2
-            // 
-            this.panelDevolucionPHorizontal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelDevolucionPHorizontal2.Location = new System.Drawing.Point(785, 24);
-            this.panelDevolucionPHorizontal2.Name = "panelDevolucionPHorizontal2";
-            this.panelDevolucionPHorizontal2.Size = new System.Drawing.Size(297, 19);
-            this.panelDevolucionPHorizontal2.TabIndex = 31;
             // 
             // panelDevolucionPHorizontal3
             // 
@@ -67,7 +59,7 @@
             this.panelDevolucionPHorizontal3.Controls.Add(this.labelDevolucionPLista);
             this.panelDevolucionPHorizontal3.Location = new System.Drawing.Point(12, 100);
             this.panelDevolucionPHorizontal3.Name = "panelDevolucionPHorizontal3";
-            this.panelDevolucionPHorizontal3.Size = new System.Drawing.Size(1056, 423);
+            this.panelDevolucionPHorizontal3.Size = new System.Drawing.Size(850, 423);
             this.panelDevolucionPHorizontal3.TabIndex = 33;
             // 
             // buttonDevolucionPBuscar
@@ -114,76 +106,10 @@
             this.fechaE});
             this.dataGridDevolucionP.Location = new System.Drawing.Point(8, 69);
             this.dataGridDevolucionP.Name = "dataGridDevolucionP";
-            this.dataGridDevolucionP.Size = new System.Drawing.Size(1036, 307);
+            this.dataGridDevolucionP.Size = new System.Drawing.Size(834, 351);
             this.dataGridDevolucionP.TabIndex = 1;
             this.dataGridDevolucionP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDevolucionP_CellContentClick);
             this.dataGridDevolucionP.DoubleClick += new System.EventHandler(this.dataGridDevolucionP_DoubleClick);
-            // 
-            // labelDevolucionPLista
-            // 
-            this.labelDevolucionPLista.AutoSize = true;
-            this.labelDevolucionPLista.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDevolucionPLista.ForeColor = System.Drawing.Color.PaleGreen;
-            this.labelDevolucionPLista.Location = new System.Drawing.Point(4, 20);
-            this.labelDevolucionPLista.Name = "labelDevolucionPLista";
-            this.labelDevolucionPLista.Size = new System.Drawing.Size(160, 19);
-            this.labelDevolucionPLista.TabIndex = 0;
-            this.labelDevolucionPLista.Text = "Lista de prestamos";
-            // 
-            // buttonDevolucionPGuardar
-            // 
-            this.buttonDevolucionPGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.buttonDevolucionPGuardar.FlatAppearance.BorderSize = 0;
-            this.buttonDevolucionPGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDevolucionPGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDevolucionPGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonDevolucionPGuardar.Location = new System.Drawing.Point(596, 529);
-            this.buttonDevolucionPGuardar.Name = "buttonDevolucionPGuardar";
-            this.buttonDevolucionPGuardar.Size = new System.Drawing.Size(96, 26);
-            this.buttonDevolucionPGuardar.TabIndex = 21;
-            this.buttonDevolucionPGuardar.Text = "Guardar";
-            this.buttonDevolucionPGuardar.UseVisualStyleBackColor = false;
-            // 
-            // panelDevolucionPHorizontal4
-            // 
-            this.panelDevolucionPHorizontal4.BackColor = System.Drawing.Color.White;
-            this.panelDevolucionPHorizontal4.Location = new System.Drawing.Point(0, 570);
-            this.panelDevolucionPHorizontal4.Name = "panelDevolucionPHorizontal4";
-            this.panelDevolucionPHorizontal4.Size = new System.Drawing.Size(1081, 30);
-            this.panelDevolucionPHorizontal4.TabIndex = 25;
-            // 
-            // labelDevolucionPTitulo
-            // 
-            this.labelDevolucionPTitulo.AutoSize = true;
-            this.labelDevolucionPTitulo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDevolucionPTitulo.ForeColor = System.Drawing.Color.Black;
-            this.labelDevolucionPTitulo.Location = new System.Drawing.Point(311, 9);
-            this.labelDevolucionPTitulo.Name = "labelDevolucionPTitulo";
-            this.labelDevolucionPTitulo.Size = new System.Drawing.Size(460, 44);
-            this.labelDevolucionPTitulo.TabIndex = 29;
-            this.labelDevolucionPTitulo.Text = "Devolucion de Prestamo";
-            // 
-            // panelDevolucionPHorizontal
-            // 
-            this.panelDevolucionPHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelDevolucionPHorizontal.Location = new System.Drawing.Point(0, 24);
-            this.panelDevolucionPHorizontal.Name = "panelDevolucionPHorizontal";
-            this.panelDevolucionPHorizontal.Size = new System.Drawing.Size(297, 19);
-            this.panelDevolucionPHorizontal.TabIndex = 32;
-            // 
-            // buttonDevolucionPEditar
-            // 
-            this.buttonDevolucionPEditar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.buttonDevolucionPEditar.FlatAppearance.BorderSize = 0;
-            this.buttonDevolucionPEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDevolucionPEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDevolucionPEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonDevolucionPEditar.Location = new System.Drawing.Point(365, 529);
-            this.buttonDevolucionPEditar.Name = "buttonDevolucionPEditar";
-            this.buttonDevolucionPEditar.Size = new System.Drawing.Size(96, 26);
-            this.buttonDevolucionPEditar.TabIndex = 50;
-            this.buttonDevolucionPEditar.Text = "Editar";
-            this.buttonDevolucionPEditar.UseVisualStyleBackColor = false;
             // 
             // Folio
             // 
@@ -225,19 +151,93 @@
             this.fechaE.ReadOnly = true;
             this.fechaE.Width = 150;
             // 
+            // labelDevolucionPLista
+            // 
+            this.labelDevolucionPLista.AutoSize = true;
+            this.labelDevolucionPLista.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDevolucionPLista.ForeColor = System.Drawing.Color.PaleGreen;
+            this.labelDevolucionPLista.Location = new System.Drawing.Point(4, 20);
+            this.labelDevolucionPLista.Name = "labelDevolucionPLista";
+            this.labelDevolucionPLista.Size = new System.Drawing.Size(160, 19);
+            this.labelDevolucionPLista.TabIndex = 0;
+            this.labelDevolucionPLista.Text = "Lista de prestamos";
+            // 
+            // buttonDevolucionPGuardar
+            // 
+            this.buttonDevolucionPGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.buttonDevolucionPGuardar.FlatAppearance.BorderSize = 0;
+            this.buttonDevolucionPGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDevolucionPGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDevolucionPGuardar.ForeColor = System.Drawing.Color.White;
+            this.buttonDevolucionPGuardar.Location = new System.Drawing.Point(508, 529);
+            this.buttonDevolucionPGuardar.Name = "buttonDevolucionPGuardar";
+            this.buttonDevolucionPGuardar.Size = new System.Drawing.Size(96, 26);
+            this.buttonDevolucionPGuardar.TabIndex = 21;
+            this.buttonDevolucionPGuardar.Text = "Guardar";
+            this.buttonDevolucionPGuardar.UseVisualStyleBackColor = false;
+            // 
+            // panelDevolucionPHorizontal4
+            // 
+            this.panelDevolucionPHorizontal4.BackColor = System.Drawing.Color.White;
+            this.panelDevolucionPHorizontal4.Location = new System.Drawing.Point(0, 570);
+            this.panelDevolucionPHorizontal4.Name = "panelDevolucionPHorizontal4";
+            this.panelDevolucionPHorizontal4.Size = new System.Drawing.Size(1081, 30);
+            this.panelDevolucionPHorizontal4.TabIndex = 25;
+            // 
+            // labelDevolucionPTitulo
+            // 
+            this.labelDevolucionPTitulo.AutoSize = true;
+            this.labelDevolucionPTitulo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDevolucionPTitulo.ForeColor = System.Drawing.Color.Black;
+            this.labelDevolucionPTitulo.Location = new System.Drawing.Point(207, 9);
+            this.labelDevolucionPTitulo.Name = "labelDevolucionPTitulo";
+            this.labelDevolucionPTitulo.Size = new System.Drawing.Size(460, 44);
+            this.labelDevolucionPTitulo.TabIndex = 29;
+            this.labelDevolucionPTitulo.Text = "Devolucion de Prestamo";
+            // 
+            // panelDevolucionPHorizontal
+            // 
+            this.panelDevolucionPHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelDevolucionPHorizontal.Location = new System.Drawing.Point(0, 24);
+            this.panelDevolucionPHorizontal.Name = "panelDevolucionPHorizontal";
+            this.panelDevolucionPHorizontal.Size = new System.Drawing.Size(201, 19);
+            this.panelDevolucionPHorizontal.TabIndex = 32;
+            // 
+            // buttonDevolucionPEditar
+            // 
+            this.buttonDevolucionPEditar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.buttonDevolucionPEditar.FlatAppearance.BorderSize = 0;
+            this.buttonDevolucionPEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDevolucionPEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDevolucionPEditar.ForeColor = System.Drawing.Color.White;
+            this.buttonDevolucionPEditar.Location = new System.Drawing.Point(277, 529);
+            this.buttonDevolucionPEditar.Name = "buttonDevolucionPEditar";
+            this.buttonDevolucionPEditar.Size = new System.Drawing.Size(96, 26);
+            this.buttonDevolucionPEditar.TabIndex = 50;
+            this.buttonDevolucionPEditar.Text = "Editar";
+            this.buttonDevolucionPEditar.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel1.Location = new System.Drawing.Point(673, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(201, 19);
+            this.panel1.TabIndex = 51;
+            // 
             // DevolucionPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1080, 615);
+            this.ClientSize = new System.Drawing.Size(874, 615);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonDevolucionPEditar);
             this.Controls.Add(this.panelDevolucionPHorizontal);
             this.Controls.Add(this.panelDevolucionPHorizontal4);
             this.Controls.Add(this.panelDevolucionPHorizontal3);
             this.Controls.Add(this.buttonDevolucionPGuardar);
             this.Controls.Add(this.labelDevolucionPTitulo);
-            this.Controls.Add(this.panelDevolucionPHorizontal2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DevolucionPrestamo";
             this.Opacity = 0.96D;
@@ -253,7 +253,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelDevolucionPHorizontal2;
         private System.Windows.Forms.Panel panelDevolucionPHorizontal3;
         private System.Windows.Forms.Button buttonDevolucionPBuscar;
         private System.Windows.Forms.TextBox textDevolucionPBuscar;
@@ -270,5 +269,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaP;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaE;
+        private System.Windows.Forms.Panel panel1;
     }
 }

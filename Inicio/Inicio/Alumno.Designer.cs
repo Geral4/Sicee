@@ -173,6 +173,7 @@
             this.comboAlumnoCarrera.Name = "comboAlumnoCarrera";
             this.comboAlumnoCarrera.Size = new System.Drawing.Size(231, 21);
             this.comboAlumnoCarrera.TabIndex = 31;
+            this.comboAlumnoCarrera.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboAlumnoCarrera_MouseClick);
             // 
             // comboAlumnoSexo
             // 
@@ -243,6 +244,7 @@
             this.buttonAlumnoCancelar.TabIndex = 20;
             this.buttonAlumnoCancelar.Text = "Cancelar";
             this.buttonAlumnoCancelar.UseVisualStyleBackColor = false;
+            this.buttonAlumnoCancelar.Click += new System.EventHandler(this.buttonAlumnoCancelar_Click);
             // 
             // buttonAlumnoGuardar
             // 

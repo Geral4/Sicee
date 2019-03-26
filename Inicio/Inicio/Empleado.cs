@@ -170,7 +170,7 @@ namespace Inicio
 
         private void Empleado_Load(object sender, EventArgs e)
         {
-            
+
 
             //try
             //{
@@ -182,7 +182,7 @@ namespace Inicio
             //    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             //}
 
-            ListarCargo();
+            
             MostrarEmpleado();
         }
 
@@ -216,29 +216,47 @@ namespace Inicio
 
         private void buttonEmpleadoGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (textEmpleadoTelefono.Text=="" || comboEmpleadoSexo.Text=="" || comboEmpleadoCargo.Text=="" || textEmpleadoNPersonal.Text=="" || textEmpleadoNombre.Text=="" || textEmpleadoApellidosP.Text=="" || textEmpleadoApellidoM.Text=="" )
             {
-                objEmpleado.insertarEmpleado(
-                    textEmpleadoNPersonal.Text,
-                    textEmpleadoNombre.Text,
-                    textEmpleadoApellidosP.Text,
-                    textEmpleadoApellidoM.Text,
-                    textEmpleadoTelefono.Text,
-                    comboEmpleadoSexo.Text,
-                    textEmpleadoDireccion.Text,
-                    comboEmpleadoCargo.SelectedValue.ToString(),
-                    textEmpleadoEmail.Text,
-                    textEmpleadoHuella.Text
-                    );
+                MessageBox.Show("Llenar los campos obligatorios");
 
-                MessageBox.Show("Insertado Correctamente");
-                MostrarEmpleado();
             }
-
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
-            }
+                try
+                {
+                    objEmpleado.insertarEmpleado(
+                        textEmpleadoNPersonal.Text,
+                        textEmpleadoNombre.Text,
+                        textEmpleadoApellidosP.Text,
+                        textEmpleadoApellidoM.Text,
+                        textEmpleadoTelefono.Text,
+                        comboEmpleadoSexo.Text,
+                        textEmpleadoDireccion.Text,
+                        comboEmpleadoCargo.SelectedValue.ToString(),
+                        textEmpleadoEmail.Text,
+                        textEmpleadoHuella.Text
+                        );
+
+                    MessageBox.Show("Insertado Correctamente");
+                    MostrarEmpleado();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se puede insertar los datos por: " + ex);
+                }
+                textEmpleadoNombre.Clear();
+                textEmpleadoApellidosP.Clear();
+                textEmpleadoApellidoM.Clear();
+                textEmpleadoDireccion.Clear();
+                textEmpleadoEmail.Clear();
+                textEmpleadoNPersonal.Clear();
+                textEmpleadoTelefono.Clear();
+                comboEmpleadoCargo.Text = string.Empty;
+                comboEmpleadoSexo.Text = string.Empty;
+                }
+
         }
 
         private void MostrarEmpleado()
@@ -274,11 +292,29 @@ namespace Inicio
 
         }
 
-        private void dataGridEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void comboEmpleadoSexo_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+         //   e.Handled = true;
         }
 
+        private void comboEmpleadoCargo_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListarCargo();
+        }
+
+        private void buttonEmpleadoCancelar_Click(object sender, EventArgs e)
+        {
+            textEmpleadoNombre.Clear();
+            textEmpleadoApellidosP.Clear();
+            textEmpleadoApellidoM.Clear();
+            textEmpleadoDireccion.Clear();
+            textEmpleadoEmail.Clear();
+            textEmpleadoNPersonal.Clear();
+            textEmpleadoTelefono.Clear();
+            comboEmpleadoCargo.Text = string.Empty;
+            comboEmpleadoSexo.Text = string.Empty;
+            
        
+        }
     }
 }

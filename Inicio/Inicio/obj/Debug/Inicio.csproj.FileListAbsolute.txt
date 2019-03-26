@@ -246,6 +246,7 @@ C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Deb
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComplete
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.exe
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.pdb
+C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.InmueblePrestado.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\bin\Debug\Inicio.exe.config
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\bin\Debug\Inicio.exe
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\bin\Debug\Inicio.pdb
@@ -279,6 +280,7 @@ C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Empleado.resour
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Horario.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Inicio.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Inmueble.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.InmueblePrestado.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Login.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.ModificacionCambio.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Prestamos.resources
@@ -296,5 +298,4 @@ C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.csproj.CoreComp
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.csproj.CopyComplete
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.exe
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.pdb
-C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.InmueblePrestado.resources
-C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Sicee\Inicio\Inicio\obj\Debug\Inicio.InmueblePrestado.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.Aula1.resources

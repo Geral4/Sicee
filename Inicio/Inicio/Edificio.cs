@@ -63,14 +63,9 @@ namespace Inicio
         private void textEdificioNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
-        }
-            
+        }           
 
-        private void numericEdificio_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void Edificio_Load(object sender, EventArgs e)
         {
             MostrarEdificio();
@@ -107,5 +102,35 @@ namespace Inicio
             }
 
         }
+
+        private void buttonCarreraCancelar_Click(object sender, EventArgs e)
+        {
+            this.textEdificioClave.Text = "";
+            this.textEdificioNombre.Text = "";
+            this.textEdificioDescripcion.Text = "";
+            numericEdificio.Value = 1;
+
+        }
+
+        private void dataGridEdificio_DoubleClick(object sender, EventArgs e)
+        {
+
+            try { 
+                string valor = (string)dataGridEdificio.CurrentCell.Value;
+                
+                    Aula1 aula1 = new Aula1();
+                    aula1.clave_edificio = valor;                    
+                    aula1.ShowDialog();               
+                
+            }
+            
+             catch (SystemException caca)
+            {
+                Console.WriteLine("Hola" + caca);
+            }
+
+
+        }
+        
     }
 }

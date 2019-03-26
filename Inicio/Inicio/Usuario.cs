@@ -35,7 +35,7 @@ namespace Inicio
 
         private void Usuario_Load(object sender, EventArgs e)
         {
-           ListarNPersonal();
+         
             MostrarUsuario();
         }
 
@@ -66,6 +66,12 @@ namespace Inicio
             {
                 MessageBox.Show("No se puede insertar correctamente: " + ex);
             }
+            comboUsuarioNPersonal.Text = string.Empty;
+            textUsuarioNombre.Clear();
+            textUsuarioUsuario.Clear();
+            textUsuarioContraseña.Clear();
+            textUsuarioRepetir.Clear();
+            comboUsuarioAcceso.Text = string.Empty;
         }
 
         private void MostrarUsuario()
@@ -117,5 +123,21 @@ namespace Inicio
 
         }
 
+        private void comboUsuarioNPersonal_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListarNPersonal();
+        }
+        
+
+        private void buttonUsuarioCancelar_Click(object sender, EventArgs e)
+        {
+            comboUsuarioNPersonal.Text = string.Empty;
+            textUsuarioNombre.Clear();
+            textUsuarioUsuario.Clear();
+            textUsuarioContraseña.Clear();
+            textUsuarioRepetir.Clear();
+            comboUsuarioAcceso.Text = string.Empty;
+                       
+        }
     }
 }

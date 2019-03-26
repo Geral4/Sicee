@@ -39,7 +39,7 @@
             // panelPrestamosHorizontal1
             // 
             this.panelPrestamosHorizontal1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelPrestamosHorizontal1.Location = new System.Drawing.Point(-1, 47);
+            this.panelPrestamosHorizontal1.Location = new System.Drawing.Point(-1, 200);
             this.panelPrestamosHorizontal1.Name = "panelPrestamosHorizontal1";
             this.panelPrestamosHorizontal1.Size = new System.Drawing.Size(350, 19);
             this.panelPrestamosHorizontal1.TabIndex = 3;
@@ -47,7 +47,7 @@
             // panelPrestamosHorizontal2
             // 
             this.panelPrestamosHorizontal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelPrestamosHorizontal2.Location = new System.Drawing.Point(730, 47);
+            this.panelPrestamosHorizontal2.Location = new System.Drawing.Point(730, 200);
             this.panelPrestamosHorizontal2.Name = "panelPrestamosHorizontal2";
             this.panelPrestamosHorizontal2.Size = new System.Drawing.Size(350, 19);
             this.panelPrestamosHorizontal2.TabIndex = 4;
@@ -55,11 +55,12 @@
             // buttonPrestamosRealizar
             // 
             this.buttonPrestamosRealizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPrestamosRealizar.FlatAppearance.BorderSize = 0;
-            this.buttonPrestamosRealizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.buttonPrestamosRealizar.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPrestamosRealizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.buttonPrestamosRealizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrestamosRealizar.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrestamosRealizar.Location = new System.Drawing.Point(364, 24);
+            this.buttonPrestamosRealizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonPrestamosRealizar.Location = new System.Drawing.Point(364, 177);
             this.buttonPrestamosRealizar.Name = "buttonPrestamosRealizar";
             this.buttonPrestamosRealizar.Size = new System.Drawing.Size(352, 55);
             this.buttonPrestamosRealizar.TabIndex = 5;
@@ -70,11 +71,11 @@
             // buttonPrestamosDevolucion
             // 
             this.buttonPrestamosDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPrestamosDevolucion.FlatAppearance.BorderSize = 0;
-            this.buttonPrestamosDevolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.buttonPrestamosDevolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.buttonPrestamosDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrestamosDevolucion.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrestamosDevolucion.Location = new System.Drawing.Point(296, 262);
+            this.buttonPrestamosDevolucion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonPrestamosDevolucion.Location = new System.Drawing.Point(296, 415);
             this.buttonPrestamosDevolucion.Name = "buttonPrestamosDevolucion";
             this.buttonPrestamosDevolucion.Size = new System.Drawing.Size(489, 55);
             this.buttonPrestamosDevolucion.TabIndex = 8;
@@ -85,7 +86,7 @@
             // panelPrestamosHorizontal4
             // 
             this.panelPrestamosHorizontal4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelPrestamosHorizontal4.Location = new System.Drawing.Point(803, 285);
+            this.panelPrestamosHorizontal4.Location = new System.Drawing.Point(803, 438);
             this.panelPrestamosHorizontal4.Name = "panelPrestamosHorizontal4";
             this.panelPrestamosHorizontal4.Size = new System.Drawing.Size(278, 19);
             this.panelPrestamosHorizontal4.TabIndex = 7;
@@ -93,7 +94,7 @@
             // panelPrestamosHorizontal3
             // 
             this.panelPrestamosHorizontal3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelPrestamosHorizontal3.Location = new System.Drawing.Point(-1, 285);
+            this.panelPrestamosHorizontal3.Location = new System.Drawing.Point(-1, 438);
             this.panelPrestamosHorizontal3.Name = "panelPrestamosHorizontal3";
             this.panelPrestamosHorizontal3.Size = new System.Drawing.Size(278, 19);
             this.panelPrestamosHorizontal3.TabIndex = 8;

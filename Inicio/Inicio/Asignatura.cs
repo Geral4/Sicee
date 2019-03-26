@@ -44,7 +44,7 @@ namespace Inicio
 
         private void Asignatura_Load(object sender, EventArgs e)
         {
-            ListarCarrera();
+           // ListarCarrera();
             MostrarAsignatura();
      
         }
@@ -81,6 +81,11 @@ namespace Inicio
             {
                 MessageBox.Show("No se puede insertar los datos por: " + ex);
             }
+            textAsignaturaNombre.Clear();
+            textAsignaturaClave.Clear();
+            numericAsignatura.Value = 3;
+            comboAsignaturaCarrera.Text = string.Empty;
+            comboAsignaturaModalidad.Text = string.Empty;
         }
 
         private void MostrarAsignatura()
@@ -115,6 +120,21 @@ namespace Inicio
             {
                 Console.WriteLine("Excepción: " + ex);
             }
+
+        }
+
+        private void comboAsignaturaCarrera_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListarCarrera();
+        }
+
+        private void buttonAsignaturaCancelar_Click(object sender, EventArgs e)
+        {
+            textAsignaturaNombre.Clear();
+            textAsignaturaClave.Clear();
+            numericAsignatura.Value = 3;
+            comboAsignaturaCarrera.Text = string.Empty;
+            comboAsignaturaModalidad.Text = string.Empty;
 
         }
     }

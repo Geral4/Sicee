@@ -28,88 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultas));
             this.panelConsultasHorizontal2 = new System.Windows.Forms.Panel();
-            this.pictureConsultasCambio = new System.Windows.Forms.PictureBox();
             this.buttonConsultaCambio = new System.Windows.Forms.Button();
-            this.pictureConsultasPrestamo = new System.Windows.Forms.PictureBox();
             this.buttonConsultaPrestamo = new System.Windows.Forms.Button();
             this.buttonConsultaAsignatura = new System.Windows.Forms.Button();
             this.buttonConsultaCarrera = new System.Windows.Forms.Button();
-            this.pictureConsultasAsignatura = new System.Windows.Forms.PictureBox();
-            this.pictureConsultasCarrera = new System.Windows.Forms.PictureBox();
-            this.pictureConsultasInmueble = new System.Windows.Forms.PictureBox();
             this.buttonConsultaInmueble = new System.Windows.Forms.Button();
             this.buttonConsultaEdificio = new System.Windows.Forms.Button();
-            this.pictureConsultasAula = new System.Windows.Forms.PictureBox();
-            this.pictureConsultasCargo = new System.Windows.Forms.PictureBox();
             this.buttonConsultaCargo = new System.Windows.Forms.Button();
             this.buttonConsultaUsuario = new System.Windows.Forms.Button();
             this.buttonConsultaEmpleado = new System.Windows.Forms.Button();
-            this.pictureConsultasEmpleo = new System.Windows.Forms.PictureBox();
             this.buttonConsultaAlumno = new System.Windows.Forms.Button();
-            this.pictureConsultasAumno = new System.Windows.Forms.PictureBox();
-            this.pictureConsultasLaboral = new System.Windows.Forms.PictureBox();
             this.buttonConsultaHorario = new System.Windows.Forms.Button();
-            this.pictureConsultasUsuario = new System.Windows.Forms.PictureBox();
             this.panelConsultasHorizontal = new System.Windows.Forms.Panel();
             this.labelReporteConsulta = new System.Windows.Forms.Label();
             this.panelConsultasVertical = new System.Windows.Forms.Panel();
             this.panelConsultasHorizontal3 = new System.Windows.Forms.Panel();
             this.panelConsultasHorizontal2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasCambio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasPrestamo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasAsignatura)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasCarrera)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasInmueble)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasAula)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasCargo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasEmpleo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasAumno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasLaboral)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasUsuario)).BeginInit();
             this.panelConsultasHorizontal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelConsultasHorizontal2
             // 
-            this.panelConsultasHorizontal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasCambio);
+            this.panelConsultasHorizontal2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelConsultasHorizontal2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaCambio);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasPrestamo);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaPrestamo);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaAsignatura);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaCarrera);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasAsignatura);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasCarrera);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasInmueble);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaInmueble);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaEdificio);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasAula);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasCargo);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaCargo);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaUsuario);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaEmpleado);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasEmpleo);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaAlumno);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasAumno);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasLaboral);
             this.panelConsultasHorizontal2.Controls.Add(this.buttonConsultaHorario);
-            this.panelConsultasHorizontal2.Controls.Add(this.pictureConsultasUsuario);
             this.panelConsultasHorizontal2.Location = new System.Drawing.Point(35, 59);
             this.panelConsultasHorizontal2.Name = "panelConsultasHorizontal2";
             this.panelConsultasHorizontal2.Size = new System.Drawing.Size(1003, 511);
             this.panelConsultasHorizontal2.TabIndex = 9;
-            // 
-            // pictureConsultasCambio
-            // 
-            this.pictureConsultasCambio.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasCambio.Image")));
-            this.pictureConsultasCambio.Location = new System.Drawing.Point(667, 357);
-            this.pictureConsultasCambio.Name = "pictureConsultasCambio";
-            this.pictureConsultasCambio.Size = new System.Drawing.Size(135, 78);
-            this.pictureConsultasCambio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasCambio.TabIndex = 42;
-            this.pictureConsultasCambio.TabStop = false;
             // 
             // buttonConsultaCambio
             // 
@@ -121,23 +78,13 @@
             this.buttonConsultaCambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaCambio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaCambio.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaCambio.Location = new System.Drawing.Point(660, 438);
+            this.buttonConsultaCambio.Location = new System.Drawing.Point(746, 190);
             this.buttonConsultaCambio.Name = "buttonConsultaCambio";
-            this.buttonConsultaCambio.Size = new System.Drawing.Size(153, 70);
+            this.buttonConsultaCambio.Size = new System.Drawing.Size(205, 53);
             this.buttonConsultaCambio.TabIndex = 41;
             this.buttonConsultaCambio.Text = "Inmueble          Modificacion de estado";
             this.buttonConsultaCambio.UseVisualStyleBackColor = false;
             this.buttonConsultaCambio.Click += new System.EventHandler(this.buttonConsultaCambio_Click);
-            // 
-            // pictureConsultasPrestamo
-            // 
-            this.pictureConsultasPrestamo.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasPrestamo.Image")));
-            this.pictureConsultasPrestamo.Location = new System.Drawing.Point(392, 354);
-            this.pictureConsultasPrestamo.Name = "pictureConsultasPrestamo";
-            this.pictureConsultasPrestamo.Size = new System.Drawing.Size(148, 85);
-            this.pictureConsultasPrestamo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasPrestamo.TabIndex = 40;
-            this.pictureConsultasPrestamo.TabStop = false;
             // 
             // buttonConsultaPrestamo
             // 
@@ -149,9 +96,9 @@
             this.buttonConsultaPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaPrestamo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaPrestamo.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaPrestamo.Location = new System.Drawing.Point(417, 438);
+            this.buttonConsultaPrestamo.Location = new System.Drawing.Point(486, 280);
             this.buttonConsultaPrestamo.Name = "buttonConsultaPrestamo";
-            this.buttonConsultaPrestamo.Size = new System.Drawing.Size(100, 31);
+            this.buttonConsultaPrestamo.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaPrestamo.TabIndex = 39;
             this.buttonConsultaPrestamo.Text = "Prestamo";
             this.buttonConsultaPrestamo.UseVisualStyleBackColor = false;
@@ -167,9 +114,9 @@
             this.buttonConsultaAsignatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaAsignatura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaAsignatura.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaAsignatura.Location = new System.Drawing.Point(168, 438);
+            this.buttonConsultaAsignatura.Location = new System.Drawing.Point(188, 355);
             this.buttonConsultaAsignatura.Name = "buttonConsultaAsignatura";
-            this.buttonConsultaAsignatura.Size = new System.Drawing.Size(110, 31);
+            this.buttonConsultaAsignatura.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaAsignatura.TabIndex = 37;
             this.buttonConsultaAsignatura.Text = "Asignatura";
             this.buttonConsultaAsignatura.UseVisualStyleBackColor = false;
@@ -185,43 +132,13 @@
             this.buttonConsultaCarrera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaCarrera.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaCarrera.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaCarrera.Location = new System.Drawing.Point(388, 273);
+            this.buttonConsultaCarrera.Location = new System.Drawing.Point(188, 280);
             this.buttonConsultaCarrera.Name = "buttonConsultaCarrera";
-            this.buttonConsultaCarrera.Size = new System.Drawing.Size(82, 31);
+            this.buttonConsultaCarrera.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaCarrera.TabIndex = 36;
             this.buttonConsultaCarrera.Text = "Carrera";
             this.buttonConsultaCarrera.UseVisualStyleBackColor = false;
             this.buttonConsultaCarrera.Click += new System.EventHandler(this.buttonConsultaCarrera_Click);
-            // 
-            // pictureConsultasAsignatura
-            // 
-            this.pictureConsultasAsignatura.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasAsignatura.Image")));
-            this.pictureConsultasAsignatura.Location = new System.Drawing.Point(151, 347);
-            this.pictureConsultasAsignatura.Name = "pictureConsultasAsignatura";
-            this.pictureConsultasAsignatura.Size = new System.Drawing.Size(148, 85);
-            this.pictureConsultasAsignatura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasAsignatura.TabIndex = 34;
-            this.pictureConsultasAsignatura.TabStop = false;
-            // 
-            // pictureConsultasCarrera
-            // 
-            this.pictureConsultasCarrera.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasCarrera.Image")));
-            this.pictureConsultasCarrera.Location = new System.Drawing.Point(360, 189);
-            this.pictureConsultasCarrera.Name = "pictureConsultasCarrera";
-            this.pictureConsultasCarrera.Size = new System.Drawing.Size(135, 78);
-            this.pictureConsultasCarrera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasCarrera.TabIndex = 33;
-            this.pictureConsultasCarrera.TabStop = false;
-            // 
-            // pictureConsultasInmueble
-            // 
-            this.pictureConsultasInmueble.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasInmueble.Image")));
-            this.pictureConsultasInmueble.Location = new System.Drawing.Point(776, 189);
-            this.pictureConsultasInmueble.Name = "pictureConsultasInmueble";
-            this.pictureConsultasInmueble.Size = new System.Drawing.Size(135, 78);
-            this.pictureConsultasInmueble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasInmueble.TabIndex = 32;
-            this.pictureConsultasInmueble.TabStop = false;
             // 
             // buttonConsultaInmueble
             // 
@@ -233,9 +150,9 @@
             this.buttonConsultaInmueble.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaInmueble.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaInmueble.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaInmueble.Location = new System.Drawing.Point(801, 269);
+            this.buttonConsultaInmueble.Location = new System.Drawing.Point(486, 200);
             this.buttonConsultaInmueble.Name = "buttonConsultaInmueble";
-            this.buttonConsultaInmueble.Size = new System.Drawing.Size(100, 31);
+            this.buttonConsultaInmueble.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaInmueble.TabIndex = 31;
             this.buttonConsultaInmueble.Text = "Inmueble";
             this.buttonConsultaInmueble.UseVisualStyleBackColor = false;
@@ -251,33 +168,13 @@
             this.buttonConsultaEdificio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaEdificio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaEdificio.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaEdificio.Location = new System.Drawing.Point(168, 270);
+            this.buttonConsultaEdificio.Location = new System.Drawing.Point(486, 125);
             this.buttonConsultaEdificio.Name = "buttonConsultaEdificio";
-            this.buttonConsultaEdificio.Size = new System.Drawing.Size(86, 31);
+            this.buttonConsultaEdificio.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaEdificio.TabIndex = 30;
             this.buttonConsultaEdificio.Text = "Edificio";
             this.buttonConsultaEdificio.UseVisualStyleBackColor = false;
             this.buttonConsultaEdificio.Click += new System.EventHandler(this.buttonConsultaEdificio_Click);
-            // 
-            // pictureConsultasAula
-            // 
-            this.pictureConsultasAula.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasAula.Image")));
-            this.pictureConsultasAula.Location = new System.Drawing.Point(133, 190);
-            this.pictureConsultasAula.Name = "pictureConsultasAula";
-            this.pictureConsultasAula.Size = new System.Drawing.Size(146, 77);
-            this.pictureConsultasAula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasAula.TabIndex = 29;
-            this.pictureConsultasAula.TabStop = false;
-            // 
-            // pictureConsultasCargo
-            // 
-            this.pictureConsultasCargo.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasCargo.Image")));
-            this.pictureConsultasCargo.Location = new System.Drawing.Point(139, 37);
-            this.pictureConsultasCargo.Name = "pictureConsultasCargo";
-            this.pictureConsultasCargo.Size = new System.Drawing.Size(140, 64);
-            this.pictureConsultasCargo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasCargo.TabIndex = 28;
-            this.pictureConsultasCargo.TabStop = false;
             // 
             // buttonConsultaCargo
             // 
@@ -289,9 +186,9 @@
             this.buttonConsultaCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaCargo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaCargo.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaCargo.Location = new System.Drawing.Point(169, 104);
+            this.buttonConsultaCargo.Location = new System.Drawing.Point(188, 45);
             this.buttonConsultaCargo.Name = "buttonConsultaCargo";
-            this.buttonConsultaCargo.Size = new System.Drawing.Size(75, 31);
+            this.buttonConsultaCargo.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaCargo.TabIndex = 26;
             this.buttonConsultaCargo.Text = "Cargo";
             this.buttonConsultaCargo.UseVisualStyleBackColor = false;
@@ -307,9 +204,9 @@
             this.buttonConsultaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaUsuario.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaUsuario.Location = new System.Drawing.Point(591, 98);
+            this.buttonConsultaUsuario.Location = new System.Drawing.Point(188, 200);
             this.buttonConsultaUsuario.Name = "buttonConsultaUsuario";
-            this.buttonConsultaUsuario.Size = new System.Drawing.Size(82, 31);
+            this.buttonConsultaUsuario.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaUsuario.TabIndex = 25;
             this.buttonConsultaUsuario.Text = "Usuario";
             this.buttonConsultaUsuario.UseVisualStyleBackColor = false;
@@ -325,23 +222,13 @@
             this.buttonConsultaEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaEmpleado.Location = new System.Drawing.Point(360, 102);
+            this.buttonConsultaEmpleado.Location = new System.Drawing.Point(188, 125);
             this.buttonConsultaEmpleado.Name = "buttonConsultaEmpleado";
-            this.buttonConsultaEmpleado.Size = new System.Drawing.Size(147, 31);
+            this.buttonConsultaEmpleado.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaEmpleado.TabIndex = 24;
             this.buttonConsultaEmpleado.Text = "Empleado";
             this.buttonConsultaEmpleado.UseVisualStyleBackColor = false;
             this.buttonConsultaEmpleado.Click += new System.EventHandler(this.buttonConsultaEmpleado_Click);
-            // 
-            // pictureConsultasEmpleo
-            // 
-            this.pictureConsultasEmpleo.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasEmpleo.Image")));
-            this.pictureConsultasEmpleo.Location = new System.Drawing.Point(347, 15);
-            this.pictureConsultasEmpleo.Name = "pictureConsultasEmpleo";
-            this.pictureConsultasEmpleo.Size = new System.Drawing.Size(170, 100);
-            this.pictureConsultasEmpleo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasEmpleo.TabIndex = 23;
-            this.pictureConsultasEmpleo.TabStop = false;
             // 
             // buttonConsultaAlumno
             // 
@@ -353,33 +240,13 @@
             this.buttonConsultaAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaAlumno.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaAlumno.Location = new System.Drawing.Point(602, 277);
+            this.buttonConsultaAlumno.Location = new System.Drawing.Point(486, 45);
             this.buttonConsultaAlumno.Name = "buttonConsultaAlumno";
-            this.buttonConsultaAlumno.Size = new System.Drawing.Size(94, 28);
+            this.buttonConsultaAlumno.Size = new System.Drawing.Size(160, 28);
             this.buttonConsultaAlumno.TabIndex = 20;
             this.buttonConsultaAlumno.Text = "Alumno";
             this.buttonConsultaAlumno.UseVisualStyleBackColor = false;
             this.buttonConsultaAlumno.Click += new System.EventHandler(this.buttonConsultaAlumno_Click);
-            // 
-            // pictureConsultasAumno
-            // 
-            this.pictureConsultasAumno.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasAumno.Image")));
-            this.pictureConsultasAumno.Location = new System.Drawing.Point(574, 190);
-            this.pictureConsultasAumno.Name = "pictureConsultasAumno";
-            this.pictureConsultasAumno.Size = new System.Drawing.Size(143, 85);
-            this.pictureConsultasAumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasAumno.TabIndex = 0;
-            this.pictureConsultasAumno.TabStop = false;
-            // 
-            // pictureConsultasLaboral
-            // 
-            this.pictureConsultasLaboral.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasLaboral.Image")));
-            this.pictureConsultasLaboral.Location = new System.Drawing.Point(776, 15);
-            this.pictureConsultasLaboral.Name = "pictureConsultasLaboral";
-            this.pictureConsultasLaboral.Size = new System.Drawing.Size(143, 85);
-            this.pictureConsultasLaboral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasLaboral.TabIndex = 22;
-            this.pictureConsultasLaboral.TabStop = false;
             // 
             // buttonConsultaHorario
             // 
@@ -391,23 +258,13 @@
             this.buttonConsultaHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsultaHorario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultaHorario.ForeColor = System.Drawing.Color.Black;
-            this.buttonConsultaHorario.Location = new System.Drawing.Point(775, 101);
+            this.buttonConsultaHorario.Location = new System.Drawing.Point(486, 355);
             this.buttonConsultaHorario.Name = "buttonConsultaHorario";
-            this.buttonConsultaHorario.Size = new System.Drawing.Size(147, 31);
+            this.buttonConsultaHorario.Size = new System.Drawing.Size(160, 31);
             this.buttonConsultaHorario.TabIndex = 22;
             this.buttonConsultaHorario.Text = "Horario laboral";
             this.buttonConsultaHorario.UseVisualStyleBackColor = false;
             this.buttonConsultaHorario.Click += new System.EventHandler(this.buttonConsultaHorario_Click);
-            // 
-            // pictureConsultasUsuario
-            // 
-            this.pictureConsultasUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureConsultasUsuario.Image")));
-            this.pictureConsultasUsuario.Location = new System.Drawing.Point(555, 16);
-            this.pictureConsultasUsuario.Name = "pictureConsultasUsuario";
-            this.pictureConsultasUsuario.Size = new System.Drawing.Size(151, 99);
-            this.pictureConsultasUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureConsultasUsuario.TabIndex = 27;
-            this.pictureConsultasUsuario.TabStop = false;
             // 
             // panelConsultasHorizontal
             // 
@@ -460,17 +317,6 @@
             this.Opacity = 0.96D;
             this.Text = "Consultas";
             this.panelConsultasHorizontal2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasCambio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasPrestamo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasAsignatura)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasCarrera)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasInmueble)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasAula)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasCargo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasEmpleo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasAumno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasLaboral)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConsultasUsuario)).EndInit();
             this.panelConsultasHorizontal.ResumeLayout(false);
             this.panelConsultasHorizontal.PerformLayout();
             this.ResumeLayout(false);
@@ -481,30 +327,19 @@
 
         private System.Windows.Forms.Panel panelConsultasHorizontal2;
         private System.Windows.Forms.Button buttonConsultaAlumno;
-        private System.Windows.Forms.PictureBox pictureConsultasAumno;
-        private System.Windows.Forms.PictureBox pictureConsultasLaboral;
         private System.Windows.Forms.Button buttonConsultaHorario;
         private System.Windows.Forms.Panel panelConsultasHorizontal;
         private System.Windows.Forms.Label labelReporteConsulta;
         private System.Windows.Forms.Button buttonConsultaEmpleado;
-        private System.Windows.Forms.PictureBox pictureConsultasEmpleo;
         private System.Windows.Forms.Button buttonConsultaCargo;
         private System.Windows.Forms.Button buttonConsultaUsuario;
-        private System.Windows.Forms.PictureBox pictureConsultasUsuario;
-        private System.Windows.Forms.PictureBox pictureConsultasCargo;
         private System.Windows.Forms.Button buttonConsultaInmueble;
         private System.Windows.Forms.Button buttonConsultaEdificio;
-        private System.Windows.Forms.PictureBox pictureConsultasAula;
-        private System.Windows.Forms.PictureBox pictureConsultasInmueble;
-        private System.Windows.Forms.PictureBox pictureConsultasCarrera;
-        private System.Windows.Forms.PictureBox pictureConsultasAsignatura;
         private System.Windows.Forms.Button buttonConsultaAsignatura;
         private System.Windows.Forms.Button buttonConsultaCarrera;
         private System.Windows.Forms.Button buttonConsultaPrestamo;
-        private System.Windows.Forms.PictureBox pictureConsultasPrestamo;
         private System.Windows.Forms.Panel panelConsultasVertical;
         private System.Windows.Forms.Panel panelConsultasHorizontal3;
-        private System.Windows.Forms.PictureBox pictureConsultasCambio;
         private System.Windows.Forms.Button buttonConsultaCambio;
     }
 }

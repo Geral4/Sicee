@@ -35,7 +35,6 @@
             this.dataGridViewCargo = new System.Windows.Forms.DataGridView();
             this.labelCargoLista = new System.Windows.Forms.Label();
             this.panelCargoVertical2 = new System.Windows.Forms.Panel();
-            this.comboCargoDepartamento = new System.Windows.Forms.ComboBox();
             this.labelCargoDepartamento = new System.Windows.Forms.Label();
             this.buttonCargoCancelar = new System.Windows.Forms.Button();
             this.buttonCargoGuardar = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.textCargoNombre = new System.Windows.Forms.TextBox();
             this.labelCargoNombre = new System.Windows.Forms.Label();
             this.labelCargoRegistro = new System.Windows.Forms.Label();
+            this.comboCargo = new System.Windows.Forms.ComboBox();
             this.panelCargoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCargo)).BeginInit();
             this.panelCargoVertical2.SuspendLayout();
@@ -121,7 +121,7 @@
             // panelCargoVertical2
             // 
             this.panelCargoVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelCargoVertical2.Controls.Add(this.comboCargoDepartamento);
+            this.panelCargoVertical2.Controls.Add(this.comboCargo);
             this.panelCargoVertical2.Controls.Add(this.labelCargoDepartamento);
             this.panelCargoVertical2.Controls.Add(this.buttonCargoCancelar);
             this.panelCargoVertical2.Controls.Add(this.buttonCargoGuardar);
@@ -139,17 +139,6 @@
             this.panelCargoVertical2.TabIndex = 4;
             this.panelCargoVertical2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCargoVertical2_Paint);
             // 
-            // comboCargoDepartamento
-            // 
-            this.comboCargoDepartamento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboCargoDepartamento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboCargoDepartamento.Items.AddRange(new object[] {
-            "Administracion"});
-            this.comboCargoDepartamento.Location = new System.Drawing.Point(120, 194);
-            this.comboCargoDepartamento.Name = "comboCargoDepartamento";
-            this.comboCargoDepartamento.Size = new System.Drawing.Size(194, 21);
-            this.comboCargoDepartamento.TabIndex = 22;
-            // 
             // labelCargoDepartamento
             // 
             this.labelCargoDepartamento.AutoSize = true;
@@ -157,9 +146,9 @@
             this.labelCargoDepartamento.ForeColor = System.Drawing.Color.White;
             this.labelCargoDepartamento.Location = new System.Drawing.Point(8, 194);
             this.labelCargoDepartamento.Name = "labelCargoDepartamento";
-            this.labelCargoDepartamento.Size = new System.Drawing.Size(102, 18);
+            this.labelCargoDepartamento.Size = new System.Drawing.Size(108, 18);
             this.labelCargoDepartamento.TabIndex = 21;
-            this.labelCargoDepartamento.Text = "Departamento";
+            this.labelCargoDepartamento.Text = "Departamento*";
             // 
             // buttonCargoCancelar
             // 
@@ -173,6 +162,7 @@
             this.buttonCargoCancelar.TabIndex = 20;
             this.buttonCargoCancelar.Text = "Cancelar";
             this.buttonCargoCancelar.UseVisualStyleBackColor = false;
+            this.buttonCargoCancelar.Click += new System.EventHandler(this.buttonCargoCancelar_Click);
             // 
             // buttonCargoGuardar
             // 
@@ -202,9 +192,9 @@
             this.labelCargoClave.ForeColor = System.Drawing.Color.White;
             this.labelCargoClave.Location = new System.Drawing.Point(9, 56);
             this.labelCargoClave.Name = "labelCargoClave";
-            this.labelCargoClave.Size = new System.Drawing.Size(45, 18);
+            this.labelCargoClave.Size = new System.Drawing.Size(51, 18);
             this.labelCargoClave.TabIndex = 7;
-            this.labelCargoClave.Text = "Clave";
+            this.labelCargoClave.Text = "Clave*";
             // 
             // textCargoDescripcion
             // 
@@ -240,9 +230,9 @@
             this.labelCargoNombre.ForeColor = System.Drawing.Color.White;
             this.labelCargoNombre.Location = new System.Drawing.Point(8, 85);
             this.labelCargoNombre.Name = "labelCargoNombre";
-            this.labelCargoNombre.Size = new System.Drawing.Size(62, 18);
+            this.labelCargoNombre.Size = new System.Drawing.Size(68, 18);
             this.labelCargoNombre.TabIndex = 1;
-            this.labelCargoNombre.Text = "Nombre";
+            this.labelCargoNombre.Text = "Nombre*";
             // 
             // labelCargoRegistro
             // 
@@ -254,6 +244,14 @@
             this.labelCargoRegistro.Size = new System.Drawing.Size(121, 20);
             this.labelCargoRegistro.TabIndex = 0;
             this.labelCargoRegistro.Text = "Registrar Cargo";
+            // 
+            // comboCargo
+            // 
+            this.comboCargo.FormattingEnabled = true;
+            this.comboCargo.Location = new System.Drawing.Point(122, 191);
+            this.comboCargo.Name = "comboCargo";
+            this.comboCargo.Size = new System.Drawing.Size(192, 21);
+            this.comboCargo.TabIndex = 23;
             // 
             // Cargo
             // 
@@ -294,7 +292,6 @@
         private System.Windows.Forms.Label labelCargoNombre;
         private System.Windows.Forms.Label labelCargoRegistro;
         private System.Windows.Forms.Label labelCargoDepartamento;
-        private System.Windows.Forms.ComboBox comboCargoDepartamento;
         private System.Windows.Forms.Label label1;
         //private Inicio.SiceeDataSet1TableAdapters.CargoTableAdapter cargoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idcargoDataGridViewTextBoxColumn;
@@ -302,5 +299,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn departamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboCargo;
     }
 }

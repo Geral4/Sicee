@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelEmpleadoVertical = new System.Windows.Forms.Panel();
-            this.textEmpleadoHuella = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textEmpleadoBuscar = new System.Windows.Forms.TextBox();
             this.labelEmpleadoBuscar = new System.Windows.Forms.Label();
             this.dataGridEmpleado = new System.Windows.Forms.DataGridView();
             this.labelEmpleadoLista = new System.Windows.Forms.Label();
             this.panelEmpleadoVertical2 = new System.Windows.Forms.Panel();
+            this.textEmpleadoHuella = new System.Windows.Forms.TextBox();
             this.buttonEmpleadoHuella = new System.Windows.Forms.Button();
             this.buttonEmpleadoCancelar = new System.Windows.Forms.Button();
             this.buttonEmpleadoGuardar = new System.Windows.Forms.Button();
@@ -66,7 +66,6 @@
             // panelEmpleadoVertical
             // 
             this.panelEmpleadoVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panelEmpleadoVertical.Controls.Add(this.textEmpleadoHuella);
             this.panelEmpleadoVertical.Controls.Add(this.label1);
             this.panelEmpleadoVertical.Controls.Add(this.textEmpleadoBuscar);
             this.panelEmpleadoVertical.Controls.Add(this.labelEmpleadoBuscar);
@@ -76,13 +75,6 @@
             this.panelEmpleadoVertical.Name = "panelEmpleadoVertical";
             this.panelEmpleadoVertical.Size = new System.Drawing.Size(575, 439);
             this.panelEmpleadoVertical.TabIndex = 1;
-            // 
-            // textEmpleadoHuella
-            // 
-            this.textEmpleadoHuella.Location = new System.Drawing.Point(206, 13);
-            this.textEmpleadoHuella.Name = "textEmpleadoHuella";
-            this.textEmpleadoHuella.Size = new System.Drawing.Size(12, 20);
-            this.textEmpleadoHuella.TabIndex = 26;
             // 
             // label1
             // 
@@ -123,7 +115,6 @@
             this.dataGridEmpleado.Name = "dataGridEmpleado";
             this.dataGridEmpleado.Size = new System.Drawing.Size(558, 330);
             this.dataGridEmpleado.TabIndex = 1;
-            this.dataGridEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpleado_CellContentClick);
             // 
             // labelEmpleadoLista
             // 
@@ -139,6 +130,7 @@
             // panelEmpleadoVertical2
             // 
             this.panelEmpleadoVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelEmpleadoVertical2.Controls.Add(this.textEmpleadoHuella);
             this.panelEmpleadoVertical2.Controls.Add(this.buttonEmpleadoHuella);
             this.panelEmpleadoVertical2.Controls.Add(this.buttonEmpleadoCancelar);
             this.panelEmpleadoVertical2.Controls.Add(this.buttonEmpleadoGuardar);
@@ -165,6 +157,13 @@
             this.panelEmpleadoVertical2.Name = "panelEmpleadoVertical2";
             this.panelEmpleadoVertical2.Size = new System.Drawing.Size(333, 439);
             this.panelEmpleadoVertical2.TabIndex = 2;
+            // 
+            // textEmpleadoHuella
+            // 
+            this.textEmpleadoHuella.Location = new System.Drawing.Point(239, 334);
+            this.textEmpleadoHuella.Name = "textEmpleadoHuella";
+            this.textEmpleadoHuella.Size = new System.Drawing.Size(12, 20);
+            this.textEmpleadoHuella.TabIndex = 26;
             // 
             // buttonEmpleadoHuella
             // 
@@ -193,6 +192,7 @@
             this.buttonEmpleadoCancelar.TabIndex = 22;
             this.buttonEmpleadoCancelar.Text = "Cancelar";
             this.buttonEmpleadoCancelar.UseVisualStyleBackColor = false;
+            this.buttonEmpleadoCancelar.Click += new System.EventHandler(this.buttonEmpleadoCancelar_Click);
             // 
             // buttonEmpleadoGuardar
             // 
@@ -215,6 +215,7 @@
             this.comboEmpleadoSexo.Name = "comboEmpleadoSexo";
             this.comboEmpleadoSexo.Size = new System.Drawing.Size(219, 21);
             this.comboEmpleadoSexo.TabIndex = 29;
+            this.comboEmpleadoSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboEmpleadoSexo_KeyPress);
             // 
             // labelEmpleadoSex
             // 
@@ -223,9 +224,9 @@
             this.labelEmpleadoSex.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoSex.Location = new System.Drawing.Point(9, 205);
             this.labelEmpleadoSex.Name = "labelEmpleadoSex";
-            this.labelEmpleadoSex.Size = new System.Drawing.Size(43, 20);
+            this.labelEmpleadoSex.Size = new System.Drawing.Size(49, 20);
             this.labelEmpleadoSex.TabIndex = 28;
-            this.labelEmpleadoSex.Text = "Sexo";
+            this.labelEmpleadoSex.Text = "Sexo*";
             // 
             // comboEmpleadoCargo
             // 
@@ -236,6 +237,7 @@
             this.comboEmpleadoCargo.Name = "comboEmpleadoCargo";
             this.comboEmpleadoCargo.Size = new System.Drawing.Size(219, 21);
             this.comboEmpleadoCargo.TabIndex = 27;
+            this.comboEmpleadoCargo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboEmpleadoCargo_MouseClick);
             // 
             // textEmpleadoApellidoM
             // 
@@ -252,9 +254,9 @@
             this.labelEmpleadoApellidoM.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoApellidoM.Location = new System.Drawing.Point(9, 147);
             this.labelEmpleadoApellidoM.Name = "labelEmpleadoApellidoM";
-            this.labelEmpleadoApellidoM.Size = new System.Drawing.Size(137, 20);
+            this.labelEmpleadoApellidoM.Size = new System.Drawing.Size(143, 20);
             this.labelEmpleadoApellidoM.TabIndex = 25;
-            this.labelEmpleadoApellidoM.Text = "Apellido Materno";
+            this.labelEmpleadoApellidoM.Text = "Apellido Materno*";
             // 
             // textEmpleadoApellidosP
             // 
@@ -271,9 +273,9 @@
             this.labelEmpleadoApellidoP.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoApellidoP.Location = new System.Drawing.Point(8, 117);
             this.labelEmpleadoApellidoP.Name = "labelEmpleadoApellidoP";
-            this.labelEmpleadoApellidoP.Size = new System.Drawing.Size(131, 20);
+            this.labelEmpleadoApellidoP.Size = new System.Drawing.Size(137, 20);
             this.labelEmpleadoApellidoP.TabIndex = 23;
-            this.labelEmpleadoApellidoP.Text = "Apellido Paterno";
+            this.labelEmpleadoApellidoP.Text = "Apellido Paterno*";
             // 
             // labelEmpleadoNPersonal
             // 
@@ -282,9 +284,9 @@
             this.labelEmpleadoNPersonal.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoNPersonal.Location = new System.Drawing.Point(9, 60);
             this.labelEmpleadoNPersonal.Name = "labelEmpleadoNPersonal";
-            this.labelEmpleadoNPersonal.Size = new System.Drawing.Size(92, 20);
+            this.labelEmpleadoNPersonal.Size = new System.Drawing.Size(98, 20);
             this.labelEmpleadoNPersonal.TabIndex = 5;
-            this.labelEmpleadoNPersonal.Text = "Nº Personal";
+            this.labelEmpleadoNPersonal.Text = "Nº Personal*";
             // 
             // textEmpleadoNPersonal
             // 
@@ -325,9 +327,9 @@
             this.labelEmpleadoCargo.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoCargo.Location = new System.Drawing.Point(9, 257);
             this.labelEmpleadoCargo.Name = "labelEmpleadoCargo";
-            this.labelEmpleadoCargo.Size = new System.Drawing.Size(56, 20);
+            this.labelEmpleadoCargo.Size = new System.Drawing.Size(62, 20);
             this.labelEmpleadoCargo.TabIndex = 11;
-            this.labelEmpleadoCargo.Text = "Cargo";
+            this.labelEmpleadoCargo.Text = "Cargo*";
             // 
             // labelEmpleadoDireccion
             // 
@@ -355,9 +357,9 @@
             this.labelEmpleadoTelefono.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoTelefono.Location = new System.Drawing.Point(9, 177);
             this.labelEmpleadoTelefono.Name = "labelEmpleadoTelefono";
-            this.labelEmpleadoTelefono.Size = new System.Drawing.Size(71, 20);
+            this.labelEmpleadoTelefono.Size = new System.Drawing.Size(77, 20);
             this.labelEmpleadoTelefono.TabIndex = 7;
-            this.labelEmpleadoTelefono.Text = "Teléfono";
+            this.labelEmpleadoTelefono.Text = "Teléfono*";
             // 
             // textEmpleadoNombre
             // 
@@ -374,9 +376,9 @@
             this.labelEmpleadoNombre.ForeColor = System.Drawing.Color.White;
             this.labelEmpleadoNombre.Location = new System.Drawing.Point(8, 88);
             this.labelEmpleadoNombre.Name = "labelEmpleadoNombre";
-            this.labelEmpleadoNombre.Size = new System.Drawing.Size(68, 20);
+            this.labelEmpleadoNombre.Size = new System.Drawing.Size(74, 20);
             this.labelEmpleadoNombre.TabIndex = 1;
-            this.labelEmpleadoNombre.Text = "Nombre";
+            this.labelEmpleadoNombre.Text = "Nombre*";
             // 
             // labeEmpleadoRegistro
             // 

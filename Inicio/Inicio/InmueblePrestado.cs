@@ -27,17 +27,11 @@ namespace Inicio
             InitializeComponent();
         }
 
-        private void InmueblePrestado_Load(object sender, EventArgs e)
-        {
-            sql = "select Numero, NSerie_id 'Numero de serie', i.Nombre, i.Modelo, Observaciones, Prestado From PrestamoInmueble p " +
-                "inner join Inmueble i on p.Nserie_id = i.Nserie where p.Folio_id = "+ folio +"";
-            dataGridInmueblePrestado.DataSource = funciones.llenarDataGrid(sql);
-        }
-
-        private void InmueblePrestado_FormClosing(object sender, FormClosingEventArgs e)
+        private void buttonIPGuardar_Click(object sender, EventArgs e)
         {
             try
             {
+                dataGridInmueblePrestado.CurrentCell = dataGridInmueblePrestado[0, 0];
                 int numFilas = dataGridInmueblePrestado.RowCount;
                 for (int i = 0; i < numFilas; i++)
                 {
@@ -49,13 +43,13 @@ namespace Inicio
                     Console.WriteLine("Actualizar observaciones: " + sql);
                     if (exec.InsertActElim2(sql) > 0)
                     {
-                        res = "Los cambios de han guardado correctamente";
+                        res = "Los cambios se han guardado correctamente";
                     }
                     else
                     {
                         res = "Los cambios no se han podido guardar, verifique";
                     }
-                    
+
                 }
                 MessageBox.Show(res, "Devoluciones");
                 exec.cerrar();
@@ -64,6 +58,19 @@ namespace Inicio
             {
                 Console.WriteLine("Excepción producida: " + ex);
             }
+
+        }
+
+        private void InmueblePrestado_Load(object sender, EventArgs e)
+        {
+            sql = "select Numero, NSerie_id 'Numero de serie', i.Nombre, i.Modelo, Observaciones, Prestado From PrestamoInmueble p " +
+                "inner join Inmueble i on p.Nserie_id = i.Nserie where p.Folio_id = "+ folio +"";
+            dataGridInmueblePrestado.DataSource = funciones.llenarDataGrid(sql);
+        }
+
+        private void InmueblePrestado_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          
                        
         }
     }

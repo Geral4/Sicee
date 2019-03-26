@@ -91,8 +91,7 @@ namespace Inicio
 
         private void Inmueble_Load(object sender, EventArgs e)
         {
-
-            ListarAula();
+            
             MostrarInmueble();
 
 
@@ -137,6 +136,14 @@ namespace Inicio
             {
                 MessageBox.Show("No se puede insertar los datos por: " + ex);
             }
+            textInmuebleNombre.Clear();
+            textInmuebleMarca.Clear();
+            textInmuebleModelo.Clear();
+            textInmuebleNSerie.Clear();
+            textInmuebleDescripcion.Clear();
+            textInmuebleAula.Clear();
+            comboInmuebleAula.Text = string.Empty;
+            comboInmuebleColor.Text = string.Empty;
 
         }
         private void ListarAula()
@@ -202,6 +209,24 @@ namespace Inicio
                 Console.WriteLine("Excepción: " + ex);
             }
 
+        }
+
+        private void comboInmuebleAula_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            ListarAula();
+        }
+
+        private void buttonInmuebleCancelar_Click(object sender, EventArgs e)
+        {
+            textInmuebleNombre.Clear();
+            textInmuebleMarca.Clear();
+            textInmuebleModelo.Clear();
+            textInmuebleNSerie.Clear();
+            textInmuebleDescripcion.Clear();
+            textInmuebleAula.Clear();
+            comboInmuebleAula.Text = string.Empty;
+            comboInmuebleColor.Text = string.Empty;
         }
     }
 }

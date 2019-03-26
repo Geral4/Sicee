@@ -149,13 +149,29 @@
             this.comboAsignaturaCarrera.Name = "comboAsignaturaCarrera";
             this.comboAsignaturaCarrera.Size = new System.Drawing.Size(231, 21);
             this.comboAsignaturaCarrera.TabIndex = 32;
+            this.comboAsignaturaCarrera.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboAsignaturaCarrera_MouseClick);
             // 
             // numericAsignatura
             // 
             this.numericAsignatura.Location = new System.Drawing.Point(81, 146);
+            this.numericAsignatura.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numericAsignatura.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.numericAsignatura.Name = "numericAsignatura";
             this.numericAsignatura.Size = new System.Drawing.Size(233, 20);
             this.numericAsignatura.TabIndex = 24;
+            this.numericAsignatura.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // labelAsignaturaCreditos
             // 
@@ -164,9 +180,9 @@
             this.labelAsignaturaCreditos.ForeColor = System.Drawing.Color.White;
             this.labelAsignaturaCreditos.Location = new System.Drawing.Point(10, 143);
             this.labelAsignaturaCreditos.Name = "labelAsignaturaCreditos";
-            this.labelAsignaturaCreditos.Size = new System.Drawing.Size(70, 20);
+            this.labelAsignaturaCreditos.Size = new System.Drawing.Size(76, 20);
             this.labelAsignaturaCreditos.TabIndex = 22;
-            this.labelAsignaturaCreditos.Text = "Creditos";
+            this.labelAsignaturaCreditos.Text = "Creditos*";
             // 
             // comboAsignaturaModalidad
             // 
@@ -188,6 +204,7 @@
             this.buttonAsignaturaCancelar.TabIndex = 20;
             this.buttonAsignaturaCancelar.Text = "Cancelar";
             this.buttonAsignaturaCancelar.UseVisualStyleBackColor = false;
+            this.buttonAsignaturaCancelar.Click += new System.EventHandler(this.buttonAsignaturaCancelar_Click);
             // 
             // buttonAsignaturaGuardar
             // 
@@ -210,9 +227,9 @@
             this.labelAsignaturaCarrera.ForeColor = System.Drawing.Color.White;
             this.labelAsignaturaCarrera.Location = new System.Drawing.Point(10, 113);
             this.labelAsignaturaCarrera.Name = "labelAsignaturaCarrera";
-            this.labelAsignaturaCarrera.Size = new System.Drawing.Size(66, 20);
+            this.labelAsignaturaCarrera.Size = new System.Drawing.Size(72, 20);
             this.labelAsignaturaCarrera.TabIndex = 12;
-            this.labelAsignaturaCarrera.Text = "Carrera";
+            this.labelAsignaturaCarrera.Text = "Carrera*";
             // 
             // labelAsignaturaModalidad
             // 
@@ -221,9 +238,9 @@
             this.labelAsignaturaModalidad.ForeColor = System.Drawing.Color.White;
             this.labelAsignaturaModalidad.Location = new System.Drawing.Point(9, 173);
             this.labelAsignaturaModalidad.Name = "labelAsignaturaModalidad";
-            this.labelAsignaturaModalidad.Size = new System.Drawing.Size(90, 20);
+            this.labelAsignaturaModalidad.Size = new System.Drawing.Size(96, 20);
             this.labelAsignaturaModalidad.TabIndex = 7;
-            this.labelAsignaturaModalidad.Text = "Modalidad";
+            this.labelAsignaturaModalidad.Text = "Modalidad*";
             // 
             // textAsignaturaClave
             // 
@@ -239,9 +256,9 @@
             this.labelAsignaturaClave.ForeColor = System.Drawing.Color.White;
             this.labelAsignaturaClave.Location = new System.Drawing.Point(8, 86);
             this.labelAsignaturaClave.Name = "labelAsignaturaClave";
-            this.labelAsignaturaClave.Size = new System.Drawing.Size(54, 20);
+            this.labelAsignaturaClave.Size = new System.Drawing.Size(60, 20);
             this.labelAsignaturaClave.TabIndex = 3;
-            this.labelAsignaturaClave.Text = "Clave";
+            this.labelAsignaturaClave.Text = "Clave*";
             // 
             // textAsignaturaNombre
             // 
@@ -258,9 +275,9 @@
             this.labelAsignaturaNombre.ForeColor = System.Drawing.Color.White;
             this.labelAsignaturaNombre.Location = new System.Drawing.Point(8, 59);
             this.labelAsignaturaNombre.Name = "labelAsignaturaNombre";
-            this.labelAsignaturaNombre.Size = new System.Drawing.Size(68, 20);
+            this.labelAsignaturaNombre.Size = new System.Drawing.Size(74, 20);
             this.labelAsignaturaNombre.TabIndex = 1;
-            this.labelAsignaturaNombre.Text = "Nombre";
+            this.labelAsignaturaNombre.Text = "Nombre*";
             // 
             // labelAsignaturaRegistro
             // 

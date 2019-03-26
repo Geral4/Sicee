@@ -143,6 +143,7 @@
             this.buttonCarreraCancelar.TabIndex = 20;
             this.buttonCarreraCancelar.Text = "Cancelar";
             this.buttonCarreraCancelar.UseVisualStyleBackColor = false;
+            this.buttonCarreraCancelar.Click += new System.EventHandler(this.buttonCarreraCancelar_Click);
             // 
             // buttonCarreraGuardar
             // 
@@ -184,9 +185,9 @@
             this.labelCarreraNombre.ForeColor = System.Drawing.Color.White;
             this.labelCarreraNombre.Location = new System.Drawing.Point(9, 88);
             this.labelCarreraNombre.Name = "labelCarreraNombre";
-            this.labelCarreraNombre.Size = new System.Drawing.Size(68, 20);
+            this.labelCarreraNombre.Size = new System.Drawing.Size(74, 20);
             this.labelCarreraNombre.TabIndex = 5;
-            this.labelCarreraNombre.Text = "Nombre";
+            this.labelCarreraNombre.Text = "Nombre*";
             // 
             // textCarreraDescripcion
             // 
@@ -210,9 +211,9 @@
             this.labelCarreraClave.ForeColor = System.Drawing.Color.White;
             this.labelCarreraClave.Location = new System.Drawing.Point(8, 64);
             this.labelCarreraClave.Name = "labelCarreraClave";
-            this.labelCarreraClave.Size = new System.Drawing.Size(54, 20);
+            this.labelCarreraClave.Size = new System.Drawing.Size(60, 20);
             this.labelCarreraClave.TabIndex = 1;
-            this.labelCarreraClave.Text = "Clave";
+            this.labelCarreraClave.Text = "Clave*";
             // 
             // labelCarreraRegistro
             // 

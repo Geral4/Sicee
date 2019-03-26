@@ -39,11 +39,12 @@ namespace Inicio
                                   
             try
             {
+                Cargo.DataSource = ObtenerCargo();
+                Cargo.DisplayMember = "Nombre";
+                Cargo.ValueMember = "Clave";
                 dataGridCEmpleado.DataSource = bindingSource1;
                 GetData("select * from Empleado");
-                columCargo.DataSource = ObtenerCargo();
-                columCargo.DisplayMember = "Nombre";
-                columCargo.ValueMember = "Clave";
+                                
             }
             catch (Exception ex)
             {

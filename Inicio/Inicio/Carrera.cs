@@ -51,10 +51,13 @@ namespace Inicio
                 MostrarCarrera();
 
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
+                MessageBox.Show("Clave ya existente");
             }
+            this.textCarreraNombre.Text = "";
+            this.textCarreraClave.Text = "";
+            this.textCarreraDescripcion.Text = "";
         }
 
 
@@ -88,6 +91,14 @@ namespace Inicio
             {
                 Console.WriteLine("Excepción: " + ex);
             }
+
+        }
+
+        private void buttonCarreraCancelar_Click(object sender, EventArgs e)
+        {
+            this.textCarreraNombre.Text = "";
+            this.textCarreraClave.Text = "";
+            this.textCarreraDescripcion.Text = "";
 
         }
     }

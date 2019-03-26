@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelEdificioVertical2 = new System.Windows.Forms.Panel();
+            this.buttonCarreraCancelar = new System.Windows.Forms.Button();
             this.buttonEdificioSiguiente = new System.Windows.Forms.Button();
             this.numericEdificio = new System.Windows.Forms.NumericUpDown();
             this.labelEdificioNAulas = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             // panelEdificioVertical2
             // 
             this.panelEdificioVertical2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelEdificioVertical2.Controls.Add(this.buttonCarreraCancelar);
             this.panelEdificioVertical2.Controls.Add(this.buttonEdificioSiguiente);
             this.panelEdificioVertical2.Controls.Add(this.numericEdificio);
             this.panelEdificioVertical2.Controls.Add(this.labelEdificioNAulas);
@@ -70,13 +72,27 @@
             this.panelEdificioVertical2.Size = new System.Drawing.Size(323, 289);
             this.panelEdificioVertical2.TabIndex = 4;
             // 
+            // buttonCarreraCancelar
+            // 
+            this.buttonCarreraCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonCarreraCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCarreraCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCarreraCancelar.ForeColor = System.Drawing.Color.White;
+            this.buttonCarreraCancelar.Location = new System.Drawing.Point(202, 227);
+            this.buttonCarreraCancelar.Name = "buttonCarreraCancelar";
+            this.buttonCarreraCancelar.Size = new System.Drawing.Size(94, 35);
+            this.buttonCarreraCancelar.TabIndex = 26;
+            this.buttonCarreraCancelar.Text = "Cancelar";
+            this.buttonCarreraCancelar.UseVisualStyleBackColor = false;
+            this.buttonCarreraCancelar.Click += new System.EventHandler(this.buttonCarreraCancelar_Click);
+            // 
             // buttonEdificioSiguiente
             // 
             this.buttonEdificioSiguiente.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonEdificioSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdificioSiguiente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdificioSiguiente.ForeColor = System.Drawing.Color.White;
-            this.buttonEdificioSiguiente.Location = new System.Drawing.Point(111, 230);
+            this.buttonEdificioSiguiente.Location = new System.Drawing.Point(41, 227);
             this.buttonEdificioSiguiente.Name = "buttonEdificioSiguiente";
             this.buttonEdificioSiguiente.Size = new System.Drawing.Size(103, 35);
             this.buttonEdificioSiguiente.TabIndex = 25;
@@ -86,11 +102,25 @@
             // 
             // numericEdificio
             // 
-            this.numericEdificio.Location = new System.Drawing.Point(81, 185);
+            this.numericEdificio.Location = new System.Drawing.Point(111, 185);
+            this.numericEdificio.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericEdificio.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericEdificio.Name = "numericEdificio";
-            this.numericEdificio.Size = new System.Drawing.Size(233, 20);
+            this.numericEdificio.Size = new System.Drawing.Size(203, 20);
             this.numericEdificio.TabIndex = 24;
-            this.numericEdificio.ValueChanged += new System.EventHandler(this.numericEdificio_ValueChanged);
+            this.numericEdificio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // labelEdificioNAulas
             // 
@@ -99,9 +129,9 @@
             this.labelEdificioNAulas.ForeColor = System.Drawing.Color.White;
             this.labelEdificioNAulas.Location = new System.Drawing.Point(12, 183);
             this.labelEdificioNAulas.Name = "labelEdificioNAulas";
-            this.labelEdificioNAulas.Size = new System.Drawing.Size(69, 20);
+            this.labelEdificioNAulas.Size = new System.Drawing.Size(75, 20);
             this.labelEdificioNAulas.TabIndex = 23;
-            this.labelEdificioNAulas.Text = "Nº Aulas";
+            this.labelEdificioNAulas.Text = "Nº Aulas*";
             // 
             // labelEdificioDescripcion
             // 
@@ -129,9 +159,9 @@
             this.labelEdificioNombre.ForeColor = System.Drawing.Color.White;
             this.labelEdificioNombre.Location = new System.Drawing.Point(9, 57);
             this.labelEdificioNombre.Name = "labelEdificioNombre";
-            this.labelEdificioNombre.Size = new System.Drawing.Size(68, 20);
+            this.labelEdificioNombre.Size = new System.Drawing.Size(74, 20);
             this.labelEdificioNombre.TabIndex = 5;
-            this.labelEdificioNombre.Text = "Nombre";
+            this.labelEdificioNombre.Text = "Nombre*";
             // 
             // textEdificioDescripcion
             // 
@@ -155,9 +185,9 @@
             this.labelEdificioClave.ForeColor = System.Drawing.Color.White;
             this.labelEdificioClave.Location = new System.Drawing.Point(8, 88);
             this.labelEdificioClave.Name = "labelEdificioClave";
-            this.labelEdificioClave.Size = new System.Drawing.Size(54, 20);
+            this.labelEdificioClave.Size = new System.Drawing.Size(60, 20);
             this.labelEdificioClave.TabIndex = 1;
-            this.labelEdificioClave.Text = "Clave";
+            this.labelEdificioClave.Text = "Clave*";
             // 
             // labelEdificioRegistro
             // 
@@ -189,6 +219,7 @@
             this.dataGridEdificio.Name = "dataGridEdificio";
             this.dataGridEdificio.Size = new System.Drawing.Size(444, 182);
             this.dataGridEdificio.TabIndex = 1;
+            this.dataGridEdificio.DoubleClick += new System.EventHandler(this.dataGridEdificio_DoubleClick);
             // 
             // labelEdificioBuscar
             // 
@@ -273,5 +304,6 @@
         private System.Windows.Forms.Panel panelEdificioVertical;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textEdificioDescripcion;
+        private System.Windows.Forms.Button buttonCarreraCancelar;
     }
 }

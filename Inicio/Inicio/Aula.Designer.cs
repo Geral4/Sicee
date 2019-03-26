@@ -56,7 +56,7 @@
             this.panelAula.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelAula.Location = new System.Drawing.Point(0, 3);
             this.panelAula.Name = "panelAula";
-            this.panelAula.Size = new System.Drawing.Size(524, 232);
+            this.panelAula.Size = new System.Drawing.Size(493, 232);
             this.panelAula.TabIndex = 22;
             // 
             // dataGridAula
@@ -70,14 +70,14 @@
             this.dataGridAula.Location = new System.Drawing.Point(12, 12);
             this.dataGridAula.Name = "dataGridAula";
             this.dataGridAula.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridAula.Size = new System.Drawing.Size(493, 204);
+            this.dataGridAula.Size = new System.Drawing.Size(468, 204);
             this.dataGridAula.TabIndex = 7;
             // 
             // Aula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 283);
+            this.ClientSize = new System.Drawing.Size(496, 283);
             this.Controls.Add(this.panelAula);
             this.Controls.Add(this.buttonAulaGuardar);
             this.Name = "Aula";

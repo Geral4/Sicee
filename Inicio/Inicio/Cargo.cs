@@ -24,9 +24,8 @@ namespace Inicio
         public Cargo()
         {
             InitializeComponent();
-            comboCargoDepartamento.Items.Add("Académico");
-            comboCargoDepartamento.Items.Add("Administrativo");
-
+            comboCargo.Items.Add("Academico");
+            comboCargo.Items.Add("Administrativo");
         }
 
         private void Cargo_Load(object sender, EventArgs e)
@@ -41,20 +40,33 @@ namespace Inicio
 
         private void buttonCargoGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (textCargoClave.Text == "" || textCargoNombre.Text  == "" || comboCargo.Text=="")
             {
-                objCargo.insertarCargo(
-                textCargoClave.Text,
-                textCargoNombre.Text,
-                textCargoDescripcion.Text,
-                comboCargoDepartamento.Text);
-            MessageBox.Show("Insertado Correctamente");
-            MostrarCargo();
+                MessageBox.Show("Llenar los campos obligatorios");
+                
             }
-
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
+                try
+                {
+                    objCargo.insertarCargo(
+                    textCargoClave.Text,
+                    textCargoNombre.Text,
+                    textCargoDescripcion.Text,
+                    comboCargo.Text);
+                    MessageBox.Show("Insertado Correctamente");
+                    MostrarCargo();
+                }
+
+                catch
+                {
+                    MessageBox.Show("No se puede repetir la misma Clave ");
+                }
+
+                textCargoClave.Clear();
+                textCargoNombre.Clear();
+                textCargoDescripcion.Clear();
+                comboCargo.Text = string.Empty;
             }
         }
 
@@ -75,33 +87,7 @@ namespace Inicio
             filtrado = textCargoBuscar.Text;
             dataGridViewCargo.DataSource = bindingSource1;
             GetData("select * from Cargo where Clave like '" + filtrado + "%' or Nombre like '" + filtrado + "%';");
-            // CDCargo objCargo3 = new CDCargo();
-            //if (textCargoBuscar.Text!="" )
-            //{
-            //    dataGridViewCargo.CurrentCell = null;
-            //    foreach (DataGridViewRow r in dataGridViewCargo.Rows)
-            //    {
-            //        r.Visible = false;
-            //    }
-            //    foreach (DataGridViewRow r in dataGridViewCargo.Rows)
-            //    {
-            //        foreach(DataGridViewCell ce in r.Cells)
-            //        {
-            //            if(( ce.Value.ToString().ToUpper()).IndexOf (textCargoBuscar.Text.ToUpper()) ==0)
-            //            {
-            //                r.Visible = true;
-            //                break;
-            //            }
-            //        }
-            //    }
-
-            //}
-            //else
-            //{
-            //    CDCargo objCargo3 = new CDCargo();
-            //    dataGridViewCargo.DataSource = objCargo3.MostrarCargo();
-            //}
-
+            
         }
         
 
@@ -129,6 +115,16 @@ namespace Inicio
             //filtrado = textCargoBuscar.Text;
             //dataGridViewCargo.DataSource = bindingSource1;
             //GetData("select * from Cargo where Clave like '" + filtrado + "%' or Nombre like '" + filtrado + "%';");
+        }
+
+       
+
+        private void buttonCargoCancelar_Click(object sender, EventArgs e)
+        {
+            textCargoClave.Clear();
+            textCargoNombre.Clear();
+            textCargoDescripcion.Clear();
+            comboCargo.Text = string.Empty;
         }
     }
 }

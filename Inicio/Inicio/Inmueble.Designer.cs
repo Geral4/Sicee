@@ -35,6 +35,7 @@
             this.dataGridInmueble = new System.Windows.Forms.DataGridView();
             this.labeInmuebleLista = new System.Windows.Forms.Label();
             this.panelInmuebleVertical2 = new System.Windows.Forms.Panel();
+            this.textInmuebleDescripcion = new System.Windows.Forms.TextBox();
             this.textInmuebleAula = new System.Windows.Forms.TextBox();
             this.comboInmuebleAula = new System.Windows.Forms.ComboBox();
             this.labelInmuebleAula = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.textInmuebleNombre = new System.Windows.Forms.TextBox();
             this.labelInmuebleNombre = new System.Windows.Forms.Label();
             this.labeInmuebleRegistro = new System.Windows.Forms.Label();
-            this.textInmuebleDescripcion = new System.Windows.Forms.TextBox();
             this.panelInmuebleVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInmueble)).BeginInit();
             this.panelInmuebleVertical2.SuspendLayout();
@@ -149,6 +149,14 @@
             this.panelInmuebleVertical2.Size = new System.Drawing.Size(329, 378);
             this.panelInmuebleVertical2.TabIndex = 5;
             // 
+            // textInmuebleDescripcion
+            // 
+            this.textInmuebleDescripcion.Location = new System.Drawing.Point(101, 259);
+            this.textInmuebleDescripcion.Multiline = true;
+            this.textInmuebleDescripcion.Name = "textInmuebleDescripcion";
+            this.textInmuebleDescripcion.Size = new System.Drawing.Size(213, 52);
+            this.textInmuebleDescripcion.TabIndex = 27;
+            // 
             // textInmuebleAula
             // 
             this.textInmuebleAula.Location = new System.Drawing.Point(84, 230);
@@ -167,6 +175,7 @@
             this.comboInmuebleAula.Size = new System.Drawing.Size(230, 21);
             this.comboInmuebleAula.TabIndex = 25;
             this.comboInmuebleAula.SelectedIndexChanged += new System.EventHandler(this.comboInmuebleAula_SelectedIndexChanged_1);
+            this.comboInmuebleAula.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboInmuebleAula_MouseClick);
             // 
             // labelInmuebleAula
             // 
@@ -213,6 +222,7 @@
             this.buttonInmuebleCancelar.TabIndex = 21;
             this.buttonInmuebleCancelar.Text = "Cancelar";
             this.buttonInmuebleCancelar.UseVisualStyleBackColor = false;
+            this.buttonInmuebleCancelar.Click += new System.EventHandler(this.buttonInmuebleCancelar_Click);
             // 
             // buttonInmuebleGuardar
             // 
@@ -323,14 +333,6 @@
             this.labeInmuebleRegistro.Size = new System.Drawing.Size(105, 20);
             this.labeInmuebleRegistro.TabIndex = 0;
             this.labeInmuebleRegistro.Text = "Alta inmueble";
-            // 
-            // textInmuebleDescripcion
-            // 
-            this.textInmuebleDescripcion.Location = new System.Drawing.Point(101, 259);
-            this.textInmuebleDescripcion.Multiline = true;
-            this.textInmuebleDescripcion.Name = "textInmuebleDescripcion";
-            this.textInmuebleDescripcion.Size = new System.Drawing.Size(213, 52);
-            this.textInmuebleDescripcion.TabIndex = 27;
             // 
             // Inmueble
             // 

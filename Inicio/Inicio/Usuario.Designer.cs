@@ -158,6 +158,7 @@
             this.comboUsuarioNPersonal.Size = new System.Drawing.Size(214, 21);
             this.comboUsuarioNPersonal.TabIndex = 25;
             this.comboUsuarioNPersonal.SelectedIndexChanged += new System.EventHandler(this.comboUsuarioNPersonal_SelectedIndexChanged);
+            this.comboUsuarioNPersonal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboUsuarioNPersonal_MouseClick);
             // 
             // textUsuarioRepetir
             // 
@@ -173,9 +174,9 @@
             this.labelUsuarioRepetir.ForeColor = System.Drawing.Color.White;
             this.labelUsuarioRepetir.Location = new System.Drawing.Point(9, 178);
             this.labelUsuarioRepetir.Name = "labelUsuarioRepetir";
-            this.labelUsuarioRepetir.Size = new System.Drawing.Size(153, 20);
+            this.labelUsuarioRepetir.Size = new System.Drawing.Size(159, 20);
             this.labelUsuarioRepetir.TabIndex = 23;
-            this.labelUsuarioRepetir.Text = "Repetir contraseña ";
+            this.labelUsuarioRepetir.Text = "Repetir contraseña *";
             // 
             // buttonUsuarioCancelar
             // 
@@ -189,6 +190,7 @@
             this.buttonUsuarioCancelar.TabIndex = 20;
             this.buttonUsuarioCancelar.Text = "Cancelar";
             this.buttonUsuarioCancelar.UseVisualStyleBackColor = false;
+            this.buttonUsuarioCancelar.Click += new System.EventHandler(this.buttonUsuarioCancelar_Click);
             // 
             // buttonUsuarioGuardar
             // 
@@ -233,9 +235,9 @@
             this.labelUsuarioAcceso.ForeColor = System.Drawing.Color.White;
             this.labelUsuarioAcceso.Location = new System.Drawing.Point(9, 207);
             this.labelUsuarioAcceso.Name = "labelUsuarioAcceso";
-            this.labelUsuarioAcceso.Size = new System.Drawing.Size(66, 20);
+            this.labelUsuarioAcceso.Size = new System.Drawing.Size(72, 20);
             this.labelUsuarioAcceso.TabIndex = 12;
-            this.labelUsuarioAcceso.Text = "Acceso";
+            this.labelUsuarioAcceso.Text = "Acceso*";
             // 
             // labelUsuarioContraseña
             // 
@@ -244,9 +246,9 @@
             this.labelUsuarioContraseña.ForeColor = System.Drawing.Color.White;
             this.labelUsuarioContraseña.Location = new System.Drawing.Point(9, 150);
             this.labelUsuarioContraseña.Name = "labelUsuarioContraseña";
-            this.labelUsuarioContraseña.Size = new System.Drawing.Size(95, 20);
+            this.labelUsuarioContraseña.Size = new System.Drawing.Size(101, 20);
             this.labelUsuarioContraseña.TabIndex = 11;
-            this.labelUsuarioContraseña.Text = "Contraseña";
+            this.labelUsuarioContraseña.Text = "Contraseña*";
             // 
             // labelUsuarioUsuario
             // 
@@ -255,9 +257,9 @@
             this.labelUsuarioUsuario.ForeColor = System.Drawing.Color.White;
             this.labelUsuarioUsuario.Location = new System.Drawing.Point(9, 122);
             this.labelUsuarioUsuario.Name = "labelUsuarioUsuario";
-            this.labelUsuarioUsuario.Size = new System.Drawing.Size(48, 20);
+            this.labelUsuarioUsuario.Size = new System.Drawing.Size(54, 20);
             this.labelUsuarioUsuario.TabIndex = 10;
-            this.labelUsuarioUsuario.Text = "Login";
+            this.labelUsuarioUsuario.Text = "Login*";
             // 
             // labelUsuarioNPersonal
             // 
@@ -266,9 +268,9 @@
             this.labelUsuarioNPersonal.ForeColor = System.Drawing.Color.White;
             this.labelUsuarioNPersonal.Location = new System.Drawing.Point(8, 63);
             this.labelUsuarioNPersonal.Name = "labelUsuarioNPersonal";
-            this.labelUsuarioNPersonal.Size = new System.Drawing.Size(92, 20);
+            this.labelUsuarioNPersonal.Size = new System.Drawing.Size(98, 20);
             this.labelUsuarioNPersonal.TabIndex = 1;
-            this.labelUsuarioNPersonal.Text = "Nº Personal";
+            this.labelUsuarioNPersonal.Text = "Nº Personal*";
             // 
             // labelUsuarioRegistro
             // 
