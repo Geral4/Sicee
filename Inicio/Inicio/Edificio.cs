@@ -34,7 +34,14 @@ namespace Inicio
 
         private void buttonEdificioRegistrar_Click(object sender, EventArgs e)
         {
-            try
+            if (textEdificioNombre.Text == "" || textEdificioClave.Text == "" )
+            {
+                MessageBox.Show("Llenar los campos obligatorios");
+
+            }
+            else
+            {
+                try
             {
                 objEdificio.insertaEdificio(
                     textEdificioNombre.Text,
@@ -46,10 +53,10 @@ namespace Inicio
                 MessageBox.Show("Insertado Correctamente");
                 MostrarEdificio();
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
-            }
+                    MessageBox.Show("No se puede repetir la misma Clave ");
+                }
 
             no_aulas = Convert.ToInt32(numericEdificio.Value);
             clave = textEdificioClave.Text;
@@ -57,6 +64,7 @@ namespace Inicio
             Aula formAula = new Aula();
             formAula.clave_edificio = clave;
             formAula.Show();
+            }
         }
 
 

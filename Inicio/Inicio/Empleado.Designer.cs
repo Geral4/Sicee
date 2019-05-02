@@ -230,7 +230,6 @@
             // 
             // comboEmpleadoCargo
             // 
-            this.comboEmpleadoCargo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboEmpleadoCargo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboEmpleadoCargo.FormattingEnabled = true;
             this.comboEmpleadoCargo.Location = new System.Drawing.Point(95, 259);
@@ -290,9 +289,9 @@
             // 
             // textEmpleadoNPersonal
             // 
-            this.textEmpleadoNPersonal.Location = new System.Drawing.Point(100, 61);
+            this.textEmpleadoNPersonal.Location = new System.Drawing.Point(113, 61);
             this.textEmpleadoNPersonal.Name = "textEmpleadoNPersonal";
-            this.textEmpleadoNPersonal.Size = new System.Drawing.Size(214, 20);
+            this.textEmpleadoNPersonal.Size = new System.Drawing.Size(201, 20);
             this.textEmpleadoNPersonal.TabIndex = 6;
             // 
             // textEmpleadoEmail

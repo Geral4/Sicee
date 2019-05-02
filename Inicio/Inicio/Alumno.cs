@@ -83,11 +83,19 @@ namespace Inicio
 
         private void buttonAlumnoGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (textAlumnoNombre.Text == "" || textAlumnoApellidoM.Text == "" || textAlumnoApellidoP.Text == "" || textAlumnoNControl.Text== "" 
+                || textAlumnoCurp.Text=="" || comboAlumnoCarrera.Text=="" || comboAlumnoSemestre.Text=="" )
+            {
+                MessageBox.Show("Llenar los campos obligatorios");
+
+            }
+            else
+            {
+                try
             {
                 objAlumno.insertarAlumno(
-                    textAlumnoNombre.Text,
-                    textAlumnoApellidoP.Text,
+                   textAlumnoNombre.Text,
+                   textAlumnoApellidoP.Text,
                    textAlumnoApellidoM.Text,
                    textAlumnoNControl.Text,
                    textAlumnoCurp.Text,
@@ -101,10 +109,10 @@ namespace Inicio
                 MessageBox.Show("Insertado Correctamente");
                 MostrarAlumno();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
-            }
+            catch 
+                {
+               MessageBox.Show("No se puede repetir la misma Clave ");
+                }
             textAlumnoNombre.Clear();
             textAlumnoApellidoP.Clear();
             textAlumnoApellidoM.Clear();
@@ -115,6 +123,7 @@ namespace Inicio
             comboAlumnoCarrera.Text = string.Empty;
             comboAlumnoSemestre.Text = string.Empty;
             comboAlumnoSexo.Text = string.Empty;
+            }
         }
 
         private void MostrarAlumno()

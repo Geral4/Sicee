@@ -50,8 +50,15 @@ namespace Inicio
 
         private void buttonUsuarioGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if ( comboUsuarioNPersonal.Text == "" || textUsuarioUsuario.Text == "" || textUsuarioContraseña.Text == "" || textUsuarioRepetir.Text =="" || comboUsuarioAcceso.Text =="" )
             {
+                MessageBox.Show("Llenar los campos obligatorios");
+
+            }
+            else
+                 {
+                 try
+                 {
                 objUsuario.insertarUsuario(
                    comboUsuarioNPersonal.Text,
                    comboUsuarioNPersonal.SelectedValue.ToString(),
@@ -59,12 +66,12 @@ namespace Inicio
                    textUsuarioContraseña.Text,
                    textUsuarioRepetir.Text,
                    comboUsuarioAcceso.Text);
-                MessageBox.Show("Usuario agregado");
+                MessageBox.Show("Agregado correctamente");
                 MostrarUsuario();
-            }
-            catch(Exception ex)
+                 }
+            catch
             {
-                MessageBox.Show("No se puede insertar correctamente: " + ex);
+                 MessageBox.Show("No se puede repetir la misma Clave ");
             }
             comboUsuarioNPersonal.Text = string.Empty;
             textUsuarioNombre.Clear();
@@ -72,6 +79,7 @@ namespace Inicio
             textUsuarioContraseña.Clear();
             textUsuarioRepetir.Clear();
             comboUsuarioAcceso.Text = string.Empty;
+                 }
         }
 
         private void MostrarUsuario()

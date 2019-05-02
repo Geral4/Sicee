@@ -65,7 +65,15 @@ namespace Inicio
 
         private void buttonAsignaturaGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (textAsignaturaNombre.Text == "" || textAsignaturaClave.Text == "" || comboAsignaturaCarrera.Text == "" || comboAsignaturaModalidad.Text=="" )
+            {
+                MessageBox.Show("Llenar los campos obligatorios");
+
+            }
+            else
+            {
+
+                try
             {
                 objAsignatura.insertarAsignatura(
                     textAsignaturaNombre.Text,
@@ -77,15 +85,16 @@ namespace Inicio
                 MessageBox.Show("Insertado Correctamente");
                 MostrarAsignatura();
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
-            }
+                    MessageBox.Show("No se puede repetir la misma Clave ");
+                }
             textAsignaturaNombre.Clear();
             textAsignaturaClave.Clear();
             numericAsignatura.Value = 3;
             comboAsignaturaCarrera.Text = string.Empty;
             comboAsignaturaModalidad.Text = string.Empty;
+            }
         }
 
         private void MostrarAsignatura()

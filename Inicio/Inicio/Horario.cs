@@ -233,6 +233,11 @@ namespace Inicio
 
         }
 
+        private void BitacoraFechaSemestre_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Horario_Load(object sender, EventArgs e)
         {
            // Bitacora();

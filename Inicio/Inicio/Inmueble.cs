@@ -116,7 +116,16 @@ namespace Inicio
         private void buttonInmuebleGuardar_Click(object sender, EventArgs e)
         {
             // MessageBox.Show("La aula elegida tiene la clave: " + comboInmuebleAula.SelectedValue);
-            try
+            if (textInmuebleNombre.Text == "" ||  textInmuebleMarca.Text == "" || textInmuebleModelo.Text == "" ||
+                textInmuebleNSerie.Text=="" || comboInmuebleAula.Text=="" )
+            {
+                MessageBox.Show("Llenar los campos obligatorios");
+
+            }
+            else
+            {
+
+                try
             {
                 objInmueble.insertarInmueble(
                     textInmuebleNombre.Text,
@@ -132,10 +141,10 @@ namespace Inicio
                 MostrarInmueble();
             }
 
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("No se puede insertar los datos por: " + ex);
-            }
+                    MessageBox.Show("No se puede repetir la misma Clave ");
+                }
             textInmuebleNombre.Clear();
             textInmuebleMarca.Clear();
             textInmuebleModelo.Clear();
@@ -144,8 +153,9 @@ namespace Inicio
             textInmuebleAula.Clear();
             comboInmuebleAula.Text = string.Empty;
             comboInmuebleColor.Text = string.Empty;
-
+            }
         }
+
         private void ListarAula()
         {
             textInmuebleAula.Enabled = false;

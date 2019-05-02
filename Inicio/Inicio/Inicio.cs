@@ -124,5 +124,22 @@ namespace Inicio
         {
             Application.Exit();
         }
+
+        internal class SiceeDataSet
+        {
+            public SiceeDataSet()
+            {
+            }
+        }
+
+        internal class SiceeDataSetTableAdapters
+        {
+            internal class EmpleadoTableAdapter
+            {
+                public EmpleadoTableAdapter()
+                {
+                }
+            }
+        }
     }
 }

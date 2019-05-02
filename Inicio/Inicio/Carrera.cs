@@ -40,7 +40,14 @@ namespace Inicio
 
         private void buttonCarreraGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (textCarreraClave.Text == "" || textCarreraNombre.Text == "")
+            {
+                MessageBox.Show("Llenar los campos obligatorios");
+
+            }
+            else
+            {
+                try
             {
                 objCarrera.insertarCarrera(
                     textCarreraClave.Text,
@@ -53,11 +60,12 @@ namespace Inicio
             }
             catch 
             {
-                MessageBox.Show("Clave ya existente");
-            }
+                MessageBox.Show("No se puede repetir la misma Clave ");
+                }
             this.textCarreraNombre.Text = "";
             this.textCarreraClave.Text = "";
             this.textCarreraDescripcion.Text = "";
+            }
         }
 
 

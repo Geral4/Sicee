@@ -168,7 +168,6 @@
             // 
             // comboInmuebleAula
             // 
-            this.comboInmuebleAula.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboInmuebleAula.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboInmuebleAula.Location = new System.Drawing.Point(84, 200);
             this.comboInmuebleAula.Name = "comboInmuebleAula";
@@ -184,9 +183,9 @@
             this.labelInmuebleAula.ForeColor = System.Drawing.Color.White;
             this.labelInmuebleAula.Location = new System.Drawing.Point(9, 198);
             this.labelInmuebleAula.Name = "labelInmuebleAula";
-            this.labelInmuebleAula.Size = new System.Drawing.Size(36, 18);
+            this.labelInmuebleAula.Size = new System.Drawing.Size(42, 18);
             this.labelInmuebleAula.TabIndex = 24;
-            this.labelInmuebleAula.Text = "Aula";
+            this.labelInmuebleAula.Text = "Aula*";
             // 
             // comboInmuebleColor
             // 
@@ -263,9 +262,9 @@
             this.labelInmuebleNSerie.ForeColor = System.Drawing.Color.White;
             this.labelInmuebleNSerie.Location = new System.Drawing.Point(9, 171);
             this.labelInmuebleNSerie.Name = "labelInmuebleNSerie";
-            this.labelInmuebleNSerie.Size = new System.Drawing.Size(62, 18);
+            this.labelInmuebleNSerie.Size = new System.Drawing.Size(68, 18);
             this.labelInmuebleNSerie.TabIndex = 7;
-            this.labelInmuebleNSerie.Text = "Nº Serie";
+            this.labelInmuebleNSerie.Text = "Nº Serie*";
             // 
             // textInmuebleModelo
             // 
@@ -281,9 +280,9 @@
             this.labelInmuebleModelo.ForeColor = System.Drawing.Color.White;
             this.labelInmuebleModelo.Location = new System.Drawing.Point(8, 115);
             this.labelInmuebleModelo.Name = "labelInmuebleModelo";
-            this.labelInmuebleModelo.Size = new System.Drawing.Size(58, 18);
+            this.labelInmuebleModelo.Size = new System.Drawing.Size(64, 18);
             this.labelInmuebleModelo.TabIndex = 5;
-            this.labelInmuebleModelo.Text = "Modelo";
+            this.labelInmuebleModelo.Text = "Modelo*";
             // 
             // textInmuebleMarca
             // 
@@ -300,9 +299,9 @@
             this.labelProductoMarca.ForeColor = System.Drawing.Color.White;
             this.labelProductoMarca.Location = new System.Drawing.Point(8, 86);
             this.labelProductoMarca.Name = "labelProductoMarca";
-            this.labelProductoMarca.Size = new System.Drawing.Size(50, 18);
+            this.labelProductoMarca.Size = new System.Drawing.Size(56, 18);
             this.labelProductoMarca.TabIndex = 3;
-            this.labelProductoMarca.Text = "Marca";
+            this.labelProductoMarca.Text = "Marca*";
             // 
             // textInmuebleNombre
             // 
@@ -319,9 +318,9 @@
             this.labelInmuebleNombre.ForeColor = System.Drawing.Color.White;
             this.labelInmuebleNombre.Location = new System.Drawing.Point(8, 59);
             this.labelInmuebleNombre.Name = "labelInmuebleNombre";
-            this.labelInmuebleNombre.Size = new System.Drawing.Size(62, 18);
+            this.labelInmuebleNombre.Size = new System.Drawing.Size(68, 18);
             this.labelInmuebleNombre.TabIndex = 1;
-            this.labelInmuebleNombre.Text = "Nombre";
+            this.labelInmuebleNombre.Text = "Nombre*";
             // 
             // labeInmuebleRegistro
             // 

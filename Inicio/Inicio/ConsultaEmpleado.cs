@@ -21,7 +21,7 @@ namespace Inicio
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private DataTable table = new DataTable("Cargos");
-        private string filtrado = "", sql ="";
+        private string filtrado = "", sql = "";
 
         //PruebaSet dataSet = new PruebaSet();
         // CNEmpleado objEmple2=new CNEmpleado();
@@ -36,7 +36,7 @@ namespace Inicio
 
         private void ConsultaEmpleado_Load(object sender, EventArgs e)
         {
-                                  
+
             try
             {
                 Cargo.DataSource = ObtenerCargo();
@@ -44,7 +44,7 @@ namespace Inicio
                 Cargo.ValueMember = "Clave";
                 dataGridCEmpleado.DataSource = bindingSource1;
                 GetData("select * from Empleado");
-                                
+
             }
             catch (Exception ex)
             {
@@ -77,7 +77,7 @@ namespace Inicio
             {
                 MessageBox.Show("" + s, "Verifica");
             }
-          
+
         }
 
         private void MostrarEmpleado()
@@ -155,8 +155,8 @@ namespace Inicio
             }
         }
 
-        
 
-        
+
+
     }
 }

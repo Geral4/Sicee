@@ -161,15 +161,15 @@
             // 
             // textAlumnoApellidoM
             // 
-            this.textAlumnoApellidoM.Location = new System.Drawing.Point(145, 115);
+            this.textAlumnoApellidoM.Location = new System.Drawing.Point(158, 115);
             this.textAlumnoApellidoM.Name = "textAlumnoApellidoM";
-            this.textAlumnoApellidoM.Size = new System.Drawing.Size(169, 20);
+            this.textAlumnoApellidoM.Size = new System.Drawing.Size(156, 20);
             this.textAlumnoApellidoM.TabIndex = 32;
             // 
             // comboAlumnoCarrera
             // 
             this.comboAlumnoCarrera.FormattingEnabled = true;
-            this.comboAlumnoCarrera.Location = new System.Drawing.Point(83, 219);
+            this.comboAlumnoCarrera.Location = new System.Drawing.Point(83, 221);
             this.comboAlumnoCarrera.Name = "comboAlumnoCarrera";
             this.comboAlumnoCarrera.Size = new System.Drawing.Size(231, 21);
             this.comboAlumnoCarrera.TabIndex = 31;
@@ -178,17 +178,17 @@
             // comboAlumnoSexo
             // 
             this.comboAlumnoSexo.FormattingEnabled = true;
-            this.comboAlumnoSexo.Location = new System.Drawing.Point(82, 195);
+            this.comboAlumnoSexo.Location = new System.Drawing.Point(83, 195);
             this.comboAlumnoSexo.Name = "comboAlumnoSexo";
-            this.comboAlumnoSexo.Size = new System.Drawing.Size(231, 21);
+            this.comboAlumnoSexo.Size = new System.Drawing.Size(230, 21);
             this.comboAlumnoSexo.TabIndex = 30;
             // 
             // comboAlumnoSemestre
             // 
             this.comboAlumnoSemestre.FormattingEnabled = true;
-            this.comboAlumnoSemestre.Location = new System.Drawing.Point(81, 247);
+            this.comboAlumnoSemestre.Location = new System.Drawing.Point(93, 248);
             this.comboAlumnoSemestre.Name = "comboAlumnoSemestre";
-            this.comboAlumnoSemestre.Size = new System.Drawing.Size(233, 21);
+            this.comboAlumnoSemestre.Size = new System.Drawing.Size(221, 21);
             this.comboAlumnoSemestre.TabIndex = 27;
             // 
             // labelAlumnoApellidoM
@@ -198,9 +198,9 @@
             this.labelAlumnoApellidoM.ForeColor = System.Drawing.Color.White;
             this.labelAlumnoApellidoM.Location = new System.Drawing.Point(9, 113);
             this.labelAlumnoApellidoM.Name = "labelAlumnoApellidoM";
-            this.labelAlumnoApellidoM.Size = new System.Drawing.Size(137, 20);
+            this.labelAlumnoApellidoM.Size = new System.Drawing.Size(143, 20);
             this.labelAlumnoApellidoM.TabIndex = 25;
-            this.labelAlumnoApellidoM.Text = "Apellido Materno";
+            this.labelAlumnoApellidoM.Text = "Apellido Materno*";
             // 
             // textAlumnoApellidoP
             // 
@@ -217,9 +217,9 @@
             this.labelAlumnoApellidoP.ForeColor = System.Drawing.Color.White;
             this.labelAlumnoApellidoP.Location = new System.Drawing.Point(8, 87);
             this.labelAlumnoApellidoP.Name = "labelAlumnoApellidoP";
-            this.labelAlumnoApellidoP.Size = new System.Drawing.Size(131, 20);
+            this.labelAlumnoApellidoP.Size = new System.Drawing.Size(137, 20);
             this.labelAlumnoApellidoP.TabIndex = 23;
-            this.labelAlumnoApellidoP.Text = "Apellido Paterno";
+            this.labelAlumnoApellidoP.Text = "Apellido Paterno*";
             // 
             // labelAlumnoSemestre
             // 
@@ -228,9 +228,9 @@
             this.labelAlumnoSemestre.ForeColor = System.Drawing.Color.White;
             this.labelAlumnoSemestre.Location = new System.Drawing.Point(10, 247);
             this.labelAlumnoSemestre.Name = "labelAlumnoSemestre";
-            this.labelAlumnoSemestre.Size = new System.Drawing.Size(75, 20);
+            this.labelAlumnoSemestre.Size = new System.Drawing.Size(81, 20);
             this.labelAlumnoSemestre.TabIndex = 21;
-            this.labelAlumnoSemestre.Text = "Semestre";
+            this.labelAlumnoSemestre.Text = "Semestre*";
             // 
             // buttonAlumnoCancelar
             // 
@@ -281,15 +281,15 @@
             this.labelAlumnonNControl.ForeColor = System.Drawing.Color.White;
             this.labelAlumnonNControl.Location = new System.Drawing.Point(9, 143);
             this.labelAlumnonNControl.Name = "labelAlumnonNControl";
-            this.labelAlumnonNControl.Size = new System.Drawing.Size(106, 20);
+            this.labelAlumnonNControl.Size = new System.Drawing.Size(112, 20);
             this.labelAlumnonNControl.TabIndex = 5;
-            this.labelAlumnonNControl.Text = "Nº de control";
+            this.labelAlumnonNControl.Text = "Nº de control*";
             // 
             // textAlumnoCurp
             // 
-            this.textAlumnoCurp.Location = new System.Drawing.Point(81, 171);
+            this.textAlumnoCurp.Location = new System.Drawing.Point(83, 169);
             this.textAlumnoCurp.Name = "textAlumnoCurp";
-            this.textAlumnoCurp.Size = new System.Drawing.Size(233, 20);
+            this.textAlumnoCurp.Size = new System.Drawing.Size(231, 20);
             this.textAlumnoCurp.TabIndex = 17;
             // 
             // labelAlumnoDireccion
@@ -310,9 +310,9 @@
             this.labelAlumnoCurp.ForeColor = System.Drawing.Color.White;
             this.labelAlumnoCurp.Location = new System.Drawing.Point(10, 168);
             this.labelAlumnoCurp.Name = "labelAlumnoCurp";
-            this.labelAlumnoCurp.Size = new System.Drawing.Size(45, 20);
+            this.labelAlumnoCurp.Size = new System.Drawing.Size(51, 20);
             this.labelAlumnoCurp.TabIndex = 12;
-            this.labelAlumnoCurp.Text = "Curp";
+            this.labelAlumnoCurp.Text = "Curp*";
             // 
             // labelAlumnoCarrera
             // 
@@ -321,9 +321,9 @@
             this.labelAlumnoCarrera.ForeColor = System.Drawing.Color.White;
             this.labelAlumnoCarrera.Location = new System.Drawing.Point(10, 220);
             this.labelAlumnoCarrera.Name = "labelAlumnoCarrera";
-            this.labelAlumnoCarrera.Size = new System.Drawing.Size(66, 20);
+            this.labelAlumnoCarrera.Size = new System.Drawing.Size(72, 20);
             this.labelAlumnoCarrera.TabIndex = 11;
-            this.labelAlumnoCarrera.Text = "Carrera";
+            this.labelAlumnoCarrera.Text = "Carrera*";
             // 
             // labelAlumnoSexo
             // 
@@ -370,9 +370,9 @@
             this.labelAlumnoNombre.ForeColor = System.Drawing.Color.White;
             this.labelAlumnoNombre.Location = new System.Drawing.Point(8, 59);
             this.labelAlumnoNombre.Name = "labelAlumnoNombre";
-            this.labelAlumnoNombre.Size = new System.Drawing.Size(68, 20);
+            this.labelAlumnoNombre.Size = new System.Drawing.Size(74, 20);
             this.labelAlumnoNombre.TabIndex = 1;
-            this.labelAlumnoNombre.Text = "Nombre";
+            this.labelAlumnoNombre.Text = "Nombre*";
             // 
             // labelAlumnoRegistro
             // 

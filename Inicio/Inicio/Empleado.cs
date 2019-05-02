@@ -244,7 +244,7 @@ namespace Inicio
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se puede insertar los datos por: " + ex);
+                    MessageBox.Show("No se puede repetir la misma Clave ");
                 }
                 textEmpleadoNombre.Clear();
                 textEmpleadoApellidosP.Clear();

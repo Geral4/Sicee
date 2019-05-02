@@ -53,8 +53,10 @@ namespace Inicio
                     textCargoClave.Text,
                     textCargoNombre.Text,
                     textCargoDescripcion.Text,
-                    comboCargo.Text);
-                    MessageBox.Show("Insertado Correctamente");
+                    comboCargo.Text
+                    );
+
+                    MessageBox.Show("Agregado Correctamente");
                     MostrarCargo();
                 }
 

@@ -289,6 +289,11 @@
     <Compile Include="ReportePrestamos.Designer.cs">
       <DependentUpon>ReportePrestamos.cs</DependentUpon>
     </Compile>
+    <Compile Include="SiceeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiceeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -434,6 +439,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SiceeDataSet.xsc">
+      <DependentUpon>SiceeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SiceeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SiceeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SiceeDataSet.xss">
+      <DependentUpon>SiceeDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
