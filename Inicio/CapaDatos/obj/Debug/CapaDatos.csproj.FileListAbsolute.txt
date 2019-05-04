@@ -31,3 +31,4 @@ C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.Co
 C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\INSPIRON\Documents\Sicee\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache

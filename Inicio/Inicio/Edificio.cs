@@ -52,7 +52,8 @@ namespace Inicio
 
                 MessageBox.Show("Insertado Correctamente");
                 MostrarEdificio();
-            }
+                    
+                }
             catch 
             {
                     MessageBox.Show("No se puede repetir la misma Clave ");
@@ -132,9 +133,9 @@ namespace Inicio
                 
             }
             
-             catch (SystemException caca)
+             catch (SystemException ca)
             {
-                Console.WriteLine("Hola" + caca);
+                Console.WriteLine("Hola" + ca);
             }
 
 

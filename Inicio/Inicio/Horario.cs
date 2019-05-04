@@ -125,6 +125,7 @@ namespace Inicio
                 Coman.CommandText = "Bitacora";
                 Coman.CommandType = CommandType.StoredProcedure;
                 Coman.Parameters.AddWithValue("@fecha_inicial_clases", FechaBitacora.Value);
+                Coman.Parameters.AddWithValue("@fecha_final_clases", FechaFinBitacora.Value);
                 Coman.ExecuteNonQuery();
                 Coman.Parameters.Clear();
             }

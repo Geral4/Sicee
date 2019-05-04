@@ -415,7 +415,7 @@
             this.buttonHorarioCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHorarioCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHorarioCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonHorarioCancelar.Location = new System.Drawing.Point(231, 481);
+            this.buttonHorarioCancelar.Location = new System.Drawing.Point(231, 475);
             this.buttonHorarioCancelar.Name = "buttonHorarioCancelar";
             this.buttonHorarioCancelar.Size = new System.Drawing.Size(83, 28);
             this.buttonHorarioCancelar.TabIndex = 20;
@@ -431,7 +431,7 @@
             this.buttonHorarioGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHorarioGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHorarioGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonHorarioGuardar.Location = new System.Drawing.Point(83, 481);
+            this.buttonHorarioGuardar.Location = new System.Drawing.Point(83, 475);
             this.buttonHorarioGuardar.Name = "buttonHorarioGuardar";
             this.buttonHorarioGuardar.Size = new System.Drawing.Size(80, 28);
             this.buttonHorarioGuardar.TabIndex = 19;

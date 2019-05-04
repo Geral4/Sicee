@@ -51,6 +51,7 @@ namespace Inicio
 
         private void buttonAulaGuardar_Click(object sender, EventArgs e)
         {
+            Edificio edificio1 = new Edificio();
             try
             {
                 this.Validate();
@@ -58,6 +59,7 @@ namespace Inicio
                 dataAdapter.Update((DataTable)bindingSource1.DataSource);
                 GetData(dataAdapter.SelectCommand.CommandText);
                 MessageBox.Show("Guardado Correctamente");
+
             }
             catch (SqlException s)
             {

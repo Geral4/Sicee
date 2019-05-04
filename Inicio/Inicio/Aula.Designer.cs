@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonAulaGuardar = new System.Windows.Forms.Button();
             this.panelAula = new System.Windows.Forms.Panel();
             this.dataGridAula = new System.Windows.Forms.DataGridView();
@@ -41,7 +42,7 @@
             this.buttonAulaGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAulaGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAulaGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonAulaGuardar.Location = new System.Drawing.Point(213, 243);
+            this.buttonAulaGuardar.Location = new System.Drawing.Point(170, 222);
             this.buttonAulaGuardar.Name = "buttonAulaGuardar";
             this.buttonAulaGuardar.Size = new System.Drawing.Size(92, 28);
             this.buttonAulaGuardar.TabIndex = 19;
@@ -53,10 +54,11 @@
             // 
             this.panelAula.BackColor = System.Drawing.Color.DimGray;
             this.panelAula.Controls.Add(this.dataGridAula);
+            this.panelAula.Controls.Add(this.buttonAulaGuardar);
             this.panelAula.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelAula.Location = new System.Drawing.Point(0, 3);
+            this.panelAula.Location = new System.Drawing.Point(4, 4);
             this.panelAula.Name = "panelAula";
-            this.panelAula.Size = new System.Drawing.Size(493, 232);
+            this.panelAula.Size = new System.Drawing.Size(469, 257);
             this.panelAula.TabIndex = 22;
             // 
             // dataGridAula
@@ -65,21 +67,23 @@
             this.dataGridAula.AllowUserToAddRows = false;
             this.dataGridAula.AllowUserToDeleteRows = false;
             this.dataGridAula.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dataGridAula.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridAula.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridAula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAula.Location = new System.Drawing.Point(12, 12);
             this.dataGridAula.Name = "dataGridAula";
             this.dataGridAula.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridAula.Size = new System.Drawing.Size(468, 204);
+            this.dataGridAula.Size = new System.Drawing.Size(448, 204);
             this.dataGridAula.TabIndex = 7;
             // 
             // Aula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 283);
+            this.ClientSize = new System.Drawing.Size(476, 262);
             this.Controls.Add(this.panelAula);
-            this.Controls.Add(this.buttonAulaGuardar);
             this.Name = "Aula";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
