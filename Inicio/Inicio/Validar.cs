@@ -119,6 +119,27 @@ namespace Inicio
             return g;
         }
 
+        public DataTable origen_registr(string sql)
+        {
+            try
+            {
+                global = new SqlDataAdapter(sql, CadenaConexion);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(global);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                global.Fill(table);
+                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción: " + ex);
+            }
+            return table;
+        }
+
+
+
         public void EditarDataGrid(DataGridView dg)
         {
             try
