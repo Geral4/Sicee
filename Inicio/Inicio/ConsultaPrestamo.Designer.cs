@@ -57,15 +57,17 @@
             this.panelCPrestamoVertical.Controls.Add(this.buttonCPrestamoBuscar);
             this.panelCPrestamoVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCPrestamoVertical.Location = new System.Drawing.Point(0, 0);
+            this.panelCPrestamoVertical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCPrestamoVertical.Name = "panelCPrestamoVertical";
-            this.panelCPrestamoVertical.Size = new System.Drawing.Size(218, 293);
+            this.panelCPrestamoVertical.Size = new System.Drawing.Size(291, 361);
             this.panelCPrestamoVertical.TabIndex = 54;
             // 
             // dateCPrestamoFecha
             // 
-            this.dateCPrestamoFecha.Location = new System.Drawing.Point(12, 157);
+            this.dateCPrestamoFecha.Location = new System.Drawing.Point(16, 193);
+            this.dateCPrestamoFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateCPrestamoFecha.Name = "dateCPrestamoFecha";
-            this.dateCPrestamoFecha.Size = new System.Drawing.Size(186, 20);
+            this.dateCPrestamoFecha.Size = new System.Drawing.Size(247, 22);
             this.dateCPrestamoFecha.TabIndex = 52;
             // 
             // labelCPrestamoBuscar
@@ -75,17 +77,19 @@
             this.labelCPrestamoBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCPrestamoBuscar.ForeColor = System.Drawing.Color.White;
             this.labelCPrestamoBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.labelCPrestamoBuscar.Location = new System.Drawing.Point(14, 26);
+            this.labelCPrestamoBuscar.Location = new System.Drawing.Point(19, 32);
+            this.labelCPrestamoBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCPrestamoBuscar.Name = "labelCPrestamoBuscar";
-            this.labelCPrestamoBuscar.Size = new System.Drawing.Size(98, 19);
+            this.labelCPrestamoBuscar.Size = new System.Drawing.Size(125, 23);
             this.labelCPrestamoBuscar.TabIndex = 40;
             this.labelCPrestamoBuscar.Text = "Buscar por :";
             // 
             // textCPrestamoFolio
             // 
-            this.textCPrestamoFolio.Location = new System.Drawing.Point(21, 96);
+            this.textCPrestamoFolio.Location = new System.Drawing.Point(28, 118);
+            this.textCPrestamoFolio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textCPrestamoFolio.Name = "textCPrestamoFolio";
-            this.textCPrestamoFolio.Size = new System.Drawing.Size(177, 20);
+            this.textCPrestamoFolio.Size = new System.Drawing.Size(235, 22);
             this.textCPrestamoFolio.TabIndex = 41;
             // 
             // radioCPrestamoFolio
@@ -94,9 +98,10 @@
             this.radioCPrestamoFolio.BackColor = System.Drawing.Color.Transparent;
             this.radioCPrestamoFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioCPrestamoFolio.ForeColor = System.Drawing.Color.Olive;
-            this.radioCPrestamoFolio.Location = new System.Drawing.Point(18, 70);
+            this.radioCPrestamoFolio.Location = new System.Drawing.Point(24, 86);
+            this.radioCPrestamoFolio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioCPrestamoFolio.Name = "radioCPrestamoFolio";
-            this.radioCPrestamoFolio.Size = new System.Drawing.Size(61, 20);
+            this.radioCPrestamoFolio.Size = new System.Drawing.Size(71, 24);
             this.radioCPrestamoFolio.TabIndex = 44;
             this.radioCPrestamoFolio.TabStop = true;
             this.radioCPrestamoFolio.Text = "Folio";
@@ -108,9 +113,10 @@
             this.radioCPrestamoFecha.BackColor = System.Drawing.Color.Transparent;
             this.radioCPrestamoFecha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioCPrestamoFecha.ForeColor = System.Drawing.Color.Olive;
-            this.radioCPrestamoFecha.Location = new System.Drawing.Point(12, 131);
+            this.radioCPrestamoFecha.Location = new System.Drawing.Point(16, 161);
+            this.radioCPrestamoFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioCPrestamoFecha.Name = "radioCPrestamoFecha";
-            this.radioCPrestamoFecha.Size = new System.Drawing.Size(169, 22);
+            this.radioCPrestamoFecha.Size = new System.Drawing.Size(211, 27);
             this.radioCPrestamoFecha.TabIndex = 43;
             this.radioCPrestamoFecha.TabStop = true;
             this.radioCPrestamoFecha.Text = "Fecha de prestamo";
@@ -122,21 +128,24 @@
             this.buttonCPrestamoBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCPrestamoBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCPrestamoBuscar.ForeColor = System.Drawing.Color.White;
-            this.buttonCPrestamoBuscar.Location = new System.Drawing.Point(81, 231);
+            this.buttonCPrestamoBuscar.Location = new System.Drawing.Point(108, 284);
+            this.buttonCPrestamoBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCPrestamoBuscar.Name = "buttonCPrestamoBuscar";
-            this.buttonCPrestamoBuscar.Size = new System.Drawing.Size(82, 26);
+            this.buttonCPrestamoBuscar.Size = new System.Drawing.Size(109, 32);
             this.buttonCPrestamoBuscar.TabIndex = 42;
             this.buttonCPrestamoBuscar.Text = "Buscar";
             this.buttonCPrestamoBuscar.UseVisualStyleBackColor = false;
+            this.buttonCPrestamoBuscar.Click += new System.EventHandler(this.buttonCPrestamoBuscar_Click);
             // 
             // labelCPrestamoLista
             // 
             this.labelCPrestamoLista.AutoSize = true;
             this.labelCPrestamoLista.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCPrestamoLista.ForeColor = System.Drawing.Color.PaleGreen;
-            this.labelCPrestamoLista.Location = new System.Drawing.Point(16, 36);
+            this.labelCPrestamoLista.Location = new System.Drawing.Point(21, 44);
+            this.labelCPrestamoLista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCPrestamoLista.Name = "labelCPrestamoLista";
-            this.labelCPrestamoLista.Size = new System.Drawing.Size(198, 24);
+            this.labelCPrestamoLista.Size = new System.Drawing.Size(258, 33);
             this.labelCPrestamoLista.TabIndex = 0;
             this.labelCPrestamoLista.Text = "Lista de prestamos";
             // 
@@ -144,9 +153,10 @@
             // 
             this.dataGridCPrestamo.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCPrestamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCPrestamo.Location = new System.Drawing.Point(7, 87);
+            this.dataGridCPrestamo.Location = new System.Drawing.Point(9, 107);
+            this.dataGridCPrestamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridCPrestamo.Name = "dataGridCPrestamo";
-            this.dataGridCPrestamo.Size = new System.Drawing.Size(629, 170);
+            this.dataGridCPrestamo.Size = new System.Drawing.Size(839, 209);
             this.dataGridCPrestamo.TabIndex = 1;
             // 
             // buttonCPrestamoEditar
@@ -156,9 +166,10 @@
             this.buttonCPrestamoEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCPrestamoEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCPrestamoEditar.ForeColor = System.Drawing.Color.White;
-            this.buttonCPrestamoEditar.Location = new System.Drawing.Point(227, 264);
+            this.buttonCPrestamoEditar.Location = new System.Drawing.Point(303, 325);
+            this.buttonCPrestamoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCPrestamoEditar.Name = "buttonCPrestamoEditar";
-            this.buttonCPrestamoEditar.Size = new System.Drawing.Size(75, 24);
+            this.buttonCPrestamoEditar.Size = new System.Drawing.Size(100, 30);
             this.buttonCPrestamoEditar.TabIndex = 21;
             this.buttonCPrestamoEditar.Text = "Editar";
             this.buttonCPrestamoEditar.UseVisualStyleBackColor = false;
@@ -170,9 +181,10 @@
             this.buttonCPrestamoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCPrestamoEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCPrestamoEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonCPrestamoEliminar.Location = new System.Drawing.Point(330, 263);
+            this.buttonCPrestamoEliminar.Location = new System.Drawing.Point(440, 324);
+            this.buttonCPrestamoEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCPrestamoEliminar.Name = "buttonCPrestamoEliminar";
-            this.buttonCPrestamoEliminar.Size = new System.Drawing.Size(85, 24);
+            this.buttonCPrestamoEliminar.Size = new System.Drawing.Size(113, 30);
             this.buttonCPrestamoEliminar.TabIndex = 22;
             this.buttonCPrestamoEliminar.Text = "Eliminar";
             this.buttonCPrestamoEliminar.UseVisualStyleBackColor = false;
@@ -183,9 +195,10 @@
             this.buttonCPrestamoGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCPrestamoGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCPrestamoGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonCPrestamoGuardar.Location = new System.Drawing.Point(455, 261);
+            this.buttonCPrestamoGuardar.Location = new System.Drawing.Point(607, 321);
+            this.buttonCPrestamoGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCPrestamoGuardar.Name = "buttonCPrestamoGuardar";
-            this.buttonCPrestamoGuardar.Size = new System.Drawing.Size(82, 26);
+            this.buttonCPrestamoGuardar.Size = new System.Drawing.Size(109, 32);
             this.buttonCPrestamoGuardar.TabIndex = 24;
             this.buttonCPrestamoGuardar.Text = "Guardar";
             this.buttonCPrestamoGuardar.UseVisualStyleBackColor = false;
@@ -199,22 +212,26 @@
             this.panelCPrestamoVertical2.Controls.Add(this.dataGridCPrestamo);
             this.panelCPrestamoVertical2.Controls.Add(this.labelCPrestamoLista);
             this.panelCPrestamoVertical2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelCPrestamoVertical2.Location = new System.Drawing.Point(218, 0);
+            this.panelCPrestamoVertical2.Location = new System.Drawing.Point(291, 0);
+            this.panelCPrestamoVertical2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCPrestamoVertical2.Name = "panelCPrestamoVertical2";
-            this.panelCPrestamoVertical2.Size = new System.Drawing.Size(645, 293);
+            this.panelCPrestamoVertical2.Size = new System.Drawing.Size(860, 361);
             this.panelCPrestamoVertical2.TabIndex = 55;
+            this.panelCPrestamoVertical2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCPrestamoVertical2_Paint);
             // 
             // ConsultaPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 293);
+            this.ClientSize = new System.Drawing.Size(1151, 361);
             this.Controls.Add(this.panelCPrestamoVertical2);
             this.Controls.Add(this.panelCPrestamoVertical);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConsultaPrestamo";
             this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaPrestamo";
+            this.Load += new System.EventHandler(this.ConsultaPrestamo_Load);
             this.panelCPrestamoVertical.ResumeLayout(false);
             this.panelCPrestamoVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCPrestamo)).EndInit();

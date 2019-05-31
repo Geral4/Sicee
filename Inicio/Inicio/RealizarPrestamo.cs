@@ -127,6 +127,11 @@ namespace Inicio
             textRealizarPFolio.Text = objPrestamo.obtenerFolio() + "";
         }
 
+        private void buttonRealizarPCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ListarNPersonal()
         {
             comboRealizarPNumero.DataSource = objEmpleado.ListarNPersonal();

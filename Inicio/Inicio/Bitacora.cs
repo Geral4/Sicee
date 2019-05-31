@@ -20,9 +20,9 @@ namespace Inicio
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "", aux = "";
-        private string sql = " select ROW_NUMBER() OVER(ORDER BY fecha ASC) AS 'Nº', (emp.Nombre + ' ' + emp.ApellidoP + ' ' + emp.ApellidoM) 'Nombre Empleado', hr.CAlumnos 'Cantidad Alumnos', car.Nombre Carrera, asig.Nombre Asignatura," +
-                   "hr.ClasePractica 'Clase/Practica', hr.HorarioInicio 'Hora Inicio', hr.HorarioFin 'Hora Fin', hr.Observaciones 'Observaciones' , hr.Firma 'Firma' from Horario hr inner join Empleado emp on hr.DocenteEmpleado_id = " +
-                   "emp.NPersonal inner join Carrera car on hr.Carrera_id = car.Clave inner join Asignatura asig on hr.Asignatura_id = asig.Clave inner join cat_aulas aula on hr.Aula_id = aula.clave";
+        private string sql = "select [N°], [Nombre Empleado], [Cantidad Alumnos], Carrera, Asignatura, [Clase/Practica], [Hora Inicio]," +
+            " [Hora Fin], Observaciones, Firma from c_visor_bitacora where format(Fecha, 'yyyyMMdd') = format(getDate(), 'yyyyMMdd')";
+                   
 
         public Bitacora()
         {

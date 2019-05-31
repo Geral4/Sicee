@@ -48,15 +48,15 @@
             this.panelRealizarPVertical2 = new System.Windows.Forms.Panel();
             this.panelRealizarPVertical3 = new System.Windows.Forms.Panel();
             this.dataGridRP = new System.Windows.Forms.DataGridView();
-            this.buttonRealizarPGuardar = new System.Windows.Forms.Button();
-            this.buttonRealizarPCancelar = new System.Windows.Forms.Button();
-            this.labelRealizarPTitulo = new System.Windows.Forms.Label();
-            this.labelRealizarPLista = new System.Windows.Forms.Label();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_PI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Folio_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NSerie = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelRealizarPLista = new System.Windows.Forms.Label();
+            this.buttonRealizarPGuardar = new System.Windows.Forms.Button();
+            this.buttonRealizarPCancelar = new System.Windows.Forms.Button();
+            this.labelRealizarPTitulo = new System.Windows.Forms.Label();
             this.panelRealizarPVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericRealizarPNPrestamos)).BeginInit();
             this.panelRealizarPVertical2.SuspendLayout();
@@ -67,9 +67,10 @@
             // panelRealizarPHorizontal3
             // 
             this.panelRealizarPHorizontal3.BackColor = System.Drawing.Color.White;
-            this.panelRealizarPHorizontal3.Location = new System.Drawing.Point(0, 570);
+            this.panelRealizarPHorizontal3.Location = new System.Drawing.Point(0, 702);
+            this.panelRealizarPHorizontal3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRealizarPHorizontal3.Name = "panelRealizarPHorizontal3";
-            this.panelRealizarPHorizontal3.Size = new System.Drawing.Size(1081, 30);
+            this.panelRealizarPHorizontal3.Size = new System.Drawing.Size(1441, 37);
             this.panelRealizarPHorizontal3.TabIndex = 7;
             // 
             // panelRealizarPVertical
@@ -88,9 +89,10 @@
             this.panelRealizarPVertical.Controls.Add(this.radioRealizarPAlumno);
             this.panelRealizarPVertical.Controls.Add(this.labelRealizarPNControl);
             this.panelRealizarPVertical.Controls.Add(this.labelRealizarPRegistro);
-            this.panelRealizarPVertical.Location = new System.Drawing.Point(11, 98);
+            this.panelRealizarPVertical.Location = new System.Drawing.Point(15, 121);
+            this.panelRealizarPVertical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRealizarPVertical.Name = "panelRealizarPVertical";
-            this.panelRealizarPVertical.Size = new System.Drawing.Size(439, 408);
+            this.panelRealizarPVertical.Size = new System.Drawing.Size(585, 502);
             this.panelRealizarPVertical.TabIndex = 26;
             // 
             // comboRealizarPNumero
@@ -98,9 +100,10 @@
             this.comboRealizarPNumero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboRealizarPNumero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboRealizarPNumero.FormattingEnabled = true;
-            this.comboRealizarPNumero.Location = new System.Drawing.Point(189, 149);
+            this.comboRealizarPNumero.Location = new System.Drawing.Point(252, 183);
+            this.comboRealizarPNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboRealizarPNumero.Name = "comboRealizarPNumero";
-            this.comboRealizarPNumero.Size = new System.Drawing.Size(235, 21);
+            this.comboRealizarPNumero.Size = new System.Drawing.Size(312, 24);
             this.comboRealizarPNumero.TabIndex = 53;
             this.comboRealizarPNumero.SelectedValueChanged += new System.EventHandler(this.comboRealizarPNumero_SelectedValueChanged);
             // 
@@ -110,9 +113,10 @@
             this.buttonRealizarPContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRealizarPContinuar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRealizarPContinuar.ForeColor = System.Drawing.Color.White;
-            this.buttonRealizarPContinuar.Location = new System.Drawing.Point(155, 344);
+            this.buttonRealizarPContinuar.Location = new System.Drawing.Point(207, 423);
+            this.buttonRealizarPContinuar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRealizarPContinuar.Name = "buttonRealizarPContinuar";
-            this.buttonRealizarPContinuar.Size = new System.Drawing.Size(124, 33);
+            this.buttonRealizarPContinuar.Size = new System.Drawing.Size(165, 41);
             this.buttonRealizarPContinuar.TabIndex = 52;
             this.buttonRealizarPContinuar.Text = "Continuar";
             this.buttonRealizarPContinuar.UseVisualStyleBackColor = false;
@@ -120,9 +124,10 @@
             // 
             // dateRealizarPFechaE
             // 
-            this.dateRealizarPFechaE.Location = new System.Drawing.Point(156, 215);
+            this.dateRealizarPFechaE.Location = new System.Drawing.Point(208, 265);
+            this.dateRealizarPFechaE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateRealizarPFechaE.Name = "dateRealizarPFechaE";
-            this.dateRealizarPFechaE.Size = new System.Drawing.Size(269, 20);
+            this.dateRealizarPFechaE.Size = new System.Drawing.Size(357, 22);
             this.dateRealizarPFechaE.TabIndex = 51;
             // 
             // labelRealizarPFechaEntrega
@@ -130,15 +135,17 @@
             this.labelRealizarPFechaEntrega.AutoSize = true;
             this.labelRealizarPFechaEntrega.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRealizarPFechaEntrega.ForeColor = System.Drawing.Color.White;
-            this.labelRealizarPFechaEntrega.Location = new System.Drawing.Point(9, 215);
+            this.labelRealizarPFechaEntrega.Location = new System.Drawing.Point(12, 265);
+            this.labelRealizarPFechaEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRealizarPFechaEntrega.Name = "labelRealizarPFechaEntrega";
-            this.labelRealizarPFechaEntrega.Size = new System.Drawing.Size(142, 20);
+            this.labelRealizarPFechaEntrega.Size = new System.Drawing.Size(178, 22);
             this.labelRealizarPFechaEntrega.TabIndex = 50;
             this.labelRealizarPFechaEntrega.Text = "Fecha de entrega";
             // 
             // numericRealizarPNPrestamos
             // 
-            this.numericRealizarPNPrestamos.Location = new System.Drawing.Point(156, 250);
+            this.numericRealizarPNPrestamos.Location = new System.Drawing.Point(208, 308);
+            this.numericRealizarPNPrestamos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericRealizarPNPrestamos.Maximum = new decimal(new int[] {
             4,
             0,
@@ -150,7 +157,7 @@
             0,
             0});
             this.numericRealizarPNPrestamos.Name = "numericRealizarPNPrestamos";
-            this.numericRealizarPNPrestamos.Size = new System.Drawing.Size(269, 20);
+            this.numericRealizarPNPrestamos.Size = new System.Drawing.Size(359, 22);
             this.numericRealizarPNPrestamos.TabIndex = 49;
             this.numericRealizarPNPrestamos.Value = new decimal(new int[] {
             1,
@@ -163,19 +170,21 @@
             this.labelRealizarPNPrestamos.AutoSize = true;
             this.labelRealizarPNPrestamos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRealizarPNPrestamos.ForeColor = System.Drawing.Color.White;
-            this.labelRealizarPNPrestamos.Location = new System.Drawing.Point(11, 248);
+            this.labelRealizarPNPrestamos.Location = new System.Drawing.Point(15, 305);
+            this.labelRealizarPNPrestamos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRealizarPNPrestamos.Name = "labelRealizarPNPrestamos";
-            this.labelRealizarPNPrestamos.Size = new System.Drawing.Size(128, 20);
+            this.labelRealizarPNPrestamos.Size = new System.Drawing.Size(158, 22);
             this.labelRealizarPNPrestamos.TabIndex = 48;
             this.labelRealizarPNPrestamos.Text = "Nº de Prestamos";
             // 
             // textRealizarPFolio
             // 
             this.textRealizarPFolio.Enabled = false;
-            this.textRealizarPFolio.Location = new System.Drawing.Point(359, 36);
+            this.textRealizarPFolio.Location = new System.Drawing.Point(479, 44);
+            this.textRealizarPFolio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textRealizarPFolio.Name = "textRealizarPFolio";
             this.textRealizarPFolio.ReadOnly = true;
-            this.textRealizarPFolio.Size = new System.Drawing.Size(64, 20);
+            this.textRealizarPFolio.Size = new System.Drawing.Size(84, 22);
             this.textRealizarPFolio.TabIndex = 47;
             // 
             // labelRealizarPFolio
@@ -183,17 +192,19 @@
             this.labelRealizarPFolio.AutoSize = true;
             this.labelRealizarPFolio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRealizarPFolio.ForeColor = System.Drawing.Color.LimeGreen;
-            this.labelRealizarPFolio.Location = new System.Drawing.Point(319, 35);
+            this.labelRealizarPFolio.Location = new System.Drawing.Point(425, 43);
+            this.labelRealizarPFolio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRealizarPFolio.Name = "labelRealizarPFolio";
-            this.labelRealizarPFolio.Size = new System.Drawing.Size(42, 20);
+            this.labelRealizarPFolio.Size = new System.Drawing.Size(49, 22);
             this.labelRealizarPFolio.TabIndex = 46;
             this.labelRealizarPFolio.Text = "Folio";
             // 
             // textRealizarPNombre
             // 
-            this.textRealizarPNombre.Location = new System.Drawing.Point(155, 181);
+            this.textRealizarPNombre.Location = new System.Drawing.Point(207, 223);
+            this.textRealizarPNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textRealizarPNombre.Name = "textRealizarPNombre";
-            this.textRealizarPNombre.Size = new System.Drawing.Size(268, 20);
+            this.textRealizarPNombre.Size = new System.Drawing.Size(356, 22);
             this.textRealizarPNombre.TabIndex = 39;
             // 
             // radioRealizarPEmpleado
@@ -201,9 +212,10 @@
             this.radioRealizarPEmpleado.AutoSize = true;
             this.radioRealizarPEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioRealizarPEmpleado.ForeColor = System.Drawing.Color.White;
-            this.radioRealizarPEmpleado.Location = new System.Drawing.Point(217, 81);
+            this.radioRealizarPEmpleado.Location = new System.Drawing.Point(289, 100);
+            this.radioRealizarPEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioRealizarPEmpleado.Name = "radioRealizarPEmpleado";
-            this.radioRealizarPEmpleado.Size = new System.Drawing.Size(108, 25);
+            this.radioRealizarPEmpleado.Size = new System.Drawing.Size(134, 27);
             this.radioRealizarPEmpleado.TabIndex = 37;
             this.radioRealizarPEmpleado.TabStop = true;
             this.radioRealizarPEmpleado.Text = "Empleado";
@@ -215,9 +227,10 @@
             this.radioRealizarPAlumno.AutoSize = true;
             this.radioRealizarPAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioRealizarPAlumno.ForeColor = System.Drawing.Color.White;
-            this.radioRealizarPAlumno.Location = new System.Drawing.Point(84, 81);
+            this.radioRealizarPAlumno.Location = new System.Drawing.Point(112, 100);
+            this.radioRealizarPAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioRealizarPAlumno.Name = "radioRealizarPAlumno";
-            this.radioRealizarPAlumno.Size = new System.Drawing.Size(89, 25);
+            this.radioRealizarPAlumno.Size = new System.Drawing.Size(107, 27);
             this.radioRealizarPAlumno.TabIndex = 36;
             this.radioRealizarPAlumno.TabStop = true;
             this.radioRealizarPAlumno.Text = "Alumno";
@@ -229,9 +242,10 @@
             this.labelRealizarPNControl.AutoSize = true;
             this.labelRealizarPNControl.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRealizarPNControl.ForeColor = System.Drawing.Color.White;
-            this.labelRealizarPNControl.Location = new System.Drawing.Point(9, 148);
+            this.labelRealizarPNControl.Location = new System.Drawing.Point(12, 182);
+            this.labelRealizarPNControl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRealizarPNControl.Name = "labelRealizarPNControl";
-            this.labelRealizarPNControl.Size = new System.Drawing.Size(174, 20);
+            this.labelRealizarPNControl.Size = new System.Drawing.Size(213, 22);
             this.labelRealizarPNControl.TabIndex = 1;
             this.labelRealizarPNControl.Text = "NºControl / NºPersonal";
             // 
@@ -240,26 +254,29 @@
             this.labelRealizarPRegistro.AutoSize = true;
             this.labelRealizarPRegistro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRealizarPRegistro.ForeColor = System.Drawing.Color.PaleGreen;
-            this.labelRealizarPRegistro.Location = new System.Drawing.Point(7, 19);
+            this.labelRealizarPRegistro.Location = new System.Drawing.Point(9, 23);
+            this.labelRealizarPRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRealizarPRegistro.Name = "labelRealizarPRegistro";
-            this.labelRealizarPRegistro.Size = new System.Drawing.Size(176, 19);
+            this.labelRealizarPRegistro.Size = new System.Drawing.Size(226, 23);
             this.labelRealizarPRegistro.TabIndex = 0;
             this.labelRealizarPRegistro.Text = "Registro de prestamos";
             // 
             // panelRealizarPHorizontal2
             // 
             this.panelRealizarPHorizontal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelRealizarPHorizontal2.Location = new System.Drawing.Point(731, 26);
+            this.panelRealizarPHorizontal2.Location = new System.Drawing.Point(975, 32);
+            this.panelRealizarPHorizontal2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRealizarPHorizontal2.Name = "panelRealizarPHorizontal2";
-            this.panelRealizarPHorizontal2.Size = new System.Drawing.Size(350, 19);
+            this.panelRealizarPHorizontal2.Size = new System.Drawing.Size(467, 23);
             this.panelRealizarPHorizontal2.TabIndex = 28;
             // 
             // panelRealizarPHorizontal
             // 
             this.panelRealizarPHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelRealizarPHorizontal.Location = new System.Drawing.Point(0, 26);
+            this.panelRealizarPHorizontal.Location = new System.Drawing.Point(0, 32);
+            this.panelRealizarPHorizontal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRealizarPHorizontal.Name = "panelRealizarPHorizontal";
-            this.panelRealizarPHorizontal.Size = new System.Drawing.Size(350, 19);
+            this.panelRealizarPHorizontal.Size = new System.Drawing.Size(467, 23);
             this.panelRealizarPHorizontal.TabIndex = 27;
             // 
             // panelRealizarPVertical2
@@ -267,9 +284,10 @@
             this.panelRealizarPVertical2.BackColor = System.Drawing.Color.White;
             this.panelRealizarPVertical2.Controls.Add(this.panelRealizarPVertical3);
             this.panelRealizarPVertical2.Controls.Add(this.labelRealizarPLista);
-            this.panelRealizarPVertical2.Location = new System.Drawing.Point(457, 98);
+            this.panelRealizarPVertical2.Location = new System.Drawing.Point(609, 121);
+            this.panelRealizarPVertical2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRealizarPVertical2.Name = "panelRealizarPVertical2";
-            this.panelRealizarPVertical2.Size = new System.Drawing.Size(615, 408);
+            this.panelRealizarPVertical2.Size = new System.Drawing.Size(820, 502);
             this.panelRealizarPVertical2.TabIndex = 30;
             // 
             // panelRealizarPVertical3
@@ -277,9 +295,10 @@
             this.panelRealizarPVertical3.BackColor = System.Drawing.Color.DimGray;
             this.panelRealizarPVertical3.Controls.Add(this.dataGridRP);
             this.panelRealizarPVertical3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelRealizarPVertical3.Location = new System.Drawing.Point(14, 51);
+            this.panelRealizarPVertical3.Location = new System.Drawing.Point(19, 63);
+            this.panelRealizarPVertical3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRealizarPVertical3.Name = "panelRealizarPVertical3";
-            this.panelRealizarPVertical3.Size = new System.Drawing.Size(587, 342);
+            this.panelRealizarPVertical3.Size = new System.Drawing.Size(783, 421);
             this.panelRealizarPVertical3.TabIndex = 3;
             // 
             // dataGridRP
@@ -291,59 +310,11 @@
             this.Folio_id,
             this.NSerie,
             this.Observaciones});
-            this.dataGridRP.Location = new System.Drawing.Point(11, 45);
+            this.dataGridRP.Location = new System.Drawing.Point(15, 55);
+            this.dataGridRP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridRP.Name = "dataGridRP";
-            this.dataGridRP.Size = new System.Drawing.Size(534, 281);
+            this.dataGridRP.Size = new System.Drawing.Size(712, 346);
             this.dataGridRP.TabIndex = 7;
-            // 
-            // buttonRealizarPGuardar
-            // 
-            this.buttonRealizarPGuardar.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonRealizarPGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRealizarPGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRealizarPGuardar.ForeColor = System.Drawing.Color.White;
-            this.buttonRealizarPGuardar.Location = new System.Drawing.Point(566, 527);
-            this.buttonRealizarPGuardar.Name = "buttonRealizarPGuardar";
-            this.buttonRealizarPGuardar.Size = new System.Drawing.Size(124, 33);
-            this.buttonRealizarPGuardar.TabIndex = 30;
-            this.buttonRealizarPGuardar.Text = "Guardar";
-            this.buttonRealizarPGuardar.UseVisualStyleBackColor = false;
-            this.buttonRealizarPGuardar.Click += new System.EventHandler(this.buttonRealizarPGuardar_Click);
-            // 
-            // buttonRealizarPCancelar
-            // 
-            this.buttonRealizarPCancelar.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonRealizarPCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRealizarPCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRealizarPCancelar.ForeColor = System.Drawing.Color.White;
-            this.buttonRealizarPCancelar.Location = new System.Drawing.Point(795, 527);
-            this.buttonRealizarPCancelar.Name = "buttonRealizarPCancelar";
-            this.buttonRealizarPCancelar.Size = new System.Drawing.Size(129, 33);
-            this.buttonRealizarPCancelar.TabIndex = 31;
-            this.buttonRealizarPCancelar.Text = "Cancelar";
-            this.buttonRealizarPCancelar.UseVisualStyleBackColor = false;
-            // 
-            // labelRealizarPTitulo
-            // 
-            this.labelRealizarPTitulo.AutoSize = true;
-            this.labelRealizarPTitulo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRealizarPTitulo.ForeColor = System.Drawing.Color.Black;
-            this.labelRealizarPTitulo.Location = new System.Drawing.Point(368, 11);
-            this.labelRealizarPTitulo.Name = "labelRealizarPTitulo";
-            this.labelRealizarPTitulo.Size = new System.Drawing.Size(337, 44);
-            this.labelRealizarPTitulo.TabIndex = 4;
-            this.labelRealizarPTitulo.Text = "Realizar Prestamo";
-            // 
-            // labelRealizarPLista
-            // 
-            this.labelRealizarPLista.AutoSize = true;
-            this.labelRealizarPLista.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRealizarPLista.ForeColor = System.Drawing.Color.Black;
-            this.labelRealizarPLista.Location = new System.Drawing.Point(191, 15);
-            this.labelRealizarPLista.Name = "labelRealizarPLista";
-            this.labelRealizarPLista.Size = new System.Drawing.Size(259, 23);
-            this.labelRealizarPLista.TabIndex = 0;
-            this.labelRealizarPLista.Text = "Asignación de prestamo(s)";
             // 
             // numero
             // 
@@ -382,12 +353,66 @@
             this.Observaciones.Name = "Observaciones";
             this.Observaciones.Width = 150;
             // 
+            // labelRealizarPLista
+            // 
+            this.labelRealizarPLista.AutoSize = true;
+            this.labelRealizarPLista.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRealizarPLista.ForeColor = System.Drawing.Color.Black;
+            this.labelRealizarPLista.Location = new System.Drawing.Point(255, 18);
+            this.labelRealizarPLista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRealizarPLista.Name = "labelRealizarPLista";
+            this.labelRealizarPLista.Size = new System.Drawing.Size(328, 28);
+            this.labelRealizarPLista.TabIndex = 0;
+            this.labelRealizarPLista.Text = "Asignación de prestamo(s)";
+            // 
+            // buttonRealizarPGuardar
+            // 
+            this.buttonRealizarPGuardar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonRealizarPGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRealizarPGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRealizarPGuardar.ForeColor = System.Drawing.Color.White;
+            this.buttonRealizarPGuardar.Location = new System.Drawing.Point(755, 649);
+            this.buttonRealizarPGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRealizarPGuardar.Name = "buttonRealizarPGuardar";
+            this.buttonRealizarPGuardar.Size = new System.Drawing.Size(165, 41);
+            this.buttonRealizarPGuardar.TabIndex = 30;
+            this.buttonRealizarPGuardar.Text = "Guardar";
+            this.buttonRealizarPGuardar.UseVisualStyleBackColor = false;
+            this.buttonRealizarPGuardar.Click += new System.EventHandler(this.buttonRealizarPGuardar_Click);
+            // 
+            // buttonRealizarPCancelar
+            // 
+            this.buttonRealizarPCancelar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonRealizarPCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRealizarPCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRealizarPCancelar.ForeColor = System.Drawing.Color.White;
+            this.buttonRealizarPCancelar.Location = new System.Drawing.Point(1060, 649);
+            this.buttonRealizarPCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRealizarPCancelar.Name = "buttonRealizarPCancelar";
+            this.buttonRealizarPCancelar.Size = new System.Drawing.Size(172, 41);
+            this.buttonRealizarPCancelar.TabIndex = 31;
+            this.buttonRealizarPCancelar.Text = "Cancelar";
+            this.buttonRealizarPCancelar.UseVisualStyleBackColor = false;
+            this.buttonRealizarPCancelar.Click += new System.EventHandler(this.buttonRealizarPCancelar_Click);
+            // 
+            // labelRealizarPTitulo
+            // 
+            this.labelRealizarPTitulo.AutoSize = true;
+            this.labelRealizarPTitulo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRealizarPTitulo.ForeColor = System.Drawing.Color.Black;
+            this.labelRealizarPTitulo.Location = new System.Drawing.Point(491, 14);
+            this.labelRealizarPTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRealizarPTitulo.Name = "labelRealizarPTitulo";
+            this.labelRealizarPTitulo.Size = new System.Drawing.Size(426, 56);
+            this.labelRealizarPTitulo.TabIndex = 4;
+            this.labelRealizarPTitulo.Text = "Realizar Prestamo";
+            // 
             // RealizarPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1371, 750);
             this.Controls.Add(this.labelRealizarPTitulo);
             this.Controls.Add(this.buttonRealizarPCancelar);
             this.Controls.Add(this.buttonRealizarPGuardar);
@@ -397,6 +422,7 @@
             this.Controls.Add(this.panelRealizarPVertical);
             this.Controls.Add(this.panelRealizarPHorizontal3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RealizarPrestamo";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
