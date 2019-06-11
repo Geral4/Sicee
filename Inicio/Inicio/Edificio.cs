@@ -125,7 +125,7 @@ namespace Inicio
         {
 
             try { 
-                string valor = (string)dataGridEdificio.CurrentCell.Value;
+                string valor = (string)dataGridEdificio.Rows[0].Cells[1].Value;
                 
                     Aula1 aula1 = new Aula1();
                     aula1.clave_edificio = valor;                    

@@ -29,7 +29,7 @@ namespace Inicio
         private void Aula1_Load(object sender, EventArgs e)
         {
             dataGridAula1.DataSource = bindingSource1;
-            GetData("select * from cat_aulas where clave like '" + clave_edificio + "%' order by clave");
+            GetData("select clave, nombre, capacidad, descripcion from cat_aulas where id_edificio = '" + clave_edificio + "' order by clave");
         }
 
         private void GetData(string sql)
