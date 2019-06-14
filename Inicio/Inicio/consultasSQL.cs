@@ -180,7 +180,7 @@ class consultasSQL
             }
             else
             {
-                MessageBox.Show("Error al realizar la inserción, actualización o eliminación", "Incorrecto");
+                //MessageBox.Show("Error al realizar la inserción, actualización o eliminación", "Incorrecto");
             }
         }
         catch (Exception consulta)

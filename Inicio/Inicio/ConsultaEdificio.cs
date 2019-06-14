@@ -20,6 +20,7 @@ namespace Inicio
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "", sql = "";
+        private Validar v = new Validar();
 
 
         public ConsultaEdificio()
@@ -33,8 +34,7 @@ namespace Inicio
         {
             try
             {
-                dataGridCEdificio.DataSource = bindingSource1;
-                GetData("select * from Edificio");
+                Refrescar();
             }
             catch (DataException ex)
             {
@@ -47,17 +47,15 @@ namespace Inicio
 
             try
             {
-                if (dataGridCEdificio.RowCount == 2)
+                if (dataGridCEdificio.RowCount >= 2)
                 {
                     this.Validate();
-                    bindingSource1.EndEdit();
-                    dataAdapter.Update((DataTable)bindingSource1.DataSource);
-                    GetData(dataAdapter.SelectCommand.CommandText);
-                    MessageBox.Show("Editado Correctamente");
+                    v.EditarDataGrid(dataGridCEdificio);
+                    Refrescar();
                 }
                 else
                 {
-                    MessageBox.Show("Solo puedes editar un registro a la vez.    Busca el registro a editar", "Atención");
+                    MessageBox.Show("Solo puedes editar un registro a la vez. Busca el registro a editar", "Atención");
                 }
             }
             catch (SqlException s)
@@ -66,36 +64,14 @@ namespace Inicio
             }
         }
 
-
-        private void GetData(string sql)
-        {
-            try
-            {
-                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
-                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
-                DataTable table = new DataTable();
-                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
-                dataAdapter.Fill(table);
-                bindingSource1.DataSource = table;
-                // dataGridCEmpleado.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Excepción: " + ex);
-            }
-
-        }
 
         private void buttonCEdificioEliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                dataGridCEdificio.Rows.Remove(dataGridCEdificio.CurrentRow);
-                //this.Validate();
-                bindingSource1.EndEdit();
-                dataAdapter.Update((DataTable)bindingSource1.DataSource);
-                GetData(dataAdapter.SelectCommand.CommandText);
-                MessageBox.Show("Eliminado Correctamente");
+                v.EliminarDataGrid(dataGridCEdificio);
+                Refrescar();
+                //MessageBox.Show("Eliminado Correctamente");
             }
             catch (SqlException s)
             {
@@ -103,13 +79,46 @@ namespace Inicio
             }
         }
 
+        private void dataGridCEdificio_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                string valor = (string)dataGridCEdificio.Rows[dataGridCEdificio.CurrentRow.Index].Cells[1].Value;
+
+
+                //if (MessageBox.Show("¿Desea continuar?", "PREGUNTA", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //{
+                Aula1 aula1 = new Aula1();
+                aula1.clave_edificio = valor;
+                aula1.buttonAgregar.Visible = true;
+                aula1.buttonEliminar.Visible = true;
+                aula1.buttonGuardar.Visible = true;
+                aula1.dataGridAula1.AllowUserToAddRows = false;
+                aula1.ShowDialog();
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            } 
+            
+        }
+
+        private void ConsultaEdificio_Activated(object sender, EventArgs e)
+        {
+            Refrescar();
+            Console.WriteLine("Prueba");
+        }
+
         private void textCEdificioBuscar_TextChanged(object sender, EventArgs e)
         {
             filtrado = textCEdificioBuscar.Text;
-            dataGridCEdificio.DataSource = bindingSource1;
-            GetData("select * from Edificio where Nombre like '" + filtrado + "%' or Clave like '" 
-                +filtrado + "%' or nAulas like '" + filtrado + "%';");
+            Refrescar();
 
+        }
+
+        private void Refrescar()
+        {
+            dataGridCEdificio.DataSource = v.llenarDataGrid("select * from Edificio where Nombre like '" + filtrado + "%' or Clave like '"
+                + filtrado + "%' or nAulas like '" + filtrado + "%';");
         }
     }
 }

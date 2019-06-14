@@ -51,7 +51,7 @@
             this.panelCEdificioVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCEdificioVertical.Location = new System.Drawing.Point(0, 0);
             this.panelCEdificioVertical.Name = "panelCEdificioVertical";
-            this.panelCEdificioVertical.Size = new System.Drawing.Size(518, 303);
+            this.panelCEdificioVertical.Size = new System.Drawing.Size(473, 303);
             this.panelCEdificioVertical.TabIndex = 7;
             // 
             // textCEdificioBuscar
@@ -112,6 +112,7 @@
             this.dataGridCEdificio.Name = "dataGridCEdificio";
             this.dataGridCEdificio.Size = new System.Drawing.Size(456, 170);
             this.dataGridCEdificio.TabIndex = 1;
+            this.dataGridCEdificio.DoubleClick += new System.EventHandler(this.dataGridCEdificio_DoubleClick);
             // 
             // labelCEdificioLista
             // 
@@ -134,6 +135,7 @@
             this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaEdificio";
+            this.Activated += new System.EventHandler(this.ConsultaEdificio_Activated);
             this.Load += new System.EventHandler(this.ConsultaEdificio_Load);
             this.panelCEdificioVertical.ResumeLayout(false);
             this.panelCEdificioVertical.PerformLayout();

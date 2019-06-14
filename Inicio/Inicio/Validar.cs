@@ -147,7 +147,7 @@ namespace Inicio
                     g.EndEdit();
                     global.Update((DataTable)g.DataSource);
                     //GetData(dataAdapter.SelectCommand.CommandText);
-                    MessageBox.Show("Editado Correctamente");
+                    MessageBox.Show("Guardado Correctamente");
                     Console.WriteLine("Hola");
                     dg.Refresh();
             }
@@ -157,6 +157,24 @@ namespace Inicio
             }
         }
 
+        public void EliminarDataGrid(DataGridView dg)
+        {
+            try
+            {
+                dg.Rows.Remove(dg.CurrentRow);
+                g.EndEdit();
+                global.Update((DataTable)g.DataSource);
+                //GetData(dataAdapter.SelectCommand.CommandText);
+                MessageBox.Show("ELiminado Correctamente");
+                Console.WriteLine("Hola");
+                dg.Refresh();
+            }
+            catch (SqlException s)
+            {
+                MessageBox.Show("" + s, "Verifica");
+            }
+        }
+       
         private void GetData(string sql)
         {
             try

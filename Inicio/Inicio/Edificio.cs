@@ -125,11 +125,19 @@ namespace Inicio
         {
 
             try { 
-                string valor = (string)dataGridEdificio.Rows[0].Cells[1].Value;
-                
+                string valor = (string)dataGridEdificio.Rows[dataGridEdificio.CurrentRow.Index].Cells[1].Value;
+
+                //if (MessageBox.Show("¿Desea continuar?", "PREGUNTA", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //{
                     Aula1 aula1 = new Aula1();
-                    aula1.clave_edificio = valor;                    
-                    aula1.ShowDialog();               
+                    aula1.clave_edificio = valor;
+                    aula1.buttonAgregar.Visible = false;
+                    aula1.buttonEliminar.Visible = false;
+                    aula1.buttonGuardar.Visible = false;
+                    aula1.dataGridAula1.ReadOnly = true;
+                    aula1.ShowDialog();
+                //}
+                        
                 
             }
             
