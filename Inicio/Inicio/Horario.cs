@@ -127,7 +127,7 @@ namespace Inicio
                 Coman.Parameters.AddWithValue("@fecha_inicial_clases", FechaBitacora.Value);
                 Coman.Parameters.AddWithValue("@fecha_final_clases", FechaFinBitacora.Value);
                 Coman.ExecuteNonQuery();
-                Coman.Parameters.Clear();
+                    Coman.Parameters.Clear();
             }
             catch (SqlException sql)
             {
