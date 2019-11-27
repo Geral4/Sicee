@@ -128,5 +128,10 @@ namespace Inicio
             textCargoDescripcion.Clear();
             comboCargo.Text = string.Empty;
         }
+
+        private void comboCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

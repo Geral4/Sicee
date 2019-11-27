@@ -166,6 +166,7 @@
             this.textUsuarioRepetir.Name = "textUsuarioRepetir";
             this.textUsuarioRepetir.Size = new System.Drawing.Size(159, 20);
             this.textUsuarioRepetir.TabIndex = 24;
+            this.textUsuarioRepetir.UseSystemPasswordChar = true;
             // 
             // labelUsuarioRepetir
             // 
@@ -220,6 +221,7 @@
             this.textUsuarioContraseña.Name = "textUsuarioContraseña";
             this.textUsuarioContraseña.Size = new System.Drawing.Size(203, 20);
             this.textUsuarioContraseña.TabIndex = 17;
+            this.textUsuarioContraseña.UseSystemPasswordChar = true;
             // 
             // textUsuarioUsuario
             // 

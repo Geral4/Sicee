@@ -41,7 +41,7 @@
             this.buttonEmpleadoGuardar = new System.Windows.Forms.Button();
             this.comboEmpleadoSexo = new System.Windows.Forms.ComboBox();
             this.labelEmpleadoSex = new System.Windows.Forms.Label();
-            this.comboEmpleadoCargo = new System.Windows.Forms.ComboBox();
+            this.comboCargo = new System.Windows.Forms.ComboBox();
             this.textEmpleadoApellidoM = new System.Windows.Forms.TextBox();
             this.labelEmpleadoApellidoM = new System.Windows.Forms.Label();
             this.textEmpleadoApellidosP = new System.Windows.Forms.TextBox();
@@ -136,7 +136,7 @@
             this.panelEmpleadoVertical2.Controls.Add(this.buttonEmpleadoGuardar);
             this.panelEmpleadoVertical2.Controls.Add(this.comboEmpleadoSexo);
             this.panelEmpleadoVertical2.Controls.Add(this.labelEmpleadoSex);
-            this.panelEmpleadoVertical2.Controls.Add(this.comboEmpleadoCargo);
+            this.panelEmpleadoVertical2.Controls.Add(this.comboCargo);
             this.panelEmpleadoVertical2.Controls.Add(this.textEmpleadoApellidoM);
             this.panelEmpleadoVertical2.Controls.Add(this.labelEmpleadoApellidoM);
             this.panelEmpleadoVertical2.Controls.Add(this.textEmpleadoApellidosP);
@@ -228,15 +228,14 @@
             this.labelEmpleadoSex.TabIndex = 28;
             this.labelEmpleadoSex.Text = "Sexo*";
             // 
-            // comboEmpleadoCargo
+            // comboCargo
             // 
-            this.comboEmpleadoCargo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboEmpleadoCargo.FormattingEnabled = true;
-            this.comboEmpleadoCargo.Location = new System.Drawing.Point(95, 259);
-            this.comboEmpleadoCargo.Name = "comboEmpleadoCargo";
-            this.comboEmpleadoCargo.Size = new System.Drawing.Size(219, 21);
-            this.comboEmpleadoCargo.TabIndex = 27;
-            this.comboEmpleadoCargo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboEmpleadoCargo_MouseClick);
+            this.comboCargo.FormattingEnabled = true;
+            this.comboCargo.Location = new System.Drawing.Point(95, 259);
+            this.comboCargo.Name = "comboCargo";
+            this.comboCargo.Size = new System.Drawing.Size(219, 21);
+            this.comboCargo.TabIndex = 27;
+            this.comboCargo.MouseCaptureChanged += new System.EventHandler(this.comboCargo_MouseCaptureChanged);
             // 
             // textEmpleadoApellidoM
             // 
@@ -437,7 +436,6 @@
         private System.Windows.Forms.Label labelEmpleadoApellidoP;
         private System.Windows.Forms.Button buttonEmpleadoCancelar;
         private System.Windows.Forms.Button buttonEmpleadoGuardar;
-        private System.Windows.Forms.ComboBox comboEmpleadoCargo;
         private System.Windows.Forms.ComboBox comboEmpleadoSexo;
         private System.Windows.Forms.Label labelEmpleadoSex;
         private System.Windows.Forms.Label label1;
@@ -454,5 +452,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonEmpleadoHuella;
         private System.Windows.Forms.TextBox textEmpleadoHuella;
+        private System.Windows.Forms.ComboBox comboCargo;
     }
 }

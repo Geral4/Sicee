@@ -35,6 +35,7 @@
             this.dataGridViewCargo = new System.Windows.Forms.DataGridView();
             this.labelCargoLista = new System.Windows.Forms.Label();
             this.panelCargoVertical2 = new System.Windows.Forms.Panel();
+            this.comboCargo = new System.Windows.Forms.ComboBox();
             this.labelCargoDepartamento = new System.Windows.Forms.Label();
             this.buttonCargoCancelar = new System.Windows.Forms.Button();
             this.buttonCargoGuardar = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.textCargoNombre = new System.Windows.Forms.TextBox();
             this.labelCargoNombre = new System.Windows.Forms.Label();
             this.labelCargoRegistro = new System.Windows.Forms.Label();
-            this.comboCargo = new System.Windows.Forms.ComboBox();
             this.panelCargoVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCargo)).BeginInit();
             this.panelCargoVertical2.SuspendLayout();
@@ -138,6 +138,15 @@
             this.panelCargoVertical2.Size = new System.Drawing.Size(328, 313);
             this.panelCargoVertical2.TabIndex = 4;
             this.panelCargoVertical2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCargoVertical2_Paint);
+            // 
+            // comboCargo
+            // 
+            this.comboCargo.FormattingEnabled = true;
+            this.comboCargo.Location = new System.Drawing.Point(122, 191);
+            this.comboCargo.Name = "comboCargo";
+            this.comboCargo.Size = new System.Drawing.Size(192, 21);
+            this.comboCargo.TabIndex = 23;
+            this.comboCargo.SelectedIndexChanged += new System.EventHandler(this.comboCargo_SelectedIndexChanged);
             // 
             // labelCargoDepartamento
             // 
@@ -244,14 +253,6 @@
             this.labelCargoRegistro.Size = new System.Drawing.Size(121, 20);
             this.labelCargoRegistro.TabIndex = 0;
             this.labelCargoRegistro.Text = "Registrar Cargo";
-            // 
-            // comboCargo
-            // 
-            this.comboCargo.FormattingEnabled = true;
-            this.comboCargo.Location = new System.Drawing.Point(122, 191);
-            this.comboCargo.Name = "comboCargo";
-            this.comboCargo.Size = new System.Drawing.Size(192, 21);
-            this.comboCargo.TabIndex = 23;
             // 
             // Cargo
             // 

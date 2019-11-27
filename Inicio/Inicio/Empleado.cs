@@ -209,14 +209,14 @@ namespace Inicio
         private void ListarCargo()
         {
             CDEmpleado objEmpleado1 = new CDEmpleado();
-            comboEmpleadoCargo.DataSource = objEmpleado1.ListarCargo();
-            comboEmpleadoCargo.DisplayMember = "Nombre";
-            comboEmpleadoCargo.ValueMember = "Clave";
+            comboCargo.DataSource = objEmpleado1.ListarCargo();
+            comboCargo.DisplayMember = "Nombre";
+            comboCargo.ValueMember = "Clave";
         }
 
         private void buttonEmpleadoGuardar_Click(object sender, EventArgs e)
         {
-            if (textEmpleadoTelefono.Text=="" || comboEmpleadoSexo.Text=="" || comboEmpleadoCargo.Text=="" || textEmpleadoNPersonal.Text=="" || textEmpleadoNombre.Text=="" || textEmpleadoApellidosP.Text=="" || textEmpleadoApellidoM.Text=="" )
+            if (textEmpleadoTelefono.Text=="" || comboEmpleadoSexo.Text=="" || comboCargo.Text=="" || textEmpleadoNPersonal.Text=="" || textEmpleadoNombre.Text=="" || textEmpleadoApellidosP.Text=="" || textEmpleadoApellidoM.Text=="" )
             {
                 MessageBox.Show("Llenar los campos obligatorios");
 
@@ -233,7 +233,7 @@ namespace Inicio
                         textEmpleadoTelefono.Text,
                         comboEmpleadoSexo.Text,
                         textEmpleadoDireccion.Text,
-                        comboEmpleadoCargo.SelectedValue.ToString(),
+                        comboCargo.SelectedValue.ToString(),
                         textEmpleadoEmail.Text,
                         textEmpleadoHuella.Text
                         );
@@ -253,7 +253,7 @@ namespace Inicio
                 textEmpleadoEmail.Clear();
                 textEmpleadoNPersonal.Clear();
                 textEmpleadoTelefono.Clear();
-                comboEmpleadoCargo.Text = string.Empty;
+                comboCargo.Text = string.Empty;
                 comboEmpleadoSexo.Text = string.Empty;
                 }
 
@@ -297,10 +297,7 @@ namespace Inicio
          //   e.Handled = true;
         }
 
-        private void comboEmpleadoCargo_MouseClick(object sender, MouseEventArgs e)
-        {
-            ListarCargo();
-        }
+        
 
         private void buttonEmpleadoCancelar_Click(object sender, EventArgs e)
         {
@@ -311,10 +308,15 @@ namespace Inicio
             textEmpleadoEmail.Clear();
             textEmpleadoNPersonal.Clear();
             textEmpleadoTelefono.Clear();
-            comboEmpleadoCargo.Text = string.Empty;
+            comboCargo.Text = string.Empty;
             comboEmpleadoSexo.Text = string.Empty;
             
        
+        }
+
+        private void comboCargo_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            ListarCargo();
         }
     }
 }
