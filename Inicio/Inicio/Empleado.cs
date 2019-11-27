@@ -9,17 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using System.Data.SqlClient;
-using GriauleFingerprintLibrary;
-using GriauleFingerprintLibrary.Exceptions;
-using GriauleFingerprintLibrary.DataTypes;
 using System.IO;
+using DPFP;
 
 namespace Inicio
 {
     public partial class Empleado : Form
     {
        CDEmpleado objEmpleado = new CDEmpleado();
-
+        private DPFP.Template Template;
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
             "Initial Catalog=Sicee;Data Source=localhost";
       private BindingSource bindingSource1 = new BindingSource();
@@ -32,11 +30,36 @@ namespace Inicio
             comboEmpleadoSexo.Items.Add("Femenino");
             comboEmpleadoSexo.Items.Add("Masculino");
 
+
+
         //    Core = new FingerprintCore();
         //    templateHuella = new FingerprintTemplate();
         //    Core.onStatus += new StatusEventHandler(core_onStatus);
         //    Core.onImage += new ImageEventHandler(core_onImage);
         }
+        private void OnTemplate(DPFP.Template template)
+        {
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+
+                //btnAgregar.Enabled = (Template != null);
+
+                if (Template != null)
+                {
+                    //Console.WriteLine("Huella: " + Templ);
+                    //MessageBox.Show("La huella está lista para ser verificada");
+                    //Registra_Huella();
+                    //txtHuella.Text = "Huella capturada correctamente";
+
+                }
+                else
+                {
+                    MessageBox.Show("Huella no válida, inténtelo de nuevo");
+                }
+            }));
+        }
+        
 
         //FingerprintRawImage imagenHuella;
         //FingerprintCore Core;
@@ -152,7 +175,7 @@ namespace Inicio
         //    }
         //}
 
-        
+
         //private delegate void delSetImage(Image img);
         //void Huella(Image img)
         //{
@@ -317,6 +340,14 @@ namespace Inicio
         private void comboCargo_MouseCaptureChanged(object sender, EventArgs e)
         {
             ListarCargo();
+        }
+
+        private void buttonEmpleadoHuella_Click(object sender, EventArgs e)
+        {
+            CapturarHuella capturaH = new CapturarHuella();
+            capturaH.OnTemplate += this.OnTemplate;
+            capturaH.TopMost = true;
+            capturaH.ShowDialog();
         }
     }
 }

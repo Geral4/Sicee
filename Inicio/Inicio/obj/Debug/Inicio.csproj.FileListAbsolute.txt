@@ -862,3 +862,9 @@ C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\bin\Debug\es\Microsoft.VisualStu
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.exe.config
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\RdlCompile.cache
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\RdlCompile.compiled
+D:\Documents\SiceeGIT\Inicio\Inicio\bin\Debug\DPFPDevNET.dll
+D:\Documents\SiceeGIT\Inicio\Inicio\bin\Debug\DPFPEngNET.dll
+D:\Documents\SiceeGIT\Inicio\Inicio\bin\Debug\DPFPShrNET.dll
+D:\Documents\SiceeGIT\Inicio\Inicio\bin\Debug\DPFPVerNET.dll
+D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.CapturarHuella.resources
+D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.CaptureForm.resources

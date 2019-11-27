@@ -32,9 +32,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GriauleFingerprintLibrary, Version=1.0.2.0, Culture=neutral, PublicKeyToken=0cd8a94f71f97144, processorArchitecture=x86">
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\GriauleFingerprintLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\Archivos de programa D\DigitalPersona\One Touch SDK\.NET\Bin\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Archivos de programa D\DigitalPersona\One Touch SDK\.NET\Bin\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Archivos de programa D\DigitalPersona\One Touch SDK\.NET\Bin\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Archivos de programa D\DigitalPersona\One Touch SDK\.NET\Bin\DPFPVerNET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -111,6 +123,18 @@
     </Compile>
     <Compile Include="Bitacora.Designer.cs">
       <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapturarHuella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarHuella.designer.cs">
+      <DependentUpon>CapturarHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaptureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaptureForm.designer.cs">
+      <DependentUpon>CaptureForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Cargo.cs">
       <SubType>Form</SubType>
@@ -348,6 +372,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturarHuella.resx">
+      <DependentUpon>CapturarHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaptureForm.resx">
+      <DependentUpon>CaptureForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cargo.resx">
       <DependentUpon>Cargo.cs</DependentUpon>
