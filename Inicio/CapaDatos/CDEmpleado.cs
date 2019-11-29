@@ -29,8 +29,8 @@ namespace CapaDatos
             return Tabla;
         }
 
-        public void insertarEmpleado(string nPersonal, string nombre,string apellidoP,
-        string apellidoM, string telefono, string sexo, string direccion, string cargo_id, string email,string huellas)
+        public void insertarEmpleado(string nPersonal, string nombre, string apellidoP,
+        string apellidoM, string telefono, string sexo, string direccion, string cargo_id, string email, byte[] huellas= null, int manual = 0)
         {
             Coman.Connection = Conexion.AbrirConexion();
             Coman.CommandText = "InsertarEmpleado";
@@ -44,10 +44,13 @@ namespace CapaDatos
             Coman.Parameters.AddWithValue("@direccion", direccion);
             Coman.Parameters.AddWithValue("@cargoid", cargo_id);
             Coman.Parameters.AddWithValue("@email", email);
+            SqlParameter[] param = { new SqlParameter("@huella", SqlDbType.VarBinary) };
+            param[0].Value = huellas;
             Coman.Parameters.AddWithValue("@huellas", huellas);
+            Coman.Parameters.AddWithValue("@manual", manual);
             Coman.ExecuteNonQuery();
-            Coman.Parameters.Clear(); 
-        }               
+            Coman.Parameters.Clear();
+        }
 
         public DataTable MostrarEmpleado()
         {

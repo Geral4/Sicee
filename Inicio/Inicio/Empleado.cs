@@ -24,13 +24,14 @@ namespace Inicio
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private string filtrado = "", cad = "";
         private consultasSQL con = new consultasSQL();
+        private byte[] huella_correcta = null;
 
         public Empleado()
         {
             InitializeComponent();
             comboEmpleadoSexo.Items.Add("Femenino");
             comboEmpleadoSexo.Items.Add("Masculino");
-            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "177.246.240.133,2008");
+            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.15");
 
 
 
@@ -49,9 +50,9 @@ namespace Inicio
 
                 if (Template != null)
                 {
-                    //Console.WriteLine("Huella: " + Templ);
-                    //MessageBox.Show("La huella está lista para ser verificada");
-                    Registra_Huella();
+                    //Console.WriteLine("Huella: " + Templ);                  
+                    setHuella(Template.Bytes);
+                    MessageBox.Show("La huella está lista para ser verificada", "Registro de Huella Digital");
                     //txtHuella.Text = "Huella capturada correctamente";
 
                 }
@@ -260,26 +261,28 @@ namespace Inicio
                         textEmpleadoDireccion.Text,
                         comboCargo.SelectedValue.ToString(),
                         textEmpleadoEmail.Text,
-                        textEmpleadoHuella.Text
+                        getHuella()
                         );
 
                     MessageBox.Show("Insertado Correctamente");
+                    textEmpleadoNombre.Clear();
+                    textEmpleadoApellidosP.Clear();
+                    textEmpleadoApellidoM.Clear();
+                    textEmpleadoDireccion.Clear();
+                    textEmpleadoEmail.Clear();
+                    textEmpleadoNPersonal.Clear();
+                    textEmpleadoTelefono.Clear();
+                    comboCargo.Text = string.Empty;
+                    comboEmpleadoSexo.Text = string.Empty;
                     MostrarEmpleado();
+                    Template = null;
+
                 }
 
                 catch (Exception ex)
                 {
                     MessageBox.Show("No se puede repetir la misma Clave ");
-                }
-                textEmpleadoNombre.Clear();
-                textEmpleadoApellidosP.Clear();
-                textEmpleadoApellidoM.Clear();
-                textEmpleadoDireccion.Clear();
-                textEmpleadoEmail.Clear();
-                textEmpleadoNPersonal.Clear();
-                textEmpleadoTelefono.Clear();
-                comboCargo.Text = string.Empty;
-                comboEmpleadoSexo.Text = string.Empty;
+                }                
                 }
 
         }
@@ -357,18 +360,14 @@ namespace Inicio
             con.cerrar();
         }
 
-        private void Registra_Huella()
+        private void setHuella(byte[] huella)
         {
-            byte[] huella_correcta = Template.Bytes;
-            string huella_lista = BitConverter.ToString(huella_correcta);
+            huella_correcta = huella;
+        }
 
-
-            con.GuardaHuella(huella_correcta, textEmpleadoNPersonal.Text);
-
-            Template = null;
-
-            MessageBox.Show("Proceso terminado, cierre la ventana activa para continuar con otro registro", "Registro de Huella Digital");
-            
+        private byte[] getHuella()
+        {
+            return huella_correcta;
         }
     }
 }

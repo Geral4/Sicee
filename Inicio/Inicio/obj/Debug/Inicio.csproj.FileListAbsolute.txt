@@ -868,3 +868,5 @@ D:\Documents\SiceeGIT\Inicio\Inicio\bin\Debug\DPFPShrNET.dll
 D:\Documents\SiceeGIT\Inicio\Inicio\bin\Debug\DPFPVerNET.dll
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.CapturarHuella.resources
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.CaptureForm.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.CapturarHuella.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.CaptureForm.resources

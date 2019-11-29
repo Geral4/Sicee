@@ -195,7 +195,7 @@ class consultasSQL
     {
         try
         {
-            comando = new SqlCommand("UPDATE cat_nomina_trabajadores set huella = @huella, huella_foto = @huella where clave_empleado = '" + emp + "'", conexion);
+            comando = new SqlCommand("UPDATE Empleado set huellas = @huella where NPersonal = '" + emp + "'", conexion);
 
             comando.Parameters.AddWithValue("@huella", huella);
 

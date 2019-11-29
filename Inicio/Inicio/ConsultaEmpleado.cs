@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
+using DPFP;
 
 namespace Inicio
 {
@@ -22,6 +23,8 @@ namespace Inicio
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private DataTable table = new DataTable("Cargos");
         private string filtrado = "", sql = "";
+        private DPFP.Template Template;
+        private consultasSQL con = new consultasSQL();
 
         //PruebaSet dataSet = new PruebaSet();
         // CNEmpleado objEmple2=new CNEmpleado();
@@ -30,8 +33,30 @@ namespace Inicio
             InitializeComponent();
             dataGridCEmpleado.AllowUserToAddRows = true;
             dataGridCEmpleado.AllowUserToDeleteRows = true;
+            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.15");
             //dataGridCEmpleado.Dock = DockStyle.Fill;
 
+        }
+
+        private void OnTemplate(DPFP.Template template)
+        {
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+
+                //btnAgregar.Enabled = (Template != null);
+
+                if (Template != null)
+                {
+
+                    Registra_Huella();
+
+                }
+                else
+                {
+                    MessageBox.Show("Huella no válida, inténtelo de nuevo");
+                }
+            }));
         }
 
         private void ConsultaEmpleado_Load(object sender, EventArgs e)
@@ -43,7 +68,7 @@ namespace Inicio
                 Cargo.DisplayMember = "Nombre";
                 Cargo.ValueMember = "Clave";
                 dataGridCEmpleado.DataSource = bindingSource1;
-                GetData("select * from Empleado");
+                GetData("select NPersonal, Nombre, ApellidoP, ApellidoM, Telefono, Sexo, Direccion, Cargo_id, Email from Empleado");
 
             }
             catch (Exception ex)
@@ -127,14 +152,17 @@ namespace Inicio
         {
             filtrado = textCEmpleadoBuscar.Text;
             dataGridCEmpleado.DataSource = bindingSource1;
-            GetData("select * from Empleado where NPersonal like '" + filtrado + "%' or Nombre like '" +
+            GetData("select NPersonal, Nombre, ApellidoP, ApellidoM, Telefono, Sexo, Direccion, Cargo_id, Email from Empleado where NPersonal like '" + filtrado + "%' or Nombre like '" +
                  filtrado + "%' or ApellidoP like '" + filtrado + "%' or ApellidoM like '" + filtrado + "%';");
 
         }
 
         private void dataGridCEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            CapturarHuella capturaH = new CapturarHuella();
+            capturaH.OnTemplate += this.OnTemplate;
+            capturaH.TopMost = true;
+            capturaH.ShowDialog();
         }
 
         private void buttonCEmpleadoEliminar_Click(object sender, EventArgs e)
@@ -156,7 +184,29 @@ namespace Inicio
         }
 
 
+        private void Button_editarHuella(Object sender, System.EventArgs e)
+        {
+            
+        }
 
+        private void ConsultaEmpleado_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.cerrar();
+        }
+
+        private void Registra_Huella()
+        {
+            byte[] huella_correcta = Template.Bytes;
+            string huella_lista = BitConverter.ToString(huella_correcta);
+
+
+            //con.GuardaHuella(huella_correcta, dataGridCEmpleado  .Text);
+
+            Template = null;
+
+            MessageBox.Show("Proceso terminado, cierre la ventana activa para continuar con otro registro", "Registro de Huella Digital");
+
+        }
 
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCEmpleadoVertical2 = new System.Windows.Forms.Panel();
             this.textCEmpleadoBuscar = new System.Windows.Forms.TextBox();
             this.labelReporteLBuscar = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.buttonCEmpleadoEditar = new System.Windows.Forms.Button();
             this.dataGridCEmpleado = new System.Windows.Forms.DataGridView();
             this.labelCEmpleadoLista = new System.Windows.Forms.Label();
+            this.editarHuella = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelCEmpleadoVertical2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCEmpleado)).BeginInit();
@@ -112,6 +114,7 @@
             this.dataGridCEmpleado.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.editarHuella,
             this.Cargo});
             this.dataGridCEmpleado.Location = new System.Drawing.Point(10, 72);
             this.dataGridCEmpleado.Name = "dataGridCEmpleado";
@@ -130,6 +133,18 @@
             this.labelCEmpleadoLista.TabIndex = 0;
             this.labelCEmpleadoLista.Text = "Lista de empleados";
             // 
+            // editarHuella
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.editarHuella.DefaultCellStyle = dataGridViewCellStyle2;
+            this.editarHuella.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.editarHuella.HeaderText = "";
+            this.editarHuella.Name = "editarHuella";
+            this.editarHuella.Text = "Editar Huella";
+            this.editarHuella.UseColumnTextForButtonValue = true;
+            // 
             // Cargo
             // 
             this.Cargo.DataPropertyName = "Cargo_id";
@@ -147,6 +162,7 @@
             this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaEmpleado";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultaEmpleado_FormClosing);
             this.Load += new System.EventHandler(this.ConsultaEmpleado_Load);
             this.panelCEmpleadoVertical2.ResumeLayout(false);
             this.panelCEmpleadoVertical2.PerformLayout();
@@ -164,6 +180,7 @@
         private System.Windows.Forms.Label labelCEmpleadoLista;
         private System.Windows.Forms.Label labelReporteLBuscar;
         private System.Windows.Forms.TextBox textCEmpleadoBuscar;
+        private System.Windows.Forms.DataGridViewButtonColumn editarHuella;
         private System.Windows.Forms.DataGridViewComboBoxColumn Cargo;
     }
 }
