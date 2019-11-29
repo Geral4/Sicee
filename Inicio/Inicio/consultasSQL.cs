@@ -191,6 +191,28 @@ class consultasSQL
 
     }
 
+    public int GuardaHuella(byte[] huella, string emp)
+    {
+        try
+        {
+            comando = new SqlCommand("UPDATE cat_nomina_trabajadores set huella = @huella, huella_foto = @huella where clave_empleado = '" + emp + "'", conexion);
+
+            comando.Parameters.AddWithValue("@huella", huella);
+
+            SqlParameter[] param = { new SqlParameter("@huella", SqlDbType.VarBinary) };
+            param[0].Value = huella;
+
+            comando.ExecuteNonQuery();
+
+        }
+        catch (Exception consulta)
+        {
+            resultado = 0;
+            //MessageBox.Show(consulta.ToString(), "Error al realizar la inserción, actualización o eliminación");
+        }
+        return resultado;
+    }
+
     public SqlCommand cargarProcedure (string procedimiento)
     {
         try

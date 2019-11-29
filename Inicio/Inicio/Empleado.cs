@@ -20,15 +20,17 @@ namespace Inicio
         private DPFP.Template Template;
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
             "Initial Catalog=Sicee;Data Source=localhost";
-      private BindingSource bindingSource1 = new BindingSource();
+        private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        private string filtrado = "";
+        private string filtrado = "", cad = "";
+        private consultasSQL con = new consultasSQL();
 
         public Empleado()
         {
             InitializeComponent();
             comboEmpleadoSexo.Items.Add("Femenino");
             comboEmpleadoSexo.Items.Add("Masculino");
+            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "177.246.240.133,2008");
 
 
 
@@ -49,7 +51,7 @@ namespace Inicio
                 {
                     //Console.WriteLine("Huella: " + Templ);
                     //MessageBox.Show("La huella está lista para ser verificada");
-                    //Registra_Huella();
+                    Registra_Huella();
                     //txtHuella.Text = "Huella capturada correctamente";
 
                 }
@@ -348,6 +350,25 @@ namespace Inicio
             capturaH.OnTemplate += this.OnTemplate;
             capturaH.TopMost = true;
             capturaH.ShowDialog();
+        }
+
+        private void Empleado_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.cerrar();
+        }
+
+        private void Registra_Huella()
+        {
+            byte[] huella_correcta = Template.Bytes;
+            string huella_lista = BitConverter.ToString(huella_correcta);
+
+
+            con.GuardaHuella(huella_correcta, textEmpleadoNPersonal.Text);
+
+            Template = null;
+
+            MessageBox.Show("Proceso terminado, cierre la ventana activa para continuar con otro registro", "Registro de Huella Digital");
+            
         }
     }
 }

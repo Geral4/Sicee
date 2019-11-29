@@ -72,7 +72,7 @@
             this.panelEmpleadoVertical.Controls.Add(this.dataGridEmpleado);
             this.panelEmpleadoVertical.Controls.Add(this.labelEmpleadoLista);
             this.panelEmpleadoVertical.Location = new System.Drawing.Point(0, 0);
-            this.panelEmpleadoVertical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEmpleadoVertical.Margin = new System.Windows.Forms.Padding(4);
             this.panelEmpleadoVertical.Name = "panelEmpleadoVertical";
             this.panelEmpleadoVertical.Size = new System.Drawing.Size(767, 540);
             this.panelEmpleadoVertical.TabIndex = 1;
@@ -92,7 +92,7 @@
             // textEmpleadoBuscar
             // 
             this.textEmpleadoBuscar.Location = new System.Drawing.Point(423, 50);
-            this.textEmpleadoBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoBuscar.Name = "textEmpleadoBuscar";
             this.textEmpleadoBuscar.Size = new System.Drawing.Size(229, 22);
             this.textEmpleadoBuscar.TabIndex = 23;
@@ -116,7 +116,7 @@
             this.dataGridEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(72)))));
             this.dataGridEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEmpleado.Location = new System.Drawing.Point(12, 90);
-            this.dataGridEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridEmpleado.Name = "dataGridEmpleado";
             this.dataGridEmpleado.Size = new System.Drawing.Size(744, 406);
             this.dataGridEmpleado.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.panelEmpleadoVertical2.Controls.Add(this.labelEmpleadoNombre);
             this.panelEmpleadoVertical2.Controls.Add(this.labeEmpleadoRegistro);
             this.panelEmpleadoVertical2.Location = new System.Drawing.Point(764, 0);
-            this.panelEmpleadoVertical2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEmpleadoVertical2.Margin = new System.Windows.Forms.Padding(4);
             this.panelEmpleadoVertical2.Name = "panelEmpleadoVertical2";
             this.panelEmpleadoVertical2.Size = new System.Drawing.Size(444, 540);
             this.panelEmpleadoVertical2.TabIndex = 2;
@@ -168,7 +168,7 @@
             // textEmpleadoHuella
             // 
             this.textEmpleadoHuella.Location = new System.Drawing.Point(319, 411);
-            this.textEmpleadoHuella.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoHuella.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoHuella.Name = "textEmpleadoHuella";
             this.textEmpleadoHuella.Size = new System.Drawing.Size(15, 22);
             this.textEmpleadoHuella.TabIndex = 26;
@@ -182,7 +182,7 @@
             this.buttonEmpleadoHuella.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmpleadoHuella.ForeColor = System.Drawing.Color.White;
             this.buttonEmpleadoHuella.Location = new System.Drawing.Point(151, 406);
-            this.buttonEmpleadoHuella.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEmpleadoHuella.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEmpleadoHuella.Name = "buttonEmpleadoHuella";
             this.buttonEmpleadoHuella.Size = new System.Drawing.Size(167, 34);
             this.buttonEmpleadoHuella.TabIndex = 30;
@@ -197,7 +197,7 @@
             this.buttonEmpleadoCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmpleadoCancelar.ForeColor = System.Drawing.Color.White;
             this.buttonEmpleadoCancelar.Location = new System.Drawing.Point(247, 476);
-            this.buttonEmpleadoCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEmpleadoCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEmpleadoCancelar.Name = "buttonEmpleadoCancelar";
             this.buttonEmpleadoCancelar.Size = new System.Drawing.Size(135, 42);
             this.buttonEmpleadoCancelar.TabIndex = 22;
@@ -212,7 +212,7 @@
             this.buttonEmpleadoGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmpleadoGuardar.ForeColor = System.Drawing.Color.White;
             this.buttonEmpleadoGuardar.Location = new System.Drawing.Point(63, 476);
-            this.buttonEmpleadoGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEmpleadoGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEmpleadoGuardar.Name = "buttonEmpleadoGuardar";
             this.buttonEmpleadoGuardar.Size = new System.Drawing.Size(131, 42);
             this.buttonEmpleadoGuardar.TabIndex = 21;
@@ -224,7 +224,7 @@
             // 
             this.comboEmpleadoSexo.FormattingEnabled = true;
             this.comboEmpleadoSexo.Location = new System.Drawing.Point(127, 251);
-            this.comboEmpleadoSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboEmpleadoSexo.Margin = new System.Windows.Forms.Padding(4);
             this.comboEmpleadoSexo.Name = "comboEmpleadoSexo";
             this.comboEmpleadoSexo.Size = new System.Drawing.Size(291, 24);
             this.comboEmpleadoSexo.TabIndex = 29;
@@ -246,7 +246,7 @@
             // 
             this.comboCargo.FormattingEnabled = true;
             this.comboCargo.Location = new System.Drawing.Point(127, 319);
-            this.comboCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboCargo.Margin = new System.Windows.Forms.Padding(4);
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(291, 24);
             this.comboCargo.TabIndex = 27;
@@ -255,7 +255,7 @@
             // textEmpleadoApellidoM
             // 
             this.textEmpleadoApellidoM.Location = new System.Drawing.Point(193, 183);
-            this.textEmpleadoApellidoM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoApellidoM.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoApellidoM.Name = "textEmpleadoApellidoM";
             this.textEmpleadoApellidoM.Size = new System.Drawing.Size(224, 22);
             this.textEmpleadoApellidoM.TabIndex = 26;
@@ -276,7 +276,7 @@
             // textEmpleadoApellidosP
             // 
             this.textEmpleadoApellidosP.Location = new System.Drawing.Point(193, 144);
-            this.textEmpleadoApellidosP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoApellidosP.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoApellidosP.Name = "textEmpleadoApellidosP";
             this.textEmpleadoApellidosP.Size = new System.Drawing.Size(224, 22);
             this.textEmpleadoApellidosP.TabIndex = 24;
@@ -309,7 +309,7 @@
             // textEmpleadoNPersonal
             // 
             this.textEmpleadoNPersonal.Location = new System.Drawing.Point(151, 75);
-            this.textEmpleadoNPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoNPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoNPersonal.Name = "textEmpleadoNPersonal";
             this.textEmpleadoNPersonal.Size = new System.Drawing.Size(267, 22);
             this.textEmpleadoNPersonal.TabIndex = 6;
@@ -317,7 +317,7 @@
             // textEmpleadoEmail
             // 
             this.textEmpleadoEmail.Location = new System.Drawing.Point(127, 354);
-            this.textEmpleadoEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoEmail.Name = "textEmpleadoEmail";
             this.textEmpleadoEmail.Size = new System.Drawing.Size(291, 22);
             this.textEmpleadoEmail.TabIndex = 17;
@@ -325,7 +325,7 @@
             // textEmpleadoDireccion
             // 
             this.textEmpleadoDireccion.Location = new System.Drawing.Point(127, 286);
-            this.textEmpleadoDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoDireccion.Name = "textEmpleadoDireccion";
             this.textEmpleadoDireccion.Size = new System.Drawing.Size(291, 22);
             this.textEmpleadoDireccion.TabIndex = 16;
@@ -369,7 +369,7 @@
             // textEmpleadoTelefono
             // 
             this.textEmpleadoTelefono.Location = new System.Drawing.Point(108, 219);
-            this.textEmpleadoTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoTelefono.Name = "textEmpleadoTelefono";
             this.textEmpleadoTelefono.Size = new System.Drawing.Size(309, 22);
             this.textEmpleadoTelefono.TabIndex = 8;
@@ -390,7 +390,7 @@
             // textEmpleadoNombre
             // 
             this.textEmpleadoNombre.Location = new System.Drawing.Point(108, 108);
-            this.textEmpleadoNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEmpleadoNombre.Margin = new System.Windows.Forms.Padding(4);
             this.textEmpleadoNombre.Name = "textEmpleadoNombre";
             this.textEmpleadoNombre.Size = new System.Drawing.Size(309, 22);
             this.textEmpleadoNombre.TabIndex = 2;
@@ -427,11 +427,12 @@
             this.ClientSize = new System.Drawing.Size(1193, 537);
             this.Controls.Add(this.panelEmpleadoVertical2);
             this.Controls.Add(this.panelEmpleadoVertical);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Empleado";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Empleado_FormClosing);
             this.Load += new System.EventHandler(this.Empleado_Load);
             this.panelEmpleadoVertical.ResumeLayout(false);
             this.panelEmpleadoVertical.PerformLayout();
