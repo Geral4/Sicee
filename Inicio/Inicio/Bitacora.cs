@@ -58,6 +58,12 @@ namespace Inicio
             Actualiza_cambios_bitacora();
         }
 
+        private void btnChecador_Click(object sender, EventArgs e)
+        {
+            F_verificar verifica = new F_verificar();
+            verifica.ShowDialog();
+        }
+
         private void filtro_fecha_ValueChanged(object sender, EventArgs e)
         {
             filter_date = new DateTime(filtro_fecha.Value.Year, filtro_fecha.Value.Month, filtro_fecha.Value.Day);

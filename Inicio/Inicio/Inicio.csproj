@@ -251,6 +251,12 @@
     <Compile Include="Empleado.Designer.cs">
       <DependentUpon>Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_verificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_verificar.designer.cs">
+      <DependentUpon>F_verificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Horario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -435,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_verificar.resx">
+      <DependentUpon>F_verificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>

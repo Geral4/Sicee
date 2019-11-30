@@ -41,10 +41,11 @@
             this.labelBitacoraBuscar = new System.Windows.Forms.Label();
             this.panelBitacoraVertical2 = new System.Windows.Forms.Panel();
             this.dataGridBHorario = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonBitacoraGuardar = new System.Windows.Forms.Button();
             this.buttonBitacoraEditar = new System.Windows.Forms.Button();
             this.timerBitacora = new System.Windows.Forms.Timer(this.components);
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnChecador = new System.Windows.Forms.Button();
             this.panelBitacoraVertical.SuspendLayout();
             this.panelBitacoraVertical2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBHorario)).BeginInit();
@@ -82,6 +83,7 @@
             // panelBitacoraVertical
             // 
             this.panelBitacoraVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelBitacoraVertical.Controls.Add(this.btnChecador);
             this.panelBitacoraVertical.Controls.Add(this.label1);
             this.panelBitacoraVertical.Controls.Add(this.filtro_fecha);
             this.panelBitacoraVertical.Controls.Add(this.labelFBitacora);
@@ -188,6 +190,13 @@
             this.dataGridBHorario.Size = new System.Drawing.Size(1351, 449);
             this.dataGridBHorario.TabIndex = 24;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
             // buttonBitacoraGuardar
             // 
             this.buttonBitacoraGuardar.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -232,12 +241,15 @@
             this.timerBitacora.Enabled = true;
             this.timerBitacora.Tick += new System.EventHandler(this.timerBitacora_Tick);
             // 
-            // id
+            // btnChecador
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
+            this.btnChecador.Location = new System.Drawing.Point(1163, 30);
+            this.btnChecador.Name = "btnChecador";
+            this.btnChecador.Size = new System.Drawing.Size(79, 23);
+            this.btnChecador.TabIndex = 37;
+            this.btnChecador.Text = "Checador";
+            this.btnChecador.UseVisualStyleBackColor = true;
+            this.btnChecador.Click += new System.EventHandler(this.btnChecador_Click);
             // 
             // Bitacora
             // 
@@ -282,5 +294,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker filtro_fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button btnChecador;
     }
 }

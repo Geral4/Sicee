@@ -16,6 +16,7 @@ class consultasSQL
     public OleDbConnection conA= null;
     OleDbDataReader lectorAccess = null;
     OleDbCommand comandoAccess = null;
+    private byte[] huella = null;
 
 
 
@@ -97,7 +98,7 @@ class consultasSQL
 
     }    
 
-    public void conectarRemoto(string database, string usuario, string contra, string server)
+    public int conectarRemoto(string database, string usuario, string contra, string server)
     {
         try
         {
@@ -109,12 +110,15 @@ class consultasSQL
             conexion = new SqlConnection(strCadConexion);
             conexion.Open();
             Console.WriteLine("SQLSERVER: Conexion establecida");
+            return 1;
 
         }
         catch (Exception sql)
         {
             MessageBox.Show(sql.ToString(), "Error de conexión");
+            return 0;
         }
+        
     }
 
     public SqlDataReader Consultar(string sentencia)
@@ -211,6 +215,22 @@ class consultasSQL
             //MessageBox.Show(consulta.ToString(), "Error al realizar la inserción, actualización o eliminación");
         }
         return resultado;
+    }
+
+    public byte[] Obtener_huella(string sentencia)
+    {
+        try
+        {            
+            comando = new SqlCommand(sentencia, conexion);
+            huella = comando.ExecuteScalar() as byte[];
+        }
+        catch (Exception consulta)
+        {
+            MessageBox.Show(consulta.Message.ToString(), "Error al iniciar la consulta");
+        }
+
+        return huella;
+
     }
 
     public SqlCommand cargarProcedure (string procedimiento)
