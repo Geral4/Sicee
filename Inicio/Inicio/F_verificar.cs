@@ -22,6 +22,7 @@ namespace Inicio
         private OleDbDataReader lector = null;
         private consultasSQL con = new consultasSQL();
         private string cadena = "", caja="", sucursal="",  empleado = "", cve_empleado = "";
+        Stream stream;
 
         public void Verify(DPFP.Template template)
         {
@@ -62,14 +63,15 @@ namespace Inicio
             {
 
                 base.Process(Sample);
-
+                byte[] h = null;
+                
                 DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Verification);
 
                 if (features != null)
                 {
                     DPFP.Verification.Verification.Result result = new DPFP.Verification.Verification.Result();
                     DPFP.Template template = new DPFP.Template();
-                    Stream stream;
+                    
 
 
                     cadena = "select NPersonal, concat(Nombre, ' ', ApellidoP, ' ', ApellidoM) as nombre from Empleado " +
@@ -83,40 +85,44 @@ namespace Inicio
                         cve_empleado = myReader.GetValue(0).ToString();
                         empleado = myReader.GetValue(1).ToString();
                         //byte[] huella = Convert.FromBase64String(myReader.GetValue(2).ToString());
-                        myReader.Close();
+                        //myReader.Close();
                         cadena = "select Huellas " +
-                            "from Empleado where NPersonal = '" + empleado + "'";
+                            "from Empleado where NPersonal = '" + cve_empleado + "'";
 
                         //string algo = myReader.GetValue(1).ToString();                    
+                        h = con.Obtener_huella(cadena);
 
-                        stream = new MemoryStream(con.Obtener_huella(cadena));
-                        template = new DPFP.Template(stream);
-                        //template.DeSerialize(huella);
-
-
-
-
-                        Verificador.Verify(features, template, ref result);
-
-                        UpdateStatus(result.FARAchieved);
-
-
-                        if (result.Verified)
+                        if (h!= null)
                         {
-                            MakeReport("Capturado: " + empleado.ToUpper());
-                            cadena = "exec sp_captura_asistencia '" + cve_empleado + "', " + sucursal + "";
-                            MessageBox.Show("Bienvenido: " + empleado.ToUpper());
-                            //myReader = con.Consultar(cadena);
+                            stream = new MemoryStream(con.Obtener_huella(cadena));
+                            template = new DPFP.Template(stream);
+                            //template.DeSerialize(huella);
 
-                            //if (myReader.Read())
-                            //{
 
-                            //}
 
-                            //myReader.Close();
-                            //con.InsertActElim(cadena);
-                            //MessageBox.Show("Bienvenido (a) " + empleado.ToUpper(), "Asistencia");                        
-                        }
+
+                            Verificador.Verify(features, template, ref result);
+
+                            UpdateStatus(result.FARAchieved);
+
+                            if (result.Verified)
+                            {
+                                MakeReport("Capturado: " + empleado.ToUpper());
+                                cadena = "exec sp_captura_asistencia '" + cve_empleado + "', " + sucursal + "";
+                                MessageBox.Show("Bienvenido: " + empleado.ToUpper());
+                                //myReader = con.Consultar(cadena);
+
+                                //if (myReader.Read())
+                                //{
+
+                                //}
+
+                                //myReader.Close();
+                                //con.InsertActElim(cadena);
+                                //MessageBox.Show("Bienvenido (a) " + empleado.ToUpper(), "Asistencia");                        
+                            }
+                        }            
+                        //myReader.NextResult();
                     }
                     myReader.Close();
                 }
@@ -124,6 +130,7 @@ namespace Inicio
             {
                 MessageBox.Show("No se le ha asignado la huella a este docente", "Asistencia");
                 Console.WriteLine("Excepción producida: " + ex);
+                myReader.Close();
             }
         }
 

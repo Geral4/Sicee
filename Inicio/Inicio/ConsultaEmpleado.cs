@@ -200,7 +200,7 @@ namespace Inicio
             string huella_lista = BitConverter.ToString(huella_correcta);
 
 
-            //con.GuardaHuella(huella_correcta, dataGridCEmpleado  .Text);
+            con.GuardaHuella(huella_correcta, dataGridCEmpleado.Rows[dataGridCEmpleado.CurrentRow.Index].Cells[1].Value.ToString());
 
             Template = null;
 

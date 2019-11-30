@@ -121,6 +121,29 @@ class consultasSQL
         
     }
 
+    public SqlConnection conectarRemotoA(string database, string usuario, string contra, string server)
+    {
+        try
+        {
+            string strCadConexion = "user id=" + usuario + ";" +
+                                "password=" + contra + ";server=" + server + ";" +
+                                "Trusted_Connection=false;" +
+                                "database=" + database + ";" +
+                                "connection timeout=15";
+            conexion = new SqlConnection(strCadConexion);
+            conexion.Open();
+            Console.WriteLine("SQLSERVER: Conexion establecida");
+            return conexion;
+
+        }
+        catch (Exception sql)
+        {
+            MessageBox.Show(sql.ToString(), "Error de conexión");
+            return null;
+        }
+
+    }
+
     public SqlDataReader Consultar(string sentencia)
     {
         try
@@ -220,9 +243,12 @@ class consultasSQL
     public byte[] Obtener_huella(string sentencia)
     {
         try
-        {            
-            comando = new SqlCommand(sentencia, conexion);
+        {
+            conexion = new SqlConnection();
+            conexion = conectarRemotoA("Sicee", "geralmiguel", "tecnologico01", "192.168.0.15");
+            SqlCommand comando = new SqlCommand(sentencia, conexion);
             huella = comando.ExecuteScalar() as byte[];
+            conexion.Close();
         }
         catch (Exception consulta)
         {

@@ -37,7 +37,7 @@ namespace Inicio
         {
             try
             {
-                sql = "select id, [N°], [Nombre Empleado], Aula, [Cantidad Alumnos], Carrera, Asignatura, [Clase/Practica], [Hora Inicio]," +
+                sql = "select [N°], [Nombre Empleado], Aula, [Cantidad Alumnos], Carrera, Asignatura, [Clase/Practica], [Hora Inicio]," +
                 " [Hora Fin], Observaciones, Firma from c_visor_bitacora " +
                 "where format(Fecha, 'yyyyMMdd') = format(getDate(), 'yyyyMMdd')";
                 dataGridBHorario.DataSource = v.llenarDataGrid(sql);
@@ -69,7 +69,7 @@ namespace Inicio
             filter_date = new DateTime(filtro_fecha.Value.Year, filtro_fecha.Value.Month, filtro_fecha.Value.Day);
             now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             fecha = filter_date.ToString("yyyyMMdd");
-            sql2 = "select id, [N°], [Nombre Empleado], Aula, [Cantidad Alumnos], Carrera, Asignatura, [Clase/Practica], [Hora Inicio]," +
+            sql2 = "select [N°], [Nombre Empleado], Aula, [Cantidad Alumnos], Carrera, Asignatura, [Clase/Practica], [Hora Inicio]," +
             " [Hora Fin], Observaciones, Firma from c_visor_bitacora where" +
             " (Aula like '%" + filtrado + "%' or nombre_aula like '%" + filtrado + "%') and Fecha between '"+ fecha +"' and '"+ fecha +" 23:59:59'";
             dataGridBHorario.DataSource = v.llenarDataGrid(sql2);
