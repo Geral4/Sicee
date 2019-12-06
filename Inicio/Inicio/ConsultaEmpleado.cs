@@ -33,7 +33,7 @@ namespace Inicio
             InitializeComponent();
             dataGridCEmpleado.AllowUserToAddRows = true;
             dataGridCEmpleado.AllowUserToDeleteRows = true;
-            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.15");
+            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.24");
             //dataGridCEmpleado.Dock = DockStyle.Fill;
 
         }

@@ -39,4 +39,3 @@ C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Inicio\CapaDatos\obj\Debug\
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Inicio\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Inicio\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\cbsistemas2\Documents\Grabaciones de sonido\Inicio\CapaDatos\obj\Debug\CapaDatos.pdb
-D:\Documents\SiceeGIT\Inicio\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache

@@ -31,7 +31,7 @@ namespace Inicio
             InitializeComponent();
             comboEmpleadoSexo.Items.Add("Femenino");
             comboEmpleadoSexo.Items.Add("Masculino");
-            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.15");
+            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.24");
 
 
 

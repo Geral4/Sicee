@@ -33,6 +33,7 @@
             this.labelBitacoraBitacora = new System.Windows.Forms.Label();
             this.panelBitacoraHorizontal = new System.Windows.Forms.Panel();
             this.panelBitacoraVertical = new System.Windows.Forms.Panel();
+            this.btnChecador = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.filtro_fecha = new System.Windows.Forms.DateTimePicker();
             this.labelFBitacora = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.buttonBitacoraGuardar = new System.Windows.Forms.Button();
             this.buttonBitacoraEditar = new System.Windows.Forms.Button();
             this.timerBitacora = new System.Windows.Forms.Timer(this.components);
-            this.btnChecador = new System.Windows.Forms.Button();
             this.panelBitacoraVertical.SuspendLayout();
             this.panelBitacoraVertical2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBHorario)).BeginInit();
@@ -95,6 +95,16 @@
             this.panelBitacoraVertical.Name = "panelBitacoraVertical";
             this.panelBitacoraVertical.Size = new System.Drawing.Size(1380, 144);
             this.panelBitacoraVertical.TabIndex = 5;
+            // 
+            // btnChecador
+            // 
+            this.btnChecador.Location = new System.Drawing.Point(1163, 30);
+            this.btnChecador.Name = "btnChecador";
+            this.btnChecador.Size = new System.Drawing.Size(88, 23);
+            this.btnChecador.TabIndex = 37;
+            this.btnChecador.Text = "Checador";
+            this.btnChecador.UseVisualStyleBackColor = true;
+            this.btnChecador.Click += new System.EventHandler(this.btnChecador_Click);
             // 
             // label1
             // 
@@ -240,16 +250,6 @@
             // 
             this.timerBitacora.Enabled = true;
             this.timerBitacora.Tick += new System.EventHandler(this.timerBitacora_Tick);
-            // 
-            // btnChecador
-            // 
-            this.btnChecador.Location = new System.Drawing.Point(1163, 30);
-            this.btnChecador.Name = "btnChecador";
-            this.btnChecador.Size = new System.Drawing.Size(79, 23);
-            this.btnChecador.TabIndex = 37;
-            this.btnChecador.Text = "Checador";
-            this.btnChecador.UseVisualStyleBackColor = true;
-            this.btnChecador.Click += new System.EventHandler(this.btnChecador_Click);
             // 
             // Bitacora
             // 

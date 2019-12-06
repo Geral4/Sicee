@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CDConexion
     {
-        static private string CadenaConexion = "Data Source=.;Initial Catalog=Sicee;Integrated Security=True";
+        static private string CadenaConexion = "user id=geralmiguel;password=tecnologico01;server=177.246.240.133, 2008;Trusted_Connection=false;database=Sicee;connection timeout=15";
         private SqlConnection Conexion = new SqlConnection(CadenaConexion);
 
         public SqlConnection AbrirConexion()

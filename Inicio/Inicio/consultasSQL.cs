@@ -245,7 +245,7 @@ class consultasSQL
         try
         {
             conexion = new SqlConnection();
-            conexion = conectarRemotoA("Sicee", "geralmiguel", "tecnologico01", "192.168.0.15");
+            conexion = conectarRemotoA("Sicee", "geralmiguel", "tecnologico01", "192.168.0.24");
             SqlCommand comando = new SqlCommand(sentencia, conexion);
             huella = comando.ExecuteScalar() as byte[];
             conexion.Close();
