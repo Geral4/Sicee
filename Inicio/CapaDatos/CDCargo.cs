@@ -15,7 +15,7 @@ namespace CapaDatos
         private CDConexion Conexion = new CDConexion();
         private SqlCommand Coman = new SqlCommand();
         private SqlDataReader LeerFilas;
-        
+
 
 
 
@@ -32,6 +32,18 @@ namespace CapaDatos
             Coman.ExecuteNonQuery();
             Coman.Parameters.Clear();
         }
+
+
+        public void editarCargo(string clave, string nombre, string descripcion, string departamento)
+            {
+            Coman.Connection = Conexion.AbrirConexion();
+            Coman.CommandText = "update Cargo set Clave='"+clave+"',Nombre='"+nombre+"',Descripcion='"+descripcion+"',Departamento='"+departamento+"'";
+            Coman.CommandType = CommandType.Text;
+            Coman.ExecuteNonQuery();
+            Conexion.CerrarConexion();
+
+        }
+
 
         public DataTable MostrarCargo()
         {

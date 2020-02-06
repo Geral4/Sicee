@@ -21,97 +21,75 @@ namespace Inicio
            "Initial Catalog=Sicee;Data Source=localhost";
         private BindingSource bindingSource1 = new BindingSource();
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        private DataTable table = new DataTable("Cargos");
         private string filtrado = "", sql = "";
-        private DPFP.Template Template;
+        //private DPFP.Template Template;
         private consultasSQL con = new consultasSQL();
 
         //PruebaSet dataSet = new PruebaSet();
-        // CNEmpleado objEmple2=new CNEmpleado();
+       
         public ConsultaEmpleado()
         {
             InitializeComponent();
             dataGridCEmpleado.AllowUserToAddRows = true;
             dataGridCEmpleado.AllowUserToDeleteRows = true;
-            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.24");
+            con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "localhost");
             //dataGridCEmpleado.Dock = DockStyle.Fill;
 
         }
 
-        private void OnTemplate(DPFP.Template template)
+        //private void OnTemplate(DPFP.Template template)
+        //{
+        //    this.Invoke(new Function(delegate ()
+        //    {
+        //        Template = template;
+
+        //        //btnAgregar.Enabled = (Template != null);
+
+        //        if (Template != null)
+        //        {
+
+        //            Registra_Huella();
+
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Huella no válida, inténtelo de nuevo");
+        //        }
+        //    }));
+        //}
+        private void ConsultaEmpleado_Load_1(object sender, EventArgs e)
         {
-            this.Invoke(new Function(delegate ()
-            {
-                Template = template;
 
-                //btnAgregar.Enabled = (Template != null);
-
-                if (Template != null)
-                {
-
-                    Registra_Huella();
-
-                }
-                else
-                {
-                    MessageBox.Show("Huella no válida, inténtelo de nuevo");
-                }
-            }));
-        }
-
-        private void ConsultaEmpleado_Load(object sender, EventArgs e)
-        {
-
-            try
-            {
-                Cargo.DataSource = ObtenerCargo();
-                Cargo.DisplayMember = "Nombre";
-                Cargo.ValueMember = "Clave";
-                dataGridCEmpleado.DataSource = bindingSource1;
-                GetData("select NPersonal, Nombre, ApellidoP, ApellidoM, Telefono, Sexo, Direccion, Cargo_id, Email from Empleado");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex, "Excepción producida");
-            }
-
-            //conexion.CerrarConexion();
-            //GetData(dataAdapter.SelectCommand.CommandText);
-            //MostrarEmpleado();
+            MostrarEmpleado();
         }
 
         private void buttonCEmpleadoEditar_Click(object sender, EventArgs e)
         {
-            try
+            if(dataGridCEmpleado.SelectedRows.Count>0)
             {
-                if (dataGridCEmpleado.RowCount == 2)
-                {
-                    this.Validate();
-                    bindingSource1.EndEdit();
-                    dataAdapter.Update((DataTable)bindingSource1.DataSource);
-                    GetData(dataAdapter.SelectCommand.CommandText);
-                    MessageBox.Show("Editado Correctamente");
-                }
-                else
-                {
-                    MessageBox.Show("Solo puedes editar un registro a la vez", "Atención");
-                }
-            }
-            catch (SqlException s)
-            {
-                MessageBox.Show("" + s, "Verifica");
-            }
+                EditarEmpleado formEditarEmpleado = new EditarEmpleado();
+                formEditarEmpleado.textEEmpleadoNPersonal.Text = dataGridCEmpleado.CurrentRow.Cells[0].Value.ToString();
+                formEditarEmpleado.textEEmpleadoNombre.Text = dataGridCEmpleado.CurrentRow.Cells[1].Value.ToString();
+                formEditarEmpleado.textEEmpleadoApellidosP.Text = dataGridCEmpleado.CurrentRow.Cells[2].Value.ToString();
+                formEditarEmpleado.textEEmpleadoApellidoM.Text = dataGridCEmpleado.CurrentRow.Cells[3].Value.ToString();
+                formEditarEmpleado.textEEmpleadoTelefono.Text = dataGridCEmpleado.CurrentRow.Cells[4].Value.ToString();
+                formEditarEmpleado.comboEEmpleadoSexo.Text = dataGridCEmpleado.CurrentRow.Cells[5].Value.ToString();
+                formEditarEmpleado.textEEmpleadoDireccion.Text = dataGridCEmpleado.CurrentRow.Cells[6].Value.ToString();
+                formEditarEmpleado.comboEEmpleadoCargo.Text = dataGridCEmpleado.CurrentRow.Cells[7].Value.ToString();
+                formEditarEmpleado.textEEmpleadoEmail.Text = dataGridCEmpleado.CurrentRow.Cells[8].Value.ToString();
+                formEditarEmpleado.ShowDialog();
+                MostrarEmpleado();
+     
+            }                      
+            else
+                MessageBox.Show("Debe seleccionar una fila");          
 
         }
 
         private void MostrarEmpleado()
         {
-            CDEmpleado objEmple2 = new CDEmpleado();
-            //dataGridCEmpleado.DataSource = objEmple2.MostrarEmpleado();
-            //dataGridCEmpleado.DataSource = dataSet.Empleado;
-
-
+            CDEmpleado objEmplea = new CDEmpleado();
+            dataGridCEmpleado.DataSource = objEmplea.MostrarEmpleado();
         }
 
         private void GetData(string sql)
@@ -133,20 +111,7 @@ namespace Inicio
 
         }
 
-        private DataTable ObtenerCargo()
-        {
-            try
-            {
-                sql = "select Clave, Nombre from Cargo order by Nombre";
-                dataAdapter = new SqlDataAdapter(sql, CadenaConexion);
-                dataAdapter.Fill(table);
-            }
-            catch (SqlException sq)
-            {
-                MessageBox.Show("" + sq, "Excepción producida");
-            }
-            return table;
-        }
+      
 
         private void textCEmpleadoBuscar_TextChanged(object sender, EventArgs e)
         {
@@ -157,17 +122,19 @@ namespace Inicio
 
         }
 
-        private void dataGridCEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            CapturarHuella capturaH = new CapturarHuella();
-            capturaH.OnTemplate += this.OnTemplate;
-            capturaH.TopMost = true;
-            capturaH.ShowDialog();
-        }
+        //private void dataGridCEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    CapturarHuella capturaH = new CapturarHuella();
+        //    capturaH.OnTemplate += this.OnTemplate;
+        //    capturaH.TopMost = true;
+        //    capturaH.ShowDialog();
+        //}
 
         private void buttonCEmpleadoEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (dataGridCEmpleado.SelectedRows.Count > 0)
+            {
+                try
             {
                 dataGridCEmpleado.Rows.Remove(dataGridCEmpleado.CurrentRow);
                 //this.Validate();
@@ -181,6 +148,10 @@ namespace Inicio
             {
                 MessageBox.Show("" + s, "Verifica");
             }
+            }
+            else
+                MessageBox.Show("Debe seleccionar una fila");
+
         }
 
 
@@ -194,19 +165,26 @@ namespace Inicio
             con.cerrar();
         }
 
-        private void Registra_Huella()
+        
+
+        private void dataGridCEmpleado_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            byte[] huella_correcta = Template.Bytes;
-            string huella_lista = BitConverter.ToString(huella_correcta);
-
-
-            con.GuardaHuella(huella_correcta, dataGridCEmpleado.Rows[dataGridCEmpleado.CurrentRow.Index].Cells[1].Value.ToString());
-
-            Template = null;
-
-            MessageBox.Show("Proceso terminado, cierre la ventana activa para continuar con otro registro", "Registro de Huella Digital");
 
         }
+
+        //private void Registra_Huella()
+        //{
+        //    byte[] huella_correcta = Template.Bytes;
+        //    string huella_lista = BitConverter.ToString(huella_correcta);
+
+
+        //    con.GuardaHuella(huella_correcta, dataGridCEmpleado.Rows[dataGridCEmpleado.CurrentRow.Index].Cells[1].Value.ToString());
+
+        //    Template = null;
+
+        //    MessageBox.Show("Proceso terminado, cierre la ventana activa para continuar con otro registro", "Registro de Huella Digital");
+
+        //}
 
     }
 }

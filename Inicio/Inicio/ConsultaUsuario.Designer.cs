@@ -35,7 +35,6 @@
             this.buttonCUsuarioEditar = new System.Windows.Forms.Button();
             this.dataGridCUsuario = new System.Windows.Forms.DataGridView();
             this.labelCUsuarioLista = new System.Windows.Forms.Label();
-            this.NPersonal = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelCUsuarioVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCUsuario)).BeginInit();
             this.SuspendLayout();
@@ -109,8 +108,6 @@
             // 
             this.dataGridCUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NPersonal});
             this.dataGridCUsuario.Location = new System.Drawing.Point(10, 87);
             this.dataGridCUsuario.Name = "dataGridCUsuario";
             this.dataGridCUsuario.Size = new System.Drawing.Size(531, 170);
@@ -126,14 +123,6 @@
             this.labelCUsuarioLista.Size = new System.Drawing.Size(171, 24);
             this.labelCUsuarioLista.TabIndex = 0;
             this.labelCUsuarioLista.Text = "Lista de usuarios";
-            // 
-            // NPersonal
-            // 
-            this.NPersonal.DataPropertyName = "NPersonal_id";
-            this.NPersonal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.NPersonal.HeaderText = "Nº Personal";
-            this.NPersonal.Name = "NPersonal";
-            this.NPersonal.Width = 80;
             // 
             // ConsultaUsuario
             // 
@@ -162,6 +151,5 @@
         private System.Windows.Forms.Button buttonCUsuarioEditar;
         private System.Windows.Forms.DataGridView dataGridCUsuario;
         private System.Windows.Forms.Label labelCUsuarioLista;
-        private System.Windows.Forms.DataGridViewComboBoxColumn NPersonal;
     }
 }

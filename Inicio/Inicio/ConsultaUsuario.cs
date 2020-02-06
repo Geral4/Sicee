@@ -42,27 +42,17 @@ namespace Inicio
 
         private void ConsultaUsuario_Load(object sender, EventArgs e)
         {
-            //MostrarUsuario();
+            MostrarUsuario();
           ListarNPersonal();
-            dataGridCUsuario.DataSource = bindingSource1;
-            try
-            {
-                NPersonal.DataSource = ObtenerEmpleado();
-                NPersonal.DisplayMember = "NPersonal";
-                NPersonal.ValueMember = "NPersonal";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex, "Excepción producida");
-            }
-            GetData("select usu.NPersonal_id, (emp.ApellidoP + ' ' + emp.ApellidoM + ' ' + emp.Nombre) " +
-                "Nombre_Completo, usu.Usuario, usu.Contrasena, usu.Acceso  from Usuario usu left outer join " +
-                "Empleado emp on usu.NPersonal_id = emp.NPersonal");
+            
+            //GetData("select usu.NPersonal_id, (emp.ApellidoP + ' ' + emp.ApellidoM + ' ' + emp.Nombre) " +
+            //    "Nombre_Completo, usu.Usuario, usu.Contrasena, usu.Acceso  from Usuario usu left outer join " +
+            //    "Empleado emp on usu.NPersonal_id = emp.NPersonal");
         }
         private void MostrarUsuario()
         {
             CDUsuario objUsuario3 = new CDUsuario();
-           // dataGridCUsuario.DataSource = objUsuario3.MostrarUsuario();
+            dataGridCUsuario.DataSource = objUsuario3.MostrarUsuario();
         }
 
         private DataTable ObtenerEmpleado()
@@ -88,25 +78,22 @@ namespace Inicio
 
         private void buttonCUsuarioEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (dataGridCUsuario.SelectedRows.Count > 0)
             {
-                if (dataGridCUsuario.RowCount == 2)
-                {
-                    this.Validate();
-                    bindingSource1.EndEdit();
-                    dataAdapter.Update((DataTable)bindingSource1.DataSource);
-                    GetData(dataAdapter.SelectCommand.CommandText);
-                    MessageBox.Show("Editado Correctamente");
-                }
-                else
-                {
-                    MessageBox.Show("Solo puedes editar un registro a la vez", "Atención");
-                }
+                EditarUsuario formEditarUsuario = new EditarUsuario();
+                formEditarUsuario.comboEUsuarioNPersonal.Text = dataGridCUsuario.CurrentRow.Cells[0].Value.ToString();
+                formEditarUsuario.textEUsuarioNombre.Text = dataGridCUsuario.CurrentRow.Cells[1].Value.ToString();
+                formEditarUsuario.textEUsuarioLogin.Text = dataGridCUsuario.CurrentRow.Cells[2].Value.ToString();
+                formEditarUsuario.textEUsuarioContraseña.Text = dataGridCUsuario.CurrentRow.Cells[3].Value.ToString();
+                formEditarUsuario.textEUsuarioRepetir.Text = dataGridCUsuario.CurrentRow.Cells[4].Value.ToString();
+                formEditarUsuario.comboEUsuarioAcceso.Text = dataGridCUsuario.CurrentRow.Cells[5].Value.ToString();
+
+                formEditarUsuario.ShowDialog();
+                MostrarUsuario();
+
             }
-            catch (SqlException s)
-            {
-                MessageBox.Show("" + s, "Verifica");
-            }
+            else
+                MessageBox.Show("Debe seleccionar una fila");
         }
 
         private void GetData(string sql)

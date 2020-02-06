@@ -58,7 +58,7 @@ namespace Inicio
 
         private void buttonRegistro_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Alta());
+            AbrirFormHija(new Alta());            
         }
         private void pictureLogo_Click(object sender, EventArgs e)
         {

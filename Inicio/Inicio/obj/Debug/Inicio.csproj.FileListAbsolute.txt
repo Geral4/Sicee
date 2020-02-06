@@ -872,3 +872,5 @@ C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.CapturarHuella.
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.CaptureForm.resources
 D:\Documents\SiceeGIT\Inicio\Inicio\obj\Debug\Inicio.F_verificar.resources
 C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.F_verificar.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.CE.resources
+C:\Users\INSPIRON\Documents\Sicee\Inicio\Inicio\obj\Debug\Inicio.EditarUsuario.resources

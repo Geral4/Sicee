@@ -117,7 +117,7 @@ namespace Inicio
                                     MessageBox.Show("Bienvenido "+ empleado.ToUpper() + "\n" + myReader.GetValue(0).ToString());
                                 }
 
-                                myReader.Close();
+                                //myReader.Close();
                                 //con.InsertActElim(cadena);                                
                             }
                         }            
@@ -144,7 +144,7 @@ namespace Inicio
         {
             try
             {
-                if (con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "192.168.0.24") == 0)
+                if (con.conectarRemoto("Sicee", "geralmiguel", "tecnologico01", "localhost") == 0)
                 {
                     MessageBox.Show("Sin conexión al servidor de base de datos, reintente más tarde", "Asistencia");
                     Application.Exit();

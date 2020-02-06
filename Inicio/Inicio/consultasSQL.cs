@@ -148,6 +148,8 @@ class consultasSQL
     {
         try
         {
+            if (conexion.State == ConnectionState.Closed)
+                conexion.Open();
             comando = new SqlCommand(sentencia, conexion);
             lector = comando.ExecuteReader();                     
 
@@ -245,7 +247,7 @@ class consultasSQL
         try
         {
             conexion = new SqlConnection();
-            conexion = conectarRemotoA("Sicee", "geralmiguel", "tecnologico01", "192.168.0.24");
+            conexion = conectarRemotoA("Sicee", "geralmiguel", "tecnologico01", "localhost");
             SqlCommand comando = new SqlCommand(sentencia, conexion);
             huella = comando.ExecuteScalar() as byte[];
             conexion.Close();

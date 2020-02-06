@@ -52,6 +52,18 @@ namespace CapaDatos
             Coman.Parameters.Clear();
         }
 
+        public void editarEmpleado(string nPersonal, string nombre, string apellidoP,string apellidoM, string telefono, string sexo,
+            string direccion, string cargo_id, string email, byte[] huellas = null, int manual = 0)
+        {
+            Coman.Connection = Conexion.AbrirConexion();
+            Coman.CommandText = "update Empleado set NPersonal='" + nPersonal + "',Nombre='" + nombre + "',ApellidoP='" + apellidoP + "',ApellidoM='" + apellidoM +
+                "',Telefono='" + telefono +"',Sexo='" + sexo + "',Direccion='"+direccion +"'Cargo_id='" +cargo_id + "',Email='"+email + "',Huellas'" +huellas + "',manuall='" +manual+"'";
+            Coman.CommandType = CommandType.Text;
+            Coman.ExecuteNonQuery();
+            Conexion.CerrarConexion();
+
+        }
+
         public DataTable MostrarEmpleado()
         {
             DataTable Tabla = new DataTable();

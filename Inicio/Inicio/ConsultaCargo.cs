@@ -15,6 +15,7 @@ namespace Inicio
     public partial class ConsultaCargo : Form
     {
         CDCargo objCCargo = new CDCargo();
+        
 
         private string CadenaConexion = "Integrated Security=SSPI;Persist Security Info=False;" +
           "Initial Catalog=Sicee;Data Source=localhost";
@@ -27,17 +28,21 @@ namespace Inicio
             InitializeComponent();
             dataGridCCargo.AllowUserToAddRows = true;
             dataGridCCargo.AllowUserToDeleteRows = true;
+            
         }
 
         private void panelCCargoVertical_Paint(object sender, PaintEventArgs e)
         {
 
         }
-        private void MostrarCargo()
+        public void MostrarCargo()
         {
             CDCargo objCar = new CDCargo();
-            //dataGridCCargo.DataSource = objCar.MostrarCargo();
+            dataGridCCargo.DataSource = objCar.MostrarCargo();
         }
+
+        
+
 
         private void ConsultaCargo_Load(object sender, EventArgs e)
         {
@@ -49,37 +54,55 @@ namespace Inicio
                 dataGridCCargo.DataSource = bindingSource1;
                 GetData("select * from Cargo");
             }
-            catch(DataException ex)
+            catch (DataException ex)
             {
                 Console.WriteLine("Excepción producida: " + ex);
             }
-            
+
         }
 
         private void buttonCCargoEditar_Click(object sender, EventArgs e)
         {
+            if (dataGridCCargo.SelectedRows.Count > 0)
+            {
+                EditarCargo formEditarCargo = new EditarCargo();
+                formEditarCargo.textECargoClave.Text = dataGridCCargo.CurrentRow.Cells[0].Value.ToString();
+                formEditarCargo.textECargoNombre.Text = dataGridCCargo.CurrentRow.Cells[1].Value.ToString();
+                formEditarCargo.textECargoDescripcion.Text = dataGridCCargo.CurrentRow.Cells[2].Value.ToString();
+                formEditarCargo.comboECargoDepartamento.Text = dataGridCCargo.CurrentRow.Cells[3].Value.ToString();
+  
+                formEditarCargo.ShowDialog();
+                MostrarCargo();
+
+            }
+            else
+                MessageBox.Show("Debe seleccionar una fila");
+          
             //EditarCargo formCargo = new EditarCargo();
             //formCargo.Show();
 
-            try
-            {
-                if (dataGridCCargo.RowCount == 2)
-                {
-                    this.Validate();
-                    bindingSource1.EndEdit();
-                    dataAdapter.Update((DataTable)bindingSource1.DataSource);
-                    GetData(dataAdapter.SelectCommand.CommandText);
-                    MessageBox.Show("Editado Correctamente");
-                }
-                else
-                {
-                    MessageBox.Show("Solo puedes editar un registro a la vez.    Busca el registro a editar" , "Atención");
-                }
-            }
-            catch (SqlException s)
-            {
-                MessageBox.Show("" + s, "Verifica");
-            }
+            //try
+            //{
+            //    if (dataGridCCargo.RowCount == 2)
+            //    {
+            //        this.Validate();
+            //        bindingSource1.EndEdit();
+            //        dataAdapter.Update((DataTable)bindingSource1.DataSource);
+            //        GetData(dataAdapter.SelectCommand.CommandText);
+            //        MessageBox.Show("Editado Correctamente");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Solo puedes editar un registro a la vez.    Busca el registro a editar" , "Atención");
+            //    }
+            //}
+            //catch (SqlException s)
+            //{
+            //    MessageBox.Show("" + s, "Verifica");
+            //}
+
+
+
 
         }
 
@@ -107,6 +130,11 @@ namespace Inicio
             {
                 Console.WriteLine("Excepción: " + ex);
             }
+
+        }
+
+        private void dataGridCCargo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
